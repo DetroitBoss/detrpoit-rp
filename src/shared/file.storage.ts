@@ -1,0 +1,1 @@
+export const FILE_STORAGE_URL = 'files.onyx-gta.ru'

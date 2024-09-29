@@ -1,0 +1,82 @@
+@import "../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.chooseLocation {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background: radial-gradient(70.74% 70.74% at 50% 50%, rgba(20, 27, 31, 0.765) 0%, rgba(20, 27, 31, 0.9) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-content {
+    position: absolute;
+    width: @1580px;
+    height: @985px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      width: @404px;
+      display: flex;
+      flex-direction: column;
+      font-size: @44px;
+      line-height: 120%;
+
+      span {
+        margin-top: @40px;
+        font-size: @24px;
+        line-height: 140%;
+      }
+    }
+
+    &__components {
+      height: 100%;
+      pointer-events: none;
+    }
+
+    &__button {
+      position: absolute;
+      width: @116px;
+      opacity: .85;
+      z-index: 100;
+      &:hover {
+        opacity: 1;
+      }
+
+      &-mafia {
+        right: @611px;
+        top: @273px;
+      }
+
+      &-gang {
+        right: @181px;
+        top: @234px;
+      }
+
+      &-sheriff {
+        right: @611px;
+        top: @560px;
+      }
+
+      &-police {
+        right: @159px;
+        top: @521px
+      }
+
+    }
+  }
+}
+

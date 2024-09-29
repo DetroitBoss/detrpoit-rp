@@ -1,0 +1,1 @@
+export {FurnitureStore} from "./FurnitureStore"

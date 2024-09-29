@@ -1,0 +1,72 @@
+var ForwardHandler = (function () {
+    function ForwardHandler(obj) {
+        if (typeof obj === "undefined") { obj = {
+        }; }
+        this.wrapped = {
+        };
+        this.wrapped = obj;
+    }
+    ForwardHandler.prototype.defineProperty = function (name, desc) {
+        Object.defineProperty(this.wrapped, name, desc);
+    };
+    ForwardHandler.prototype.delete = function (name) {
+        return delete this.wrapped[name];
+    };
+    ForwardHandler.prototype.getOwnPropertyNames = function () {
+        return Object.getOwnPropertyNames(this.wrapped);
+    };
+    ForwardHandler.prototype.getPropertyNames = function () {
+        var getPropertyNames = function (obj, name) {
+            if(obj === null) {
+                return [];
+            }
+            return Object.getOwnPropertyNames(obj).concat(getPropertyNames(Object.getPrototypeOf(obj)));
+        };
+        return getPropertyNames(this.wrapped);
+    };
+    ForwardHandler.prototype.getOwnPropertyDescriptor = function (name) {
+        var desc = Object.getOwnPropertyDescriptor(this.wrapped, name);
+        if(desc !== undefined) {
+            desc.configurable = true;
+        }
+        return desc;
+    };
+    ForwardHandler.prototype.getPropertyDescriptor = function (name) {
+        var getPropertyDescriptor = function (obj, name) {
+            if(obj === null) {
+                return undefined;
+            }
+            var desc = Object.getOwnPropertyDescriptor(obj, name);
+            if(desc !== undefined) {
+                return desc;
+            }
+            return getPropertyDescriptor(Object.getPrototypeOf(obj));
+        };
+        var desc = getPropertyDescriptor(this.wrapped, name);
+        if(desc !== undefined) {
+            desc.configurable = true;
+        }
+        return desc;
+    };
+    ForwardHandler.prototype.fix = function () {
+        var result = {
+        };
+        Object.getOwnPropertyNames(obj).forEach(function (name) {
+            result[name] = Object.getOwnPropertyDescriptor(obj, name);
+        });
+        return result;
+    };
+    return ForwardHandler;
+})();
+/* ==================================================================== */
+var Tester = (function () {
+    function Tester() { }
+    return Tester;
+})();
+var tester = new Tester();
+var obj = Proxy.create(new ForwardHandler(tester));
+obj.a = 1;
+console.log(obj.a);
+console.log(tester);
+console.log('Is a tester? : ' + (obj instanceof Tester));
+//@ sourceMappingURL=forward.js.map

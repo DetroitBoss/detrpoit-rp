@@ -1,0 +1,717 @@
+unit.js:3094: ERROR - Parse error. invalid property id
+                    new: false
+                    ^
+
+unit.js:3094: ERROR - Parse error. syntax error
+                    new: false
+                       ^
+
+unit.js:3095: ERROR - Parse error. syntax error
+                }, function (err, doc) {
+                 ^
+
+unit.js:3096: ERROR - Parse error. missing ; before statement
+                    if(err) {
+                            ^
+
+unit.js:3097: ERROR - Parse error. syntax error
+                        that.fail(p, '%s: Unable query lock : %s', that.id(), err.message);
+                            ^
+
+unit.js:3098: ERROR - Parse error. missing ; before statement
+                    } else if(!doc) {
+                      ^
+
+unit.js:3100: ERROR - Parse error. missing ; before statement
+                        if(timeout > CHECKRAND) {
+                                                ^
+
+unit.js:3101: ERROR - Parse error. syntax error
+                            that._collection.findOne({
+                                ^
+
+unit.js:3102: ERROR - Parse error. syntax error
+                                _id: oid
+                                   ^
+
+unit.js:3103: ERROR - Parse error. syntax error
+                            }, function (err, doc) {
+                             ^
+
+unit.js:3104: ERROR - Parse error. missing ; before statement
+                                if(err) {
+                                        ^
+
+unit.js:3105: ERROR - Parse error. syntax error
+                                    that.fail(p, '%s: Unable query lock : %s', that.id(), err.message);
+                                        ^
+
+unit.js:3106: ERROR - Parse error. missing ) in parenthetical
+                                } else {
+                                  ^
+
+unit.js:3107: ERROR - Parse error. syntax error
+                                    that._logger.debug('STORE', '%s: Locked by: %s', that.id(), doc.host);
+                                        ^
+
+unit.js:3138: ERROR - Parse error. missing ) in parenthetical
+                            });
+                            ^
+
+unit.js:3138: ERROR - Parse error. syntax error
+                            });
+                             ^
+
+unit.js:3139: ERROR - Parse error. missing ) in parenthetical
+                        } else {
+                          ^
+
+unit.js:3148: ERROR - Parse error. syntax error
+                        }
+                        ^
+
+unit.js:3149: ERROR - Parse error. syntax error
+                    } else {
+                      ^
+
+unit.js:3150: ERROR - Parse error. syntax error
+                        that._logger.debug('STORE', '%s: Acquired lock', that.id());
+                            ^
+
+unit.js:3152: ERROR - Parse error. syntax error
+                    }
+                    ^
+
+unit.js:3153: ERROR - Parse error. syntax error
+                });
+                 ^
+
+unit.js:3154: ERROR - Parse error. invalid return
+                return p;
+                ^
+
+unit.js:3155: ERROR - Parse error. syntax error
+            };
+            ^
+
+unit.js:3357: ERROR - Parse error. invalid property id
+                    new: true
+                    ^
+
+unit.js:3357: ERROR - Parse error. syntax error
+                    new: true
+                       ^
+
+unit.js:3358: ERROR - Parse error. syntax error
+                }, function (err, doc) {
+                 ^
+
+unit.js:3359: ERROR - Parse error. missing ; before statement
+                    if(err) {
+                            ^
+
+unit.js:3360: ERROR - Parse error. syntax error
+                        that.fail(p, '%s: Update failed on object ref for %s error %s', that.id(), oid, err.message);
+                            ^
+
+unit.js:3361: ERROR - Parse error. missing ; before statement
+                    } else {
+                      ^
+
+unit.js:3362: ERROR - Parse error. missing ; before statement
+                        if(doc === null) {
+                                         ^
+
+unit.js:3363: ERROR - Parse error. syntax error
+                            that.fail(p, '%s: Update failed on object ref for %s empty doc', that.id(), oid);
+                                ^
+
+unit.js:3364: ERROR - Parse error. syntax error
+                        } else {
+                        ^
+
+unit.js:3394: ERROR - Parse error. syntax error
+                        }
+                        ^
+
+unit.js:3396: ERROR - Parse error. syntax error
+                });
+                ^
+
+unit.js:3397: ERROR - Parse error. invalid return
+                return p;
+                ^
+
+unit.js:3398: ERROR - Parse error. syntax error
+            };
+            ^
+
+unit.js:3559: ERROR - Parse error. invalid return
+            return MongoStore;
+            ^
+
+unit.js:3560: ERROR - Parse error. syntax error
+        })(shared.mtx.mtxFactory);
+        ^
+
+unit.js:3562: ERROR - Parse error. syntax error
+    })(shared.store || (shared.store = {}));
+    ^
+
+unit.js:3565: ERROR - Parse error. syntax error
+    })(shared || (shared = {}));
+    ^
+
+unit.js:3606: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3608: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:3609: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3612: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3614: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3615: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3617: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3618: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3620: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3621: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3623: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3624: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3626: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3627: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3629: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3631: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:3632: ERROR - Parse error. syntax error
+    testtracker.illegaltype = illegaltype;
+               ^
+
+unit.js:3646: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3649: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:3650: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3653: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3661: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:3662: ERROR - Parse error. syntax error
+    testtracker.idobjctor = idobjctor;
+               ^
+
+unit.js:3675: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3677: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:3678: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3680: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3687: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:3688: ERROR - Parse error. syntax error
+    testtracker.idarrayctor = idarrayctor;
+               ^
+
+unit.js:3956: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3958: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:3965: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:3967: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:3969: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:3970: ERROR - Parse error. syntax error
+    testtracker.unwrapable = unwrapable;
+               ^
+
+unit.js:5398: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:5399: ERROR - Parse error. syntax error
+            store.valueId(obj);
+                 ^
+
+unit.js:5400: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:5402: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:5403: ERROR - Parse error. syntax error
+    testtracker.xstore = xstore;
+               ^
+
+unit.js:6581: ERROR - Parse error. syntax error
+})(testtracker || (testtracker = {}));
+^
+
+unit.js:6688: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6689: ERROR - Parse error. syntax error
+            clog.fatal('Hello %s', 'bob');
+                ^
+
+unit.js:6690: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:6697: ERROR - Parse error. missing ) in parenthetical
+    testutils.clog_fatal = clog_fatal;
+    ^
+
+unit.js:6697: ERROR - Parse error. syntax error
+    testutils.clog_fatal = clog_fatal;
+             ^
+
+unit.js:6700: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6701: ERROR - Parse error. syntax error
+            utils.hash(null);
+                 ^
+
+unit.js:6702: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:6703: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6704: ERROR - Parse error. syntax error
+            utils.hash(undefined);
+                 ^
+
+unit.js:6705: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:6718: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:6719: ERROR - Parse error. syntax error
+    testutils.hashString = hashString;
+             ^
+
+unit.js:6793: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6794: ERROR - Parse error. syntax error
+            utils.isUID(utils.makeUID('23456781234567812345678'));
+                 ^
+
+unit.js:6795: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:6796: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6797: ERROR - Parse error. syntax error
+            utils.isUID(utils.makeUID('1123456781234567812345678'));
+                 ^
+
+unit.js:6798: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:6800: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6801: ERROR - Parse error. syntax error
+            utils.isUID(utils.makeUID('ABCDEFG7ABCDEFG7ABCDEFG7'));
+                 ^
+
+unit.js:6802: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:6813: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:6814: ERROR - Parse error. syntax error
+    testutils.unique = unique;
+             ^
+
+unit.js:6829: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6830: ERROR - Parse error. syntax error
+            m.insert('c', null);
+             ^
+
+unit.js:6831: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:6835: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:6836: ERROR - Parse error. syntax error
+    testutils.stringmap = stringmap;
+             ^
+
+unit.js:6842: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6843: ERROR - Parse error. syntax error
+            s.put(null);
+             ^
+
+unit.js:6844: ERROR - Parse error. syntax error
+        }, Error);
+         ^
+
+unit.js:6845: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6846: ERROR - Parse error. syntax error
+            s.remove(null);
+             ^
+
+unit.js:6847: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:6848: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6849: ERROR - Parse error. syntax error
+            s.id(null);
+             ^
+
+unit.js:6850: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:6851: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6852: ERROR - Parse error. syntax error
+            s.has(null);
+             ^
+
+unit.js:6853: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:6864: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6865: ERROR - Parse error. syntax error
+            s.put(null);
+             ^
+
+unit.js:6866: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:6867: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:6868: ERROR - Parse error. syntax error
+            s.remove(null);
+             ^
+
+unit.js:6869: ERROR - Parse error. syntax error
+        }, Error);
+        ^
+
+unit.js:6876: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:6877: ERROR - Parse error. syntax error
+    testutils.stringset = stringset;
+             ^
+
+unit.js:6898: ERROR - Parse error. syntax error
+})(testutils || (testutils = {}));
+^
+
+unit.js:7199: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7200: ERROR - Parse error. syntax error
+            serial.writeValue(null, null);
+                  ^
+
+unit.js:7201: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:7288: ERROR - Parse error. missing ) in parenthetical
+    testserial.writeValue = writeValue;
+    ^
+
+unit.js:7288: ERROR - Parse error. syntax error
+    testserial.writeValue = writeValue;
+              ^
+
+unit.js:7291: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7292: ERROR - Parse error. syntax error
+            serial.writeObject(null, null);
+                  ^
+
+unit.js:7293: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:7294: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7295: ERROR - Parse error. syntax error
+            serial.writeObject(null, {
+                  ^
+
+unit.js:7296: ERROR - Parse error. syntax error
+            });
+             ^
+
+unit.js:7297: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7298: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7299: ERROR - Parse error. syntax error
+            serial.writeObject(rh, null);
+                  ^
+
+unit.js:7300: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7549: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:7550: ERROR - Parse error. syntax error
+    testserial.writeObject = writeObject;
+              ^
+
+unit.js:7597: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7598: ERROR - Parse error. syntax error
+            serial.readValue(null);
+                  ^
+
+unit.js:7599: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:7645: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7646: ERROR - Parse error. syntax error
+            serial.readValue('xxxnull');
+                  ^
+
+unit.js:7647: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7649: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7650: ERROR - Parse error. syntax error
+            serial.readValue('xxx0');
+                  ^
+
+unit.js:7651: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7654: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7655: ERROR - Parse error. syntax error
+            serial.readValue('aaa<123456781234567812345678>');
+                  ^
+
+unit.js:7656: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7659: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:7660: ERROR - Parse error. syntax error
+    testserial.readValue = readValue;
+              ^
+
+unit.js:7663: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7664: ERROR - Parse error. syntax error
+            serial.readObject("");
+                  ^
+
+unit.js:7665: ERROR - Parse error. syntax error
+        });
+         ^
+
+unit.js:7666: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7667: ERROR - Parse error. syntax error
+            serial.readObject("0");
+                  ^
+
+unit.js:7668: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7669: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7670: ERROR - Parse error. syntax error
+            serial.readObject("{}", []);
+                  ^
+
+unit.js:7671: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7672: ERROR - Parse error. missing name after . operator
+        test.throws(function () {
+             ^
+
+unit.js:7673: ERROR - Parse error. syntax error
+            serial.readObject("[]", {
+                  ^
+
+unit.js:7674: ERROR - Parse error. syntax error
+            });
+             ^
+
+unit.js:7675: ERROR - Parse error. syntax error
+        });
+        ^
+
+unit.js:7763: ERROR - Parse error. syntax error
+    }
+    ^
+
+unit.js:7764: ERROR - Parse error. syntax error
+    testserial.readObject = readObject;
+              ^
+
+unit.js:7779: ERROR - Parse error. syntax error
+})(testserial || (testserial = {}));
+^
+
+179 error(s), 0 warning(s)

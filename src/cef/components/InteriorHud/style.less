@@ -1,0 +1,149 @@
+@import "../../assets/less/uikit";
+
+.interiorHud {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #141B1F8c -5.65%, #141B1F00 20%, #141B1F00 80%, #141B1F8c 105.65%);
+
+  * {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    color: #fff;
+
+  }
+
+  &-buttonBlock {
+    padding: 0 @8px;
+    min-height: @40px;
+    max-height: @40px;
+    min-width: @40px;
+    border-radius: @6px;
+    background-color: #ffffff1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: @4px;
+
+    span {
+      color: #fff;
+      font-size: @18px !important;
+      box-sizing: content-box;
+      padding: 0 @17px !important;
+    }
+
+    img {
+      width: @24px;
+      height: @24px;
+    }
+  }
+
+  &-top-left {
+    position: absolute;
+    left: @40px;
+    top: @40px;
+    display: flex;
+    flex-direction: column;
+
+    &-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: @20px;
+
+      &__text {
+        margin-left: @14px;
+        font-size: @16px !important;
+      }
+    }
+  }
+
+  &-top-center {
+    display: flex;
+    position: absolute;
+    top: @40px;
+    align-items: center;
+    transform: translateX(@70px);
+
+    &__text {
+      margin: 0 @40px 0 @14px;
+      font-size: @16px !important;
+
+      span {
+        opacity: .6;
+      }
+    }
+
+  }
+
+  &-top-right {
+    display: flex;
+    position: absolute;
+    top: @40px;
+    right: @40px;
+    align-items: flex-end;
+    flex-direction: column;
+
+    &-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: @20px;
+
+      &__text {
+        margin-right: @16px;
+        font-size: @16px !important;
+      }
+
+    }
+
+
+  }
+
+  &-bottom-left {
+    position: absolute;
+    bottom: @40px;
+    left: @40px;
+    display: flex;
+    align-items: flex-end;
+
+    &__image {
+      width: @111px;
+      height: @111px;
+      margin-right: @20px;
+    }
+
+    &-block {
+      height: @52px;
+      background-color: #ffffff1a;
+      display: flex;
+      align-items: center;
+      padding: 0 @12px;
+      border-radius: @6px;
+
+      img {
+        width: @30px;
+        margin-right: @12px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        font-size: @16px;
+
+        span {
+          font-size: @16px !important;
+          margin-bottom: @4px;
+        }
+      }
+
+    }
+
+  }
+
+
+}

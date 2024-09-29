@@ -1,0 +1,90 @@
+﻿@import "../../../assets/less/uikit";
+
+.fishing {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__helpImage {
+    position: absolute;
+    bottom: @90px;
+    height: @36px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: @36px;
+      margin-right: @16px;
+    }
+
+    span {
+      line-height: 100%;
+      color: #FFFFFF;
+      margin: @12px 0;
+      font-size: @32px;
+      text-shadow: 0 @4px @24px #ffffff4d;
+    }
+
+  }
+
+  &__help {
+    position: absolute;
+    bottom: @20px;
+    height: @37px;
+    display: flex;
+    align-items: center;
+    font-size: @16px;
+    line-height: 130%;
+
+    span {
+      font-size: @13px;
+      background-color: #141B1F80;
+      text-transform: uppercase;
+      width: @90px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 @8px;
+      line-height: 130%;
+    }
+  }
+}
+
+.hud-fishing-catch {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: @75px;
+  height: @75px;
+  transform: translate(-80%, -50%);
+}
+
+.fish-circle-wrap {
+  position: absolute;
+  width: @75px;
+  height: @75px;
+}
+
+.bg-circle {
+  position: absolute;
+  width: @75px;
+  height: @75px;
+  border-radius: 38px;
+  background: gray;
+}
+
+.fish-rod-img {
+  z-index: 100;
+  position: absolute;
+  width: @30px;
+  height: @30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}

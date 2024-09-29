@@ -1,0 +1,188 @@
+@import "../../../../assets/less/uikit";
+
+.battlePass {
+
+  .footer {
+    width: 100vw;
+    font-size: @16px !important;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    bottom: @20px;
+    z-index: 7;
+    padding: 0 @80px;
+
+    * {
+      color: #fff;
+    }
+
+    &__leftText {
+      margin-right: @20px;
+      display: flex;
+      flex-direction: column;
+      line-height: 120%;
+      font-size: @16px;
+
+      span {
+        font-size: @16px;
+        margin-bottom: @6px;
+      }
+    }
+
+    &__rightText {
+      margin: 0 0 0 auto !important;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: end;
+      line-height: 120%;
+      font-size: @16px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        margin-left: @16px;
+        width: @32px;
+        transform: translateY(@5px);
+      }
+
+      span {
+        font-size: @16px;
+        margin-bottom: @6px;
+      }
+    }
+
+    &-button {
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: @16px;
+      height: @65px;
+      padding: 0 @20px;
+      background-color: #EB5757;
+      border-radius: @4px;
+      margin-left: @20px;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+
+      &__icon {
+        margin-right: @10px;
+        height: @16px;
+      }
+
+      &Transparent {
+        background: none !important;
+        border: @2px solid #E3E3E3;
+        opacity: .75;
+
+        &:hover {
+          opacity: 1;
+          box-shadow: none !important;
+          border: @2px solid #fff !important;
+        }
+      }
+
+
+      &__star {
+        position: absolute;
+        left: 0;
+        bottom: 110%;
+        opacity: .3;
+        width: @11px;
+
+        &:nth-child(2) {
+          left: @8px !important;
+          animation: star 4s infinite linear;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(3) {
+          left: @35px !important;
+          animation: star 2s infinite linear;
+          width: @15px;
+        }
+
+        &:nth-child(4) {
+          left: @58px !important;
+          animation: star 5s infinite linear;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(5) {
+          left: @120px !important;
+          animation: star 3s infinite linear;
+          width: @13px;
+        }
+
+        &:nth-child(6) {
+          left: @150px !important;
+          animation: star 2.4s infinite linear;
+          width: @20px;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(7) {
+          left: @70px !important;
+          animation: star 4.3s infinite linear;
+          width: @18px;
+        }
+
+        &:nth-child(8) {
+          left: @170px !important;
+          animation: star 3s infinite linear;
+          width: @11px;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(9) {
+          left: @200px !important;
+          animation: star 5s infinite linear;
+          width: @9px;
+        }
+
+        &:nth-child(10) {
+          left: @210px !important;
+          animation: star 4.2s infinite linear;
+          width: @18px;
+        }
+
+        &:nth-child(11) {
+          left: @220px !important;
+          animation: star 2.4s infinite linear;
+          width: @12px;
+          animation-delay: 2s;
+        }
+
+      }
+
+
+      &:hover {
+        background-color: #E13C14;
+        box-shadow: 0 @10px @40px rgba(240, 78, 39, 0.6);
+
+        .footer-button__star {
+          animation-play-state: running !important;
+        }
+      }
+
+
+    }
+
+    @keyframes star {
+      from {
+      }
+
+      to {
+        bottom: -30%;
+      }
+
+    }
+
+
+  }
+
+}

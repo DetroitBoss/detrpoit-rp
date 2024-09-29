@@ -1,0 +1,112 @@
+@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// .mainbox-license {
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+// 	display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     user-select: none;
+//     overflow: hidden;
+//     // background-color: grey;
+// }
+
+.licbox {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    opacity: 1.0;
+}
+.liceffect {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 1rem;
+    opacity: 0.902;
+    width: 38rem;
+    height: 22rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 26rem;
+}
+.lickey {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1rem 0rem 1rem;
+}
+.lickey img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.licdata {
+    display: grid;
+    grid-template-columns: 1.3fr 1.0fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". ." ". .";
+    margin: 1rem 3rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    width: calc( 100% - 6rem );
+    height: calc( 100% - 3rem - 4rem );
+}
+.licdata div{
+    font-weight: 500;
+}
+.licdata h1{
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.licdata h2{
+    margin: 0 0;
+    font-size: 1.2rem;
+}
+.licdata p {
+    color: #ffffff99;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.licown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    & h2 {
+        color: #ffffff;
+    }
+}
+.licnumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    & h2 {
+        color: #ffffff;
+    }
+}
+.licinfo{
+    display: flex;
+    justify-content: flex-end;
+}
+.licinfo div{
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 0.1rem solid #ffffff99;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    height: 2.1rem;
+}
+
+
+

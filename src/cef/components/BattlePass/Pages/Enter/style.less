@@ -1,0 +1,191 @@
+@import "../../../../assets/less/uikit";
+
+.battlePass {
+
+  .enter {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto 0;
+    width: 100vw;
+    height: 100vh;
+
+    * {
+      color: #fff;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      user-select: none;
+      z-index: 1;
+    }
+
+    &__right-image {
+      position: absolute;
+      right: 0;
+      height: @1080px;
+      pointer-events: none;
+      top: 0;
+      z-index: 4;
+    }
+
+    &__left-image {
+      position: absolute;
+      left: 0;
+      height: @1080px;
+      pointer-events: none;
+      top: 0;
+      z-index: 4;
+    }
+
+    &__summer {
+      position: absolute;
+      right: @517px;
+      bottom: @232px;
+      z-index: 5 !important;
+      pointer-events: none !important;
+    }
+
+    &__star {
+      position: absolute;
+      width: @443px;
+      left: 0;
+      top: 0;
+    }
+
+    &__background {
+      position: absolute;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    &__title {
+      font-size: @220px;
+      margin-top: @50px;
+      line-height: 90%;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    &__text {
+      font-size: @40px;
+      margin-top: @284px;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      opacity: .5;
+      display: flex;
+      transform: translateX(@60px);
+
+      div {
+        width: @174px;
+        height: @40px;
+      }
+    }
+
+    &__leprechaun {
+      width: @793px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-53%, -48%);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    &-bottom {
+      margin-top: @498px;
+      width: @1511px;
+      display: flex;
+      align-items: center;
+      border-top: @1px solid #fff3;
+      padding-top: @35px;
+      z-index: 5 !important;
+
+      &__text {
+        font-size: @17px;
+        width: @550px;
+        display: flex;
+        flex-direction: column;
+        line-height: 160%;
+        color: #ffff !important;
+        opacity: 1;
+        margin-right: auto;
+
+        span {
+          font-size: @18px;
+          margin-bottom: @6px;
+        }
+      }
+
+      &__line {
+        height: @41px;
+        width: @2px;
+        background-color: #fff;
+        margin: 0 @40px;
+      }
+
+      &-time {
+        height: @56px;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: @32px;
+          margin-right: @16px;
+        }
+
+        &__text {
+          font-size: @14px;
+          color: #fff9;
+          display: flex;
+          flex-direction: column;
+          line-height: 160%;
+
+          span {
+            margin-top: @4px;
+            font-size: @22px;
+          }
+
+        }
+
+      }
+
+      &-price {
+        display: flex;
+        align-items: center;
+        font-size: @44px;
+        margin-right: @10px;
+
+        img {
+          width: @40px;
+          margin-right: @8px;
+        }
+
+        &__through {
+          font-size: @20px;
+          text-decoration: line-through;
+          opacity: .6;
+          display: flex;
+          align-items: center;
+          margin-left: @12px;
+
+          img {
+            width: @20px;
+            margin-right: @4px;
+          }
+        }
+      }
+
+
+
+    }
+
+  }
+
+}

@@ -1,0 +1,42 @@
+.debug_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: black;
+    color: white;
+    h2 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999999;
+    opacity: 0.7;
+    transition: opacity .4s ease-in-out;
+    &:hover {
+        opacity: 1.0;
+    }
+    .debug_menu_item {
+        background: rgba(255, 255, 255, 0.1);
+        &:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        height: 30px;
+        border-radius: 0.4rem;
+        opacity: 100%;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .hide {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

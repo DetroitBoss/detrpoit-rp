@@ -1,0 +1,350 @@
+body.body-win-task {
+
+    ::-webkit-scrollbar {
+        width: 0.2083vw;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        -webkit-border-radius: 0.520834vw;
+        border-radius: 0.520834vw;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0.520834vw;
+        border-radius: 0.520834vw;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    position: relative;
+//    background: url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    font-size: 0.9375vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    overflow: hidden;
+    button {
+        border: 0;
+        padding: 0;
+        transition: all 0.33s ease-in-out;
+        -webkit-transition: all 0.33s ease-in-out;
+        -moz-transition: all 0.33s ease-in-out;
+        background: transparent;
+        cursor: pointer;
+    }
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+    .upper {
+        text-transform: uppercase;
+    }
+    textarea,
+    button,
+    a,
+    select,
+    input {
+        outline: none !important;
+        text-decoration: none !important;
+    }
+    input {
+        border: 0;
+    }
+    button,
+    a {
+        cursor: pointer;
+        transition: all 0.33s ease-in-out;
+        -webkit-transition: all 0.33s ease-in-out;
+        -moz-transition: all 0.33s ease-in-out;
+    }
+    .tl {
+        text-align: left;
+    }
+    .tc {
+        text-align: center;
+    }
+    .tr {
+        text-align: right;
+    }
+    ::selection {
+        background: #E79D32;
+        color: #fff;
+    }
+    ::-moz-selection {
+        background: #E79D32;
+        color: #fff;
+    }
+    .anim {
+        transition: all 0.33s ease-in-out;
+        -webkit-transition: all 0.33s ease-in-out;
+        -moz-transition: all 0.33s ease-in-out;
+    }
+    p {
+        margin: 0;
+        position: relative;
+        font-variant: none;
+    }
+    a {
+        cursor: pointer;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    .fl-row-aic-jcc {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fl-row-aic-je {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .fl-row-ais {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: flex-start;
+    }
+    .fl-col-aic-jcc {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .br4 {
+        border-radius: 0.2083vw;
+    }
+    .br8 {
+        border-radius: 0.41666667vw;
+    }
+    .overflow {
+        overflow: hidden;
+        height: 100vh;
+    }
+    & {
+//        background: url(../images/win-task/bg-win-task.jpg) no-repeat center center;
+        background-size: cover;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(20, 27, 31, 0.6);
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: radial-gradient(70.74% 70.74% at 50% 50%, rgba(20, 27, 31, 0) 16.67%, #141b1f 79.17%);
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    & .circle {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        pointer-events: none;
+        user-select: none;
+        z-index: 2;
+    }
+    & .circle img {
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        top: 50%;
+        transform-origin: center center;
+        transform: translate(-50%, -50%) rotate(0);
+        animation: circlerotate 110s infinite linear;
+        width: 119.79166667vw;
+        height: 119.79166667vw;
+    }
+    & .leaves {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: 86.30208333vw;
+        height: 123.1481481481481vh;
+        z-index: 2;
+    }
+    & .leaves img {
+        height: 100%;
+        width: 100%;
+    }
+    @keyframes circlerotate {
+        from {
+        transform: translate(-50%, -50%) rotate(0);
+        }
+        to {
+        transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    .win-task-wrapper {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    .win-task-wrapper .p-big {
+        font-size: 4.16666667vw;
+        font-style: italic;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 0.833335vw;
+        text-transform: uppercase;
+    }
+    .win-task-wrapper .p-descr {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.66666667vw;
+        margin-bottom: 3.02083333vw;
+        text-align: center;
+    }
+    .win-task-wrapper .p-descr span {
+        font-weight: bold;
+    }
+    .win-task-rewards-wrapper {
+        width: 16.5625vw;
+        margin: 0 auto;
+    }
+    .win-task-rewards-wrapper p {
+        text-align: center;
+    }
+    .win-task-rewards-wrapper .p-title {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 0.9375vw;
+        margin-bottom: 0.833335vw;
+        text-align: center;
+    }
+    .win-task-rewards-wrapper .p-mini-title {
+        font-size: 0.729165vw;
+        font-weight: 400;
+        margin-bottom: 0.41666667vw;
+    }
+    .win-task-rewards-wrapper .p-value {
+        font-weight: 800;
+        font-size: 1.66666667vw;
+        img {
+            width: 1.141665vw;
+            height: 1.141665vw;
+            margin-right: 0.2vw;
+        }
+    }
+    .win-task-rewards-wrapper .win-task-rewards-wrap {
+        background: rgba(242, 242, 242, 0.1);
+    }
+    .win-task-rewards-wrapper .win-task-rewards-item {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 5.20833333vw;
+        border-bottom: 0.05208333vw solid rgba(242, 242, 242, 0.2);
+    }
+    .win-task-rewards-wrapper .win-task-rewards-item:last-of-type {
+        border-bottom: 0;
+    }
+    .object-rewards-wrap {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .object-rewards-item {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(20, 27, 31, 0.5);
+        width: 1.875vw;
+        height: 1.875vw;
+        margin-right: 0.41666667vw;
+        border-radius: 0.2083vw;
+    }
+    .object-rewards-item:last-of-type {
+        margin-right: 0;
+    }
+    .object-rewards-item .img-wrap {
+        width: 1.041665vw;
+        height: 1.041665vw;
+    }
+    .object-rewards-item .img-wrap img {
+        width: 100%;
+        height: 100%;
+    }
+    .win-task-btn {
+        height: 2.60416667vw;
+        padding: 0.833335vw 1.97916667vw;
+        background-color: #6FCF97;
+        margin-top: 3.02083333vw;
+        box-shadow: 0px 0px 40px rgba(111, 207, 151, 0);
+        border-radius: 0.2083vw;
+    }
+    .win-task-btn:hover {
+        box-shadow: 0px 0px 40px rgba(111, 207, 151, 0.3);
+    }
+    .win-task-btn p {
+        font-size: 0.9375vw;
+        color: #fff;
+        font-weight: 400;
+    }
+    .object-rewards-item-name {
+        text-align: left !important;
+        font-size: 0.729165vw;
+        margin-left: 0.520834vw;
+        width: 10.41666667vw;
+    }
+}

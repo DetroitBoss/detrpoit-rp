@@ -1,0 +1,60 @@
+.root {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(20, 27, 31, 0.576) 0%, rgba(13, 15, 16, 0.846) 100%);
+
+    .hints {
+        @margin: 50px;
+        position: fixed;
+        left: @margin;
+
+        .mouse {
+            position: fixed;
+            bottom: @margin;
+        }
+        .title {
+            position: fixed;
+            top: @margin;
+
+            .name {
+                span {
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 36px;
+                    line-height: 36px;
+                    font-weight: 300;
+
+                    &:nth-child(1) {
+                        font-weight: 800;
+                    }
+                }
+
+                margin-bottom: 24px;
+            }
+            .description {
+                max-width: 405px;
+                font-size: 18px;
+                font-weight: 400;
+                opacity: 0.5;
+                display: inline-block;
+            }
+        }
+    }
+    // .particles {
+    //     background-image: url("assets/particles.png");
+    //     background-size: cover;
+    //     height: 100vh;
+    //     width: 100vw;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     mix-blend-mode: screen;
+    // }
+    .job {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}

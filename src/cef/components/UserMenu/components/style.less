@@ -1,0 +1,349 @@
+﻿@import "./sizes.less";
+
+.dr {
+  &-title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: @80px;
+    line-height: 130%;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px @10px @20px rgba(255, 255, 255, 0.4);
+    margin-bottom: @23px;
+    margin-top: 59 * @1px;
+  }
+  &-wrap {
+    position: relative;
+    width: @1436px;
+    height: @808px;
+    display: FLEX;
+    flex-direction: column;
+    align-items: center;
+    border-radius: @8px;
+    opacity: 0.9;
+    background-image: url("./assets/donate-roulette-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-rouletts-list {
+    display: flex;
+  }
+  &-roulette-item {
+    width: 404 * @1px;
+    height: 522 * @1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: @1px solid #000;
+    border: @2px solid rgba(#fff, 0.1);
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      .dr-roulette-item-title {
+        opacity: 1;
+      }
+      .dr-roulette-item-cost {
+        text-shadow: 0px @1px @15px rgba(#ffbc10, 0.4);
+      }
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+  &-roulette-item-title {
+    margin-top: @40px;
+    font-weight: bold;
+    font-size: @30px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: all 0.3s;
+    opacity: 0.6;
+    margin-bottom: @4px;
+  }
+  &-roulette-item-cost {
+    font-weight: bold;
+    font-size: @30px;
+    line-height: 130%;
+    color: #ffbc10;
+    display: flex;
+    transition: all 0.3s;
+    align-items: center;
+    svg {
+      width: @24px;
+      height: @24px;
+      margin-left: @8px;
+    }
+  }
+  &-roulette-item-img {
+    position: absolute;
+    left: @30px;
+    bottom: @40px;
+    height: 344 * @1px;
+    transition: all 0.3s;
+    width: auto;
+    &.luxe {
+      img {
+        width: 407 * @1px !important;
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  position: relative;
+  // margin-top: @72px;
+}
+
+.modal-header {
+  position: absolute;
+  width: 100%;
+  border-radius: @8px;
+  .btns {
+    padding: @12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+  }
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: @14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  position: relative;
+  border-radius: @6px;
+  cursor: pointer;
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  &.back {
+    width: @114px;
+    height: @40px;
+    &:hover {
+      background: rgba(#fff, 0.1) !important;
+    }
+    .icon {
+      width: @40px;
+      height: @40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        height: @15px;
+      }
+    }
+    span {
+      margin-right: @16px;
+    }
+  }
+
+  &.light-green {
+    background: rgba(196, 237, 38, 1) !important;
+    font-weight: bold;
+    color: rgba(20, 27, 31, 1);
+    padding: @11px @18px @11px @12px !important;
+    .icon {
+      margin-right: @12px;
+      svg {
+        height: @18px;
+        fill: rgba(20, 27, 31, 1);
+      }
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px @6px rgba(196, 237, 38, 0.3);
+    }
+  }
+  &.orange {
+    border-radius: @9px;
+    color: #fff;
+    margin-left: @9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f04d26;
+    padding: 0 @19px;
+    transition: 0.2s;
+    svg {
+      margin-right: @10px;
+      height: @20px;
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px @4px rgba(240, 77, 38, 0.4);
+    }
+    &.empty {
+      background: transparent;
+      border: @2px solid #f04d26;
+      &:hover {
+        background: #f04d26;
+      }
+    }
+  }
+  &.white {
+    font-weight: bold;
+    font-size: @14px;
+    line-height: 120%;
+    color: #fff;
+    border-radius: @7px;
+    text-shadow: 0px @3px @20px rgba(255, 255, 255, 0.25);
+    background: rgba(#fff, 0.2) !important;
+    padding: @11px @18px @11px @12px !important;
+    .icon {
+      margin-right: @12px;
+      svg {
+        height: @20px !important;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px @4px rgba(#fff, 0.1);
+    }
+  }
+}
+.balance {
+  width: 100%;
+  height: 0px;
+  padding: 0 @80px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+  top: @90px;
+  &.dark {
+    padding: 0;
+    top: @22px;
+    right: @38px;
+    width: @132px;
+    z-index: 9999;
+    .coins {
+      background: rgba(#141b1f, 0.8);
+    }
+    .dollars {
+      display: none;
+    }
+  }
+  .dollars {
+    &-main {
+      font-weight: bold;
+      font-size: @24px;
+      line-height: 100%;
+    }
+    &-second {
+      font-weight: normal;
+      font-size: @14px;
+      line-height: 100%;
+      margin-top: @10px;
+    }
+  }
+  .coins {
+    width: @132px;
+    height: @54px;
+    font-weight: bold;
+    font-size: @28px;
+    line-height: 1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#fff, 0.1);
+    border-radius: @6px;
+    text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+    .coin-icon {
+      width: @22px;
+      margin-right: @13px;
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.dr-leftBlock {
+  width: 100%;
+  float: left;
+  height: @808px;
+  position: relative;
+
+  :hover {
+    background: initial !important;
+  }
+}
+
+.dr-block-image {
+  display: block;
+  //margin: auto;
+  //  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  &.left {
+    width: @1px * 494px;
+    height: @1px * 246px;
+  }
+  &.right {
+    width: @1px * 620px;
+    height: @1px * 409px;
+  }
+}
+
+.dr-parent {
+  //position: relative;
+  width: 50%;
+
+  &.right {
+    :hover {
+      background: linear-gradient(0deg, #c8f026 0%, rgba(175, 240, 38, 0) 100%);
+      .dr-block-image {
+        transition: all 0.3s;
+        transform: scale(1.2);
+      }
+    }
+  }
+  &.left {
+    :hover {
+      background: linear-gradient(
+        180deg,
+        #f04d26 0%,
+        rgba(240, 77, 38, 0) 100%
+      );
+      .dr-block-image {
+        transition: all 0.3s;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.dr-rightBlock {
+  position: relative;
+  width: 100%;
+  float: right;
+  height: @808px;
+  //height: @640px;
+  background-image: url("./assets/green-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  :hover {
+    background: initial !important;
+  }
+}

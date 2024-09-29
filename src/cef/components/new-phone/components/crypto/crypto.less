@@ -1,0 +1,218 @@
+@import "../../../../assets/less/uikit";
+
+.radial-progress {
+  @circle-size: @74px;
+  @circle-background: rgba(216, 225, 240, 0.46);
+  @circle-color: #514f7a;
+  @inset-size: @36px;
+  @inset-color: #fbfbfb;
+  @transition-length: 1s;
+
+  width: @circle-size;
+  height: @circle-size;
+  position: absolute;
+  bottom: @22px;
+  right: @16px;
+  background-color: @circle-background;
+  border-radius: 50%;
+  .circle {
+    .mask,
+    .fill,
+    .shadow {
+      width: @circle-size;
+      height: @circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .mask,
+    .fill {
+      -webkit-backface-visibility: hidden;
+      transition: -webkit-transform @transition-length;
+      transition: -ms-transform @transition-length;
+      transition: transform @transition-length;
+    }
+    .mask {
+      clip: rect(0px, @circle-size, @circle-size, @circle-size / 2);
+      .fill {
+        clip: rect(0px, @circle-size / 2, @circle-size, 0px);
+        background-color: @circle-color;
+      }
+    }
+  }
+  .inset {
+    width: @inset-size;
+    height: @inset-size;
+    position: absolute;
+    margin-left: (@circle-size - @inset-size)/2;
+    margin-top: (@circle-size - @inset-size)/2;
+
+    background-color: @inset-color;
+    border-radius: 50%;
+  }
+
+  @i: 0;
+  @increment: 180deg / 100;
+  .loop (@i) when (@i <= 100) {
+    &[data-progress="@{i}"] {
+      .circle {
+        .mask.full,
+        .fill {
+          -webkit-transform: rotate(@increment * @i);
+          -ms-transform: rotate(@increment * @i);
+          transform: rotate(@increment * @i);
+        }
+        .fill.fix {
+          -webkit-transform: rotate(@increment * @i * 2);
+          -ms-transform: rotate(@increment * @i * 2);
+          transform: rotate(@increment * @i * 2);
+        }
+      }
+    }
+    .loop(@i + 1);
+  }
+  .loop(@i);
+}
+
+.np-crypto {
+  &-title {
+    font-weight: bold;
+    font-size: @20px;
+    line-height: @24px;
+    margin-bottom: @22px;
+    span {
+      color: #7d78f9;
+    }
+  }
+  &-back-btn {
+    height: @32px;
+    font-weight: 500;
+    font-size: @14px;
+    line-height: @16px;
+    color: #3a9fff;
+    display: flex;
+    align-items: center;
+    svg {
+      width: @16px;
+      height: @16px;
+      margin-right: @8px;
+    }
+  }
+  &-wrap {
+    background: linear-gradient(180deg, #e2e1e3 31.65%, #f3f2f7 48.5%);
+    border-radius: @34px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 @16px;
+  }
+  &-balance-wrap {
+    width: 294 * @1px;
+    border-radius: @34px @34px @30px @30px;
+    padding: @48px @16px @64px @16px;
+    background: #fff;
+  }
+  &-balance-label {
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: @15px;
+  }
+  &-balance {
+    font-weight: 600;
+    font-size: @50px;
+    line-height: @60px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    svg {
+      width: @40px;
+      margin-right: @8px;
+    }
+  }
+  &-stats-wrap {
+    width: 262 * @1px;
+    background: #ffffff;
+    box-shadow: 0 @4px @60px rgba(131, 134, 166, 0.12);
+    border-radius: @30px;
+    padding: @16px @16px @30px @16px;
+    margin-top: -@44px;
+    position: relative;
+  }
+  &-stats-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @20px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: @28px;
+    svg {
+      width: @20px;
+      height: @20px;
+      margin-right: @7px;
+    }
+  }
+  &-stats-label {
+    font-weight: 600;
+    font-size: @14px;
+    line-height: @17px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: @7px;
+  }
+  &-withdrawn-balance {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: @30px;
+    line-height: @36px;
+    color: #514f7a;
+    svg {
+      width: @28px;
+      height: @26px;
+      margin-right: @4px;
+    }
+  }
+  &-new-transaction {
+    width: 100%;
+    display: flex;
+    margin-top: @24px;
+    align-items: center;
+    background: #7d78f9;
+    border-radius: @20px;
+    padding: @17px @16px @16px @16px;
+    cursor: pointer;
+  }
+  &-transaction-icon {
+    width: @54px;
+    height: @54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: @11px;
+    svg {
+      width: @28px;
+      height: @28px;
+    }
+  }
+  &-transaction-desc {
+    max-width: @140px;
+    margin-right: @4px;
+  }
+  &-transaction-name {
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    color: #fff;
+    margin-bottom: @4px;
+  }
+  &-transaction-label {
+    font-weight: 600;
+    font-size: @14px;
+    line-height: @17px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

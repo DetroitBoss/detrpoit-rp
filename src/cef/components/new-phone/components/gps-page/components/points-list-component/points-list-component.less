@@ -1,0 +1,89 @@
+@import "../../../../../../assets/less/uikit";
+
+.np-gps-points-list {
+  height: 417 * @1px;
+  overflow-y: scroll;
+  &-wrap {
+    width: 100%;
+    height: 100%;
+    padding-top: @45px;
+    background: #49494a;
+  }
+  &-page {
+    background: #f5f5f5;
+    border-radius: @30px;
+    height: 100%;
+    padding: @16px 0 0 @16px;
+  }
+  &-btns {
+    height: @32px;
+    display: flex;
+    padding-right: @14px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @8px;
+    .np-gps-page-btn.back {
+      margin-bottom: 0;
+    }
+  }
+}
+.np-gps-point {
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: @15px;
+    position: relative;
+  }
+  &-icon {
+    width: @44px;
+    height: @44px;
+    background: #ffffff;
+    border-radius: @4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      width: @22px;
+    }
+  }
+  &-info {
+    width: @222px;
+  }
+  &-name {
+    color: #000;
+    font-size: @16px;
+    line-height: @19px;
+    font-weight: 500;
+    margin-bottom: @4px;
+    margin-top: @2px;
+  }
+  &-distance {
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(0, 0, 0, 0.4);
+    padding-bottom: @14px;
+    border-bottom: @1px solid rgba(0, 0, 0, 0.1);
+  }
+  &-select-btn {
+    position: absolute;
+    top: @9px;
+    right: @16px;
+  }
+}
+#select-btn-svg {
+  width: @24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  #select-btn-rect {
+    fill: #d8d8d8 !important;
+    transition: all 0.3s;
+  }
+  &:hover {
+    #select-btn-rect {
+      fill: #6ba8f9 !important;
+      transition: all 0.3s;
+    }
+  }
+}

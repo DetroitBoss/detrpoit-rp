@@ -1,0 +1,139 @@
+@import "../../../../../assets/less/uikit";
+
+.np-crypto {
+  &-nt {
+    width: 100%;
+  }
+  &-selector {
+    background: #e7e8ee;
+    border: @1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    border-radius: @100px;
+    margin-top: -@36px;
+    margin-bottom: @30px;
+    position: relative;
+    height: @60px;
+    display: flex;
+    &.withdraw {
+      .np-crypto-nt-withdraw {
+        width: 55% !important;
+        padding-left: @48px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:before {
+          left: @21px;
+          opacity: 1;
+        }
+      }
+      .np-crypto-nt-buy {
+        width: 45% !important;
+        padding-left: @21px;
+      }
+    }
+    &.buy {
+      &::after {
+        transform: translateX(119 * @1px);
+      }
+      .np-crypto-nt-withdraw {
+        padding-left: @21px;
+        width: 45% !important;
+      }
+      .np-crypto-nt-buy {
+        &:before {
+          left: @21px;
+          opacity: 1;
+        }
+        padding-left: @48px;
+        width: 55% !important;
+      }
+    }
+    button {
+      border-radius: @100px;
+      font-weight: 600;
+      font-size: @16px;
+      line-height: @19px;
+      color: #000;
+      position: relative;
+      text-align: left;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: @10px;
+        height: @10px;
+        left: @38px;
+        border-radius: @10px;
+        background: #7d78f9;
+        position: absolute;
+        transition: all 0.3s;
+        opacity: 0;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 143 * @1px;
+      height: @60px;
+      border-radius: @100px;
+      background: #fff;
+      position: absolute;
+      transition: all 0.3s;
+      box-shadow: 0 @4px @40px rgba(131, 134, 166, 0.12);
+      left: -@1px;
+      top: -@1px;
+      z-index: 0;
+    }
+  }
+  &-form-field {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: text;
+    margin-top: @22px;
+    display: block;
+    &:first-child {
+      margin-top: 0;
+    }
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+      opacity: 0;
+    }
+    .input-value {
+      padding: @12px @16px;
+      display: flex;
+      align-items: center;
+      background: #e7e8ee;
+    }
+  }
+  &-form-field-icon {
+    width: @26px;
+    height: @36px;
+    display: flex;
+    align-items: center;
+    border-right: @1px solid rgba(0, 0, 0, 0.1);
+    margin-right: @16px;
+  }
+  &-transaction-btn {
+    width: 262 * @1px;
+    height: @60px;
+    position: absolute;
+    bottom: @48px;
+    background: #7d78f9;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    margin-top: @30px;
+    color: #fff;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

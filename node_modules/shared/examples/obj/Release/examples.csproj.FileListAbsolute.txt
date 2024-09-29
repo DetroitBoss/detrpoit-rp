@@ -1,0 +1,2 @@
+C:\cygwin\home\kjones\shared\examples\obj\Release\examples.dll
+C:\cygwin\home\kjones\shared\examples\obj\Release\examples.pdb

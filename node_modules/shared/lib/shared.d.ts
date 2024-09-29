@@ -1,0 +1,542 @@
+﻿module shared.utils {
+    class Map {
+        private _hashfn;
+        private _size;
+        private _tree;
+        constructor(hashfn: (a: any) => number);
+        public size(): number;
+        public find(key: any): any;
+        public insert(key: any, value: any): bool;
+        public findOrInsert(key: any, proto?: {}): any;
+        public remove(key: any): bool;
+        public apply(handler: (key: any, value: any) => bool): bool;
+        public removeAll(): void;
+    }
+    /**
+    * A simple string set
+    */
+    class StringSet {
+        private _map;
+        private _id;
+        constructor(names?: string[]);
+        public put(key: string): bool;
+        public has(key: string): bool;
+        public id(key: string): number;
+        public remove(key: string): bool;
+        public size(): number;
+        public removeAll(): void;
+        public apply(handler: (value: any) => bool): bool;
+    }
+    /**
+    * A simple queue, items can be added/removed from the
+    * head/tail with random access and assertions thrown in.
+    */
+    class Queue {
+        private _elems;
+        public size(): number;
+        public empty(): bool;
+        public front(): any;
+        public back(): any;
+        public at(i: number);
+        public setAt(i: number, value: any): void;
+        public push(value: any): void;
+        public pop(): any;
+        public unshift(value: any): void;
+        public shift(): any;
+        public array(): any[];
+        public first(match: (value: any) => bool): any;
+        public filter(match: (value: any) => bool): Queue;
+        public apply(func: (value: any) => void): void;
+    }
+}
+module shared.utils {
+    /**
+    * Log message levels, should really be an enum.
+    * Logs include messages for current level and higher. NONE turns off
+    * logging.
+    */
+    var LogLevel: {
+        INFO: number;
+        WARN: number;
+        FATAL: number;
+        NONE: number;
+    };
+    /**
+    * Writable interface
+    */
+    interface Writeable {
+        write(str: string): void;
+    }
+    /**
+    * Writable FD
+    */
+    class WriteableFD implements Writeable {
+        private _fd;
+        constructor(fd: number);
+        public write(str: string): void;
+    }
+    /**
+    * Logger helper
+    */
+    class Logger {
+        private _to;
+        private _next;
+        private _prefix;
+        private _level;
+        private _debug;
+        constructor(to: Writeable, prefix: string, level: number, debug?: string[], next?: Logger);
+        public logLevel(): number;
+        public isDebugLogging(component: string): bool;
+        public enableDebugLogging(component: string, on?: bool): void;
+        public disableDebugLogging(): void;
+        public debug(component: string, fmt: string, ...msgs: any[]): void;
+        public info(fmt: string, ...msgs: any[]): void;
+        public warn(fmt: string, ...msgs: any[]): void;
+        public fatal(fmt: string, ...msgs: any[]): void;
+        public write(msg: string): void;
+        public trace(fmt: string, ...msgs: any[]): void;
+        private log(type, fmt, msgs);
+    }
+    /**
+    * File logger
+    */
+    class FileLogger extends Logger {
+        constructor(fileprefix: string, prefix: string, level: number, subjects: string[], next?: Logger);
+        private openLog(fileprefix);
+    }
+    /**
+    * Set a logger to be used as the default for modules.
+    */
+    function setdefaultLogger(logger: Logger): void;
+    /**
+    * Obtains the default logger. If one has not been set then logging is
+    * to process.stdout at the INFO level.
+    */
+    function defaultLogger(): Logger;
+    /**
+    * Enable/Disable internal asserts.
+    */
+    function enableAsserts(on: bool): void;
+    /**
+    * Are assert enabled?
+    */
+    function assertsEnabled(): bool;
+    /**
+    * Switchable assert handler.
+    */
+    function dassert(test: bool): void;
+}
+module shared.utils {
+    function hash(str: string, prime?: number): number;
+    /**
+    * Deep Equals
+    */
+    function isEqual(x: any, y: any): bool;
+    /**
+    * Non-null or undefined value
+    */
+    function isValue(arg: any): bool;
+    /**
+    * Non-null object value
+    */
+    function isObject(value: any): bool;
+    /**
+    * Non-null array value
+    */
+    function isArray(value: any): bool;
+    /**
+    * Non-null object or array value
+    */
+    function isObjectOrArray(value: any): bool;
+    /**
+    * Corrected type of value.
+    * Arrays & null are not 'objects'
+    */
+    function typeOf(value: any): string;
+    /**
+    * Corrected type of value.
+    * Arrays & null are not 'objects'
+    * Objects return their prototype type.
+    */
+    function treatAs(value: any): string;
+    function cloneArray(obj: any[]): any[];
+    function cloneObject(obj: any): any;
+    function clone(obj: any): any;
+    function toInteger(val: any): number;
+    function dateFormat(type: string, fmt: string, args: any[]): string;
+    function format(type: string, fmt: string, args: any[]): string;
+    function hostInfo(): string;
+    function exceptionInfo(e: any);
+}
+module shared.utils {
+    var uidStringLength: number;
+    interface uid {
+        toString(): string;
+    }
+    function UID(): uid;
+    function isUID(a: uid): bool;
+    function makeUID(id: string);
+    function toObjectID(id: uid): uid;
+    interface Unique {
+        id(): uid;
+    }
+    class UniqueObject implements Unique {
+        private _id;
+        public id(): uid;
+    }
+    class IdMap {
+        private _map;
+        public size(): number;
+        public find(key: uid): any;
+        public insert(key: uid, value: any): bool;
+        public findOrInsert(key: uid, proto?: {}): any;
+        public remove(key: uid): bool;
+        public apply(handler: (key: uid, value: any) => bool): bool;
+        public removeAll(): void;
+    }
+}
+module shared.types {
+    class TypeDesc extends utils.UniqueObject {
+        private _isobj;
+        private _props;
+        constructor(isobj: bool, props: string[]);
+        public isobj(): bool;
+        public isarray(): bool;
+        public props(): string[];
+        public typeDesc(): string;
+    }
+    class TypeStore {
+        static _instance;
+        private _tree;
+        static instance(): TypeStore;
+        constructor();
+        public type(obj: any): TypeDesc;
+        static props(obj: any): string;
+    }
+}
+module shared.serial {
+    class Reference {
+        private _id;
+        constructor(id: utils.uid);
+        public id(): utils.uid;
+    }
+    interface ReferenceHandler {
+        valueId(value: any): utils.uid;
+        valueRev(value: any): number;
+    }
+    function writeObject(rh: ReferenceHandler, obj: any, to?: string, identify?: bool): string;
+    function writeValue(rh: ReferenceHandler, value: any, to?: string): string;
+    function readObject(str: string, proto?: any): any;
+    function readValue(str: string): any;
+}
+module shared.tracker {
+    interface TrackCache extends serial.ReferenceHandler {
+        disable: number;
+        markRead(value: any): void;
+        addNew(obj: any, prop: string, value: any, lasttx: number): number;
+        addWrite(obj: any, prop: string, value: any, last: any, lasttx: number): number;
+        addDelete(obj: any, prop: string, lasttx: number): number;
+        addReverse(obj: any, lasttx: number): number;
+        addSort(obj: any, lasttx: number): number;
+        addShift(obj: any, at: number, size: number, lasttx: number): number;
+        addUnshift(obj: any, at: number, size: number, lasttx: number): number;
+    }
+    class UnknownReference {
+        private _id;
+        private _prop;
+        private _missing;
+        constructor(id, prop, missing);
+        public id(): string;
+        public prop(): string;
+        public missing();
+    }
+    function getTrackerUnsafe(value: any): Tracker;
+    function getTracker(value: any): Tracker;
+    function isTracked(value: any): bool;
+    class Tracker {
+        private _tc;
+        private _id;
+        private _rev;
+        private _ref;
+        private _type;
+        private _lastTx;
+        private _userdata;
+        constructor(tc: TrackCache, obj: any, id?: utils.uid, rev?: number);
+        public kill(): void;
+        public isDead(): bool;
+        /**
+        * Get the tracker cache this tracker is using
+        */
+        public tc(): TrackCache;
+        /**
+        * Get the unique object id
+        */
+        public id(): utils.uid;
+        /**
+        * Get the objects (pre-changes) type
+        */
+        public type(): types.TypeDesc;
+        /**
+        * Get/Increment the object revision, returning new value
+        */
+        public rev(by?: number): number;
+        /**
+        * Set object rev to a value, must be >= to existing rev
+        */
+        public setRev(to: number): number;
+        /**
+        * Get/Increment the object revision, returning new value
+        */
+        public ref(by?: number): number;
+        /**
+        * Set object rev to a value, must be >= to existing rev
+        */
+        public setRef(to: number): number;
+        public setData(ud: any): void;
+        public getData(): any;
+        public hasChanges(): bool;
+        public lastChange(): number;
+        public setLastChange(tx: number): void;
+        /**
+        * Change notification handlers called to record changes
+        */
+        public addNew(obj: any, prop: string, value: any): void;
+        public addWrite(obj: any, prop: string, value: any, last: any): void;
+        public addDelete(obj: any, prop: string): void;
+        public addReverse(obj: any): void;
+        public addSort(obj: any): void;
+        public addShift(obj: any, at: number, size: number): void;
+        public addUnshift(obj: any, at: number, size: number): void;
+        public retrack(obj: any): void;
+        /**
+        * Wrap a property for get/set tracking
+        */
+        public track(obj: any, prop: string): void;
+        /**
+        * Uprev an object recording new properties
+        */
+        public uprev(obj): void;
+        /**
+        * Down rev (undo) an object recording new properties
+        */
+        public downrev(obj): void;
+    }
+    function isPropTracked(obj: any, prop: string): bool;
+}
+module shared.mtx {
+    class ReadMap {
+        private _map;
+        public size(): number;
+        public find(id: utils.uid): any;
+        public insert(id: utils.uid, revision: number): bool;
+        public remove(id: utils.uid): bool;
+        public apply(handler: (key: utils.uid, value: number) => bool): bool;
+        public removeAll(): void;
+        public toString(): string;
+    }
+    interface NewItem {
+        id: utils.uid;
+        obj: any;
+    }
+    class NewQueue {
+        private _queue;
+        constructor(queue?: utils.Queue);
+        public size(): number;
+        public empty(): bool;
+        public front(): NewItem;
+        public back(): NewItem;
+        public at(i: number): NewItem;
+        public setAt(i: number, value: NewItem): void;
+        public push(value: NewItem): void;
+        public pop(): NewItem;
+        public unshift(value: NewItem): void;
+        public shift(): NewItem;
+        public array(): NewItem[];
+        public first(match: (value: NewItem) => bool): NewItem;
+        public filter(match: (value: NewItem) => bool): NewQueue;
+        public apply(func: (value: NewItem) => void): void;
+        public toString(): string;
+    }
+    interface ChangeItem {
+        obj: any;
+        lasttx: number;
+        write?: string;
+        value?: any;
+        last?: any;
+        del?: string;
+        sort?: bool;
+        reinit?: any;
+        reverse?: bool;
+        shift?: number;
+        unshift?: number;
+        size?: number;
+    }
+    class ChangeQueue {
+        private _queue;
+        constructor(queue?: utils.Queue);
+        public size(): number;
+        public empty(): bool;
+        public front(): ChangeItem;
+        public back(): ChangeItem;
+        public at(i: number): ChangeItem;
+        public setAt(i: number, value: ChangeItem): void;
+        public push(value: ChangeItem): void;
+        public pop(): ChangeItem;
+        public unshift(value: ChangeItem): void;
+        public shift(): ChangeItem;
+        public array(): ChangeItem[];
+        public first(match: (value: ChangeItem) => bool): ChangeItem;
+        public filter(match: (value: ChangeItem) => bool): ChangeQueue;
+        public apply(func: (value: ChangeItem) => void): void;
+        public toString(): string;
+    }
+    class MTX {
+        public rset: ReadMap;
+        public nset: NewQueue;
+        public cset: ChangeQueue;
+        constructor();
+        public reset(): void;
+        public toString(): string;
+    }
+}
+module shared.mtx {
+    class ObjectCache {
+        private _cache;
+        public find(id: utils.uid): any;
+        public insert(id: utils.uid, value: any): bool;
+        public remove(id: utils.uid): bool;
+    }
+    class mtxFactory extends utils.UniqueObject implements tracker.TrackCache {
+        public disable: number;
+        private _mtx;
+        private _collected;
+        constructor();
+        public cset(): any[];
+        public markRead(value: any): void;
+        public readsetSize(): number;
+        public readsetObject(id: utils.uid): number;
+        public newsetSize(): number;
+        public newsetObject(id: utils.uid): any;
+        public addNew(obj: any, prop: string, value: any, lasttx: number): number;
+        public addWrite(obj: any, prop: string, value: any, last: any, lasttx: number): number;
+        public addDelete(obj: any, prop: string, lasttx: number): number;
+        public addReverse(obj: any, lasttx: number): number;
+        public addSort(obj: any, lasttx: number): number;
+        public addShift(obj: any, at: number, size: number, lasttx: number): number;
+        public addUnshift(obj: any, at: number, size: number, lasttx: number): number;
+        public replaceSort(at: number, obj: any, values: string): void;
+        public mtx(cache: ObjectCache): MTX;
+        public resetMtx(): void;
+        public okMtx(store: ObjectCache): void;
+        public undoMtx(cache: ObjectCache): void;
+        public valueId(value: any): utils.uid;
+        public valueRev(value: any): number;
+        private collect(cache);
+        public collectObject(obj: any): void;
+        private objectChanges(obj);
+        private arrayChanges(obj);
+    }
+}
+module shared.store {
+    var rootUID;
+    function createStore(options: any): Store;
+    interface Store {
+        close(): void;
+        apply(handler: (store: any) => any, callback?: (error: string, arg: any) => void): void;
+    }
+}
+module shared.store {
+    class MongoStore extends mtx.mtxFactory implements Store {
+        private _logger;
+        private _host;
+        private _port;
+        private _dbName;
+        private _collectionName;
+        private _safe;
+        private _db;
+        private _collection;
+        private _pending;
+        private _root;
+        private _cache;
+        private _lockRand;
+        constructor(options?: any);
+        public close(): void;
+        public apply(handler: (store: any) => any, callback?: (error: string, arg: any) => void): void;
+        private processPending(recurse?);
+        private tryHandler(handler, done?);
+        private commitMtx(mtx);
+        private applyMtx(mtx);
+        private makeChanges(mtx);
+        private undo();
+        private objectID(obj);
+        private fail(promise, fmt, ...msgs);
+        private updateObject(doc, proto?);
+        private wait(chainP, fn);
+        private wrap(chainP, fn);
+        private locked(fn);
+        private getCollection();
+        private lock(timeout?);
+        private removeLock();
+        private getRoot();
+        private getObject(oid);
+        private refreshSet(failed);
+        private writeObject(oid, obj, rev, ref);
+        private ensureExists(oid, proto, arg);
+        private changeRevAndRef(oid, revchange, refchange);
+        private deleteObject(oid);
+        private readProp(oid, prop);
+        private writeProp(oid, prop, value);
+        private deleteProp(oid, prop);
+        private arrayPop(oid, front);
+        private checkReadset(rset);
+        private revisionCheck(oid, revision);
+    }
+    interface ObjectData {
+        obj: any;
+        id: string;
+        rev: number;
+        ref: number;
+        out: number;
+    }
+    interface TrackerData {
+        rout: number;
+        rin: number;
+    }
+    interface RRData {
+        uprev: bool;
+        ref: number;
+        reinit: bool;
+    }
+}
+module shared.message {
+    /**
+    * Uses the worker unique id to route data. All non-local messages
+    * end up being routed via the cluster master. A null rid is used
+    * to send data to the 'network' endpoint. Zero route data means
+    * send to master, which is logically the same as saying I don't
+    * know where to send it as the master will pass-on if needed.
+    */
+    class Address {
+        static _network;
+        public worker: number;
+        public rid: utils.uid;
+        constructor(rid: utils.uid, worker?: number);
+        static networkAddress(): Address;
+    }
+    interface Message {
+        next: Message;
+        to_rid: utils.uid;
+        to_worker: number;
+        from_rid: utils.uid;
+        from_worker: number;
+        body: any;
+    }
+    function isMessage(msg: any): bool;
+    function setTo(msg: Message, addr: Address): void;
+    function setFrom(msg: Message, addr: Address): void;
+    function replyTo(to: Message, from: Message): void;
+    function getMessage(): Message;
+    function getMessageFor(addr: Address): Message;
+    function returnMessage(msg: Message): void;
+}
+var ver: string;

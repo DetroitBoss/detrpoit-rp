@@ -1,0 +1,120 @@
+@import "../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.casino {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: radial-gradient(61.53% 61.53% at 50% 50%,
+  rgba(26, 49, 111, 0.84) 0%, rgba(22, 21, 43, 0.99) 100%);
+  color: #fff;
+  overflow: hidden;
+
+  &__smoke {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  &-content {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+
+    &__line {
+      width: @12px;
+      height: @198px;
+      background: #FFCC32;
+      box-shadow: 0 0 @30px rgba(242, 201, 76, 0.55);
+    }
+
+    &-information {
+      width: @1042px;
+      height: @365px;
+      margin-top: @44px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+
+      &__name {
+        font-size: @44px;
+        line-height: @54px;
+        text-align: center;
+
+        span {
+          color: #FFCC32 !important;
+        }
+      }
+
+      &__block {
+        margin-top: @59px;
+        height: @245px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        &-welcomeImg {
+          height: @264px !important;
+        }
+
+        img {
+          height: 100%;
+        }
+
+        div {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          width: @500px;
+          margin-left: @50px;
+          font-size: @16px;
+          line-height: 170%;
+        }
+      }
+
+    }
+
+
+    &-slide {
+      font-size: @24px;
+      margin-bottom: @50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: @59px;
+
+      span {
+        opacity: .4;
+      }
+
+      &__button {
+        width: @176px;
+        opacity: .7;
+        margin-bottom: @40px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+    }
+
+  }
+}
+
+.displayNone {
+  display: none;
+}

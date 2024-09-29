@@ -1,0 +1,159 @@
+@import "../../../../../../assets/less/uikit";
+.np-new-transaction {
+  width: 100%;
+  height: 100%;
+  padding: @54px @16px @42px @16px;
+  background: #121212;
+  position: relative;
+  &-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: @24px;
+    line-height: 29 * @1px;
+    color: #fff;
+  }
+  &-user-balance-wrap {
+    width: 100%;
+    height: @100px;
+    margin-top: @24px;
+    background: #212121;
+    border-radius: @20px;
+    padding: @16px @20px @17px @20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &-user-balance {
+    font-style: normal;
+    font-weight: 600;
+    font-size: @30px;
+    line-height: @36px;
+    color: #ffffff;
+  }
+  &-transfer {
+    margin-top: @22px;
+  }
+  &-form-field {
+    width: 100%;
+    height: 59 * @1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: default;
+    padding-bottom: @12px;
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(255, 255, 255, 0.4);
+    border-bottom: @1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: @22px;
+    .input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+      // &:focus {
+      //   & ~ .input-value {
+      //     border-bottom: 1px solid rgba(#fff, 0.3);
+      //   }
+      // }
+    }
+    .input-value {
+      height: @19px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: @16px;
+      line-height: @19px;
+      color: #ffffff;
+      cursor: text;
+    }
+  }
+  &-confirm {
+    width: 262 * @1px;
+    height: @56px;
+    position: absolute;
+    bottom: @42px;
+    background: linear-gradient(90deg, #9cdfcf 0%, #03b0b9 100%);
+    border-radius: @30px;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    color: #ffffff;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &-tax {
+    margin-top: @40px;
+    background: rgba(33, 33, 33, 0.3);
+    border: @1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border-radius: @20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: @15px @20px;
+  }
+  &-tax-info {
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  &-tax-amount {
+    margin-top: @8px;
+    font-weight: 500;
+    font-size: @18px;
+    line-height: @21px;
+    color: #fff;
+  }
+}
+.np-tax-icon {
+  height: @40px;
+  width: @40px;
+  border-radius: @20px;
+  background: linear-gradient(115.03deg, #d91c34 -40.05%, #03afb7 129.56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: @22px;
+  }
+}
+.np-bank-page-back-btn {
+  display: flex;
+  align-items: center;
+  border-radius: @4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: @14px;
+  line-height: @16px;
+  color: #fff;
+  margin-bottom: @12px;
+  padding-right: @12px;
+  box-sizing: border-box;
+  &:hover {
+    .np-bank-page-btn-icon {
+      border: @1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.np-bank-page-btn-icon {
+  width: @32px;
+  height: @32px;
+  border-radius: @4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: @8px;
+  svg {
+    width: @16px;
+    height: @16px;
+  }
+}

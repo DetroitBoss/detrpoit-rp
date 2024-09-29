@@ -1,0 +1,1 @@
+export interface chatDialogMessage { name: string; id: number; time: number; text: string, pos?:{x: number, y: number} }

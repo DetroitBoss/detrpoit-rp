@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
+	<g>
+		<path d="M191.359,108.311l-14.153-7.879l8.941-13.507c0.061-0.095,2.513-3.966,5.327-10.602h-61.342    c2.607,2.462,5.148,5.032,7.607,7.719c19.215,20.999,31.388,46.377,34.389,71.578c16.256,0.422,36.492-2.07,53.835-13.326    C219.687,132.48,208.183,117.678,191.359,108.311z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<polygon points="0,361.009 0,401.154 36.724,435.676 475.276,435.676 512,401.154 512,361.009   " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M475.276,76.324H223.501c-1.693,5.262-3.527,9.884-5.253,13.751c27.327,20.377,40.181,48.676,40.785,50.032l4.402,9.875    l-7.976,7.299c-24.82,22.713-55.501,28.387-79.944,28.387c-1.509,0-2.985-0.027-4.443-0.068    c-3.153,15.098-10.397,28.209-21.371,38.252c-20.805,19.038-66.453,36.437-108.521,36.44c-14.548,0.001-28.662-2.085-41.179-6.896    v77.613H512V110.848L475.276,76.324z M243.333,297.009h-30v-30h30V297.009z M448,297.009H277.333v-30H448V297.009z M448,233.009    H341.333v-30H448V233.009z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M142.445,159.934c-2.095-19.256-11.626-39.016-26.839-55.64c-11.721-12.809-25.877-22.507-40.314-27.97H36.724L0,110.848    v108.8c32.044,23.803,105.895,3.626,129.448-17.928C139.736,192.306,144.351,177.465,142.445,159.934z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><style id="stylish-11" class="stylish active-path" type="text/css">/* ==UserStyle==
+@name         Wikipedia Deep Dark Theme
+@version      1.0.0
+@description  Dark Wikipedia theme. Get a cleaner, easier-to-read wiki at night to focus on content while browsing a beautiful dark website.
+@namespace    http://www.w3.org/1999/xhtml
+@author       n0x
+@homepageURL  https://github.com/n0x-styles/wikipedia-dark
+@supportURL   https://github.com/n0x-styles/wikipedia-dark/issues
+@updateURL    https://raw.githubusercontent.com/n0x-styles/wikipedia-dark/master/wikipedia-dark.user.css
+@license      CC0
+@preprocessor default
+==/UserStyle== */
+
+@namespace url(http://www.w3.org/1999/xhtml);</style></g> </svg>

@@ -1,0 +1,249 @@
+@import "../../assets/less/uikit";
+
+.garbageLobby {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 0 @200px;
+
+  * {
+    color: #fff;
+    z-index: 2;
+  }
+
+  &-mt {
+    margin-top: @40px;
+  }
+
+  &__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  &__car {
+    position: absolute;
+    height: @1007px;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-size: @60px;
+    margin-bottom: @30px;
+  }
+
+  &__text {
+    font-size: @18px;
+    line-height: 160%;
+    width: @596px;
+    margin-bottom: @66px;
+  }
+
+  &-images {
+    width: @596px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: @40px;
+
+    &__block {
+      width: @154px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        width: 100%;
+        margin-bottom: @20px;
+      }
+
+      p {
+        font-size: @16px !important;
+        line-height: 140% !important;
+        opacity: .8;
+      }
+
+      div {
+        font-size: @16px !important;
+        line-height: 140% !important;
+      }
+
+      span {
+        margin-top: @6px;
+        opacity: .6;
+        font-size: @14px !important;
+        line-height: 140% !important;
+      }
+    }
+  }
+
+  &-redButton {
+    display: flex;
+    height: @80px;
+    align-items: center;
+    margin-bottom: @24px;
+
+    &__button, .garbageLobby-greenButton {
+      width: @360px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(273.39deg, #F39654 5.57%, #E83D40 59.24%, #BE1622 94.41%);
+      border-radius: @4px;
+      text-transform: uppercase;
+      font-size: @20px;
+      opacity: .7;
+      transition: .07s;
+
+      &:hover {
+        opacity: 1;
+        box-shadow: 0 @10px @100px rgba(240, 38, 38, 0.55);
+      }
+    }
+
+    &__switcher {
+      width: @50px;
+      height: @34px;
+      margin: 0 @14px 0 @32px;
+      background-color: #ffffff0d;
+      border-radius: @300px;
+      border: @1px solid #fff9;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: @6px;
+
+      div {
+        width: @22px;
+        height: @22px;
+        background-color: #fff;
+        border-radius: @300px;
+        opacity: .7;
+      }
+
+      &-active {
+        justify-content: flex-end !important;
+
+        div {
+          opacity: 1 !important;
+          box-shadow: 0 0 @20px #fff6;
+        }
+      }
+    }
+
+    span {
+      font-size: @16px;
+    }
+  }
+
+  &-button {
+    width: @360px;
+    height: @80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: @2px solid #fff3;
+    border-radius: @4px;
+    font-size: @20px;
+    margin-bottom: @8px;
+
+    &:hover {
+      border: @2px solid #fff9;
+    }
+  }
+
+  &-session, &-sessionInput input, &-player {
+    width: @360px;
+    height: @80px;
+    padding: 0 @40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: @2px solid #fff3;
+    border-radius: @4px;
+    font-size: @20px;
+    margin-bottom: @8px;
+    background: none;
+    outline: none;
+
+    &:hover {
+      border: @2px solid #fff9;
+    }
+  }
+
+  &-sessionInput {
+    position: relative;
+
+    input {
+      padding: @10px @25px 0;
+    }
+
+    span {
+      position: absolute;
+      top: @15px;
+      left: @27px;
+      font-size: @14px;
+      opacity: .4;
+      pointer-events: none;
+    }
+  }
+
+  &-player {
+    position: relative;
+
+    img {
+      display: none;
+      position: absolute;
+      right: @32px;
+      width: @24px;
+    }
+
+    &__crown {
+      img:nth-child(1) {
+        display: block !important;
+      }
+    }
+
+    &__ready {
+      border: @2px solid #27AE60 !important;
+      color: #27AE60 !important;
+
+      img:nth-child(2) {
+        display: block !important;
+      }
+    }
+  }
+
+  .garbageLobby-greenButton {
+    width: @360px;
+    height: @80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #27AE60;
+    border-radius: @4px;
+    text-transform: uppercase;
+    font-size: @20px;
+    opacity: .7;
+    transition: .07s;
+    margin-top: @40px;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 @10px @100px #27AE6033;
+    }
+  }
+
+}
+

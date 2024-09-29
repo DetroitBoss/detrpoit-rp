@@ -1,0 +1,140 @@
+@import "../../assets/less/uikit";
+
+
+.candyShop {
+  width: 100vw;
+  height: 100vh;
+  background-color: #141B1Fe6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  flex: 100%;
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    z-index: 1;
+    color: #fff;
+  }
+
+  &__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0 !important;
+  }
+
+  &__title {
+    position: relative;
+    line-height: @102px;
+    font-size: @80px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-top: @114px;
+
+    img {
+      position: absolute;
+      width: @51px;
+      transform: rotate(18deg);
+      right: @30px;
+      top: @50px;
+    }
+  }
+
+  &__balance {
+    background-color: #141B1F;
+    border-radius: @8px;
+    margin-top: @12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: @8px @16px;
+    font-size: @16px;
+    opacity: .9;
+    min-height: @79px;
+    max-height: @79px;
+
+    img {
+      width: @32px;
+      margin-right: @8px;
+      mix-blend-mode: color-dodge !important;
+    }
+
+    div {
+      font-size: @28px;
+      margin-top: @8px;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  &-list {
+    display: grid;
+    grid-row-gap: @40px;
+    grid-column-gap: @50px;
+    grid-template-columns: repeat(5, @232px);
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-top: @43px;
+    padding-bottom: @20px;
+
+    &-block {
+      height: @309px;
+      position: relative;
+      box-sizing: content-box !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: .7;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &__background {
+        width: 100%;
+        position: absolute;
+      }
+
+      &__item {
+        height: @182px;
+        margin-bottom: @8px;
+      }
+
+      &__name {
+        font-size: @18px;
+        line-height: @21px;
+        text-align: center;
+        width: @217px;
+      }
+
+      &__price {
+        padding: @6px @12px;
+        display: flex;
+        align-items: center;
+        bottom: @25px;
+        position: absolute;
+        line-height: @24px;
+        font-size: @20px;
+        border-radius: @100px;
+        background-color: #ffffff1a;
+
+        img {
+          width: @28px;
+          margin-right: @7px;
+        }
+      }
+    }
+  }
+}

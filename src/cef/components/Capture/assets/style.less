@@ -1,0 +1,262 @@
+.section-fight {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    & .capture_start {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10vw;
+        margin-top: -80vh;
+        width: 80vw;
+        height: 80vh;
+        opacity: 0.5;
+//        transform: translateY(-100%);
+        transition: margin-top 1s linear, opacity 1s linear;
+        &.show {
+            margin-top: 5vh;
+            opacity: 1.0;
+//            transform: translateY(0%);
+        }
+        transform: translateY(0);
+        & img {
+            position: absolute;
+            &.capture_img {
+                width: 20vw;
+            }
+        }
+        & h1 {
+            position: absolute;
+            max-width: 10vw;
+            margin-top: 2vw;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.6vw;
+            line-height: 90%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0px 5.55px 19.4944px rgba(0, 0, 0, 0.25);
+
+        }
+    }
+    .animated {
+        -webkit-animation-duration: 1.1s;
+        animation-duration: 1.1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeInRight {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .fadeInRight {
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+
+
+    .killist-wrapper {
+        position: absolute;
+        right: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .killist-wrapper > ul li {
+        margin-bottom: 0.2083vw;
+        position: relative;
+    }
+    .killist-wrapper > ul li p {
+        font-weight: normal;
+        font-size: 0.9375vw;
+        line-height: 100%;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 0px 0.15625vw 0.833335vw rgba(255, 255, 255, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 0.2083vw;
+        position: absolute;
+    }
+    .killist-wrapper > ul li p:first-child {
+        background: linear-gradient(-90deg, rgba(17, 20, 25, 0.4) 0%, rgba(17, 20, 25, 0) 100%);
+        text-align: right;
+        width: 12.5vw;
+        height: 2.604vw;
+        right: 100%;
+        margin-right: 0.2083vw;
+        padding-right: 0.833335vw;
+    }
+    .killist-wrapper > ul li p:last-child {
+        background: linear-gradient(90deg, rgba(17, 20, 25, 0.4) 0%, rgba(17, 20, 25, 0) 100%);
+        text-align: left;
+        justify-content: flex-start;
+        width: 12.5vw;
+        height: 2.604vw;
+        left: 100%;
+        top: 0;
+        padding-left: 0.833335vw;
+        margin-left: 0.2083vw;
+    }
+    .killist-wrapper > ul li i {
+        width: 2.604vw;
+        height: 2.604vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.4) url(./death-red.svg) center center no-repeat;
+        background-size: 40%;
+    }
+    .fight-bottom-info {
+        width: 26.04166667vw;
+        background: linear-gradient(0deg, rgba(17, 20, 25, 0.7) 0%, rgba(17, 20, 25, 0) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: -1.041665vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .fight-bottom-info .fight-name-timeline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -1.041665vw;
+        position: relative;
+    }
+    .fight-bottom-info .fight-name-timeline p {
+        font-size: 0.9375vw;
+        color: rgba(255, 255, 255, 0.4);
+        width: 5.2083vw;
+        height: 2.083vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .fight-bottom-info .fight-name-timeline p.fight-time {
+        font-weight: bold;
+        font-size: 1.66666667vw;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0.15625vw 0.833335vw rgba(255, 255, 255, 0.25);
+    }
+    .fight-bottom-info .fight-teams {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fight-bottom-info .fight-teams .fight-kills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fight-bottom-info .fight-teams .fight-kills p {
+        font-weight: 800;
+        font-size: 1.354165vw;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0.15625vw 0.9375vw rgba(255, 255, 255, 0.25);
+        position: relative;
+        top: 0.2083vw;
+    }
+    .fight-bottom-info .fight-teams .fight-kills img {
+        height: 1.041665vw;
+        width: auto;
+        opacity: .4;
+        margin: 0 0.41666667vw;
+    }
+    .fight-bottom-info .fight-teams .fight-brand {
+        width: 5.83333333vw;
+        height: 5.83333333vw;
+        min-width: 5.83333333vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.729165vw;
+    }
+    .fight-bottom-info .fight-teams .fight-brand img {
+        width: 100%;
+        height: 100%;
+    }
+    .fight-bottom-info.fight-easy {
+        width: 36.40625vw;
+    }
+    .fight-bottom-info.fight-easy .fight-teams {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.66666667vw;
+    }
+    .fight-bottom-info.fight-easy .fight-brand {
+        display: none;
+    }
+    .fight-bottom-info.fight-easy .fight-name-timeline {
+        bottom: -5.72916667vw;
+    }
+    .fight-bottom-info.fight-easy .fight-name-timeline p {
+        width: 7.29166667vw;
+    }
+    & i.vs {
+        font-size: 0;
+    }
+    & i.vs img {
+        height: 8.85416667vw;
+        width: auto;
+    }
+}

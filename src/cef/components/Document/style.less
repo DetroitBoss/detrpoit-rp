@@ -1,0 +1,77 @@
+.anim {
+    transition: all 0.23232323s ease-in-out;
+    -webkit-transition: all 0.23232323s ease-in-out;
+    -moz-transition: all 0.23232323s ease-in-out;
+}
+
+@dark: #2e4060;
+@import (css) url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
+@import (css) url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Seaweed+Script&display=swap');
+
+.document-block {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 613px;
+    height: 859px;
+    background: url('./background.png');
+    padding: 60px;
+    padding-top: 120px;
+    // border-radius: 5px;
+    // box-shadow: 0 -5px 50px @dark;
+    // transform-origin: center center;
+    // transform: scale(.7, .7) !important;
+    // transform: scale(1, 1);
+    // -webkit-transition: all 0.6s ease-in-out;
+    // &:not(:hover) {
+    //     transform-origin: center center;
+
+    // }
+    .closebutton {
+        top: 100px;
+        right: 20px;
+        position: absolute;
+        border-radius: 50%;
+        border: 0;
+        background: rgba(0, 0, 0, 0.4);
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99900;
+        pointer-events: all;
+        cursor: pointer;
+        position: absolute;
+        transform: translateX(-50%);
+        .anim;
+
+        &:hover {
+            transform: translateX(-50%) rotate(90deg);
+        }
+
+        img {
+            width: 16px;
+        }
+    }
+    .document-title {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 10px;
+        font-size: 35px;
+        font-weight: 900;
+    }
+    .document-text {
+        font-size: 30px;
+    }
+    .document-bottom {
+        text-align: right;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .sign {
+        font-size: 1.8em;
+    }
+}

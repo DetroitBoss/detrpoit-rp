@@ -1,0 +1,149 @@
+.section-middle-block {
+    position: relative;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+
+.passport-wrapper {
+    .closebutton {
+        top: 1%;
+        right: 1%;
+        position: absolute;
+        border-radius: 50%;
+        border: 0;
+        background: rgba(0, 0, 0, 0.4);
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99900;
+        pointer-events: all;
+        cursor: pointer;
+        position: absolute;
+        transform: translateX(-50%);
+        .anim;
+    
+        &:hover {
+            transform: translateX(-50%) rotate(90deg);
+        }
+    
+        img {
+            width: 16px;
+        }
+    }
+}
+
+.passport-grid .info-block {
+    width: 100%;
+    display: grid;
+    padding: 10px 0;
+}
+.passport-grid .info-block p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-size: 12px;
+    color: #b4c0d1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info-block p strong {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2e4060;
+    padding: 14px 0;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.passport-grid {
+    position: relative;
+    z-index: 300;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &>div {
+        &:first-child {
+            text-align: center;
+        }
+
+        &:last-child {
+            padding-left: 50px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.passport-wrapper-block {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+.passport-wrapper {
+    width: 612px;
+    height: 395px;
+    transform: scale(0.65, 0.65);
+
+    &:before {
+        content: '';
+        background: url(../../assets/images/bg-passport.png) no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 6px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 0px 6px rgba(230, 244, 255, 0.7), 0px 0px 100px 0px rgba(255, 255, 255, 0.7);
+        z-index: 100;
+    }
+
+    &:after {
+        content: '';
+        background: url(../../assets/images/bg-bottom-passport.png) no-repeat;
+        width: 613px;
+        height: 446px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+    }
+}
+
+.passport-number {
+    color: @dark;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.passport-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: @dark;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.passport-avatar {
+    display: inline-block;
+}
+
+.anim {
+    transition: all 0.23232323s ease-in-out;
+    -webkit-transition: all 0.23232323s ease-in-out;
+    -moz-transition: all 0.23232323s ease-in-out;
+}
+@dark: #2e4060;

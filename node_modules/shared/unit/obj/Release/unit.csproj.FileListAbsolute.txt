@@ -1,0 +1,4 @@
+C:\cygwin\home\kjones\shared\unit\obj\Release\unit.dll
+C:\cygwin\home\kjones\shared\unit\obj\Release\unit.pdb
+C:\cygwin\home\kjones\shared\unit\bin\unit.dll
+C:\cygwin\home\kjones\shared\unit\bin\unit.pdb

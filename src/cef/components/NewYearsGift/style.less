@@ -1,0 +1,330 @@
+@import "../../assets/less/uikit";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.giftSend {
+  width: 100vw;
+  height: 100vh;
+  background: #0009;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  * {
+    z-index: 2;
+  }
+
+
+  &-left {
+    width: @997px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: @83px;
+    transform: translateY(-@60px);
+
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: #1116 !important;
+    }
+
+    &__background {
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+
+    &__text {
+      position: absolute;
+      width: @586px;
+      height: @105px;
+      border: none;
+      background: none;
+      outline: none;
+      right: @147px;
+      transform: translateY(-@20px);
+      text-align: center;
+      font-size: @28px;
+      resize: none;
+    }
+
+    &__maxLength {
+      position: absolute;
+      color: #111;
+      font-size: @16px;
+      opacity: .4;
+      right: @114px;
+      transform: translateY(@65px);
+    }
+
+    &__itemSlot {
+      position: absolute;
+      width: @189px;
+      height: @189px;
+      right: @345px;
+      transform: translateY(@155px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: @114px;
+        height: @114px;
+      }
+    }
+
+    &-address {
+      position: absolute;
+      width: @475px;
+      height: @60px;
+      right: @202px;
+      display: flex;
+      justify-content: space-around;
+      transform: translateY(@380px);
+
+      &-input {
+        width: @289px;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 0;
+        }
+
+        input {
+          position: absolute;
+          width: @230px;
+          left: @30px;
+          height: 100%;
+          font-size: @16px;
+          text-align: center;
+          color: #1118;
+          background: none;
+          border: none;
+          outline: none;
+        }
+
+      }
+
+      &-button {
+        width: @166px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: #fff;
+        pointer-events: none;
+
+        .giftSend__active {
+          pointer-events: all !important;
+        }
+
+        &:hover {
+          filter: drop-shadow(0 @10px @30px rgba(255, 41, 31, 0.7));
+        }
+
+        &__background {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 0;
+        }
+
+        &__box {
+          width: @18px;
+          margin-right: @8px;
+        }
+
+        span {
+          line-height: 100%;
+          font-size: @16px !important;
+          transform: translateY(@1px);
+        }
+      }
+
+    }
+
+  }
+
+  &-right {
+    width: @630px;
+    height: 100vh;
+    background-color: #141B1Fe6;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 @90px;
+    text-align: center;
+
+    &__title {
+      font-size: @16px;
+      line-height: 100%;
+      letter-spacing: 0.1em;
+    }
+
+    &-inventory {
+      display: grid;
+      grid-template-columns: repeat(5, @80px);
+      grid-gap: @8px;
+      margin-top: @20px;
+      max-height: @620px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: @5px !important;
+        display: block !important;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #0000 !important;
+        display: block !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: @10px !important;
+        background-color: #ffffff29 !important;
+        display: block !important;
+        opacity: .5 !important;
+      }
+
+      &__slot {
+        height: @80px;
+        border-radius: @4px;
+        background-color: #ffffff0f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          background-color: #ffffff29;
+        }
+
+        img {
+          width: @50px;
+        }
+
+        span {
+          position: absolute;
+          right: @8px;
+          bottom: @8px;
+          color: #fff;
+          line-height: @11px;
+          font-size: @14px;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.giftGet {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-@30px);
+
+  * {
+    z-index: 2;
+  }
+
+  &__background {
+    width: @1102px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &-block {
+    width: @879px;
+    height: @540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: @130px;
+    transform: translateY(@35px);
+  }
+
+  &__text {
+    width: @640px;
+    color: #222;
+    text-align: center;
+    font-size: @32px;
+  }
+
+  &-item {
+    width: @251px;
+    height: @274px;
+    margin-top: @25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    &__item {
+      width: @150px;
+    }
+  }
+
+  &__button {
+    width: @166px;
+    height: @60px;
+    transform: translateY(@90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+
+    &:hover {
+    filter: drop-shadow(0 @10px @30px rgba(255, 41, 31, 0.7));
+  }
+
+    img {
+      width: 100%;
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    span {
+      font-size: @16px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}

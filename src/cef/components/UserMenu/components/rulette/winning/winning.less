@@ -1,0 +1,148 @@
+﻿@import "../../sizes.less";
+
+.winning-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1000;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @50px;
+
+  h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 130%;
+  }
+}
+
+.header-bold {
+  text-align: center;
+  font-weight: bold;
+}
+
+.winning-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("./../../assets/roulette-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: @115px 0;
+  border-radius: @8px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("./../../assets/roulette-top-bg.png");
+    background-repeat: no-repeat;
+    border-radius: @8px;
+    background-size: cover;
+  }
+}
+
+.winning-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 300;
+  margin-top: @40px;
+}
+
+.winning-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  .btn {
+    height: @62px;
+    .icon {
+      width: @20px;
+      height: @20px;
+      display: block !important;
+      margin-right: @13px;
+      svg {
+        margin: 0;
+        width: @20px;
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: @14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  position: relative;
+  border-radius: @6px;
+  cursor: pointer;
+  margin-left: @8px;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &.back {
+    width: @114px;
+    height: @40px;
+
+    &:hover {
+      background: rgba(#fff, 0.1) !important;
+    }
+
+    .icon {
+      width: @40px;
+      height: @40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        height: @15px;
+      }
+    }
+
+    span {
+      margin-right: @16px;
+    }
+  }
+
+  // &.btn-dark {
+  //   border: @2px solid #f04d26;
+  //   box-sizing: border-box;
+  //   border-radius: @6px;
+  //   background: transparent;
+  //   font-weight: bold;
+
+  //   span {
+  //     color: #ffffff !important;
+  //   }
+
+  //   .icon {
+  //     margin-right: @12px;
+  //     svg {
+  //       height: @18px;
+  //     }
+  //   }
+  // }
+}

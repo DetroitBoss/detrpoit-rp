@@ -1,0 +1,15 @@
+{
+    "host": "127.0.0.1",
+    "db_user": "root",
+    "password": "553255aq",
+    "database": "server",
+    "type": "mariadb",
+    "port": 3306,
+
+    "logs_host": "127.0.0.1",
+    "logs_db_user": "root",
+    "logs_password": "553255aq",
+    "logs_database": "serverlogs",
+    "logs_type": "mariadb",
+    "logs_port": 3306
+}

@@ -1,0 +1,116 @@
+@import "../../../assets/less/uikit";
+
+.popup-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.death-popup-svg {
+  opacity: 0.04;
+  svg {
+    width: 1700 * @1px;
+    height: 1700 * @1px;
+  }
+}
+
+.death-popup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: @128px;
+  height: @56px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: @4px;
+  margin-right: @6px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: @16px;
+  line-height: @20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background: linear-gradient(90deg, #be1622 0%, #EB5757 100%);
+  }
+  svg {
+    width: @24px;
+    height: @24px;
+    margin-right: @16px;
+  }
+}
+
+.death-popup-blur {
+  width: 806 * @1px;
+  height: 806 * @1px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(22, 27, 38, 0.8) 0%,
+    rgba(22, 27, 38, 0.552) 100%
+  );
+  filter: blur(@100px);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.death-popup-elipse {
+  position: absolute;
+  animation-name: rotation;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: @675px;
+  height: @675px;
+}
+
+.death-popup-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: @24px;
+  line-height: 29 * @1px;
+  color: #fff;
+  &.death-type {
+    margin-bottom: @38px;
+  }
+}
+
+.death-popup-subtitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: @18px;
+  line-height: @21px;
+  text-align: center;
+  margin-top: @9px;
+}
+
+.death-popup-small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: @16px;
+  line-height: @19px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.death-popup-timer-wrap {
+  margin-bottom: @60px;
+}
+
+.death-timer {
+  font-style: normal;
+  font-weight: bold;
+  font-size: @48px;
+  line-height: @58px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.death-popup-icon {
+  margin-bottom: @27px;
+  svg {
+    width: @40px;
+    height: @40px;
+  }
+}

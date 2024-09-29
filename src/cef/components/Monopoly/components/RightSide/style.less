@@ -1,0 +1,144 @@
+@import "../../../../assets/less/uikit";
+
+.monopoly-rightSide {
+  width: @408px;
+  padding: @28px 0 0 @48px;
+  height: 100vh;
+  border-left: @1px solid #fff3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+  &-rules {
+    font-size: @16px !important;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: @50px;
+
+    &:hover img {
+      background-color: #fff3;
+    }
+
+    img {
+      width: @44px;
+      height: @44px;
+      border-radius: @6px;
+      padding: @10px;
+      background-color: #ffffff1a;
+      margin-right: @16px;
+      transition: .15s;
+    }
+  }
+
+  &__title {
+    margin-bottom: @30px;
+    text-transform: uppercase;
+    font-size: @16px !important;
+    color: #ffffff80;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: @60px;
+
+    &__image {
+      width: @86px;
+      height: @86px;
+      border-radius: @100px;
+      background-color: #ffffff0f;
+      margin-right: @20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: @57px;
+      }
+
+
+    }
+
+    &-text {
+      &__name {
+        font-size: @24px;
+        margin-bottom: @16px;
+      }
+
+      &__balance {
+        font-size: @30px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: @29px;
+          margin-right: @14px;
+        }
+      }
+
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    height: @700px;
+    overflow-y: auto;
+
+    &-block {
+      display: flex;
+      height: @42px;
+      align-items: center;
+      margin-bottom: @20px;
+
+      &__line {
+        border-radius: @100px;
+        margin-right: @17px;
+        width: @8px;
+        height: 100%;
+
+        &-red {
+          background-color: #F43001;
+        }
+
+        &-aqua {
+          background-color: #00D1BB;
+        }
+
+        &-blue {
+          background-color: #1342EB;
+        }
+
+        &-purple {
+          background-color: #FB00ED;
+        }
+
+        &-sky {
+          background-color: #2F7BEE;
+        }
+
+        &-rose {
+          background-color: #E93162;
+        }
+      }
+
+      &__logo {
+        height: 95%;
+        margin-right: @35px;
+      }
+
+      &__tax {
+        height: @32px;
+        margin-right: @12px;
+      }
+
+      &__money {
+        font-size: @18px;
+        color: #fff;
+      }
+    }
+  }
+}

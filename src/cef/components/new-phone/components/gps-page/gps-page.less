@@ -1,0 +1,275 @@
+@import "../../../../assets/less/uikit";
+
+
+.np-gps-page {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  padding-top: @54px;
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: @34px;
+    transition: all 0.3s;
+  }
+  &-wrap {
+    width: 295 * @1px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: @34px;
+    transition: all 0.3s;
+    &.gray-bg {
+      transition: all 0.3s;
+      background: #49494a;
+      .np-gps-page-bg {
+        transition: all 0.3s;
+        opacity: 0;
+      }
+    }
+  }
+  &-location-wrap {
+    display: flex;
+    margin-left: @16px;
+  }
+  &-location-icon {
+    margin-right: @8px;
+    svg {
+      width: @30px;
+      height: @30px;
+    }
+  }
+  &-location-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: @18px;
+    line-height: @21px;
+    color: #000;
+  }
+  &-location {
+    font-style: normal;
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &-saved-locations-wrap {
+    width: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    top: 255 * @1px;
+    display: flex;
+    padding-left: @16px;
+  }
+  &-saved-locations {
+    width: 415 * @1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &-location-btn {
+    background: #fff;
+    margin-right: @12px;
+    border-radius: @20px;
+    height: @43px;
+    padding: 0 @18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    color: #000000;
+    svg {
+      width: @14px !important;
+      height: @14px !important;
+      max-width: none;
+      margin-right: @10px;
+      display: inline !important;
+    }
+  }
+  &-location-categories-wrap {
+    position: absolute;
+    bottom: 0;
+    background: #ffffff;
+    box-shadow: 0px -@4px @40px rgba(131, 134, 166, 0.2);
+    border-radius: @20px;
+    width: 100%;
+    padding: @20px @16px 0 @16px;
+    .np-gps-page-btn {
+      margin-top: @20px;
+      margin-bottom: @35px;
+    }
+    &.active {
+      & ~ .np-gps-page {
+        background: rgba(0, 0, 0, 0.7);
+        &-bg {
+          display: none;
+        }
+      }
+
+      .np-gps-page-location-categories {
+        height: 422 * @1px;
+        overflow-y: scroll;
+      }
+    }
+  }
+  &-sub-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: @20px;
+    line-height: @24px;
+    color: #000000;
+    margin-bottom: @16px;
+    svg {
+      width: @24px;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: @24px;
+    line-height: 29 * @1px;
+    text-transform: uppercase;
+    color: #000;
+  }
+  &-info-text {
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &-location-categories-close {
+    svg {
+      width: @24px;
+    }
+  }
+  &-location-categories {
+    height: @164px;
+    display: grid;
+    grid-gap: @8px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: @78px;
+    overflow-y: hidden;
+    transition: all 0.3s;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: transparent !important;
+    }
+  }
+  &-location-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: @1px solid rgba(164, 179, 212, 0.4);
+    box-sizing: border-box;
+    border-radius: @10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      border: none;
+      background: #6ba8f9;
+      color: #fff;
+      svg {
+        transition: all 0.3s;
+        path {
+          transition: all 0.3s;
+          fill: #fff;
+        }
+      }
+      .np-gps-page-location-category-name {
+        transition: all 0.3s;
+        color: #fff;
+      }
+    }
+  }
+  &-location-category-icon {
+    svg {
+      width: @22px;
+      height: @22px;
+    }
+  }
+  &-location-category-name {
+    margin-top: @6px;
+    font-weight: 500;
+    font-size: @13px;
+    line-height: @15px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &-btn {
+    width: 100%;
+    height: @43px;
+    border-radius: @40px;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.blue {
+      svg {
+        width: @16px;
+        margin-left: @8px;
+      }
+      background: #6ba8f9;
+      &:hover {
+        background: #3089ff;
+      }
+    }
+    &.black {
+      svg {
+        width: @16px;
+        margin-right: @8px;
+      }
+      background: #111;
+      &:hover {
+        background: #333;
+      }
+    }
+    &.back {
+      color: #3a9fff;
+      width: auto;
+      height: auto;
+      font-weight: 500;
+      font-size: @14px;
+      line-height: @16px;
+
+      svg {
+        width: @16px;
+        margin-right: @8px;
+      }
+    }
+  }
+  &-divider-v {
+    width: @2px;
+    height: 100%;
+    background: rgba(152, 161, 175, 0.16);
+    border-radius: 10px;
+  }
+}

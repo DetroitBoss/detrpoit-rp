@@ -1,0 +1,217 @@
+@import "../../../../assets/less/uikit";
+
+.battlePass {
+
+  .quests {
+    display: flex;
+    padding: 0 @80px;
+
+    * {
+      color: #fff;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      user-select: none;
+      z-index: 1;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__title {
+      width: 100vw;
+      margin-top: @149px;
+      font-size: @100px;
+      margin-bottom: @64px;
+      text-transform: uppercase;
+    }
+
+    &-body {
+      width: 100%;
+      display: flex;
+
+      &__title {
+        font-size: @16px;
+        line-height: 90%;
+        padding-bottom: @16px;
+        border-bottom: @2px solid #ffffff1a;
+        margin-bottom: @40px;
+      }
+
+      &-left {
+        width: @789px;
+
+        &-blocks {
+          display: grid;
+          grid-template-columns: repeat(2, @384px);
+          grid-gap: @20px;
+          max-height: @530px;
+          overflow-y: scroll;
+
+          &-block {
+            padding: @30px @20px;
+            background-color: #ffffff0a;
+            border-radius: @10px;
+            position: relative;
+
+            &__title {
+              width: @240px;
+              font-size: @22px;
+              text-transform: uppercase;
+              margin: @5px 0 @16px;
+              line-height: 90%;
+            }
+
+            &__text {
+              font-size: @16px;
+              line-height: 90%;
+              margin-bottom: @20px;
+            }
+
+            &__exp {
+              position: absolute;
+              right: @22px;
+              top: @30px;
+              background-color: #EB5757;
+              height: @30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: @8px;
+              border-radius: @8px;
+
+              span {
+                color: #fff !important;
+                font-size: @16px !important;
+              }
+            }
+
+            &-progressbar {
+              display: flex;
+              align-items: center;
+              font-size: @16px;
+
+              &__bar {
+                background-color: #fff3;
+                width: @270px;
+                height: @4px;
+                border-radius: @2px;
+                margin-left: auto;
+                position: relative;
+
+                div {
+                  height: 100%;
+                  position: absolute;
+                  border-radius: @2px;
+                  left: 0;
+                  top: 0;
+                  background-color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-right {
+        margin-left: @126px;
+        width: @533px;
+
+        &-block {
+          display: flex;
+          flex-direction: column;
+          width: @553px;
+          height: @462px;
+          background-color: #ffffff0a;
+          border-radius: @8px;
+          padding: @30px @40px;
+          position: relative;
+
+          &__name {
+            color: #ffffff4d;
+            text-transform: uppercase;
+            font-size: @14px;
+            margin-bottom: @10px;
+          }
+
+          &__title {
+            width: @300px;
+            line-height: 120%;
+            font-size: @40px;
+            margin-bottom: @20px;
+            text-transform: uppercase;
+          }
+
+          &__text {
+            width: @223px;
+            line-height: 130%;
+            font-size: @16px;
+            opacity: .8;
+          }
+
+          &-progressbar {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            font-size: @14px;
+            width: 100%;
+            justify-content: space-between;
+
+            &__bar {
+              width: @406px;
+              height: @4px;
+              border-radius: @2px;
+              background-color: #fff2;
+              position: relative;
+
+              div {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                border-radius: @2px;
+                background-color: #fff;
+              }
+            }
+          }
+
+          &-exp {
+            position: absolute;
+            width: @555px;
+            height: @510px;
+            left: @284px;
+            top: -@62px;
+
+            img {
+              position: absolute;
+              z-index: 0;
+              width: 100%;
+              left: 0;
+              top: 0;
+            }
+
+            span {
+              font-size: @50px;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              position: absolute;
+              left: @194px;
+              top: @252px;
+
+              div {
+                font-size: @30px !important;
+                margin-top: @8px;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}

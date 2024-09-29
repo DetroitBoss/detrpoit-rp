@@ -1,0 +1,249 @@
+@import "../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.sortGarbage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(71, 31, 31, 0.57) 0%, rgba(31, 18, 18, 0.84) 100%);
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    opacity: .7;
+    pointer-events: none;
+  }
+
+  &__bagFront, &__bagBack {
+    position: absolute;
+    width: @570px;
+    bottom: -@107px;
+    pointer-events: none;
+  }
+
+  &__bagFront {
+    z-index: 200;
+  }
+
+  &-titleTopLeft {
+    position: absolute;
+    left: @60px;
+    top: @60px;
+    width: @210px;
+    pointer-events: none;
+    font-size: @60px;
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+
+    span {
+
+      text-transform: uppercase;
+
+      &::first-line {
+        text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+      }
+
+    }
+
+    p {
+      margin: @23px 0 0 0;
+      font-size: @16px !important;
+      opacity: .5;
+      line-height: 140%;
+    }
+
+  }
+
+  &__bottomLeft {
+    position: absolute;
+    left: @50px;
+    bottom: @50px;
+    width: @288px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: #fff9;
+    font-size: @16px !important;
+
+    img {
+      width: @58px;
+      margin-right: @25px;
+    }
+  }
+
+  &-time {
+    position: absolute;
+    right: @50px;
+    bottom: @40px;
+    display: flex;
+    align-items: center;
+    height: @60px;
+
+    img {
+      width: @167px;
+      margin-right: @16px;
+      transform: translateY(@3px);
+    }
+
+    span {
+      font-size: @55px;
+    }
+  }
+
+  &-slots {
+
+    div {
+      width: @261px;
+      height: @287px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100111111;
+
+      img {
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+
+    &__0 {
+      left: @230px;
+      top: @51px;
+    }
+
+    &__1 {
+      left: @575px;
+      bottom: @785px;
+    }
+
+    &__2 {
+      right: @749px;
+      top: @49px;
+    }
+
+    &__3 {
+      right: @344px;
+      top: @7px;
+    }
+
+    &__4 {
+      right: @43px;
+      top: @56px;
+    }
+
+    &__5 {
+      right: @214px;
+      bottom: @540px;
+    }
+
+    &__6 {
+      right: @578px;
+      top: @343px;
+    }
+
+    &__7 {
+      left: @713px;
+      bottom: @371px;
+    }
+
+    &__8 {
+      left: @360px;
+      bottom: @477px;
+    }
+
+    &__9 {
+      left: @29px;
+      top: @406px;
+    }
+
+    &__10 {
+      left: @222px;
+      bottom: @190px;
+    }
+
+    &__11 {
+      right: @345px;
+      bottom: @240px;
+    }
+
+    &__12 {
+      right: @78px;
+      bottom: @211px;
+    }
+
+  }
+
+  &__dropBlock {
+    position: absolute;
+    bottom: 0;
+    width: @530px;
+    height: @220px;
+    z-index: 250;
+  }
+
+  &-containers {
+    display: flex;
+    position: absolute;
+    bottom: -@270px;
+
+    &-block {
+      position: relative;
+      width: @380px;
+      margin: 0 @20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__category {
+        width: @60px;
+        margin-bottom: @50px;
+      }
+
+      &__container {
+        width: 100%;
+      }
+
+
+      &__containerFront {
+        width: 100%;
+        z-index: 100000;
+        pointer-events: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 999999999999999 !important;
+      }
+
+      &__drop {
+        width: @380px;
+        height: @130px;
+        position: absolute;
+        left: 0;
+        bottom: @270px;
+        z-index: 1001111111 !important;
+      }
+    }
+  }
+}

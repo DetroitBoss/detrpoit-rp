@@ -1,0 +1,234 @@
+@import "../../../../assets/less/uikit";
+
+.provoda_bg {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('./bg.png');
+  background-size: cover;
+  position: absolute;
+  opacity: 0.9;
+}
+
+.provoda_browser {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(20, 27, 31, 0.64) 0%, rgba(13, 15, 16, 0.94) 100%);
+
+  & .provoda_item {
+    cursor: pointer;
+    width: 2vw;
+    height: 100vh;
+    //        position: absolute;
+    //        display: flex;
+    display: block;
+  }
+
+  & span {
+    width: 1vw;
+    height: 0.5vw;
+  }
+
+  & .bablo_time {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    padding: 5vw;
+
+    & h5 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 5vw;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+    }
+
+    & h3 {
+      //            margin-top:1vw;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2vw;
+      line-height: 140%;
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
+  }
+
+  & .provoda_info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 29%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vw;
+
+    & h1, h2 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 2vw;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+    }
+
+    & h2 {
+      font-weight: 300;
+    }
+
+    & h3, h4 {
+      margin-top: 1vw;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1vw;
+      line-height: 140%;
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
+
+    & h4 {
+      font-size: 1.5vw;
+      line-height: 100%;
+    }
+
+    & .provoda_bottom {
+      display: flex;
+      align-items: center;
+
+      & img {
+        width: @58px;
+        margin: auto @24px auto 0;
+      }
+
+      h4 {
+        font-size: @24px;
+        margin: auto 0;
+      }
+    }
+  }
+}
+
+.drillgame_sverlo {
+  animation-name: drill_rotation;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes drill_rotation {
+  from {
+    transform: translate(10vw)
+    //    margin-right: 10vh;
+    //    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: translate(0vh)
+    //   margin-right: 0vw;
+    //      transform: rotateX(359deg);
+  }
+}
+
+.water_stream {
+  width: 0.1vmin;
+  height: 50vh;
+  z-index: -1;
+  background: repeating-linear-gradient(#5F9ECC,
+  #5F9ECC 2vmin,
+  transparent 2vmin,
+  transparent 4vmin);
+  margin: -0.12vw;
+  //    padding: 0;
+  animation: water_game 1s infinite linear;
+}
+
+@keyframes water_game {
+  0% {
+    transform: translateY(25vh);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+
+.water-round-container {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 35vh;
+  height: 35vh;
+  //    border-radius: 50%;
+  //    border: 3px solid silver;
+  text-align: center;
+  line-height: 50px;
+  animation: water-waves linear infinite;
+}
+
+.water-wave1 {
+  position: absolute;
+  top: 40%;
+  left: -25%;
+  background: #33cfff;
+  opacity: 0.6;
+  width: 200%;
+  height: 200%;
+  border-radius: 40%;
+  animation: inherit;
+  animation-duration: 11s;
+}
+
+.water-wave2 {
+  position: absolute;
+  top: 45%;
+  left: -35%;
+  background: #0eaffe;
+  opacity: 0.4;
+  width: 200%;
+  height: 200%;
+  border-radius: 38%;
+  animation: inherit;
+  animation-duration: 13s;
+}
+
+.water-wave3 {
+  position: absolute;
+  top: 50%;
+  left: -35%;
+  background: #0f7ae4;
+  opacity: 0.2;
+  width: 200%;
+  height: 200%;
+  border-radius: 34%;
+  animation: inherit;
+  animation-duration: 15s;
+}
+
+@keyframes water-waves {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

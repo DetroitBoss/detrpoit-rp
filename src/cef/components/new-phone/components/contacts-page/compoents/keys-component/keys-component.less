@@ -1,0 +1,144 @@
+@import "../../../../../../assets/less/uikit";
+
+.np-keys {
+  margin-top: 73 * @1px;
+  margin: 73 * @1px @16px 0 @16px;
+  &-input {
+    input {
+      width: 100%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      text-align: center;
+      color: #343435;
+    }
+  }
+  &-add-contact {
+    width: 232 * @1px;
+    height: @33px;
+    margin-top: @8px;
+    margin-bottom: @25px;
+    opacity: 0.6;
+    border: @1px solid rgba(47, 106, 164, 0.3);
+    box-sizing: border-box;
+    border-radius: @20px;
+    font-weight: 600;
+    font-size: @14px;
+    line-height: @17px;
+    text-align: center;
+    color: #2f6aa4;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.np-key {
+  width: @60px;
+  height: @60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: @12px;
+  border-radius: 50%;
+  font-size: @36px;
+  line-height: @42px;
+  color: #343435;
+  position: relative;
+  &-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: @14px;
+    line-height: @16px;
+    text-align: center;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    bottom: -@28px;
+  }
+  &-blocked {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(#000, 0.5);
+    cursor: default;
+    svg {
+      width: @24px !important;
+      height: @24px !important;
+    }
+  }
+  &.blocked {
+    background: rgba(255, 255, 255, 0.2);
+    &:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+  &.number {
+    background: rgba(172, 177, 187, 0.2);
+    &:hover {
+      background: rgba(172, 177, 187, 0.4);
+    }
+    &:nth-child(10) {
+      position: relative;
+      p {
+        position: absolute;
+        margin-top: -@9px;
+        margin-left: -@5px;
+        height: @12px;
+        width: @12px;
+      }
+    }
+  }
+  &.call {
+    background: linear-gradient(137.39deg, #0bbc28 14.46%, #5bf775 94.6%);
+    transition: 0.3s;
+    svg {
+      width: @26px;
+    }
+    &:hover {
+      background: linear-gradient(137.39deg, #0bbc28 14.46%, #4ad361 94.6%);
+      transition: 0.3s;
+    }
+  }
+  &.cancel {
+    background: linear-gradient(137.39deg, #da0211 14.46%, #ff0000 94.6%);
+    transition: 0.3s;
+    svg {
+      width: @26px;
+      transform: rotate(135deg);
+    }
+    &:hover {
+      background: linear-gradient(137.39deg, #da0211 14.46%, #cc3535 94.6%);
+      transition: 0.3s;
+    }
+  }
+  &.delete {
+    svg {
+      width: @32px;
+    }
+  }
+  &.empty {
+    cursor: default;
+  }
+  &.white {
+    background: rgba(255, 255, 255, 0.2);
+    svg {
+      width: @36px;
+      height: @36px;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    &.active {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

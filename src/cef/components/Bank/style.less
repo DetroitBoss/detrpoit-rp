@@ -1,0 +1,953 @@
+@import "../../assets/less/uikit";
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    user-select: none;
+}
+
+.bank__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.bank {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(39, 48, 54, 0.7), rgba(39, 48, 54, 0.7)), radial-gradient(70.74% 70.74% at 50% 50%, rgba(20, 27, 31, 0.53) 43.75%, #141B1F 99.99%, #141B1F 100%);
+    color: #fff;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input::placeholder {
+        transform: translateX(@10px);
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__fleecaImg {
+        top: 0;
+        width: 100vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__linesImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    &-body {
+        height: @797px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-left {
+            z-index: 2;
+            width: @320px;
+            height: @797px;
+
+            &__card {
+                position: relative;
+                height: @210px;
+
+                img {
+                    width: @320px;
+                }
+
+                p {
+                    position: absolute;
+                    height: auto;
+                    top: @30px;
+                    line-height: @24px;
+                    margin: 0;
+                    left: @20px;
+                    font-size: @20px;
+                    letter-spacing: @1px;
+                    opacity: .7;
+                }
+            }
+
+            &-content {
+                background-color: #171D21;
+                height: @567px;
+                margin-top: @20px;
+                font-size: @20px;
+                display: flex;
+                flex-direction: column;
+
+                &-yourCard {
+                    padding: @20px;
+                    height: @123px;
+                    border-bottom: @1px solid #ffffff1a;
+                    position: relative;
+
+                    &__cardIcon {
+                        position: absolute;
+                        top: @56px;
+                        left: @20px;
+                        width: @32px;
+                    }
+
+                    &__cardName {
+                        position: absolute;
+                        font-size: @16px;
+                        left: @64px;
+                        top: @54px;
+                    }
+
+                    &__cardNumber {
+                        position: absolute;
+                        font-size: @16px;
+                        top: @79px;
+                        left: @64px;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: @6px;
+                            margin-right: @4px;
+                        }
+
+                        span {
+                            left: @2px;
+                            opacity: .8;
+                        }
+                    }
+
+                    &__balance {
+                        position: absolute;
+                        top: @56px;
+                        right: @20px;
+                        font-size: @20px;
+                    }
+                }
+
+                &-row {
+                    height: @84px;
+                    width: 100%;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        height: @44px;
+                        left: @20px;
+                        top: @20px;
+                    }
+
+                    &__title {
+                        font-size: @16px;
+                        opacity: .8;
+                        position: absolute;
+                        top: @20px;
+                        left: @80px;
+                    }
+
+                    span {
+                        font-size: @16px;
+                        color: #fff !important;
+                        position: absolute;
+                        top: @45px;
+                        left: @80px;
+                    }
+
+                    &__hr {
+                        border: none;
+                        outline: none;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: @240px;
+                        height: @1px;
+                        opacity: .1;
+                        background-color: #fff;
+                    }
+                }
+
+                &-footer {
+                    margin-top: auto;
+                    position: relative;
+                    height: @166px;
+                    width: 100%;
+                    padding: @28px @20px;
+                    background-color: #20292F;
+
+                    &__title {
+                        font-size: @20px;
+                        color: #fff;
+                    }
+
+                    &__text {
+                        font-size: @16px;
+                        color: #fff;
+                        opacity: .7;
+                        margin-top: @3px;
+                    }
+
+                    &__input {
+                        height: @40px;
+                        width: 100%;
+                        margin-top: @17px;
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+
+                        img {
+                            height: 100%;
+                            opacity: .5;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
+                        input {
+                            width: @167px;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            color: #ffffffb3;
+                            background-color: #ffffff15;
+                            display: flex;
+                            align-items: center;
+                            font-size: @16px;
+                            padding-left: @61px;
+                        }
+
+                        span {
+                            position: absolute;
+                            top: @13px;
+                            left: @77px;
+                            opacity: .7;
+                            font-size: @16px;
+                        }
+
+                        div {
+                            position: absolute;
+                            left: @103px;
+                            top: @10px;
+                            height: @20px;
+                            width: @1px;
+                            background-color: #fff;
+                            opacity: .2;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            width: @912px;
+            height: @797px;
+            margin-left: @30px;
+            background-color: #171D21;
+            z-index: 2;
+
+            &-nav {
+                width: 100%;
+                background-color: #20292F;
+                height: @89px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                text-transform: uppercase;
+                font-size: @16px;
+                color: #fff;
+
+                .bank-active {
+                    opacity: 1;
+                    border-bottom: @4px solid #EB5757;
+
+                    span {
+                        transform: translateY(@4px);
+                    }
+                }
+
+                div {
+                    opacity: .5;
+                    transition: .3s;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-top: @5px;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &-content {
+                height: calc(100% - @89px);
+                width: 100%;
+                padding: @40px;
+                position: relative;
+            }
+
+            &-content0 {
+
+                &__switcher {
+                    width: @346px;
+                    height: @51px;
+                    background-color: #ffffff08;
+                    border-radius: @10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: @16px;
+
+                    .bank-active {
+                        background-color: #ffffff10;
+                        opacity: 1;
+                    }
+
+                    div {
+                        height: 100%;
+                        box-sizing: content-box;
+                        padding: @2px @20px 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: @10px;
+                        opacity: .7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &-window {
+                    width: @832px;
+                    height: @239px;
+                    margin-top: @35px;
+                    background-color: #20292F;
+                    padding: @30px @50px;
+                    border-radius: @20px;
+                    position: relative;
+                    box-shadow: 0 @10px @80px rgba(131, 134, 166, 0.1);
+
+                    &__cashBalance {
+                        position: absolute;
+                        height: @24px;
+                        right: @50px;
+                        top: @49px;
+                        opacity: .7;
+                        font-size: @20px;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            height: @19px;
+                            margin-right: @11px;
+                            transform: translateY(-@1px);
+                        }
+
+                    }
+
+                    &__title {
+                        font-size: @40px;
+                        height: @40px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &-input {
+                        width: @732px;
+                        height: @70px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        font-size: @20px;
+                        background-color: #FFFFFF0A;
+                        margin-top: @20px;
+                        border-radius: @10px @10px 0 0;
+                        border-bottom: @2px solid #EB5757;
+
+                        span {
+                            color: #fff;
+                            position: absolute;
+                            left: @28px;
+                        }
+
+                        div {
+                            position: absolute;
+                            left: @67px;
+                            height: @36px;
+                            width: @2px;
+                            background-color: #fff;
+                            opacity: .1;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            color: #ffffffb3;
+                            background: none;
+                            display: flex;
+                            align-items: center;
+                            padding-left: @97px;
+                            padding-right: @10px;
+                            font-size: @20px;
+                        }
+
+                        p {
+                            padding: 0;
+                            margin: 0;
+                            position: absolute;
+                            right: @28px;
+                            color: #FF0E0E;
+                            font-size: @16px !important;
+                            opacity: 1;
+                            transform: translateY(@3px);
+                        }
+                    }
+
+                    &-commission {
+                        display: flex;
+                        margin-top: @16px;
+                        font-size: @16px;
+                        color: #FFFFFF99;
+
+                        div {
+                            margin-right: @14px;
+                        }
+
+                        span {
+                            margin-left: @6px;
+                            color: #EB5757;
+                        }
+                    }
+                }
+
+                &-pinTitle {
+                    font-size: @24px;
+                    margin: @30px 0 @21px;
+                    opacity: .3;
+                    letter-spacing: .02vw;
+                }
+
+                &-pin {
+                    display: flex;
+
+                    .bank-active {
+                        pointer-events: all;
+                        background-color: #EB5757;
+                        color: #fff;
+                        opacity: .6;
+                        transition: .3s;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    input {
+                        width: @212px;
+                        height: @70px;
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                        color: #ffffffb3;
+                        background-color: #FFFFFF0F;
+                        border: none;
+                        outline: none;
+                        font-size: @40px;
+                        letter-spacing: @20px;
+                        padding-left: @10px;
+                    }
+
+                    div {
+                        width: @200px;
+                        height: @70px;
+                        margin-left: @24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #1C2225;
+                        color: #494E51;
+                        padding-top: @5px;
+                        pointer-events: none;
+                        font-size: @16px;
+                    }
+                }
+            }
+
+            &-content1 {
+
+                &-nav {
+                    width: @832px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    height: @209px;
+
+                    .bank-active {
+                        background-color: #181E22;
+                        opacity: 1;
+                    }
+
+                    &-block {
+                        width: @150px;
+                        position: relative;
+                        height: 100%;
+                        border-radius: @20px;
+                        background-color: #20292F;
+                        padding: @20px;
+                        display: flex;
+                        flex-direction: column;
+                        opacity: .7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: @40px;
+                            margin-bottom: @10px;
+                        }
+
+                        span {
+                            font-size: @16px;
+                        }
+
+                        div {
+                            margin-top: auto;
+                            color: #63696D;
+                            font-size: @16px;
+
+                            p {
+                                margin: @4px 0 0 0;
+                                padding: 0;
+                                color: #fff;
+                                font-size: @16px;
+                            }
+                        }
+                    }
+                }
+
+                &-title {
+                    width: 100%;
+                    height: @113px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: @32px;
+                    margin-top: @10px;
+
+                    &__button {
+                        padding: 0 @24px;
+                        height: @51px;
+                        display: flex;
+                        color: #FACABE;
+                        font-size: @16px;
+                        background-color: #EB5757;
+                        align-items: center;
+                        opacity: .7;
+                        transition: .3s;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        span {
+                            color: #fff;
+                            margin-left: @10px;
+                        }
+                    }
+                }
+
+                &-scroll {
+                    height: @320px;
+                    width: 100%;
+                    overflow-y: auto;
+
+                    &-block {
+                        height: @103px;
+                        border-top: @1px solid #ffffff1a;
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+
+                        &__left {
+                            font-size: @14px;
+                            transform: translateY(-@2px);
+                            div {
+                               margin-bottom: @3px;
+                            }
+
+                            span {
+                                color: #828282;
+                                margin-top: @5px;
+                                padding: @5px 0;
+                            }
+                        }
+
+                        &__right {
+                            display: flex;
+                            align-items: center;
+
+                            span {
+                                margin-right: @20px;
+                                font-size: @24px;
+                            }
+
+                            div {
+                                width: @121px;
+                                height: @51px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: @16px;
+                                background-color: #272D31;
+                                transition: .3s;
+                                opacity: .7;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-content2 {
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                &__leftShadow, &__rightShadow {
+                    position: absolute;
+                    width: @284px;
+                    height: 100%;
+                    right: 0;
+                    top: 0;
+                    z-index: 5;
+                    background: linear-gradient(270deg, rgba(20, 27, 31, 0.6) 0%, rgba(20, 27, 31, 0) 100%);
+                }
+
+                &__leftShadow {
+                    left: 0;
+                    background: linear-gradient(90deg, rgba(20, 27, 31, 0.6) 0%, rgba(20, 27, 31, 0) 100%);
+                }
+
+                &__leftButton, &__rightButton {
+                    position: absolute;
+                    width: @200px;
+                    height: 50%;
+                    z-index: 50;
+                    right: 0;
+                    top: 10%;
+                }
+
+                &__leftButton {
+                    left: 0;
+                }
+
+                &-cardInfo {
+                    position: absolute;
+                    top: @410px;
+                    width: @350px;
+
+                    &__title {
+                        font-size: @40px;
+                    }
+
+                    &__li span{
+                            margin-top: @10px;
+                            display: flex;
+                            flex-direction: column;
+                            font-size: @16px;
+                            opacity: .7;
+
+                    }
+
+                    &-button {
+                        height: @51px;
+                        margin-top: @34px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        span {
+                            font-size: @30px;
+                            opacity: .8;
+                        }
+
+                        div {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: @16px;
+                            background-color: #EB5757;
+                            width: @196px;
+                            height: @51px;
+                            color: #FFFFFF;
+                            padding-top: @2px;
+                            transition: .3s;
+                            opacity: .7;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
+                        .bank-active {
+                            background-color: #422722;
+                            color: #EB5757;
+                        }
+                    }
+                }
+
+                .bank-card0 {
+                    div {
+                        transform: translateX(@415px);
+                    }
+                }
+                .bank-card2 {
+                    div {
+                        transform: translateX(-@415px);
+                    }
+                }
+
+                &-cards {
+                    height: @294px;
+                    position: absolute;
+                    width: @1400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    pointer-events: none;
+                    top: @89px;
+
+                    .bank-active {
+                        height: @294px !important;
+                        width: @448px !important;
+                    }
+
+                    div {
+                        margin: 0 @31px;
+                        height: @232px;
+                        width: @352px;
+                        position: relative;
+                        //    transform: translateX(-@415px);
+                        transition: .5s;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    span {
+                        position: absolute;
+                        font-size: 190%;
+                        color: #000;
+                        top: 9%;
+                        left: 6%;
+                    }
+                }
+            }
+
+            &-content3 {
+
+                &-buttons {
+                    width: @260px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .bank-active {
+                        background-color: #1A2125;
+                        border-left: @4px solid #EB5757;
+                        padding-left: @38px;
+                        opacity: 1;
+                    }
+
+                    div {
+                        width: @260px;
+                        height: @90px;
+                        margin-bottom: @16px;
+                        background-color: #20292F;
+                        display: flex;
+                        align-items: center;
+                        padding-left: @42px;
+                        font-size: @16px;
+                        transition: .3s;
+                        opacity: .7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &__hr {
+                    position: absolute;
+                    width: @2px;
+                    height: 100%;
+                    top: 0;
+                    left: @340px;
+                    background-color: #ffffff1a;
+
+                }
+
+                &-content {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    left: @420px;
+                    padding-top: @40px;
+                    width: @404px;
+
+                    &__title {
+                        font-size: @30px;
+                        margin-bottom: @10px;
+                    }
+
+                    &__description, &__descriptionBig{
+                        margin: @16px 0 @20px;
+                        font-size: @16px;
+                        color: #ffffff;
+                        opacity: .3;
+                    }
+
+                    &__descriptionBig {
+                        font-size: @20px;
+                    }
+
+                    input {
+                        border: none;
+                        outline: none;
+                        text-align: center;
+                        background-color: #ffffff10;
+                        font-size: @36px;
+                        color: #A8AAAB;
+                        width: @295px;
+                        height: @70px;
+                        letter-spacing: @20px;
+                        transition: .3s;
+                        opacity: .7;
+
+                        &:hover, &:focus {
+                            opacity: 1;
+                        }
+                    }
+
+                    &__button, &__buttonBig {
+                        font-size: @16px;
+                        height: @70px;
+                        width: @237px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #EB5757;
+                        transition: .3s;
+                        opacity: .7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    &__buttonBig {
+                        width: @295px;
+                        margin-top: @30px;
+                    }
+
+                    &__price {
+                        display: flex;
+                        position: relative;
+                        height: @70px;
+                        margin-top: @30px;
+                        span {
+                            position: absolute;
+                            top: @3px;
+                            opacity: .7;
+                            font-size: @16px;
+                        }
+
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            font-size: @34px;
+                            position: absolute;
+                            top: @26px;
+                        }
+
+                        .bank-body-right-content3-content__button {
+                            margin-left: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.exit {
+    position: absolute;
+    top: @40px;
+    left: @40px;
+    height: @40px;
+    width: @132px;
+    background-color: #141B1F80;
+    border-radius: @6px;
+    display: flex;
+    align-items: center;
+    z-index: 50 !important;
+    font-size: @16px;
+    &-icon {
+        width: @40px;
+        height: @40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #141B1FE3;
+        border-radius: @6px;
+    }
+
+    &__title {
+        text-align: center;
+        width: @91px;
+        color: white;
+    }
+
+    img {
+        width: @17px;
+        height: @17px;
+    }
+}
+
+.displayNone {
+    display: none;
+}

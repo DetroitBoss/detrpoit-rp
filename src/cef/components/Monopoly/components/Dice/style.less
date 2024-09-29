@@ -1,0 +1,94 @@
+@import "../../../../assets/less/uikit";
+
+.monopoly-dice {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: radial-gradient(61.53% 61.53% at 50% 50%, #172548 0%, #16152B72 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  * {
+    z-index: 2;
+  }
+
+  .monopoly-dice-gradient {
+    width: 100vw;
+    position: absolute;
+    height: @346px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, rgba(23, 37, 72, 0) 0%, rgba(16, 26, 52, 0.92) 59.35%);
+    z-index: 1;
+
+    &__bottom {
+      top: auto;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(23, 37, 72, 0) 0%, rgba(16, 26, 52, 0.92) 59.35%) !important;
+    }
+  }
+
+  &-time {
+    margin-top: @200px;
+    text-align: center;
+
+    &__text {
+      text-decoration: @16px !important;
+      letter-spacing: .1em;
+      color: #fff !important;
+    }
+
+    &__timer {
+      font-size: @74px !important;
+      color: #fff !important;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: @160px;
+    height: @160px;
+
+    &-left {
+      left: 43%;
+    }
+
+    &-right {
+      left: 57%;
+    }
+  }
+
+  &-description {
+    display: flex;
+    align-items: center;
+    margin-bottom: @90px  ;
+
+    img {
+      margin-right: @16px;
+      width: @32px;
+    }
+
+    &-text {
+      div {
+        opacity: .4;
+        margin-bottom: @8px;
+        color: #fff !important;
+        text-transform: uppercase !important;
+        font-size: @16px !important;
+        letter-spacing: .1em;
+      }
+      span {
+        color: #fff !important;
+        text-transform: uppercase !important;
+        font-size: @16px !important;
+        letter-spacing: .1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.info-block {
+  width: 45.29%;
+  height: 76.481vh;
+  background: linear-gradient(
+    180deg,
+    rgba(131, 67, 235, 0) 0%,
+    rgba(131, 67, 235, 0.97) 100%
+  );
+  border-radius: 0.556vh 0 0 0.556vh;
+  position: relative;
+  top: @modal-height - 76.481vh;
+  overflow: hidden;
+}
+
+.info-content {
+  display: block;
+  width: 100%;
+  height: 76.481vh;
+  padding: 2.222vh 2.222vh 0 2.222vh;
+}
+
+.level-info {
+  width: 100%;
+  height: 9.259vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #8343eb;
+  border-radius: 0.741vh;
+  padding: 0 5.531%;
+  .btn {
+    margin-left: 3.148vh;
+  }
+}
+
+.level-info.empty {
+  background: transparent;
+  border: 0.4vh solid #8343eb;
+  .level {
+    margin-right: 4.63vh;
+  }
+}
+
+.level {
+  margin: 0;
+  position: relative;
+
+  &-img {
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    left: 0;
+    margin-top: 1vh;
+    img {
+      margin-left: -22%;
+      width: 16.574vh;
+      height: auto;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.up-icon {
+  width: 1.404vh;
+}
+.checkmark-icon {
+  width: 1.204vh;
+}
+
+.improvement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.704vh 0;
+  .title-m {
+    max-width: 73%;
+    text-align: center;
+    line-height: 140%;
+    margin: 0 0 1.852vh 0;
+  }
+}
+
+.stats {
+  margin-top: 1.667vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &-item {
+    width: 100%;
+    height: 5.556vh;
+    font-size: 1.667vh;
+    display: flex;
+    padding-left: 1.852vh;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    color: rgba(#fff, .6);
+    background: rgba(#fff, .1);
+    margin-bottom: 0.2vh;
+  }
+  &-value-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &-value {
+    padding: 0 1.852vh;
+    text-align: right;
+  }
+  &-increase-value {
+    width: 9.259vh;
+    height: 100%;
+    background: #5ABF52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

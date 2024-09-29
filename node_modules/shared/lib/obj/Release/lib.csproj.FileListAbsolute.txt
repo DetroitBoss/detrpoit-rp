@@ -1,0 +1,4 @@
+C:\cygwin\home\kjones\shared\lib\obj\Release\lib.dll
+C:\cygwin\home\kjones\shared\lib\obj\Release\lib.pdb
+C:\cygwin\home\kjones\shared\lib\bin\lib.dll
+C:\cygwin\home\kjones\shared\lib\bin\lib.pdb

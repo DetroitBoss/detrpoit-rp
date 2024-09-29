@@ -1,0 +1,613 @@
+@import "../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.market {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  font-size: @18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-timer {
+    position: absolute;
+    width: @170px;
+    height: @90px;
+    top: @100px;
+    left: @488px;
+    display: grid;
+    grid-template-columns: @32px @138px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      line-height: 190%;
+      font-size: @12px;
+
+      span {
+        margin-top: @10px;
+        font-size: @32px;
+      }
+
+      &:nth-child(1) {
+        border-radius: @4px 0 0 @4px;
+        background-color: #27AE60;
+        img {
+          width: @16px;
+        }
+      }
+    }
+  }
+
+  &-left {
+    width: @356px;
+    margin: @100px 0 0 @100px;
+
+    &__closeButton {
+      position: absolute;
+      bottom: @100px;
+      left: @100px;
+      width: @233px;
+      height: @56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: @16px;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(240, 77, 38, 0.9);
+      box-shadow: 0 @10px @100px rgba(240, 78, 39, 0.54);
+
+      img {
+        width: @24px;
+        margin-right: @10px;
+      }
+    }
+
+    &__name {
+      display: flex;
+      height: @90px;
+      width: 160%;
+      align-items: center;
+
+      img {
+        height: 100%;
+        margin-right: @32px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        font-size: @44px;
+        justify-content: center;
+        height: @73px;
+        line-height: 100%;
+
+        span {
+          display: flex;
+          font-size: @18px;
+          line-height: 100%;
+          margin-top: @4px;
+
+          span {
+            margin-left: @3px;
+            margin-top: 0;
+          }
+        }
+
+        p {
+          font-size: @44px;
+          margin: 0 !important;
+          padding: 0 !important;
+          line-height: 100%;
+        }
+
+      }
+    }
+
+    &__description {
+      width: 100%;
+      margin: @32px 0;
+    }
+
+
+    &-scroll {
+      width: 100%;
+      margin-top: @10px;
+      height: calc(100% - @248px);
+      overflow-y: auto;
+
+      &-block {
+        width: 100%;
+        height: @50px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: @16px;
+
+        &__icon {
+
+          width: @50px;
+          height: @50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #ffffff1a;
+          border-radius: @3px;
+          position: relative;
+          margin-right: @16px;
+
+          img {
+            height: @31px;
+          }
+
+          span {
+            position: absolute;
+            bottom: @5px;
+            right: @5px;
+            font-size: @9px;
+            line-height: 100%;
+          }
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+
+          div {
+            font-size: @16px;
+            line-height: 100%;
+          }
+
+          span {
+            font-size: @12px;
+            margin-top: @4px;
+            line-height: 100%;
+          }
+        }
+
+        &__quantity {
+          position: absolute;
+          right: 0;
+          height: @36px;
+          padding: 0 @14px;
+          display: flex;
+          justify-content: center;
+          border-radius: @4px;
+          line-height: 100%;
+          align-items: center;
+          background-color: #ffffff1a;
+        }
+      }
+    }
+  }
+
+  &-right {
+    margin: @100px @60px 0 0;
+    width: @645px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__row {
+      display: flex;
+      width: @1100px;
+      transform: translateX(-@460px);
+      flex-direction: row-reverse;
+      margin-bottom: @30px;
+    }
+
+    &-moneyBack {
+      display: flex;
+      flex-direction: column;
+      font-size: @16px;
+      line-height: 120%;
+      justify-content: center;
+      padding: 0 @25px 0 @14px;
+      margin-right: -@20px;
+      border-radius: @4px;
+      background-color: #0006;
+      z-index: 0;
+    }
+
+    &-button {
+      z-index: 100;
+      height: @56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 @20px;
+      background: #27AE60;
+      border-radius: @4px;
+      margin-left: auto;
+      box-shadow: 0 0 @100px #27AE60cc;
+      opacity: .9;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        height: @24px;
+        margin-right: @10px;
+      }
+
+      &__blue:nth-child(2) {
+        background-color: #41ABE7 !important;
+        box-shadow: 0 0 @100px #41ABE7cc !important;
+      }
+
+      &__purple {
+        background-color: #7879F1 !important;
+        box-shadow: 0 0 @100px #7879F1cc !important;
+      }
+
+      &__red {
+        background-color: #F15E3B !important;
+        box-shadow: 0 0 @100px #F15E3Bcc !important;
+
+        span {
+          font-size: @16px;
+          display: flex;
+          flex-direction: column;
+          line-height: 120%;
+        }
+      }
+    }
+
+
+    &-scroll {
+      width: 100%;
+      height: calc(100% - @200px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+
+      &-block {
+
+        width: 100%;
+        min-height: @128px;
+        border-bottom: @1px solid #ffffff1a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .market-part {
+          display: flex;
+          align-items: center;
+        }
+
+        &__icon {
+          border-radius: @7px;
+          position: relative;
+          margin-right: @18px;
+          width: @80px;
+          height: @80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #ffffff1a;
+
+          img {
+            height: @50px;
+          }
+
+          span {
+            position: absolute;
+            bottom: @8px;
+            right: @8px;
+            font-size: @14px;
+            line-height: 100%;
+          }
+        }
+
+        &__text {
+          font-size: @20px;
+          line-height: 100%;
+          width: @170px;
+        }
+
+        &__reviewButton {
+          height: @80px;
+          position: relative;
+          z-index: 1000;
+          opacity: .9;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &__inputs {
+          width: @180px;
+          height: @80px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 0 @8px;
+
+          div {
+            width: 100%;
+            height: @36px;
+            background-color: #ffffff0e;
+            border-radius: @4px;
+            display: flex;
+            opacity: .9;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            input {
+              width: 50%;
+              height: 100%;
+              border-radius: @4px 0 0 @4px;
+              background-color: #ffffff1a;
+              outline: none;
+              border: none;
+              color: #fff;
+              text-align: center;
+              font-size: @18px;
+            }
+
+            span {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: @10px;
+              opacity: .4;
+              line-height: @10px;
+            }
+
+          }
+
+          p {
+            margin: 0 0 @8px 0 !important;
+            padding: 0 !important;
+            width: 100%;
+            height: @36px;
+            border-radius: @4px;
+            display: flex;
+            font-size: @24px;
+            line-height: 100%;
+            align-items: center;
+            justify-content: center;
+          }
+
+        }
+
+        &__buyButton {
+          width: @62px;
+          height: @80px;
+          border: @2px solid #fff1;
+          border-radius: @4px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: @24px;
+          }
+
+          span {
+            font-size: @10px;
+            margin-top: @8px;
+          }
+
+        }
+
+        .market-active-buyButton {
+          border: @2px solid #27AE60;
+
+
+          &:hover {
+            background: #27AE60;
+          }
+
+        }
+
+        &__mark {
+          width: @34px;
+          height: @34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: @4px;
+          background-color: #fff1;
+          transform: rotate(45deg);
+          margin: 0 @20px 0 @13px;
+
+          img {
+            width: @25px;
+            transform: rotate(-45deg);
+            display: none;
+          }
+        }
+
+        .market-deActive {
+          opacity: .4;
+          pointer-events: none;
+        }
+
+        .market-active {
+
+          .market-right-scroll-block__mark {
+            background-color: #27AE60;
+
+            img {
+              display: block;
+            }
+          }
+
+          .market-deActive {
+            pointer-events: all !important;
+            opacity: .8;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-attention {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: @557px;
+    padding: @56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #141B1F;
+
+    &__close {
+      position: absolute;
+      top: @30px;
+      right: @30px;
+      width: @24px;
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__icon {
+      margin-bottom: @24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: @80px;
+      height: @80px;
+      background-color: #141B1F1a;
+      border-radius: @4px;
+    }
+
+    &__text, &__bold, &__rangeTest {
+      font-size: @24px;
+      line-height: 140%;
+    }
+
+    &__rangeTest {
+      margin-top: @20px;
+      font-size: @15px;
+      margin-bottom: -@20px;
+      font-weight: bold;
+    }
+
+    &-buttons {
+      margin-top: @35px;
+      height: @56px;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: @4px;
+        width: @152px;
+        height: 100%;
+        opacity: .8;
+        margin: 0 @10px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+
+
+      &__green {
+        color: #FFFFFF;
+        background-color: #27AE60;
+        box-shadow: 0 @10px @100px #27AE60;
+        text-transform: uppercase;
+      }
+
+      &__gray {
+        background-color: #141B1F1a;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+
+
+  input[type=range] {
+    -webkit-appearance: none;
+    border-radius: 8px;
+    height: @10px;
+    border: none;
+    margin-top: @30px;
+    background-color: #fff9;
+    width: 50%;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #27AE60;
+    box-shadow: 0 @10px @100px #27AE60;
+    opacity: .9;
+    width: @15px;
+    height: @30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}
+
+.market-customer {
+  .market-customer__hidden {
+    display: none !important;
+  }
+
+  .market-right-scroll {
+    height: calc(100% - @105px);
+  }
+
+}
+
+.market-seller {
+  .market-seller__hidden {
+    display: none !important;
+  }
+}
+
+.market-mark-active {
+  background-color: #27AE60;
+
+  img {
+    display: block;
+  }
+}

@@ -1,0 +1,72 @@
+.title {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+}
+
+.title-m {
+  font-size: 2.222vh;
+  p {
+    max-width: 80%;
+  }
+  .title();
+}
+
+.title-l {
+  font-size: 2.963vh;
+  .title();
+}
+
+.title-xl {
+  font-size: 4.074vh;
+  padding: 5.556vh;
+  .title();
+}
+
+.info-title {
+  font-size: 1.296vh;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(#fff, 0.2);
+  padding: 0 -2.222vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:first-child {
+    margin: 2.222vh 0 0 0;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    width: 30.2%;
+    height: 0.1vh;
+    position: absolute;
+    display: block;
+    background: rgba(#fff, 0.2);
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before {
+    left: 0;
+  }
+}
+
+.info-title.left {
+  margin-top: 4.63vh;
+  justify-content: start;
+  &::before {
+    width: 2.963vh;
+  }
+  &::after {
+    width: 32.037vh;
+  }
+}

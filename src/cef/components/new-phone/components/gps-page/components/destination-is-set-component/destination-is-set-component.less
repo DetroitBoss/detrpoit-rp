@@ -1,0 +1,60 @@
+@import "../../../../../../assets/less/uikit";
+
+.np-gps-destination-is-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: @54px @16px @35px @16px;
+  &-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: @34px;
+  }
+  &-point {
+    position: absolute;
+    width: 201 * @1px;
+    margin: auto;
+    z-index: 1;
+    left: @20px;
+    top: 255 * @1px;
+  }
+  &-text {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .np-gps-page-title,
+    .np-gps-page-info-text {
+      width: 232 * @1px;
+    }
+    .np-gps-page-info-text {
+      margin-top: @12px;
+      margin-bottom: @24px;
+    }
+  }
+  .np-gps-page-location-wrap {
+    position: relative;
+    margin-left: 0;
+    z-index: 1000;
+  }
+  .np-gps-page-btn.black {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    svg {
+      width: @16px;
+      height: @16px;
+      margin-left: @8px;
+    }
+  }
+}

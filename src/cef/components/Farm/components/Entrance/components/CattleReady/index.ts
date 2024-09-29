@@ -1,0 +1,1 @@
+export { CattleReady } from "./CattleReady";

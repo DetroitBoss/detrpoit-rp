@@ -1,0 +1,207 @@
+.loadingblock {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    video:not(#introVideo) {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    background-color: black;
+    opacity: 0;
+    &.show {
+        opacity: 1;
+        transition: 0.5s opacity ease-in-out;
+    }
+    transition: 0.5s opacity ease-in-out;
+}
+
+
+.loadingScreenStart {
+    opacity: 0;
+    &.show {
+        opacity: 1;
+        transition: 1s opacity ease-in-out;
+    }
+    transition: 0.5s opacity ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('./img/bgz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .backbox
+    {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(21, 21, 21, 1);
+        padding: 20px;
+        border-radius: 8px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Центрирует по вертикали */
+        align-items: center; /* Центрирует по горизонтали */
+        .logobox {
+            position: relative;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 18px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            animation: glitch 1.5s infinite;
+        }
+        
+        .logotext {
+            position: relative;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .welcomtext {
+            color: rgba(255, 255, 255, 1);
+            width: 100%;
+            text-align: center;
+            font-style: bold;
+            font-weight: 800;
+            font-size: 34px;
+            line-height: 100%;
+            line-height: 20px;
+            margin-bottom: 18px;
+        }
+        .subtext {
+            // bottom: 32%;
+            color: rgba(255, 255, 255, 1);
+            width: 100%;
+            text-align: center;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 20px;
+        
+            /* Добавлено для центрирования и ограничения ширины */
+            display: flex;
+            justify-content: center;
+            max-width: 700px;
+            margin-bottom: 18px;
+        }
+        .box_social{
+            display: flex;
+            justify-content: center; /* Центрирует элементы по горизонтали */
+            align-items: center; /* Центрирует элементы по вертикали, если нужно */
+            text-align: center;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 24px;
+            white-space: nowrap; /* Запрещает перенос элементов на новую строку */
+            gap: 16px;
+            padding-bottom: 15px;
+            .box_stats{
+                background-color: rgba(28, 28, 28, 0.8);
+                padding: 8px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center; /* Центрирует элементы по горизонтали */
+                align-items: center; /* Центрирует элементы по вертикали, если нужно */
+                text-align: center;
+                font-style: normal;
+                span {
+                    font-style: normal;
+                    font-weight: normal;
+                    margin-left: 8px;
+                    line-height: 100%;
+                    font-weight: 800;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .icon {
+                width: 26px;
+                height: 26.15px;
+            }
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 50px;
+            background: linear-gradient(45deg, #E3256B, #86102b); /* Градиент от основного цвета к более светлому оттенку */
+            border-radius: 10px; /* Скругление углов */
+            color: white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(133, 10, 55, 0.4); /* Светящееся свечение */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 17px;
+            img {
+                margin-bottom: -10px;
+                width: 31px;
+                height: 35.15px;
+            }
+        }
+        
+        .button:hover {
+            background: linear-gradient(45deg, #86102b, #E3256B); /* Обратный градиент при наведении */
+            box-shadow: 0 8px 25px rgba(133, 10, 55, 0.8); /* Усиленное свечение при наведении */
+            transform: scale(1.05); /* Лёгкое увеличение при наведении */
+        }
+        
+        .button:active {
+            transform: scale(0.98); /* Легкое уменьшение при клике */
+            box-shadow: 0 4px 12px rgba(227, 37, 107, 0.4); /* Уменьшение свечения при нажатии */
+        }
+        
+        .text {
+            color: rgba(255, 255, 255, 0.63);
+            width: 100%;
+            text-align: center;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            line-height: 24px;
+        }
+    }
+    // .logobox {
+    //     max-height: 100%;
+    //     max-width: 100%;
+    //     width: auto;
+    //     height: auto;
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 35%;
+    //     left: 0;
+    //     right: 0;
+    //     margin: auto;
+    // }
+    
+}
+
+
+@keyframes upper {
+    50% {
+        margin-bottom: 5px;
+    }
+}

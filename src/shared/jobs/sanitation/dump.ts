@@ -1,0 +1,1 @@
+export const DUMP_POSITION: Vector3Mp = new mp.Vector3(2411.57, 3051.61, 48.15);

@@ -1,0 +1,127 @@
+@import "../../../../assets/less/uikit";
+
+.monopoly-dropCard {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: radial-gradient(61.53% 61.53% at 50% 50%, #172548 0%, #16152B72 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    z-index: 2;
+  }
+
+  &-gradient {
+    width: 100vw;
+    position: absolute;
+    height: @346px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, rgba(23, 37, 72, 0) 0%, rgba(16, 26, 52, 0.92) 59.35%);
+    z-index: 1;
+
+    &__bottom {
+      top: auto;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(23, 37, 72, 0) 0%, rgba(16, 26, 52, 0.92) 59.35%) !important;
+    }
+  }
+
+  &__arrows {
+    width: 150vw;
+    height: 150vw;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: -@130px 0 @30px;
+    font-size: @50px;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: @20px !important;
+    margin-bottom: @60px;
+  }
+
+  &__bonus {
+    color: #E93162 !important;
+    font-size: @70px !important;
+    margin-bottom: @20px;
+  }
+
+  &__description {
+    position: absolute;
+    font-size: @18px;
+    color: #fff;
+    bottom: @50px;
+    letter-spacing: .1em;
+    text-align: center;
+    opacity: .5;
+  }
+
+  &-list {
+    display: flex;
+    gap: @20px;
+  }
+
+  &-card {
+    display: flex;
+    width: @324px;
+    height: @390px;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+    &__background {
+      z-index: 1 !important;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
+
+    &__price {
+      background: #E93162;
+      border-radius: @20px;
+      width: @304px;
+      height: @108px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: @20px;
+      color: #fff !important;
+      margin-top: @10px;
+
+      img {
+        width: @120px !important;
+        transform: translate(@15px, @5px);
+      }
+    }
+
+    &__brand {
+      margin-top: @10px;
+      width: 100%;
+      height: @220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: @220px;
+      }
+    }
+  }
+
+}

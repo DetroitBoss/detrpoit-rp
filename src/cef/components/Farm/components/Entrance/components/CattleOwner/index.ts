@@ -1,0 +1,1 @@
+export { CattleOwner } from "./CattleOwner";

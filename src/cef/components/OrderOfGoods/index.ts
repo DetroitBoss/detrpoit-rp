@@ -1,0 +1,1 @@
+export { OrderOfGoods } from "./OrderOfGoods";

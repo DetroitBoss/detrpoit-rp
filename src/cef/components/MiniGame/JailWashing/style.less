@@ -1,0 +1,275 @@
+@import "../../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.jail-washing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    opacity: .7;
+    pointer-events: none;
+  }
+
+  &__bagFront, &__bagBack {
+    position: absolute;
+    width: @570px;
+    bottom: -@107px;
+    pointer-events: none;
+  }
+
+  &__bagFront {
+    z-index: 200;
+  }
+
+  &-titleTopLeft {
+    position: absolute;
+    left: @60px;
+    top: @60px;
+    width: @400px;
+    pointer-events: none;
+    font-size: @60px;
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+
+    span {
+
+      text-transform: uppercase;
+
+      &::first-line {
+        text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+      }
+
+    }
+
+    p {
+      margin: @23px 0 0 0;
+      font-size: @16px !important;
+      opacity: .5;
+      line-height: 140%;
+    }
+
+    &-mission {
+      width: @356px;
+      padding: @18px @22px;
+      background-color: #ffffff1a;
+      border-radius: @10px;
+      margin-top: @45px;
+
+      &__color {
+        display: flex;
+        align-items: center;
+        font-size: @18px;
+        color: #fff9;
+        line-height: 140%;
+        &-white {
+          div {
+            background-color: #fff;
+          }
+        }
+
+        &-black {
+          div {
+            background-color: #111;
+          }
+        }
+
+        &-orange {
+          div {
+            background-color: #F04D26;
+          }
+        }
+
+        div {
+          width: @44px;
+          height: @44px;
+          border-radius: @200px;
+          border: @2px solid #fff3;
+          margin-right: @13px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          div {
+            width: @16px !important;
+            height: @16px !important;
+            border: none !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__bottomLeft {
+    position: absolute;
+    left: @50px;
+    bottom: @50px;
+    width: @288px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: #fff9;
+    font-size: @16px !important;
+
+    img {
+      width: @58px;
+      margin-right: @25px;
+    }
+  }
+
+  &-time {
+    position: absolute;
+    right: @50px;
+    bottom: @40px;
+    display: flex;
+    align-items: center;
+    height: @60px;
+
+    img {
+      width: @167px;
+      margin-right: @16px;
+      transform: translateY(@3px);
+    }
+
+    span {
+      font-size: @55px;
+    }
+  }
+
+  &-slots {
+
+    &-hide {
+      transition: .15s;
+      opacity: 0;
+      pointer-events: none !important;
+
+    }
+
+    div {
+      width: @261px;
+      height: @287px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100111111;
+
+      img {
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+
+    &__0 {
+      left: @560px;
+      top: @51px;
+    }
+
+    &__1 {
+      right: @723px;
+      top: @30px;
+    }
+
+    &__2 {
+      left: @760px;
+      top: @407px;
+    }
+
+    &__3 {
+      right: @582px;
+      top: @260px;
+    }
+
+    &__4 {
+      right: @343px;
+      top: @16px;
+    }
+
+    &__5 {
+      right: @666px;
+      bottom: @35px;
+    }
+
+
+  }
+
+  &__dropBlock {
+    position: absolute;
+    bottom: 0;
+    width: @530px;
+    height: @220px;
+    z-index: 250;
+  }
+
+  &-containers {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: @88px;
+    flex-direction: column;
+
+    &-block {
+      position: relative;
+      width: @380px;
+      margin: 0 @20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__container {
+        width: 100%;
+      }
+
+
+      &__drop {
+        width: @347px;
+        height: @117px;
+        margin-bottom: @54px;
+        z-index: 1001111111 !important;
+        border: @2px dashed #FFF3;
+        border-radius: @10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: @18px;
+        color: #fffc;
+
+        &-green {
+          border: @2px dashed #4BEF5399 !important;
+          color: #4BEF5399 !important;
+        }
+
+        &-red {
+          border: @2px dashed #EF4B4B99 !important;
+          color: #EF4B4B99 !important;
+        }
+      }
+    }
+  }
+}

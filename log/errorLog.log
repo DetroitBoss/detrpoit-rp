@@ -1,0 +1,429 @@
+[Thu Oct 05 2023 14:59:09 GMT+0300 (GMT+03:00)] [14:59:09] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","Connection with logs database established","Конфиг одежды существует, удаляем","------------------------","Количество элементов одежды",62,"------------------------","Конфиг одежды сохранён","Внешний IP, хранимый в файлах","178.253.43.232","Основные модули, необходимые до инициализации загружены","Загрузка инвентаря, количество предметов: 140","---------------","Количество предметов",140,"Количество удалённых предметов",0,"---------------","Загрузка данных гоночных трасс, количество предметов: 0","Загрузка рейтинга дуелей, количество предметов: 0","Загружено 2 семей","Loaded 0 market items","Moving all market items to stock","Moved 0 market items to stock","Все модули загружены","--------------------","Таблица с рейтингом дуэли обновлён.\n-----------\nТоп 3 стрелков:\nРейтинг пустой\n-----------"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:07:13 GMT+0300 (GMT+03:00)] [15:07:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"message":"No repository for \"FractionsEntity\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:08:11 GMT+0300 (GMT+03:00)] [15:08:11] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","Connection with logs database established","Конфиг одежды существует, удаляем","------------------------","Количество элементов одежды",62,"------------------------","Конфиг одежды сохранён","Внешний IP, хранимый в файлах","178.253.43.232","Основные модули, необходимые до инициализации загружены","Загрузка инвентаря, количество предметов: 140","---------------","Количество предметов",140,"Количество удалённых предметов",0,"---------------","Загрузка данных гоночных трасс, количество предметов: 0","Загрузка рейтинга дуелей, количество предметов: 0","Загружено 2 семей","Loaded 0 market items","Moving all market items to stock","Moved 0 market items to stock","Все модули загружены","--------------------","Таблица с рейтингом дуэли обновлён.\n-----------\nТоп 3 стрелков:\nРейтинг пустой\n-----------"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:10:02 GMT+0300 (GMT+03:00)] [15:10:02] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","Connection with logs database established","Конфиг одежды существует, удаляем","------------------------","Количество элементов одежды",62,"------------------------","Конфиг одежды сохранён","Внешний IP, хранимый в файлах","178.253.43.232","Основные модули, необходимые до инициализации загружены","Загрузка инвентаря, количество предметов: 140","---------------","Количество предметов",140,"Количество удалённых предметов",0,"---------------","Загрузка данных гоночных трасс, количество предметов: 0","Загрузка рейтинга дуелей, количество предметов: 0","Загружено 2 семей","Loaded 0 market items","Moving all market items to stock","Moved 0 market items to stock","Все модули загружены","--------------------","Таблица с рейтингом дуэли обновлён.\n-----------\nТоп 3 стрелков:\nРейтинг пустой\n-----------"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:14:19 GMT+0300 (GMT+03:00)] [15:14:19] 
+  !!! unhandledRejection !!!
+  reason
+  {"message":"No repository for \"FractionsEntity\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:14:42 GMT+0300 (GMT+03:00)] [15:14:42] 
+  !!! unhandledRejection !!!
+  reason
+  {"message":"No repository for \"FractionsEntity\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров"]
+  --------
+
+
+  
+[Thu Oct 05 2023 15:15:07 GMT+0300 (GMT+03:00)] [15:15:07] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Загрузка модулей сервера","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","Connection with logs database established","Конфиг одежды существует, удаляем","------------------------","Количество элементов одежды",62,"------------------------","Конфиг одежды сохранён","Внешний IP, хранимый в файлах","178.253.43.232","Основные модули, необходимые до инициализации загружены","Загрузка инвентаря, количество предметов: 140","---------------","Количество предметов",140,"Количество удалённых предметов",0,"---------------","Загрузка данных гоночных трасс, количество предметов: 0","Загрузка рейтинга дуелей, количество предметов: 0","Загружено 2 семей","Loaded 0 market items","Moving all market items to stock","Moved 0 market items to stock","Все модули загружены","--------------------","Таблица с рейтингом дуэли обновлён.\n-----------\nТоп 3 стрелков:\nРейтинг пустой\n-----------"]
+  --------
+
+
+  
+[Sun Oct 22 2023 00:37:40 GMT+0300 (GMT+03:00)] [00:37:40] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (?)","parameters":[1],"driverError":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (1)"},"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (1)"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 37","start","Vehicle.destroy","SID: 37","complete","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Vehicle.respawn","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","start","Vehicle.destroy","SID: 56","complete","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#13 ] на учётную запись #5","Выбор персонажа [#13]  на учётной записи [5] mils","Mils Skiel #13 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000023"]
+  --------
+
+
+  
+[Sun Oct 22 2023 00:41:40 GMT+0300 (GMT+03:00)] [00:41:40] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (?)","parameters":[4],"driverError":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (4)"},"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (4)"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 37","start","Vehicle.destroy","SID: 37","complete","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Vehicle.respawn","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","start","Vehicle.destroy","SID: 56","complete","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#13 ] на учётную запись #5","Выбор персонажа [#13]  на учётной записи [5] mils","Mils Skiel #13 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000023","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#14 ] на учётную запись #6","Выбор персонажа [#14]  на учётной записи [6] roman7878"]
+  --------
+
+
+  
+[Sun Oct 22 2023 00:45:40 GMT+0300 (GMT+03:00)] [00:45:40] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (?)","parameters":[4],"driverError":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (4)"},"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'server.fraction_garage_entity' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT `FractionGarageEntity`.`id` AS `FractionGarageEntity_id`, `FractionGarageEntity`.`name` AS `FractionGarageEntity_name`, `FractionGarageEntity`.`prefix` AS `FractionGarageEntity_prefix`, `FractionGarageEntity`.`x` AS `FractionGarageEntity_x`, `FractionGarageEntity`.`y` AS `FractionGarageEntity_y`, `FractionGarageEntity`.`z` AS `FractionGarageEntity_z`, `FractionGarageEntity`.`d` AS `FractionGarageEntity_d`, `FractionGarageEntity`.`h` AS `FractionGarageEntity_h`, `FractionGarageEntity`.`fraction` AS `FractionGarageEntity_fraction`, `FractionGarageEntity`.`closed` AS `FractionGarageEntity_closed`, `FractionGarageEntity`.`cars_data` AS `FractionGarageEntity_cars_data` FROM `fraction_garage_entity` `FractionGarageEntity` WHERE `FractionGarageEntity`.`id` IN (4)"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 37","start","Vehicle.destroy","SID: 37","complete","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Vehicle.respawn","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 56","start","Vehicle.destroy","SID: 56","complete","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#13 ] на учётную запись #5","Выбор персонажа [#13]  на учётной записи [5] mils","Mils Skiel #13 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000023","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#14 ] на учётную запись #6","Выбор персонажа [#14]  на учётной записи [6] roman7878","Сохранение всех системы выполнено","Raiden Admin #14 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000024"]
+  --------
+
+
+  
+[Mon Oct 23 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["spawnDimension: false","Vehicle.destroy","SID: 143","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 143","start","Vehicle.destroy","SID: 143","complete","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 2 игроков","Зарплата: $800","Бонусные средства: $0","Донат валюта: 0","Опыт: 4","----------------","Новый день","Сохранение всех системы выполнено","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Mon Oct 23 2023 20:33:43 GMT+0300 (GMT+03:00)] [20:33:43] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["garage: 3","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 452","start","Vehicle.destroy","SID: 452","complete","Сохранение всех системы выполнено","Vehicle.destroy","SID: 314","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 314","start","Vehicle.destroy","SID: 314","complete","Зарегистрирован новый персонаж [#34 ] на учётную запись #23","Выбор персонажа [#34]  на учётной записи [23] lastmen3","Dmitry Fomin #34 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000041","Сохранение всех системы выполнено","Dmitry Fomin #34 teleport x: 115.47 y: -1946.94 z: 20.60 h: -23.98 d: 0","Авторизация учётной записи [#7 GeorgeSmall19 91.223.89.49]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -460.00 y: -273.62 z: 35.78 h: 40.43 d: 10009","Авторизация учётной записи [#15 Sebik_Big 92.248.190.38]. Доступные персонажи: (#26 Vi Leman)","Выбор персонажа [#26] Vi Leman на учётной записи [15] 8ballpooll","Vi Leman #26 teleport x: -77.12 y: -813.30 z: 326.18 h: 46.67 d: 10010","Alex Harizma #10 teleport x: -456.49 y: -271.15 z: 35.97 h: -47.22 d: 0"]
+  --------
+
+
+  
+[Mon Oct 23 2023 20:34:02 GMT+0300 (GMT+03:00)] [20:34:02] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["garage: 3","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 452","start","Vehicle.destroy","SID: 452","complete","Сохранение всех системы выполнено","Vehicle.destroy","SID: 314","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 314","start","Vehicle.destroy","SID: 314","complete","Зарегистрирован новый персонаж [#34 ] на учётную запись #23","Выбор персонажа [#34]  на учётной записи [23] lastmen3","Dmitry Fomin #34 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000041","Сохранение всех системы выполнено","Dmitry Fomin #34 teleport x: 115.47 y: -1946.94 z: 20.60 h: -23.98 d: 0","Авторизация учётной записи [#7 GeorgeSmall19 91.223.89.49]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -460.00 y: -273.62 z: 35.78 h: 40.43 d: 10009","Авторизация учётной записи [#15 Sebik_Big 92.248.190.38]. Доступные персонажи: (#26 Vi Leman)","Выбор персонажа [#26] Vi Leman на учётной записи [15] 8ballpooll","Vi Leman #26 teleport x: -77.12 y: -813.30 z: 326.18 h: 46.67 d: 10010","Alex Harizma #10 teleport x: -456.49 y: -271.15 z: 35.97 h: -47.22 d: 0"]
+  --------
+
+
+  
+[Mon Oct 23 2023 20:34:50 GMT+0300 (GMT+03:00)] [20:34:50] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["garage: 3","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 452","start","Vehicle.destroy","SID: 452","complete","Сохранение всех системы выполнено","Vehicle.destroy","SID: 314","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 314","start","Vehicle.destroy","SID: 314","complete","Зарегистрирован новый персонаж [#34 ] на учётную запись #23","Выбор персонажа [#34]  на учётной записи [23] lastmen3","Dmitry Fomin #34 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000041","Сохранение всех системы выполнено","Dmitry Fomin #34 teleport x: 115.47 y: -1946.94 z: 20.60 h: -23.98 d: 0","Авторизация учётной записи [#7 GeorgeSmall19 91.223.89.49]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -460.00 y: -273.62 z: 35.78 h: 40.43 d: 10009","Авторизация учётной записи [#15 Sebik_Big 92.248.190.38]. Доступные персонажи: (#26 Vi Leman)","Выбор персонажа [#26] Vi Leman на учётной записи [15] 8ballpooll","Vi Leman #26 teleport x: -77.12 y: -813.30 z: 326.18 h: 46.67 d: 10010","Alex Harizma #10 teleport x: -456.49 y: -271.15 z: 35.97 h: -47.22 d: 0"]
+  --------
+
+
+  
+[Mon Oct 23 2023 20:35:14 GMT+0300 (GMT+03:00)] [20:35:14] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["garage: 3","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 452","start","Vehicle.destroy","SID: 452","complete","Сохранение всех системы выполнено","Vehicle.destroy","SID: 314","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 314","start","Vehicle.destroy","SID: 314","complete","Зарегистрирован новый персонаж [#34 ] на учётную запись #23","Выбор персонажа [#34]  на учётной записи [23] lastmen3","Dmitry Fomin #34 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000041","Сохранение всех системы выполнено","Dmitry Fomin #34 teleport x: 115.47 y: -1946.94 z: 20.60 h: -23.98 d: 0","Авторизация учётной записи [#7 GeorgeSmall19 91.223.89.49]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -460.00 y: -273.62 z: 35.78 h: 40.43 d: 10009","Авторизация учётной записи [#15 Sebik_Big 92.248.190.38]. Доступные персонажи: (#26 Vi Leman)","Выбор персонажа [#26] Vi Leman на учётной записи [15] 8ballpooll","Vi Leman #26 teleport x: -77.12 y: -813.30 z: 326.18 h: 46.67 d: 10010","Alex Harizma #10 teleport x: -456.49 y: -271.15 z: 35.97 h: -47.22 d: 0"]
+  --------
+
+
+  
+[Mon Oct 23 2023 20:35:56 GMT+0300 (GMT+03:00)] [20:35:56] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["garage: 3","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 452","start","Vehicle.destroy","SID: 452","complete","Сохранение всех системы выполнено","Vehicle.destroy","SID: 314","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 314","start","Vehicle.destroy","SID: 314","complete","Зарегистрирован новый персонаж [#34 ] на учётную запись #23","Выбор персонажа [#34]  на учётной записи [23] lastmen3","Dmitry Fomin #34 teleport x: -519.57 y: -258.77 z: 35.59 h: 28.00 d: 10000041","Сохранение всех системы выполнено","Dmitry Fomin #34 teleport x: 115.47 y: -1946.94 z: 20.60 h: -23.98 d: 0","Авторизация учётной записи [#7 GeorgeSmall19 91.223.89.49]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -460.00 y: -273.62 z: 35.78 h: 40.43 d: 10009","Авторизация учётной записи [#15 Sebik_Big 92.248.190.38]. Доступные персонажи: (#26 Vi Leman)","Выбор персонажа [#26] Vi Leman на учётной записи [15] 8ballpooll","Vi Leman #26 teleport x: -77.12 y: -813.30 z: 326.18 h: 46.67 d: 10010","Alex Harizma #10 teleport x: -456.49 y: -271.15 z: 35.97 h: -47.22 d: 0","Сохранение всех системы выполнено"]
+  --------
+
+
+  
+[Mon Oct 23 2023 21:40:27 GMT+0300 (GMT+03:00)] [21:40:27] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Vehicle.destroy","SID: 489","start","Vehicle.destroy","SID: 489","complete","Janek Basota #38 teleport x: 3.29 y: -1308.97 z: 30.17 h: 293.00 d: 10000051","Сохранение всех системы выполнено","Авторизация учётной записи [#25 Polinastark 31.185.6.228]. Доступные персонажи: (#37 )","Зарегистрирован новый персонаж [#41 ] на учётную запись #25","Выбор персонажа [#41]  на учётной записи [25] bambinapolina","Vehicle.destroy","SID: 484","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 484","start","Vehicle.destroy","SID: 484","complete","Gazzelka Viks #30 teleport x: -700.80 y: -1310.46 z: 4.11 h: -127.63737487792969 d: 10000054","Vehicle.destroy","SID: 485","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.destroy","SID: 485","start","Vehicle.destroy","SID: 485","complete","Raiden  #14 teleport x: 291.78 y: -604.26 z: 43.19 h: 97.75 d: 0","Polina Bambina #41 teleport x: -1057.11 y: -855.24 z: 4.87 h: 151.00 d: 10000057","Lalka Lalkova #40 teleport x: 3.29 y: -1308.97 z: 30.17 h: 293.00 d: 10000056","Raiden  #14 teleport x: 291.72 y: -604.34 z: 43.19 h: 5.23 d: 0","Сохранение всех системы выполнено"]
+  --------
+
+
+  
+[Tue Oct 24 2023 00:00:14 GMT+0300 (GMT+03:00)] [00:00:14] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["SID: 84","start","Vehicle.destroy","SID: 84","complete","Vehicle.respawn","SID: 93","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 93","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 93","start","Vehicle.destroy","SID: 93","complete","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 2 игроков","Зарплата: $400","Бонусные средства: $0","Донат валюта: 0","Опыт: 2","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Tue Oct 24 2023 20:00:13 GMT+0300 (GMT+03:00)] [20:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"UPDATE `business_entity` SET `userId` = ? WHERE `id` IN (?)","parameters":[null,172],"driverError":{"code":"ER_LOCK_DEADLOCK","errno":1213,"sqlMessage":"Deadlock found when trying to get lock; try restarting transaction","sqlState":"40001","index":0,"sql":"UPDATE `business_entity` SET `userId` = NULL WHERE `id` IN (172)"},"code":"ER_LOCK_DEADLOCK","errno":1213,"sqlMessage":"Deadlock found when trying to get lock; try restarting transaction","sqlState":"40001","index":0,"sql":"UPDATE `business_entity` SET `userId` = NULL WHERE `id` IN (172)"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 503","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 503","start","Vehicle.destroy","SID: 503","complete","Raiden  #14 teleport x: 997.88 y: -2049.02 z: 43.56 h: -79.46 d: 0","ROSTOVSKIY YYYY #44 teleport x: 785.40 y: -2614.59 z: 92.56 h: -79.46 d: 0","Сохранение всех системы выполнено","Vehicle.teleport","CID: 506","modelname: shotaro","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Vehicle.teleport","CID: 507","modelname: shotaro","Raiden  #14 teleport x: 1184.04 y: -2544.10 z: 35.02 h: 126.42 d: 1","ROSTOVSKIY YYYY #44 teleport x: 1184.04 y: -2544.10 z: 35.02 h: 126.42 d: 2","Raiden  #14 teleport x: 1184.04 y: -2544.10 z: 35.02 h: 126.42 d: 1","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 3 игроков","Зарплата: $800","Бонусные средства: $0","Донат валюта: 0","Опыт: 4","----------------","Сохранение всех системы выполнено"]
+  --------
+
+
+  
+[Wed Oct 25 2023 00:00:10 GMT+0300 (GMT+03:00)] [00:00:10] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["ROSTOVSKIY YYYY #44 teleport x: -455.21 y: 6015.36 z: 31.72 h: -37.25 d: 0","Сохранение всех системы выполнено","ROSTOVSKIY YYYY #44 teleport x: -455.62 y: 6015.50 z: 31.72 h: 135.25 d: 0","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Raiden  #14 teleport x: -159.58 y: -297.73 z: 39.73 h: -32.17 d: 3","Raiden  #14 teleport x: -158.93 y: -297.98 z: 39.73 h: -20.73 d: 3","ROSTOVSKIY YYYY #44 teleport x: -160.29 y: -296.25 z: 39.73 h: -177.17 d: 2","Сохранение всех системы выполнено","ROSTOVSKIY YYYY #44 teleport x: -2340.20 y: 3222.76 z: 29.22 h: 83.06 d: 2","Гардероб","Army",18,"был удалён","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 3 игроков","Зарплата: $800","Бонусные средства: $0","Донат валюта: 0","Опыт: 4","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Thu Oct 26 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Vehicle.destroy","SID: 363","complete","Сохранение всех системы выполнено","Spidey Rock #51 teleport x: -1057.11 y: -855.24 z: 4.87 h: 151.00 d: 10000039","Сохранение всех системы выполнено","#51 Spidey Rock Покинул сервер, timeout undefined","Сохранение всех системы выполнено","Alex Harizma #10 teleport x: 122.47 y: 193.59 z: 98.66 h: -144.1500244140625 d: 1","Alex Harizma #10 teleport x: 126.39 y: 185.15 z: 108.62 h: 40.51998519897461 d: 1","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 1 игроков","Зарплата: $6 600","Бонусные средства: $800","Донат валюта: 0","Опыт: 3","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Fri Oct 27 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Авторизация учётной записи [#38 HonPersov999 94.181.184.101]. Доступные персонажи: (#52 Samurai Kalen)","Выбор персонажа [#52] Samurai Kalen на учётной записи [38] semrei","Samurai Kalen #52 teleport x: 911.69 y: -163.02 z: 74.12 h: 90.87 d: 10000","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Samurai Kalen #52 teleport x: -1150.55 y: -1520.95 z: 9.63 h: 32.35 d: 296","Samurai Kalen #52 teleport x: -1150.55 y: -1520.95 z: 9.63 h: 32.35 d: 296","Samurai Kalen #52 teleport x: 833.01 y: -1308.94 z: -84.81 h: 270.00 d: 296","Vehicle.teleport","CID: 144","modelname: 2170","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 1 игроков","Зарплата: $5 400","Бонусные средства: $0","Донат валюта: 0","Опыт: 2","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Sat Oct 28 2023 00:00:11 GMT+0300 (GMT+03:00)] [00:00:11] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Samurai Kalen #52 teleport x: -18.47 y: -591.79 z: 90.11 h: 336.67 d: 289","Сохранение всех системы выполнено","#52 Samurai Kalen Покинул сервер, disconnect undefined","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Сохранение всех системы выполнено","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Sun Oct 29 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:14] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Tue Oct 31 2023 00:00:11 GMT+0300 (GMT+03:00)] [00:00:11] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Сохранение всех системы выполнено","Vi Leman #26 teleport x: 1252.56 y: 230.10 z: -48.84 h: -158.73 d: 114000","Vi Leman #26 teleport x: -1162.17 y: -741.89 z: 18.73 h: -71.00 d: 114000","Vi Leman #26 teleport x: 1089.63 y: 206.54 z: -50.00 h: 338.00 d: 1","Сохранение всех системы выполнено","Vi Leman #26 teleport x: 935.05 y: 46.23 z: 80.20 h: 112.00 d: 1","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Vi Leman #26 teleport x: -700.80 y: -1310.46 z: 4.11 h: -122.87610626220703 d: 10000027","Vehicle.destroy","SID: 240","rentCar: undefined","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.destroy","SID: 240","start","Vehicle.destroy","SID: 240","complete","Создан новый ТС для Vi Leman #26 chaser","Vehicle.teleport","CID: 242","modelname: chaser","Сохранение всех системы выполнено","Vi Leman #26 teleport x: 1252.56 y: 230.10 z: -48.84 h: 173.64 d: 114000","Vi Leman #26 teleport x: -1162.17 y: -741.89 z: 18.73 h: -71.00 d: 114000","Сохранение всех системы выполнено","----------------","Выдача PayDay для 1 игроков","Зарплата: $400","Бонусные средства: $0","Донат валюта: 0","Опыт: 3","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Wed Nov 01 2023 00:00:10 GMT+0300 (GMT+03:00)] [00:00:10] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Бонусные средства: $0","Донат валюта: 0","Опыт: 4","----------------","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Kua Kogoto #63 teleport x: 1089.63 y: 206.54 z: -50.00 h: 338.00 d: 1","Dmitriy Timofeev #62 teleport x: 1089.63 y: 206.54 z: -50.00 h: 338.00 d: 1","Авторизация учётной записи [#7 GeorgeSmall19 85.249.19.7]. Доступные персонажи: (#15 Lis Admin)","Выбор персонажа [#15] Lis Admin на учётной записи [7] Lis_","Lis Admin #15 teleport x: -2046.01 y: -1030.57 z: 11.98 h: -109.79 d: 10002","Сохранение всех системы выполнено","Lis Admin #15 teleport x: 1149.93 y: 269.51 z: -51.84 h: 44.99 d: 1","Lis Admin #15 teleport x: 935.05 y: 46.23 z: 80.20 h: 112.00 d: 1","#15 Lis Admin Покинул сервер, disconnect undefined","Сохранение всех системы выполнено","Dmitriy Timofeev #62 teleport x: 935.05 y: 46.23 z: 80.20 h: 112.00 d: 1","Сохранение всех системы выполнено","Kua Kogoto #63 teleport x: 935.05 y: 46.23 z: 80.20 h: 112.00 d: 1","Сохранение всех системы выполнено","Dmitriy Timofeev #62 teleport x: -792.80 y: 320.53 z: 127.04 h: 182.00 d: 10000032","Kua Kogoto #63 teleport x: -792.80 y: 320.53 z: 127.04 h: 182.00 d: 10000032","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 2 игроков","Зарплата: $13 400","Бонусные средства: $0","Донат валюта: 0","Опыт: 4","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Thu Nov 02 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Сохранение всех системы выполнено","Авторизация учётной записи [#32 Golosutzki2004 87.117.59.79]. Доступные персонажи: (#45 Kiwi Boom)","Выбор персонажа [#45] Kiwi Boom на учётной записи [32] EnotikBro5","Kiwi Boom #45 teleport x: -86.92 y: -821.61 z: 321.81 h: 89.26 d: 10000","Сохранение всех системы выполнено","#45 Kiwi Boom Покинул сервер, disconnect undefined","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Fri Nov 03 2023 00:00:13 GMT+0300 (GMT+03:00)] [00:00:13] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","Сохранение всех системы выполнено","Зарегистрирован новый персонаж [#67 ] на учётную запись #53","Выбор персонажа [#67]  на учётной записи [53] Lokere","Lahma Lahmadju #67 teleport x: 3.29 y: -1308.97 z: 30.17 h: 293.00 d: 10000038","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","----------------","Выдача PayDay для 1 игроков","Зарплата: $0","Бонусные средства: $0","Донат валюта: 0","Опыт: 0","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Sat Nov 04 2023 00:00:12 GMT+0300 (GMT+03:00)] [00:00:12] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["modelname: bmwe","Vehicle.respawn","SID: 269","rentCar: undefined","garage: undefined","dbid: 24","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.respawn","SID: 444","rentCar: undefined","garage: undefined","dbid: 26","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.teleport","CID: 444","modelname: bmwe","#20 Ferruccio Martini Покинул сервер, timeout undefined","Vehicle.teleport","CID: 444","modelname: bmwe","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $0","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Sat Nov 04 2023 21:10:58 GMT+0300 (GMT+03:00)] [21:10:58] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"UPDATE `user_entity` SET `bank_money` = ?, `water` = ?, `food` = ? WHERE `id` IN (?)","parameters":[18336,982.3600000000024,982.3600000000024,11],"driverError":{"code":"ER_LOCK_DEADLOCK","errno":1213,"sqlMessage":"Deadlock found when trying to get lock; try restarting transaction","sqlState":"40001","index":0,"sql":"UPDATE `user_entity` SET `bank_money` = 18336, `water` = 982.3600000000024, `food` = 982.3600000000024 WHERE `id` IN (11)"},"code":"ER_LOCK_DEADLOCK","errno":1213,"sqlMessage":"Deadlock found when trying to get lock; try restarting transaction","sqlState":"40001","index":0,"sql":"UPDATE `user_entity` SET `bank_money` = 18336, `water` = 982.3600000000024, `food` = 982.3600000000024 WHERE `id` IN (11)"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["SID: 490","complete","Lony Gold #76 teleport x: 748.72 y: 114.66 z: 78.76 h: 157.35 d: 48280523","Lony Gold #76 teleport x: -2223.22 y: 3304.65 z: 32.82 h: 91.08 d: 0","#63 Kua Kogoto Покинул сервер, disconnect undefined","Сохранение всех системы выполнено","Vehicle.destroy","SID: 492","rentCar: undefined","garage: 9","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 492","start","Vehicle.destroy","SID: 492","complete","Lony Gold #76 teleport x: 1174.35 y: -3266.72 z: 5.66 h: 92.99 d: 36945239","Tema Chert #75 teleport x: 1089.63 y: 206.54 z: -50.00 h: 338.00 d: 1","Точка ограбления Pacific была восстановлена до изначальных параметров","Точка ограбления Casino была восстановлена до изначальных параметров","Точка ограбления Army была восстановлена до изначальных параметров","Точка ограбления Port была восстановлена до изначальных параметров","----------------","Выдача PayDay для 3 игроков","Зарплата: $19 800","Бонусные средства: $1 200","Донат валюта: 0","Опыт: 8","----------------","Сохранение всех системы выполнено","Tema Chert #75 teleport x: 935.05 y: 46.23 z: 80.20 h: 112.00 d: 1","Сохранение всех системы выполнено","Сохранение всех системы выполнено"]
+  --------
+
+
+  
+[Sun Nov 05 2023 00:00:11 GMT+0300 (GMT+03:00)] [00:00:11] 
+  !!! unhandledRejection !!!
+  reason
+  {"query":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`","parameters":[],"driverError":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"},"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlMessage":"Field 'chestsData' doesn't have a default value","sqlState":"HY000","index":0,"sql":"INSERT INTO `warehouse_entity`(`id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`, `chestsData`, `userId`) VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) RETURNING `id`, `x`, `y`, `z`, `h`, `d`, `price`, `key`, `tax`"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Vehicle.teleport","CID: 479","modelname: vaz2121","Vehicle.respawn","SID: 498","rentCar: undefined","garage: undefined","dbid: 36","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.teleport","CID: 498","modelname: mersg63","Vehicle.respawn","SID: 502","rentCar: undefined","garage: undefined","dbid: 40","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: true","Vehicle.teleport","CID: 502","modelname: slsamg","#71 Ded Mazai Покинул сервер, timeout undefined","Vehicle.teleport","CID: 479","modelname: vaz2121","Vehicle.teleport","CID: 498","modelname: mersg63","Vehicle.teleport","CID: 502","modelname: slsamg","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $45 945","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  
+[Sun Nov 05 2023 10:48:12 GMT+0300 (GMT+03:00)] [10:48:12] 
+  !!! unhandledRejection !!!
+  reason
+  {"errno":-4039,"code":"ESOCKET","syscall":"connect","address":"212.41.1.119","port":465,"command":"CONN"}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["Vehicle.respawn","SID: 478","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 478","rentCar: true","garage: undefined","dbid: undefined","usedAfterRespawn: true","spawnPosition: true","spawnRotation: true","spawnDimension: false","Vehicle.destroy","SID: 478","start","Vehicle.destroy","SID: 478","complete","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Точка ограбления Casino была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Авторизация учётной записи [#63 rollerxxx124 62.68.158.225]. Доступные персонажи: (#78 Aleksandr Miller)","Выбор персонажа [#78] Aleksandr Miller на учётной записи [63] partizan138","Aleksandr Miller #78 teleport x: -1053.47 y: -877.55 z: 4.81 h: 86.61 d: 10000","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","Сохранение всех системы выполнено","#78 Aleksandr Miller Покинул сервер, disconnect undefined","Сохранение всех системы выполнено"]
+  --------
+
+
+  
+[Wed Nov 08 2023 00:00:12 GMT+0300 (GMT+03:00)] [00:00:12] 
+  !!! unhandledRejection !!!
+  reason
+  {}
+  promise
+  {}
+  --------
+  LAST DEBUG
+  ["modelname: jesko20","Авторизация учётной записи [#32 Golosutzki2004 31.23.17.43]. Доступные персонажи: (#45 Kiwi Boom)","Выбор персонажа [#45] Kiwi Boom на учётной записи [32] EnotikBro5","Kiwi Boom #45 teleport x: 401.55 y: -962.30 z: 28.81 h: 89.59 d: 10000","Vehicle.respawn","SID: 486","rentCar: undefined","garage: undefined","dbid: 43","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: true","#45 Kiwi Boom Покинул сервер, timeout undefined","Авторизация учётной записи [#32 Golosutzki2004 31.23.17.43]. Доступные персонажи: (#45 Kiwi Boom)","Выбор персонажа [#45] Kiwi Boom на учётной записи [32] EnotikBro5","Kiwi Boom #45 teleport x: 401.46 y: -962.10 z: 29.41 h: 46.41 d: 10000","Vehicle.respawn","SID: 486","rentCar: undefined","garage: undefined","dbid: 43","usedAfterRespawn: false","spawnPosition: true","spawnRotation: true","spawnDimension: true","#45 Kiwi Boom Покинул сервер, timeout undefined","Точка ограбления Fleeca1 была восстановлена до изначальных параметров","Точка ограбления Fleeca3 была восстановлена до изначальных параметров","Точка ограбления Fleeca6 была восстановлена до изначальных параметров","Точка ограбления Fleeca2 была восстановлена до изначальных параметров","Точка ограбления Fleeca5 была восстановлена до изначальных параметров","Точка ограбления Fleeca4 была восстановлена до изначальных параметров","----------------","Выдача PayDay для 0 игроков","----------------","----------------","Выдача PayDay для 0 игроков","----------------","Новый день","----------------","Списание налогов","Бизнесам выписаны налоги на сумму $32 985","Домам выписаны налоги на сумму $0"]
+  --------
+
+
+  

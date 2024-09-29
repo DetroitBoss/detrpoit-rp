@@ -1,0 +1,375 @@
+@import "../../assets/less/uikit";
+
+.divingGame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(20, 27, 31, 0.42), rgba(20, 27, 31, 0.42));
+  flex-direction: column;
+  overflow: hidden;
+
+  .exit {
+    align-items: center;
+    z-index: 502 !important;
+    font-size: @16px;
+    background-color: #141B1F80;
+    border-radius: @6px;
+    display: flex;
+    position: absolute;
+    top: @40px;
+    left: auto !important;
+    right: @40px !important;
+    height: @40px !important;
+    width: @132px !important;
+
+    &__icon {
+      justify-content: center;
+      align-items: center;
+      background-color: #141B1FE3;
+      border-radius: @6px;
+      width: @40px !important;
+      height: @40px;
+      display: flex;
+    }
+
+    &__title {
+      text-align: center;
+      width: @91px;
+      color: white;
+    }
+
+    img {
+      width: @17px;
+      height: @17px;
+    }
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+
+  &__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  &__title {
+    font-size: @60px;
+    line-height: @76px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: @18px;
+    line-height: @21px;
+    text-align: center;
+    opacity: .7;
+  }
+
+  &-netTitle {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: @80px;
+    top: @60px;
+    align-items: flex-start;
+
+    &__title {
+      line-height: @76px;
+      font-size: @60px;
+    }
+
+    &__text {
+      opacity: .5;
+      margin-top: @10px;
+      font-size: @16px;
+      line-height: 140%;
+    }
+  }
+
+  &__instruction {
+    display: flex;
+    justify-content: center;
+    height: @46px;
+    align-items: center;
+    font-size: @18px;
+    margin-top: @28px;
+
+    img {
+      width: @40px !important;
+    }
+
+    div {
+      height: @46px;
+      padding: @11px;
+      margin-right: @16px;
+      border: @1px solid #FFFFFF4D;
+      border-radius: @4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: @24px !important;
+      }
+
+      span {
+        font-size: @11px !important;
+        margin: 0 @10px;
+      }
+    }
+
+    span {
+      font-size: @18px;
+      margin-right: @42px;
+    }
+  }
+
+  .lockGame {
+    height: @486px;
+    margin-top: @82px;
+    display: flex;
+    align-items: center;
+
+    &-gears {
+      width: @124px;
+      height: @472px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      img {
+        width: @124px;
+        filter: brightness(.7);
+      }
+
+
+      .lockGame-focus {
+        -webkit-filter: drop-shadow(0 0 @50px #FF212199);
+
+        img {
+          filter: brightness(1) !important;
+        }
+      }
+
+      .lockGame-green {
+        -webkit-filter: drop-shadow(0 0 @50px #9AC00099);
+
+        img {
+          filter: sepia(1) hue-rotate(30deg) contrast(1.2);
+        }
+      }
+
+    }
+
+    &__lock {
+      width: @342px;
+      height: @485px;
+      margin: 0 @47px;
+    }
+  }
+
+  .chestGame {
+    width: @895px;
+    height: @492px;
+    position: relative;
+    margin-top: @36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__chest {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+
+      img {
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+
+    &-runes {
+      display: grid;
+      grid-gap: @10px;
+      grid-template-columns: repeat(4, @154px);
+
+      &__stone {
+        width: @154px;
+        height: @154px;
+      }
+
+      img {
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+
+    &-manual {
+      position: absolute;
+      right: 0;
+      width: @374px;
+      height: @751px;
+      transform: translateY(@80px);
+      z-index: 1;
+
+      &__background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0 !important;
+        top: 0;
+        left: 0;
+      }
+
+      &__block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1 !important;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: @146px;
+
+        img {
+          width: @100px;
+          -webkit-filter: box-shadow(0 @20px @100px rgba(0, 0, 0, 0.9));
+
+          &:nth-child(1) {
+            margin-right: @30px;
+          }
+
+          &:nth-child(2) {
+            margin-right: @50px;
+          }
+
+          &:nth-child(3) {
+            margin-right: @80px;
+          }
+
+          &:nth-child(4) {
+            margin-right: @110px;
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  }
+
+  .netGame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    * {
+      z-index: 5;
+    }
+
+    .netGame-slot {
+      width: @230px;
+      height: @230px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      &__0 {
+        top: @60px;
+        left: @360px;
+      }
+
+      &__1 {
+        top: @20px;
+        left: @750px;
+      }
+
+      &__2 {
+        top: @40px;
+        right: @600px;
+      }
+
+      &__3 {
+        top: @240px;
+        right: @300px;
+      }
+
+      &__4 {
+        top: @330px;
+        left: @310px;
+      }
+
+      &__5 {
+        top: @300px;
+        left: @670px;
+      }
+
+      &__6 {
+        top: @290px;
+        right: @700px;
+      }
+
+    }
+
+    &__bagFront, &__bagBack {
+      height: @400px;
+      position: absolute;
+      z-index: 6;
+      left: 0;
+      bottom: 0;
+      transform: translateX(@130px);
+      pointer-events: none;
+    }
+
+    &__bagBack {
+      z-index: 4 !important;
+    }
+
+    &__bagBody {
+      position: absolute;
+      bottom: 0;
+      height: @330px;
+      z-index: 10;
+      width: @850px;
+      transform: translateX(-@30px);
+    }
+
+  }
+
+}
+

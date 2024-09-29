@@ -1,0 +1,229 @@
+@import "../../assets/less/uikit";
+
+.snowWar {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #2D424Fe6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .exit {
+    position: absolute;
+    top: @40px;
+    right: @40px !important;
+    left: auto;
+    height: @40px;
+    width: @132px;
+    background-color: #141B1F80;
+    border-radius: @6px;
+    display: flex;
+    align-items: center;
+    z-index: 502 !important;
+    font-size: @16px;
+
+    &__icon {
+      width: @40px;
+      height: @40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #141B1FE3;
+      border-radius: @6px;
+    }
+
+    &__title {
+      text-align: center;
+      width: @91px;
+      color: white;
+    }
+
+    img {
+      width: @17px;
+      height: @17px;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+  }
+
+  &__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  &__body {
+    width: @974px;
+    height: @1043px;
+    position: absolute;
+    transform: translate(-@10px, -@20px);
+    z-index: 0;
+  }
+
+  &-block {
+    width: @974px;
+    height: @1043px;
+    position: relative;
+    padding: @254px @237px 0 @266px;
+    transform: translateX(@5px);
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 0;
+    }
+
+    * {
+      z-index: 5;
+    }
+
+    &__title {
+      font-size: @80px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+      margin: @19px 0;
+    }
+
+    &__text {
+      font-size: @16px;
+      width: @408px;
+      line-height: 120%;
+      display: flex;
+      flex-direction: column;
+      color: #ffffffe6;
+      text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+
+      span {
+        color: #fff !important;
+        margin-bottom: @14px;
+        line-height: 120%;
+        letter-spacing: @1px / 1.8;
+      }
+    }
+
+    &__hr {
+      width: @396px;
+      height: @2px;
+      background-color: #ffffff1a;
+      margin: @30px 0;
+    }
+
+    &-footer {
+      display: flex;
+      width: @396px;
+      justify-content: space-between;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+
+
+        span {
+          font-size: @16px;
+          margin-bottom: @10px;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: @30px;
+
+          img {
+            width: @32px;
+          }
+        }
+      }
+
+      &__button {
+        width: @210px;
+        height: @60px;
+        background-color: #F04D26E5;
+        text-transform: uppercase;
+        font-size: @14px;
+        letter-spacing: @1px / 1.9;
+        line-height: 100%;
+        border-radius: @4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        img {
+          width: @18px;
+          margin-right: @6px;
+        }
+
+        &:hover {
+          box-shadow: 0 @4px @100px #F04D267F;
+        }
+
+        &Transparent {
+          background: none !important;
+          border: @1px solid #fff6;
+          opacity: .7;
+
+          &:hover {
+            opacity: 1;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+
+    &-timer {
+      margin-top: @187px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transform: translateX(@12px);
+
+      img {
+        width: @38px;
+      }
+
+      &__time {
+        margin: 0 @16px;
+        font-size: @40px;
+        text-shadow: 0 4px 24px rgba(255, 255, 255, 0.25);
+        width: @105px;
+        text-align: center;
+      }
+
+      &__hr {
+        height: @28px;
+        width: @2px;
+        margin-right: @16px;
+        background-color: #B2BABE;
+      }
+
+      &__text {
+        width: @170px;
+        font-size: @18px;
+        color: #B2BABE;
+        text-shadow: 0 @4px @24px rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+
+}

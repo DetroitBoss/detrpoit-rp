@@ -1,0 +1,97 @@
+var VirtualHandler = (function () {
+    function VirtualHandler(obj) {
+        if (typeof obj === "undefined") { obj = {
+        }; }
+        this.delegate = {
+        };
+        this.props = {
+        };
+        this.delegate = obj;
+    }
+    VirtualHandler.prototype.addProperty = function (name, writeCB) {
+        var that = this;
+        var desc = {
+            get: function () {
+                return that.props[name].value;
+            },
+            set: function (value) {
+                writeCB(value);
+                that.props[name].value = value;
+            }
+        };
+        this.props[name] = {
+            value: null,
+            pd: desc
+        };
+    };
+    VirtualHandler.prototype.defineProperty = function (name, desc) {
+        Object.defineProperty(this.delegate, name, desc);
+    };
+    VirtualHandler.prototype.delete = function (name) {
+        return delete this.delegate[name];
+    };
+    VirtualHandler.prototype.getOwnPropertyNames = function () {
+        return Object.getOwnPropertyNames(this.delegate);
+    };
+    VirtualHandler.prototype.getPropertyNames = function () {
+        var getPropertyNames = function (obj, name) {
+            if(obj === null) {
+                return [];
+            }
+            return Object.getOwnPropertyNames(obj).concat(getPropertyNames(Object.getPrototypeOf(obj)));
+        };
+        return getPropertyNames(this.delegate);
+    };
+    VirtualHandler.prototype.getOwnPropertyDescriptor = function (name) {
+        var that = this;
+        if(this.props[name] !== undefined) {
+            return that.props[name].pd;
+        } else {
+            var desc = Object.getOwnPropertyDescriptor(this.delegate, name);
+            if(desc !== undefined) {
+                desc.configurable = true;
+            }
+            return desc;
+        }
+    };
+    VirtualHandler.prototype.getPropertyDescriptor = function (name) {
+        var getPropertyDescriptor = function (obj, name) {
+            if(obj === null) {
+                return undefined;
+            }
+            var desc = Object.getOwnPropertyDescriptor(obj, name);
+            if(desc !== undefined) {
+                return desc;
+            }
+            return getPropertyDescriptor(Object.getPrototypeOf(obj));
+        };
+        var desc = getPropertyDescriptor(this.delegate, name);
+        if(desc !== undefined) {
+            desc.configurable = true;
+        }
+        return desc;
+    };
+    VirtualHandler.prototype.fix = function () {
+        var result = {
+        };
+        Object.getOwnPropertyNames(this.delegate).forEach(function (name) {
+            result[name] = Object.getOwnPropertyDescriptor(this.delegate, name);
+        });
+        return result;
+    };
+    return VirtualHandler;
+})();
+/* ==================================================================== */
+var Tester = (function () {
+    function Tester() {
+        this.handler = new VirtualHandler(this);
+        this.handler.addProperty("foo", function (value) {
+            console.log('New foo: ' + value);
+        });
+        return Proxy.create(this.handler, this);
+    }
+    return Tester;
+})();
+var tester = new Tester();
+tester.foo = 1;
+//@ sourceMappingURL=virtual.js.map

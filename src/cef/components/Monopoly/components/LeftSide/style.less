@@ -1,0 +1,251 @@
+@import "../../../../assets/less/uikit";
+
+.monopoly-leftSide {
+  width: @418px;
+  padding: @28px 0 0 @48px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    width: 100%;
+    height: @1px;
+    outline: none;
+    border: none;
+    background: #D9D9D9;
+    opacity: 0.1;
+    margin: @30px 0 0 0;
+  }
+
+  &-exit {
+    font-size: @16px !important;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: @50px;
+
+    div {
+      &:hover {
+        background-color: #fff3;
+      }
+
+      width: @68px;
+      height: @40px;
+      border-radius: @6px;
+      padding: @10px;
+      background-color: #ffffff1a;
+      margin-right: @16px;
+      transition: .15s;
+      font-size: @16px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: @20px;
+    text-transform: uppercase;
+    font-size: @16px !important;
+    color: #ffffff80;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
+      color: #ffffff80;
+      font-size: @16px !important;
+    }
+  }
+
+  &-block {
+    width: @358px;
+    padding: @20px;
+    border-radius: @8px;
+    display: flex;
+    margin-bottom: @20px;
+    flex-wrap: wrap;
+    border: 1px solid #FFFFFF0F;
+
+    &__red {
+      border: @1px solid #E33400 !important;
+
+      .leftSide-block-information-status__action {
+        color: #E33400 !important;
+      }
+    }
+
+    hr {
+      margin: @18px 0 !important;
+    }
+
+    &__image {
+      width: @60px;
+      height: @60px;
+      background: #FFFFFF0F;
+      border-radius: @100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: @16px;
+
+      img {
+        width: @40px;
+      }
+    }
+
+    &-information {
+      display: flex;
+      flex-direction: column;
+
+      &-status {
+        display: flex;
+        align-items: center;
+        margin-bottom: @8px;
+
+        &__number {
+          font-size: @14px;
+          color: #ffffff80;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+
+          &::after {
+            margin: 0 @10px;
+            content: '';
+            width: @4px;
+            height: @4px;
+            border-radius: @100px;
+            background-color: #ffffff80;
+          }
+        }
+
+        &__action {
+          font-size: @14px;
+          color: #ffffff80;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__name {
+        font-size: @20px !important;
+        color: #fff !important;
+        margin-bottom: @10px;
+      }
+
+      &__money {
+        display: flex;
+        align-items: center;
+        font-size: @20px !important;
+
+        img {
+          margin-right: @10px;
+          width: @20px;
+        }
+      }
+    }
+
+    &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: @16px !important;
+      color: #fff9 !important;
+
+      div {
+        margin-left: @8px;
+        border-radius: @4px;
+        width: @19px;
+        height: @19px;
+
+      }
+
+
+      &-red {
+        background-color: #F43001;
+      }
+
+      &-aqua {
+        background-color: #00D1BB;
+      }
+
+      &-blue {
+        background-color: #1342EB;
+      }
+
+      &-purple {
+        background-color: #FB00ED;
+      }
+
+      &-sky {
+        background-color: #2F7BEE;
+      }
+
+      &-rose {
+        background-color: #E93162;
+      }
+    }
+  }
+
+  &-position {
+    display: flex;
+    align-items: center;
+    margin-top: -@15px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      font-size: @20px !important;
+      color: #fff;
+      margin-right: @35px;
+
+      &__block {
+        width: @28px;
+        height: @28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: @2px dashed #FFFFFF;
+        border-radius: @2px;
+        margin-right: @10px;
+
+        div {
+          width: @12px;
+          height: @12px;
+          background: #FFFFFF;
+          border-radius: @2px;
+        }
+      }
+
+      &__red {
+        color: #E33400 !important;
+
+        .leftSide-position-left__block {
+          border: @2px dashed #E33400 !important;
+
+          div {
+            background-color: #E33400 !important;
+          }
+        }
+      }
+    }
+
+    &-text {
+      line-height: 140%;
+      font-size: @16px !important;
+      color: #fff !important;
+    }
+  }
+
+  &-list {
+    padding-top: @30px;
+    flex-grow: 100;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+}

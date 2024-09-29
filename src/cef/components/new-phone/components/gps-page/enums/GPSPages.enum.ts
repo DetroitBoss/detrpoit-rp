@@ -1,0 +1,6 @@
+export enum GPSPages {
+  MAIN,
+  POINTS,
+  DESTINATION,
+  DESTINATION_IS_SET,
+}

@@ -1,0 +1,4 @@
+C:\cygwin\home\kjones\shared\slides\obj\Release\oatas.dll
+C:\cygwin\home\kjones\shared\slides\obj\Release\oatas.pdb
+C:\cygwin\home\kjones\shared\slides\bin\oatas.dll
+C:\cygwin\home\kjones\shared\slides\bin\oatas.pdb

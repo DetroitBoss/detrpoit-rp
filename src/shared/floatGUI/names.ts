@@ -1,0 +1,1 @@
+export type floatGUINames = null | "walkie";

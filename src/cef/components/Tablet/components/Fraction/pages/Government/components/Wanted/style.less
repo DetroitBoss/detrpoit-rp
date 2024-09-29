@@ -1,0 +1,77 @@
+@import "../../../../../../../../assets/less/uikit";
+
+.wanted {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+
+
+  &-info {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: @10px;
+
+    span {
+      font-size: @18px !important;
+      color: #ffffff80 !important;
+    }
+  }
+
+  &-description {
+    width: 100%;
+    border-bottom: @1px solid #1C1F24;
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    height: 40px;
+
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff80 !important;
+      font-size: @14px !important;
+    }
+  }
+
+  &-list {
+    overflow-y: auto;
+    max-height: @335px;
+
+    &-block {
+      display: grid;
+      align-items: center;
+      margin-bottom: @4px;
+      width: @601px;
+      height: @50px;
+      padding-left: @18px;
+      grid-template-columns: @80px @410px @90px;
+      background-color: #ffffff0d;
+      border-radius: @4px;
+
+      &__id {
+        font-size: @16px;
+        color: #fff;
+        opacity: .6;
+      }
+
+      &__name {
+        font-size: @16px;
+        color: #fff;
+      }
+
+      &__status {
+        font-size: @16px;
+        color: #fff;
+
+        &-active {
+          color: #5AFF57;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../../../../../assets/less/uikit";
+
+.np-contact-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // margin: 0 -@16px 0 -@16px;
+  // padding: 0 @16px;
+  padding-bottom: @30px;
+  background: #f5f5f5;
+  position: absolute;
+  border-radius: @34px @34px 0 0;
+  left: 0;
+  .np-btns-wrap {
+    width: 100%;
+    margin-top: @54px;
+    padding: 0 @16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-btn {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: @12px;
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: #2273d1;
+        }
+      }
+    }
+    &.large {
+      width: 126 * @1px;
+      height: @60px;
+      background: #ffffff;
+      border-radius: @10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: @14px;
+      line-height: @16px;
+      text-align: center;
+      color: #3a9fff;
+
+      svg {
+        height: 22.75 * @1px;
+        margin-right: 0;
+        margin-bottom: @2px;
+      }
+    }
+  }
+  &-user {
+    margin-top: @24px;
+    padding: 0 @16px;
+  }
+  &-user-img {
+    display: flex;
+    justify-content: center;
+  }
+  &-user-name {
+    font-weight: 500;
+    font-size: @24px;
+    line-height: @28px;
+    text-align: center;
+    color: #000;
+    margin-top: @10px;
+  }
+  &-phone {
+    margin-top: @6px;
+    color: #2a8cff;
+  }
+  &-phone-wrap {
+    padding-top: @16px;
+  }
+  &-user-info {
+    margin-top: @20px;
+    padding: 0 @16px;
+    border-top: @1px solid rgba(#000, 0.1);
+    font-weight: 500;
+    font-size: @16px;
+    line-height: @19px;
+  }
+  &-call-time {
+    font-size: @14px;
+    line-height: @16px;
+    margin-right: @10px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  &-call-type {
+    font-size: @14px;
+    line-height: @17px;
+    color: #000;
+  }
+  ul {
+    padding: @20px 0;
+    border-bottom: @1px solid rgba(#000, 0.1);
+    li {
+      margin-bottom: @12px;
+      &:first-child {
+        margin-bottom: @6px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-btn-wrap {
+    padding: @14px @16px;
+    background: #fff;
+    border-top: @1px solid rgba(#000, 0.1);
+    border-bottom: @1px solid rgba(#000, 0.1);
+    margin-top: @15px;
+    &:first-child {
+      margin-top: @18px;
+    }
+  }
+}

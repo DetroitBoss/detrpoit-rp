@@ -1,0 +1,647 @@
+@import "../../assets/less/uikit";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+
+.potions {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+
+
+  ::-webkit-scrollbar {
+    width: @4px;
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff33;
+    border-radius: @100px;
+  }
+
+  * {
+    z-index: 1;
+  }
+
+  .exit {
+    position: absolute;
+    top: @40px;
+    left: auto !important;
+    right: @40px !important;
+    height: @40px !important;
+    width: @132px !important;
+    align-items: center;
+    z-index: 502 !important;
+    font-size: @16px;
+    background-color: #141B1F80;
+    border-radius: @6px;
+    display: flex;
+
+    &__icon {
+      justify-content: center;
+      align-items: center;
+      background-color: #141B1FE3;
+      border-radius: @6px;
+      width: @40px !important;
+      height: @40px;
+      display: flex;
+    }
+
+    &__title {
+      text-align: center;
+      width: @91px;
+      color: white;
+    }
+
+    img {
+      width: @17px;
+      height: @17px;
+    }
+  }
+
+  &__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+
+  &__title {
+    font-size: @80px;
+    margin-top: @50px;
+    line-height: @102px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: @20px;
+    line-height: 130%;
+    opacity: .7;
+  }
+
+  &-list {
+    position: absolute;
+    height: calc(100% - @248px);
+    bottom: 0;
+    width: @1490px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: @20px;
+
+    &-block {
+      width: 100%;
+      min-height: @310px;
+      max-height: @310px;
+      display: grid;
+      grid-template-columns: @316px @270px @804px;
+      grid-template-rows: @278px;
+      grid-gap: @40px;
+      padding-bottom: @40px;
+      border-bottom: @2px solid #fff3;
+      margin-top: @40px;
+
+      &__title {
+        font-size: @16px;
+        color: #fff9;
+        margin-bottom: @16px;
+        line-height: @20px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      &-flask {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &__table {
+          position: absolute;
+          top: @157px;
+          z-index: 0;
+          width: @316px;
+        }
+
+        &__flask {
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          width: @100px;
+        }
+
+        &__plate {
+          position: absolute;
+          top: @135px;
+          z-index: 2;
+          width: @230px;
+        }
+
+        span {
+          font-size: @26px;
+          width: @190px;
+          transform: rotate(-5deg);
+          position: absolute;
+          top: @165px;
+          text-align: center;
+          z-index: 3;
+          color: #000000e6;
+
+        }
+
+      }
+
+      &-progress {
+        display: flex;
+        flex-direction: column;
+
+        &__percent {
+          font-size: @42px;
+          line-height: @54px;
+        }
+
+        span {
+          font-size: @16px;
+          line-height: @19px;
+          color: #FFFFFF4D;
+        }
+
+        &__button {
+          font-size: @16px;
+          width: @176px;
+          height: @64px;
+          border-radius: @4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #32383C;
+          line-height: @20px;
+          margin-top: @36px;
+          color: #ffffff80;
+
+          img {
+            margin-right: @10px;
+            width: @20px;
+            opacity: .5;
+          }
+        }
+
+        .potions-active {
+          background: radial-gradient(79.69% 79.69% at 50% 111.72%, #D50B0B 0%, rgba(213, 11, 11, 0) 100%), #EB5757;
+          color: #fff;
+          opacity: .85;
+
+          img {
+            opacity: 1;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+      }
+
+      &-ingredients {
+        display: flex;
+        flex-direction: column;
+        max-height: @350px;
+
+        &-list {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          max-height: 100%;
+
+          .potions-active {
+            div {
+              background-color: #EB5757 !important;
+              border-color: #EB5757 !important;
+
+              img {
+                opacity: 1;
+              }
+            }
+
+            span {
+              color: #EB5757;
+              opacity: 1;
+            }
+          }
+
+          &__block {
+            width: @275px;
+            display: flex;
+            align-items: flex-start;
+            font-size: @18px;
+            margin-bottom: @16px;
+
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-width: @24px;
+              max-width: @24px;
+              min-height: @24px;
+              max-height: @24px;
+              border-radius: 100%;
+              border: @2px solid #616668;
+              background-color: #222;
+
+              img {
+                width: @16px;
+                opacity: 0;
+              }
+            }
+
+            span {
+              margin: @1px @12px 0;
+              opacity: .5;
+              line-height: @22px;
+              width: @80px;
+            }
+
+            p {
+              width: 60%;
+              margin: @1px 0 0 !important;
+              line-height: @22px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+
+}
+
+.potionsGame {
+
+  justify-content: center;
+
+  .potions__title {
+    color: #FF3100 !important;
+    text-shadow: 0 @10px @40px #FF31007F;
+  }
+
+  .potions__text {
+    text-align: center;
+    margin-bottom: auto;
+  }
+
+  &__red {
+    background: linear-gradient(131.48deg, #801F07 -3.21%, rgba(20, 27, 31, 0) 72.84%);
+    opacity: 0.5;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &-recipe {
+    position: absolute;
+    right: 0;
+    width: @477px;
+    height: @840px;
+
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__item {
+      width: @80px;
+      height: @80px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:nth-child(2) {
+        left: 60%;
+        top: 23%;
+      }
+
+      &:nth-child(3) {
+        left: 53%;
+        top: 38.5%;
+      }
+
+      &:nth-child(4) {
+        left: 46%;
+        top: 55%;
+      }
+
+      &:nth-child(5) {
+        left: 39%;
+        top: 72%;
+      }
+
+    }
+
+  }
+
+  &-ingredients {
+    z-index: 90;
+    position: absolute;
+    left: 0;
+    width: @522px;
+    transform: translateY(@50px);
+    display: flex;
+    flex-direction: column;
+
+    &-shelf {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: @522px;
+      height: @340px;
+      padding-right: @60px;
+      margin-top: -@60px;
+
+      &__background {
+        width: @690px;
+        height: @165px;
+        position: absolute;
+        object-fit: cover;
+        object-position: right;
+        bottom: 0;
+        right: auto;
+        pointer-events: none;
+      }
+
+      &-item {
+        height: @220px;
+        width: @198px;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0 @15px;
+        position: relative;
+
+        &__pot {
+          width: @192px;
+          height: @170px;
+          margin-top: auto;
+          pointer-events: none;
+          position: absolute;
+          bottom: 0;
+          z-index: 2;
+        }
+
+        &__potFront {
+          width: @192px;
+          height: @170px;
+          bottom: 0;
+          position: absolute;
+          pointer-events: none;
+          z-index: 3;
+        }
+
+        &__name {
+          position: absolute;
+          top: @105px;
+          width: @163px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #000;
+          pointer-events: none;
+          height: @65px;
+          font-size: @24px;
+          transform: rotate(-5deg);
+          z-index: 4;
+
+          img {
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+            filter: saturate(150%);
+          }
+
+          span {
+            text-align: center;
+          }
+        }
+
+        &__block {
+          z-index: 2;
+          width: @150px;
+          height: @150px;
+          top: 0;
+          transform: translateY(-@30px);
+          position: absolute;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-kettle {
+    position: absolute;
+    width: @770px;
+    transform: translateX(@40px);
+    height: @780px;
+    bottom: -@330px;
+    pointer-events: none;
+
+    &__background {
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    &__backgroundFront {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    &__bubble {
+      position: absolute;
+      border-radius: 100%;
+      background: radial-gradient(100% 100% at 100% 112.06%, #C42F0B 0%, rgba(195, 47, 11, 0) 100%);
+      opacity: 0.8;
+      z-index: 1;
+      transition: 1.5s;
+
+      &_0 {
+        width: @80px;
+        height: @80px;
+        left: 50%;
+        top: 30%;
+        animation: bubbleAnimation 5s linear infinite;
+      }
+
+      &_1 {
+        width: @30px;
+        height: @30px;
+        left: 30%;
+        top: 35%;
+        animation: bubbleAnimation 4s linear infinite;
+      }
+
+      &_2{
+        width: @20px;
+        height: @20px;
+        left: 60%;
+        top: 20%;
+        animation: bubbleAnimation 7s linear infinite;
+      }
+
+      &_3 {
+        width: @70px;
+        height: @70px;
+        left: 40%;
+        top: 35%;
+        animation: bubbleAnimation 6s linear infinite;
+      }
+
+      &_4 {
+        width: @80px;
+        height: @80px;
+        left: 20%;
+        top: 30%;
+        animation: bubbleAnimation 4s linear infinite;
+      }
+
+      &_5 {
+        width: @60px;
+        height: @60px;
+        left: 70%;
+        top: 30%;
+        animation: bubbleAnimation 8s linear infinite;
+      }
+
+      &_6 {
+        width: @45px;
+        height: @45px;
+        left: 65%;
+        top: 20%;
+        animation: bubbleAnimation 4s linear infinite;
+      }
+
+      &_7 {
+        width: @50px;
+        height: @50px;
+        left: 45%;
+        top: 25%;
+        animation: bubbleAnimation 5s linear infinite;
+      }
+
+    }
+
+    &__drop {
+      position: absolute;
+      width: @690px;
+      height: @320px;
+      transform: translateX(@17px);
+      bottom: 0;
+      z-index: 100;
+    }
+
+  }
+
+  &__warning {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    color: #FC3E0F;
+    font-size: @40px;
+  }
+
+  .kettle-red {
+    transition: 1.5s;
+    opacity: 1;
+  }
+
+  .kettle-green {
+    transition: 1.5s;
+    opacity: 0;
+  }
+
+  .kettle-kaka {
+    transition: 1.5s;
+    opacity: 0;
+  }
+
+  .kettle-active {
+    .kettle-red {
+      transition: 1.5s;
+      opacity: 0;
+    }
+
+    .kettle-green {
+      transition: 1.5s;
+      opacity: 1;
+    }
+
+    .potionsGame-kettle__bubble {
+      background: radial-gradient(100% 100% at 100% 112.06%, #07805c 0%, rgba(195, 47, 11, 0) 100%);
+    }
+  }
+
+  .kettle-unActive {
+    .kettle-red {
+      transition: 1.5s;
+      opacity: 0;
+    }
+
+    .kettle-kaka {
+      transition: 1.5s;
+      opacity: 1;
+    }
+
+    .potionsGame-kettle__bubble {
+      background: radial-gradient(100% 100% at 100% 112.06%, #f7f21a 0%, rgba(195, 47, 11, 0) 100%);
+    }
+  }
+}
+
+@keyframes bubbleAnimation {
+  to {
+    transform: translateY(-@300px);
+  }
+  from {
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}

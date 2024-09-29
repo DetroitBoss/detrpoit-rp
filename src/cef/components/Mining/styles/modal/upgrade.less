@@ -1,0 +1,115 @@
+.upgrade {
+  padding: 4.63vh;
+  width: 54.71%;
+  max-height: 100%;
+  //display: none;
+  position: relative;
+  overflow: hidden;
+  &-title {
+    display: flex;
+    align-items: center;
+    margin: 2.593vh 0;
+    svg {
+      width: 2.963vh;
+      height: auto;
+      margin-right: 1.667vh;
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.back {
+  font-size: 1.296vh;
+  line-height: 120%;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.4;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.778vh;
+  &-icon {
+    width: 0.926vh;
+    margin-right: 1.234vh;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.circles-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .circle-wrapper {
+    width: 6.296vh;
+    height: 6.296vh;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .circle {
+        img {
+          transition: .15s;
+          width: 140%;
+        }
+      }
+    }
+  }
+  .circle {
+    width: 5.926vh;
+    height: 5.926vh;
+    img {
+      width: 125%;
+    }
+  }
+}
+
+.remove {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.add {
+  position: absolute;
+  right: 0.37vh;
+  bottom: 0.37vh;
+}
+
+.inventory {
+  display: grid;
+  margin-top: 2.963vh;
+  grid-template-columns: repeat(6, 15.842%);
+  grid-gap: 1%;
+  height: 22.9vh;
+  overflow: auto;
+  .cell {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 0.37vh;
+    height: 7.407vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.389vh;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.15s;
+      background: rgba(131, 67, 235, 1);
+      img {
+        width: 100%;
+        transition: 0.15s;
+      }
+    }
+
+    img {
+      width: 90%;
+      height: auto;
+    }
+  }
+}

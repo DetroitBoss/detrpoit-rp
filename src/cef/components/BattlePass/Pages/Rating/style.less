@@ -1,0 +1,156 @@
+@import "../../../../assets/less/uikit";
+
+.battlePass {
+
+  .rating {
+    display: flex;
+    flex-direction: column;
+    padding: @149px @185px;
+    height: @1080px;
+    width: @1920px;
+    position: absolute;
+
+    * {
+      color: #fff;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      user-select: none;
+      z-index: 3;
+    }
+
+    &__background {
+      position: absolute;
+      right: 0;
+      height: @1080px;
+      bottom: 0 !important;
+      z-index: 2;
+    }
+
+    &-title {
+      font-size: @100px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: @50px;
+
+      span {
+        font-size: @40px;
+        margin-left: @453px;
+      }
+
+    }
+
+    &-body {
+      display: flex;
+      width: @1208px;
+
+      &-left {
+        display: flex;
+        flex-direction: column;
+        width: @658px;
+
+        &-scroll {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-height: @470px;
+          overflow-y: auto;
+        }
+
+        &-categories {
+          display: flex;
+          align-items: center;
+          height: @56px;
+          width: 100%;
+          border-bottom: @1px solid #c4c4c41a;
+
+          * {
+            font-size: @14px;
+            opacity: .7;
+          }
+
+          &__number {
+            width: @40px;
+          }
+
+          &__name {
+            margin-right: auto;
+          }
+
+        }
+
+        &-block {
+          height: @91px;
+          min-height: @91px;
+          display: flex;
+          align-items: center;
+          border-bottom: @1px dashed #FFFFFF1A;
+
+          div {
+            font-size: @20px;
+            color: #fff;
+          }
+
+          &__number {
+            width: @40px;
+            color: #fff6 !important;
+          }
+
+          &__name {
+            margin-right: auto;
+          }
+
+          &__level {
+            display: flex;
+            align-items: center;
+            font-size: @24px !important;
+
+            img {
+              margin: 0 @12px 0 @16px;
+              height: @31px;
+            }
+
+          }
+        }
+      }
+
+      &-right {
+        display: flex;
+        flex-direction: column;
+        margin: @16px 0 0 @244px;
+
+        &-block {
+          padding: 0 @15px 0 @70px;
+          width: @272px;
+          height: @140px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: @20px;
+          color: #fff !important;
+          letter-spacing: 0.04em;
+          line-height: @28px;
+          background-color: #ffffff0a;
+          border-radius: @4px;
+          margin-bottom: @40px;
+          position: relative;
+
+          span {
+            font-size: @22px !important;
+          }
+
+          img {
+            position: absolute;
+            width: @152px;
+            left: -@89px;
+            bottom: @8px;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+}

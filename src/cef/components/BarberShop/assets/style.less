@@ -1,0 +1,79 @@
+
+.barbershop_main {
+//    background-image: url('./../../Personage/assets/bg_person.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & .barbershop_box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+        & .pers_box_left {
+            &:first-child {
+                margin-bottom: 20vh;
+            }
+        }
+        & .barbershop_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            min-width: 30rem;
+            width: 40vh;
+            margin: 1.0vh 1.0vh;
+
+            h1 {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 2vw;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+            }
+            h2 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1vw;
+                line-height: 100%;
+                color: #FFFFFF;
+                opacity: 0.6;
+                text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+            }
+            & .barbershop_key {
+//                margin-top:1vw;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0.5vw 1vw;
+                min-width: 9vw;
+                background: #F04D26;
+                &.reset {
+                    background: #1358cf;
+                    min-width: 5vw;
+                }
+                border-radius: 4px;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 1.0vw;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                &:hover {
+                    box-shadow: 0px 4px 100px rgba(240, 77, 38, 0.5);
+                }
+            }
+        }
+    }
+}

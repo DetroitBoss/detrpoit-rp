@@ -1,0 +1,302 @@
+.fuel_browser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.fuel_blur {
+
+    width: 100vw;
+    height: 100vh;
+    background: #141B1F;
+    opacity: 0.8;
+    filter: blur(99px);
+    position: absolute;
+}
+.fuel_grid {
+    background-image: url("../../NewAuth/assets/grid.svg");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.fuel_main {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    flex-direction: row;
+    width: max-content;//75vw;
+    height: 60vh;
+    z-index: 1;
+    & .fuel_left, .fuel_right {
+        height: 100%;
+        width: 15vw;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+//        transform: rotate(90deg);
+    }
+    & .fuel_s_left {
+        height: 100%;
+        display: flex;
+        & .fuel_slider {
+            display: flex;
+            margin-left: -12vw;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 10vw;
+            h1 {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1vw;
+                line-height: 100%;
+                text-align: right;
+                color: #FFFFFF;
+            }
+            h2 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1vw;
+                line-height: 100%;
+                color: #FFFFFF;
+                opacity: 0.4;
+            }
+        }
+        & .fuel_left {
+            margin-left: 1vw;
+            display: flex;
+            justify-content: flex-end;
+            align-self: flex-end;
+            overflow: hidden;
+            position: relative;
+            & .fuel_water {
+                position: absolute;
+                background: #6FCF9766;
+                &.fuel_electro {
+                    background: #56CCF266;
+                }
+                width: 55vw;
+                height: 55vw;
+
+                transform: translateZ(0);
+                -webkit-transform: translateZ(0);
+
+                transition: all 1s ease !important;
+                -webkit-transition: all 1s ease !important;
+
+                top: 95%;
+                left: -12vw;
+                border: 1px solid transparent;
+                border-radius: 40% !important;
+                &:first-child {
+                    animation-duration: 15s;
+                    background: #27AE6033;
+                    &.fuel_electro {
+                        background: #2D9CDB33;
+                    }
+                    top: 97%;
+                    left: -18vw;
+                }
+                animation-duration: 10s;
+                animation-name: fuel_spin;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+        }
+    }
+    & .fuel_right  {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 2vw;
+        overflow: hidden;
+        & img {
+            width: 100%;
+        }
+        & h1, h2, h3 {
+            font-style: normal;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 0.5vw 0vw 0vw 2vw;
+            line-height: 100%;
+            text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+        }
+        & h1 {
+            font-weight: 300;
+            font-size: 1vw;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+        & h2 {
+            font-weight: 800;
+            font-size: 2vw;
+        }
+        & h3 {
+            font-weight: 300;
+            font-size: 3vw;
+        }
+
+    }
+    & .fuel_center {
+        min-width: 44vw;
+        height: 100%;
+        padding: 0 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .fuel_name {
+            margin-bottom: auto;
+            h1 {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 0.9vw;
+                line-height: 100%;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                opacity: 0.6;
+                text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+            }
+            h2 {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 2.8vw;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+                margin-bottom: 2vw;
+                margin-top: 1vw;
+            }
+        }
+        p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1vw;
+            opacity: 0.6;
+            line-height: 100%;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+        }
+        & .fuel_type {
+            display: flex;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+            & .fuel_key_type {
+                background: rgba(255, 255, 255, 0.05);
+                cursor: pointer;
+                &.fuel_type_select {
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                }
+                box-sizing: border-box;
+                border-radius: 4px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.8vw;
+                line-height: 100%;
+                color: #FFFFFF;
+                padding: 1.0vw;
+                margin-right: 1vw;
+            }
+        }
+        & .fuel_pay_info {
+            margin-top: 1vw;
+            margin-bottom: 0.5vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            & h3 {
+                &:first-child {
+                    color: #6FCF97;
+                    text-shadow: 0px 4px 24px #6FCF97;
+                    &.fuel_electro {
+                        color: #56CCF2;
+                        text-shadow: 0px 4px 24px #56CCF2;
+                    }
+                }
+                font-style: normal;
+                font-weight: 300;
+                font-size: 3vw;
+                line-height: 100%;
+                color: #FFFFFF;
+                text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        & .fuel_pay {
+            cursor: pointer;
+//            min-width: max-content;
+            margin-top: 1vw;
+            max-width: max-content;
+            padding: 0 3vw;
+            height: 3.5vw;
+            min-height: 3.3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #6FCF97;
+            &.fuel_electro {
+                background: #56CCF2;
+            }
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.4vw;
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+}
+.fuel_bg {
+    width: calc( 120vw );
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        height: 100%;
+//        height: 100%;
+        animation-name: fuel_rotation;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        overflow: hidden;
+    }
+}
+
+
+@keyframes fuel_rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(359deg);
+    }
+}
+
+@keyframes fuel_spin{
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }

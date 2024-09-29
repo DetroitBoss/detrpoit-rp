@@ -1,0 +1,164 @@
+@import "../../../../../../assets/less/uikit";
+
+
+.np-add-contact {
+  width: 100%;
+  height: 589 * @1px;
+  padding: @16px;
+  background: #fff;
+  border-radius: @30px @30px @34px @34px;
+  position: relative;
+  background: #f5f5f5;
+  position: relative;
+  &-wrap {
+    height: 634 * @1px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: @34px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: @20px;
+    img {
+      height: @176px;
+      margin: auto;
+    }
+  }
+  &-close {
+    position: absolute;
+    right: @14px;
+    top: @14px;
+    &:hover {
+      svg {
+        path {
+          transition: all 0.3s;
+          fill: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    svg {
+      width: @24px;
+      path {
+        fill: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  &-form-field {
+    background: #fff;
+    border-radius: @12px;
+    padding: @14px @16px @15px @16px;
+    width: 100%;
+    height: @68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: @12px;
+    label {
+      font-weight: 500;
+      font-size: @14px;
+      line-height: @16px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .np-contact-input {
+      min-height: @24px;
+      font-weight: 500;
+      font-size: @16px;
+      line-height: @19px;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 0;
+      outline: none;
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: @2px;
+        height: @2px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        box-shadow: none;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+        box-shadow: none;
+      }
+      &::-webkit-scrollbar-track-piece {
+        background: transparent;
+      }
+      img {
+        width: @24px;
+        height: @24px;
+      }
+    }
+    .np-add-contact-emoji {
+      position: absolute;
+      right: @12px;
+      bottom: @12px;
+      &:hover {
+        svg {
+          path {
+            transition: all 0.3s;
+            fill: rgba(197, 197, 197, 1);
+          }
+        }
+      }
+      svg {
+        width: @21px;
+      }
+    }
+    .np-emoji-popup {
+      position: absolute;
+      bottom: -@128px;
+      z-index: 9999;
+      right: @12px;
+      width: @140px;
+      height: 134 * @1px;
+      background: #fff;
+      border-radius: @8px;
+      overflow-y: scroll;
+      display: grid;
+      padding: @16px @18px;
+      grid-template-columns: @24px @24px @24px;
+      grid-column-gap: @16px;
+      grid-row-gap: @12px;
+      border: @1px solid rgba(52, 52, 53, 0.1);
+      .np-emoji-item {
+        height: @24px;
+        cursor: pointer;
+        img {
+          width: @24px;
+          height: @24px;
+        }
+      }
+    }
+  }
+  &-btn {
+    width: 262 * @1px;
+    height: @40px;
+    background: linear-gradient(90.02deg, #2a8cff 0.01%, #0a75f2 99.98%);
+    border-radius: @14px;
+    font-weight: 600;
+    font-size: @14px;
+    line-height: @17px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: @16px;
+    svg {
+      width: 19.5 * @1px;
+      margin-right: @8px;
+    }
+    &:hover {
+      background: linear-gradient(90.02deg, #2178DF 0.01%, #0567DA 99.98%);
+    }
+    
+  }
+  
+}

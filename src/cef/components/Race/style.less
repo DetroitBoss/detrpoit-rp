@@ -1,0 +1,116 @@
+.anim {
+    transition: all 0.23232323s ease-in-out;
+    -webkit-transition: all 0.23232323s ease-in-out;
+    -moz-transition: all 0.23232323s ease-in-out;
+}
+
+@dark: #2e4060;
+
+.race-edit {
+    background-color: black;
+    width: 330px;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+    .name {
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 5px;
+        width: 90%;
+        margin-left: 5%;
+        border: none;
+        background-color: grey;
+        font-size: 15px;
+        .anim;
+
+        &:hover {
+            background-color: rgb(156, 156, 156);
+
+            font-weight: 700;
+        }
+
+        border-radius: 8px;
+        min-height: 30px;
+    }
+
+    .list {
+
+        background-color: rgb(37, 37, 37);
+        .anim;
+        &:hover {
+            background-color: rgb(49, 49, 49);
+        }
+        margin-top: 30px;
+        padding: 10px;
+        height: 200px;
+        overflow-x: auto;
+        border-radius: 8px;
+
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .title {
+                font-size: 15px;
+                // text-align: center;
+                line-height: 35px;
+            }
+
+            .job {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .del {
+                    background-color: rgb(148, 4, 4);
+
+                    &:hover {
+                        background-color: rgb(255, 0, 0);
+                    }
+                }
+
+                .tp {
+                    background-color: rgb(4, 66, 148);
+
+                    &:hover {
+                        background-color: rgb(3, 57, 206);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .control {
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // padding: 0 2.5% 0 2.5%;
+
+        button {
+            font-weight: 800;
+        }
+
+        .no {
+            background-color: rgb(148, 4, 4);
+
+            &:hover {
+                background-color: rgb(255, 0, 0);
+            }
+        }
+
+        .yes {
+            background-color: rgb(21, 148, 4);
+
+            &:hover {
+                background-color: rgb(3, 206, 71);
+            }
+        }
+    }
+}

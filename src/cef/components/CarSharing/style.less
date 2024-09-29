@@ -1,0 +1,230 @@
+@import '../../assets/less/uikit';
+
+* {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.rentCar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: #141B1FE6 radial-gradient(70.74% 70.74% at 50% 50%, rgba(20, 27, 31, 0) 43.75%, #141B1F 90%);
+  overflow: hidden;
+
+  &__active {
+    opacity: 1 !important;
+  }
+
+
+  .exit {
+    position: absolute;
+    top: @40px;
+    left: @40px;
+    height: @40px;
+    width: @132px;
+    background-color: #141B1F80;
+    border-radius: @6px;
+    display: flex;
+    align-items: center;
+    z-index: 502 !important;
+    font-size: @16px;
+
+    &__icon {
+      width: @40px;
+      height: @40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #141B1FE3;
+      border-radius: @6px;
+    }
+
+    &__title {
+      text-align: center;
+      width: @91px;
+      color: white;
+    }
+
+    img {
+      width: @17px;
+      height: @17px;
+    }
+  }
+
+  * {
+    color: white !important;
+  }
+
+  &-tireTracksBackground {
+    position: absolute;
+    pointer-events: none;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  &-sparksBackground {
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  &-carBackground {
+    position: absolute;
+    pointer-events: none;
+    width: @948px;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-notify {
+    position: absolute;
+    width: @780px;
+    left: @1019px;
+    top: @374px;
+    background-color: #141B1F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: @40px @50px @50px;
+
+    &__header {
+      line-height:  @60px;
+      font-size: @50px !important;
+      text-align: center;
+      margin-bottom: @20px;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      margin-bottom: @30px;
+      font-size: @20px;
+      text-align: center;
+      line-height: @24px;
+
+      opacity: 0.8;
+      text-shadow: 0 @10px @40px rgba(255, 255, 255, 0.4);
+
+      span {
+        word-wrap: break-word;
+      }
+    }
+
+    &__btn {
+
+      padding: @18px @32px;
+      text-align: center;
+
+      width: @154px;
+      height: @60px;
+      font-size: @20px;
+      text-shadow: 0 @10px @40px rgba(255, 255, 255, 0.4);
+
+
+      background: #FF5C00;
+      border-radius: @4px;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    width: @762px;
+    right: @130px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #FFF;
+    height: 100vh;
+
+    &__description {
+      font-size: @40px;
+      opacity: .4;
+      margin-top: @40px;
+    }
+
+    &__title {
+      font-size: @100px;
+      text-shadow: 0 @10px @40px #FFFFFF66;
+      margin-bottom: @20px;
+    }
+
+    &-cars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: @30px;
+      overflow-y: scroll;
+      opacity: 0.2;
+
+      &-block {
+        border: @1px solid #FFFFFF33;
+        height: @434px;
+        width: @366px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 @24px;
+        position: relative;
+
+        &__image {
+          margin-top: @60px;
+          width: 100%;
+        }
+
+        &__name {
+          margin-top: @20px;
+          font-size: @24px;
+          text-shadow: 0 @8px @40px #fff9;
+          text-align: left;
+        }
+
+        &__button {
+          position: absolute;
+          height: @60px;
+          width: @193px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: @16px;
+          line-height: 120%;
+          background-color: #FFFFFF19;
+          bottom: @24px;
+          left: @24px;
+          opacity: .7;
+          img {
+            margin-right: @15px;
+            width: @24px;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &__price {
+          position: absolute;
+          right: @24px;
+          bottom: @37px;
+          font-size: @26px;
+        }
+      }
+    }
+  }
+}

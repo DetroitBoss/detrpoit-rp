@@ -1,0 +1,13 @@
+{
+    "maxplayers" : 1500,
+    "name" : "🚀 DETROIT PROJECT |  [NEW] [ROLEPLAY] [VOICE] [1.1]", 
+    "gamemode" : "roleplay",
+    "language" : "ru",
+    "stream-distance" : 500,
+    "announce" :  true,
+    "csharp" : "disabled",
+    "port": 22005,
+    "allow-cef-debugging": true,
+    "voice-chat": true,
+    "voice-chat-sample-rate": 48000
+}

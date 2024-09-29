@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/sha256`
+
+# Summary
+This package contains type definitions for sha256 (https://github.com/cryptocoinjs/sha256).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/sha256
+
+Additional Details
+ * Last updated: Thu, 27 Sep 2018 12:34:28 GMT
+ * Dependencies: node
+ * Global values: sha256
+
+# Credits
+These definitions were written by Nathan Hardy <https://github.com/nhardy>.

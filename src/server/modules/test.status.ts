@@ -1,0 +1,1 @@
+export const testStatus = mp.config.anounce

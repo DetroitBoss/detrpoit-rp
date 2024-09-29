@@ -1,0 +1,2 @@
+import './npc';
+import './dialogs';

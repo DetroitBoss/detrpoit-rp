@@ -1,0 +1,43 @@
+@import "../../../../styles/sizes.less";
+
+.np-settings-wallpapers {
+  background: transparent;
+  padding-top: @7px;
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: @10px;
+    padding: @10px @16px;
+    background: #fff;
+    min-height: 533 * @1px;
+    border-radius: 0 0 @34px @34px;
+    border-top: @1px solid rgba(0, 0, 0, 0.1);
+    .np-settings-wallpaper {
+      position: relative;
+      height: @160px;
+      overflow: hidden;
+      border: @1px solid #d0cfcf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        border: @2px solid #2a8cff;
+        .check-circle {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 100%;
+        position: absolute;
+      }
+      .check-circle {
+        position: absolute;
+        transition: all 0.3s;
+        opacity: 0;
+        bottom: @8px;
+        right: @8px;
+        width: @24px;
+      }
+    }
+  }
+}

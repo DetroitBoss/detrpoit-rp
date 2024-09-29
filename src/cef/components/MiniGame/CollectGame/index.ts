@@ -1,0 +1,2 @@
+export { CollectGame } from "./CollectGame";
+

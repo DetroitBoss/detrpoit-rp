@@ -1,0 +1,49 @@
+@import "../../../../../../assets/less/uikit";
+
+.np-success-transaction {
+  position: relative;
+  height: 100%;
+  padding: @66px @16px 0 @16px;
+  &-bg {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 270 * @1px;
+  }
+
+  &-title {
+    margin-top: @110px;
+    font-weight: 600;
+    font-size: @36px;
+    line-height: @43px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-amount {
+    margin-top: @10px;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &-next {
+    width: 262 * @1px;
+    height: @56px;
+    position: absolute;
+    bottom: @42px;
+    background: linear-gradient(90deg, #9cdfcf 0%, #03b0b9 100%);
+    border-radius: @30px;
+    font-weight: 600;
+    font-size: @16px;
+    line-height: @19px;
+    color: #ffffff;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
