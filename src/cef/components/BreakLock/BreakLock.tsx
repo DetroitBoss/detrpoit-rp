@@ -114,7 +114,7 @@ export class BreakLock extends Component<{}, {
 
             this.setState({boosts: newBoost})
 
-            cylinder.current.style.background = "linear-gradient(180deg, #BE1622, rgba(190, 22, 34, 0)), linear-gradient(90deg, #393939, #727171, #232323)";
+            cylinder.current.style.background = "linear-gradient(180deg, #E3256B, rgba(190, 22, 34, 0)), linear-gradient(90deg, #393939, #727171, #232323)";
         }else{
             let newBoost = this.state.boosts;
 
@@ -131,7 +131,7 @@ export class BreakLock extends Component<{}, {
             }else if (newBoost[this.state.selectedPicklock] >= value && boost <= value + .4) {
                 cylinder.current.style.background = "linear-gradient(180deg, rgba(154, 192, 0, 0.5) 0%, rgba(154, 192, 0, 0) 100%), linear-gradient(90deg, #393939 0%, #727171 49.48%, #232323 100%)";
             }else if (newBoost[this.state.selectedPicklock] > value) {
-                cylinder.current.style.background = "linear-gradient(180deg, #BE1622, rgba(190, 22, 34, 0)), linear-gradient(90deg, #393939, #727171, #232323)";
+                cylinder.current.style.background = "linear-gradient(180deg, #E3256B, rgba(190, 22, 34, 0)), linear-gradient(90deg, #393939, #727171, #232323)";
             }
         }
 

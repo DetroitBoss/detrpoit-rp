@@ -41,36 +41,27 @@ export class LoadScreenJoin extends Component<{
         document.removeEventListener("keyup", this.handleKeyUp, false);
     }
 
-    handleEnterAction = (): void => {
-        // Проверяем условия, как в handleKeyUp
+    handleKeyUp = (e: KeyboardEvent): void => {
+        if (e.keyCode !== 13) return;
         if (!this.store.allowEnter) return;
         if (!this.store.introScene) return;
-        
-        // Останавливаем звук и запускаем дальнейшие действия
-        CEF.stopSound();
-        CustomEvent.triggerClient('fractionCfg:cefReady');
-        
+        CEF.stopSound()
+        CustomEvent.triggerClient('fractionCfg:cefReady')
         if (!alertsEnable.enableIntro) {
-            CustomEvent.triggerClient('loadingscreen:load');
+            CustomEvent.triggerClient('loadingscreen:load')
             setTimeout((): void => {
-                setInit();
-            }, 1000);
+                setInit()
+            }, 1000)
             return;
         }
-    
         this.store.setState({introScene: false, showVideo: true}, (): void => {
             setTimeout((): void => {
                 this.store.setState({videoRun: true, loadingScreenStart: false});
                 setTimeout((): void => {
-                    CustomEvent.triggerClient('loadingscreen:load');
-                }, 2000);
-            }, 1000);
-        });
-    };
-
-    handleKeyUp = (e: KeyboardEvent): void => {
-        if (e.keyCode !== 13) return;
-        this.handleEnterAction();
+                    CustomEvent.triggerClient('loadingscreen:load')
+                }, 2000)
+            }, 1000)
+        })
     }
 
     render(): JSX.Element {
@@ -92,10 +83,10 @@ export class LoadScreenJoin extends Component<{
                         <div className='box_stats'><img className='icon' src={ds}/> <span>discord.gg/EYYBeYxRV5</span> </div>
                         <div className='box_stats'><img className='icon' src={tg}/> <span>t.me/detroitgta5</span> </div>
                     </div>
-                    <button className="button" onClick={this.handleEnterAction}>Начать игру <img src={enterButton} alt="Enter Button" /></button>
+                    <button className="button" onClick={this.handleKeyUp}>Начать игру <img src={enterButton} alt="Enter Button" /></button>
                     <div className="text">Если у вас не появляется курсор, нажмите  ~ (Ё)</div>
                 </div>
             </div>
         </>;
     }
-}
+} 

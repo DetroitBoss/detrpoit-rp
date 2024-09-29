@@ -140,37 +140,36 @@
             }
         }
         .button {
-            display: inline-block;
-            padding: 15px 50px;
-            background: linear-gradient(45deg, #E3256B, #86102b); /* Градиент от основного цвета к более светлому оттенку */
-            border-radius: 10px; /* Скругление углов */
-            color: white;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 22px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(133, 10, 55, 0.4); /* Светящееся свечение */
-            transition: all 0.3s ease;
+            margin: 0.5rem;
+            background: linear-gradient(273.39deg, #E3256B 5.57%, #E3256B 59.24%, #E3256B 94.41%);
+            box-shadow: 0px 10px 100px rgba(227, 37, 107, 0.55);
+            border-radius: 0.4rem;
+            width: 22rem;
+            height: 4.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
-            margin-bottom: 17px;
+            transition: 1s ease-in-out;
+            &:hover {
+                box-shadow: 0px 10px 50px rgba(227, 37, 107, 1);
+            }
+            & p {
+                transition: 1s ease;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: #fff;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+            }
             img {
                 margin-bottom: -10px;
                 width: 31px;
                 height: 35.15px;
             }
-        }
-        
-        .button:hover {
-            background: linear-gradient(45deg, #86102b, #E3256B); /* Обратный градиент при наведении */
-            box-shadow: 0 8px 25px rgba(133, 10, 55, 0.8); /* Усиленное свечение при наведении */
-            transform: scale(1.05); /* Лёгкое увеличение при наведении */
-        }
-        
-        .button:active {
-            transform: scale(0.98); /* Легкое уменьшение при клике */
-            box-shadow: 0 4px 12px rgba(227, 37, 107, 0.4); /* Уменьшение свечения при нажатии */
         }
         
         .text {

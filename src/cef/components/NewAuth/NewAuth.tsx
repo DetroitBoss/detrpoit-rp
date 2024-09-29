@@ -1,11 +1,7 @@
 import React from 'react';
 import './assets/auth.less';
-import frame from './assets/frame.svg';
-import frame2 from './assets/frame2.svg';
-import frame3 from './assets/frame3.svg';
-import china from './assets/login_pers.png';
-// import china from './assets/chinapers.webp';
 import logo from './assets/logo.svg';
+import logotext from './assets/textlogo.svg';
 import eye from './assets/openeye.svg';
 import colse_eye from './assets/closeeye.svg';
 import {CustomEvent} from './../../modules/custom.event';
@@ -148,9 +144,9 @@ export default class NewAuth extends React.Component<{}, {
             this.getShow(TYPE_SELECT_CHARACTER)
         })
 
-        if(CEF.gui.currentGui === "reg"){
-            CEF.playSound('registeronyx')
-        }
+        // if(CEF.gui.currentGui === "reg"){
+        //     CEF.playSound('registeronyx')
+        // }
 
     }
 
@@ -190,7 +186,7 @@ export default class NewAuth extends React.Component<{}, {
                         this.getError(ERROR_LOGIN, res.text)
                         CEF.playSound('errorClick')
                     } else {
-                        CEF.playSound('okLogin')
+                        // CEF.playSound('okLogin')
                         this.setState({ characters: res.personages, type: TYPE_SELECT_CHARACTER, donate: res.donate || 0 });
                         CEF.gui.saveLogin(this.state.login);
                     }
@@ -211,7 +207,7 @@ export default class NewAuth extends React.Component<{}, {
                         CEF.playSound('errorClick')
                     } else {
                         CEF.gui.saveLogin(this.state.reg_login);
-                        CEF.playSound('okLogin')
+                        // CEF.playSound('okLogin')
                         this.setState({ characters: [], type: TYPE_SELECT_CHARACTER });
                     }
                 });
@@ -368,16 +364,8 @@ export default class NewAuth extends React.Component<{}, {
             {this.state.type === TYPE_EMAIL ? <>
                 <div className="uk-animation-fade">
                 <div className={`auth_login ${this.state.page_loading ? "show": ""}`}>
-                <div className="auth_login_blur"/>
-                <div className="auth_grid"/>
-                    <div className="china">
-                        <img src={china}/>
-                    </div>
+                <div className="auth_restore_blur"/>
                     <div className="auth_box">
-                        <div className="auth_frame1"><img src={frame}/></div>
-                        <div/>
-                        <div className="auth_frame2"><img src={frame2}/> </div>
-                        <div className="auth_frame3"><img src={frame3}/> </div>
                         <div className="auth_form_box">
                             <div className="auth_form_logo">
                                     <img src={logo}/>
@@ -447,18 +435,13 @@ export default class NewAuth extends React.Component<{}, {
                 <div className="uk-animation-fade">
                 <div className={`auth_login ${this.state.page_loading ? "show": ""}`}>
                 <div className="auth_login_blur"/>
-                <div className="auth_grid"/>
-                    <div className="china">
-                        <img src={china}/>
-                    </div>
                     <div className="auth_box">
-                        <div className="auth_frame1"><img src={frame}/></div>
-                        <div/>
-                        <div className="auth_frame2"><img src={frame2}/> </div>
-                        <div className="auth_frame3"><img src={frame3}/> </div>
                         <div className="auth_form_box">
                             <div className="auth_form_logo">
                                     <img src={logo}/>
+                            </div>
+                            <div className="auth_form_textlogo">
+                                <img src={logotext} />
                             </div>
                             <h1>Авторизация</h1>
                             <p>Войдите для того, чтобы начать игру</p>
@@ -522,12 +505,13 @@ export default class NewAuth extends React.Component<{}, {
             {this.state.type === TYPE_REG ? <>
                 <div className={`auth_reg ${this.state.page_loading ? "show" : ""}`}>
                 <div className="auth_reg_blur" />
-                <div className="auth_grid" />
-                    <div className="auth_reg_pic" />
                     <div className="auth_box">
                         <div className="auth_form_box">
                             <div className="auth_form_logo">
                                 <img src={logo} />
+                            </div>
+                            <div className="auth_form_textlogo">
+                                <img src={logotext} />
                             </div>
                             <h1>Регистрация</h1>
                             <p>Зарегистрируйтесь, чтобы начать игру</p>

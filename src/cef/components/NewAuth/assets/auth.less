@@ -7,37 +7,31 @@
     align-items: center;
 }
 .auth_login_blur {
-    min-width: 50rem;
+    min-width: 30rem;
     min-height: 50rem;
     max-width: 50vw;
     max-height: 90vh;
-    background: #141B1F;
-    opacity: 0.9;
-    filter: blur(99px);
-    border-radius: 6px;
+    background: rgba(21, 21, 21, 1);
+    border-radius: 8px;
+    position: absolute;
+}
+.auth_restore_blur{
+    min-width: 30rem;
+    min-height: 40rem;
+    max-width: 50vw;
+    max-height: 90vh;
+    background: rgba(21, 21, 21, 1);
+    border-radius: 8px;
     position: absolute;
 }
 .auth_reg_blur {
-    min-width: 50rem;
+    min-width: 30rem;
     min-height: 50rem;
     max-width: 50vw;
     max-height: 90vh;
-    background: #291009;
-    opacity: 0.9;
-    filter: blur(99px);
-    border-radius: 6px;
+    background: rgba(21, 21, 21, 1);
+    border-radius: 8px;
     position: absolute;
-}
-.auth_grid {
-    background-image: url("../assets/grid.svg");
-//    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-//    height: auto;
-//    width: 100vw;
-//   height: 100vh;
-    position: absolute;
-    opacity: 0.2;
 }
 
 .auth_reg {
@@ -50,15 +44,6 @@
     &.show {
         opacity: 1;
         transition: 1s ease-in-out;
-    }
-    & .auth_reg_pic {
-        width: 100vw;
-        height: 100vh;
-        background-image: url('../assets/reg.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
     }
     & .auth_box {
         position: absolute;
@@ -83,15 +68,19 @@
             flex-direction: column;
             color: #FFFFFF;
             & .auth_form_logo {
-                padding-bottom: 2.2rem;
+                padding-bottom: 0.3rem;
+            }
+            & .auth_form_textlogo {
+                padding-bottom: 0.3rem;
             }
             & h1 {
                 color: #FFFFFF;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 3rem;
+                font-size: 1.2rem;
                 line-height: 100%;
                 text-align: center;
+                margin-bottom: 5px;
                 text-transform: uppercase;
                 text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
             }
@@ -99,7 +88,7 @@
                 font-style: normal;
                 font-weight: normal;
                 font-weight: 300;
-                font-size: 1.1rem;
+                font-size: 0.8rem;
                 line-height: 100%;
                 margin-bottom: 2rem;
             }
@@ -183,8 +172,8 @@
             }
             & .auth_form_key {
                 margin: 0.5rem;
-                background: linear-gradient(273.39deg, #F39654 5.57%, #E83D40 59.24%, #BE1622 94.41%);
-                box-shadow: 0px 10px 100px rgba(240, 38, 38, 0.55);
+                background: linear-gradient(273.39deg, #E3256B 5.57%, #E3256B 59.24%, #E3256B 94.41%);
+                box-shadow: 0px 10px 100px rgba(227, 37, 107, 0.55);
                 border-radius: 0.4rem;
                 width: 22rem;
                 height: 4.5rem;
@@ -194,7 +183,7 @@
                 cursor: pointer;
                 transition: 1s ease-in-out;
                 &:hover {
-                    box-shadow: 0px 10px 50px rgba(240, 38, 38, 1);
+                    box-shadow: 0px 10px 50px rgba(227, 37, 107, 1);
                 }
                 & p {
                     transition: 1s ease;
@@ -244,24 +233,6 @@
         opacity: 1;
         transition: 1s ease-in-out;
     }
-    & .china {
-       width: 100vw;
-       height: 100vh;
-       display: flex;
-       flex-direction: row-reverse;
-       flex-wrap: nowrap;
-       justify-content: flex-start;
-       align-items: flex-end;
-       align-content: stretch;
-       min-width: 40rem;
-       & img {
-//          width: auto;
-//          height: 95%;
-          max-width: 40vw;
-//          max-height: 85vh;
-       }
-       position: absolute;
-    }
     & .auth_box {
         position: absolute;
         display: flex;
@@ -275,27 +246,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        .auth_frame1 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: start;
-            align-items: flex-start;
-        }
-        .auth_frame2 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: start;
-            align-items: flex-end;
-        }
-        .auth_frame3 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
         .auth_form_box {
             position: absolute;
             background-color: rgba(233, 233, 255, 0.0);
@@ -309,23 +259,27 @@
             & .auth_form_logo {
                 padding-bottom: 2.2rem;
             }
+            & .auth_form_textlogo {
+                padding-bottom: 0.3rem;
+            }
             & h1 {
                 color: #FFFFFF;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 3rem;
+                font-size: 1.2rem;
                 line-height: 100%;
                 text-align: center;
+                margin-bottom: 5px;
                 text-transform: uppercase;
                 text-shadow: 0px 4px 24px rgba(255, 255, 255, 0.25);
             }
             & p {
                 font-style: normal;
                 font-weight: normal;
-                font-weight: 200;
-                font-size: 1.1rem;
+                font-weight: 300;
+                font-size: 0.8rem;
                 line-height: 100%;
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
             }
             & .auth_form_area {
                 display: block;
@@ -428,8 +382,8 @@
             }
             & .auth_form_key {
                 margin: 0.5rem;
-                background: linear-gradient(273.39deg, #F39654 5.57%, #E83D40 59.24%, #BE1622 94.41%);
-                box-shadow: 0px 10px 100px rgba(240, 38, 38, 0.55);
+                background: linear-gradient(273.39deg, #E3256B 5.57%, #E3256B 59.24%, #E3256B 94.41%);
+                box-shadow: 0px 10px 100px rgba(227, 37, 107, 0.55);
                 border-radius: 0.4rem;
                 width: 22rem;
                 height: 5rem;
@@ -439,7 +393,7 @@
                 cursor: pointer;
                 transition: 0.5s ease-in-out;
                 &:hover {
-                    box-shadow: 0px 10px 50px rgba(240, 38, 38, 1);
+                    box-shadow: 0px 10px 50px rgba(227, 37, 107, 1);
                 }
                 & p {
                     transition: 1s ease;
