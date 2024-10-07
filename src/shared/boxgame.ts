@@ -1,6 +1,6 @@
 
 /** Минимальное количество игроков, необходимое для начала игры */
-export const BOX_GAME_MIN_PLAYERS_TO_START = 100
+export const BOX_GAME_MIN_PLAYERS_TO_START = 10
 
 /** Время на то, чтобы хоть кто то взял сумку (в секундах) */
 export const BOX_GAME_TIME_FROM_START = 600 // секунд
@@ -27,7 +27,7 @@ export const BOX_GAME_START_TRY_INTERVAL = 0 // минут
 */
 export const BOX_GAME_WINS_VALUES = {
   'money': {
-    items: [30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000],
+    items: [1000000, 5000000, 2000000, 9000000, 12000000, 4000000, 24000000, 34000000],
     percent: 45
   },
   'coins': {
