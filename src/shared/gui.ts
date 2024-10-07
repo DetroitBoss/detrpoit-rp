@@ -84,5 +84,8 @@ export type guiNames =
     | "garbageLobby"
     | "carSharing"
     | "monopoly"
+    | "phone"
+    | "deathpopup"
+    | "casinoslots"
 
 export const guiNotHideList: guiNames[] = ['interaction', 'tablet']

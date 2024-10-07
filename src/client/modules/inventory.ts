@@ -17,6 +17,7 @@ import {system} from "./system"
 import {menu} from "../../server/modules/menu";
 import {dancing} from "./dance";
 import {furniturePlace} from "./houses/furniturePlace";
+import e from "cors"
 
 const player = mp.players.local;
 export const inventory = {
@@ -99,7 +100,6 @@ for(let i = 0; i < 5; i++) {
 CustomEvent.register('phoneSlot', () => {
     if (!user.login) return;
     if (currentMenu) return;
-    if (gui.is_block_keys) return;
     if (terminalOpened) return;
     if (inputOnFocus) return;
     if (dancing) return;
@@ -107,7 +107,17 @@ CustomEvent.register('phoneSlot', () => {
     //if (sendHotkeyCommand) return user.notify('Не нажимайте на хоткей так часто', 'error')
     if (user.cuffed) return user.notify('Нельзя использовать в наручниках');
     if (user.walkingWithObject) return user.notify('Недоступно при перемещении предмета', 'error');
-    CustomEvent.triggerServer('phone:openPhone');
+        //if (gui.is_block_keys) return;
+        if (gui.currentGui === 'phone') {
+            CustomEvent.triggerServer('phone:openPhone');
+            gui.setGui(null)
+        } else {
+            if (!gui.currentGui && !mp.game.ui.isPauseMenuActive()) {
+            CustomEvent.triggerServer('phone:openPhone');
+            gui.setGui('phone');
+            }
+        }
+   
     sendHotkeyCommand = true;
     setTimeout(() => {
         sendHotkeyCommand = false;
@@ -121,17 +131,22 @@ CustomEvent.register('tabletSlot', () => {
     if (inputOnFocus) return;
     if (dancing) return;
     if (!furniturePlace.lockControls) return;
-    //if (sendHotkeyCommand) return user.notify('Не нажимайте на хоткей так часто', 'error')
     if (user.cuffed) return user.notify('Нельзя использовать в наручниках');
     if (user.walkingWithObject) return user.notify('Недоступно при перемещении предмета', 'error');
 
+        //if (gui.is_block_keys) return;
     if (gui.currentGui === 'tablet') {
         gui.setGui(null)
+        mp.console.logInfo(`Tablet closed`);
+    } else {
+        if (!gui.currentGui && !mp.game.ui.isPauseMenuActive()) {
+        CustomEvent.triggerServer('tablet:openTablet');
+        gui.setGui('tablet');
+        mp.console.logInfo(`Tablet open`);
+        mp.console.logInfo(`Tablet open gui.currentGui: ${gui.currentGui}`);
+        }
     }
-    else {
-        if (gui.is_block_keys) return;
-        CustomEvent.triggerServer('tablet:openTablet')
-    }
+   
 })
 
 // for(let key = 0; key < 5; key++){

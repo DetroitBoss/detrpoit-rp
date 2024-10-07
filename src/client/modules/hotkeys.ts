@@ -86,10 +86,17 @@ const checkHotkey = (task: keyof typeof currentHotkeys, unpress: boolean) => {
         gui.setGui(null);
         return;
     }
+    /*
     if (task === "tabletSlot" && gui.currentGui === "tablet") {
         gui.setGui(null);
         return;
     }
+    if (task === "phoneSlot" && gui.currentGui === "phone") {
+        gui.setGui(null);
+        return;
+    }*/
+    if (task === "phoneSlot") return true;
+    if (task === "tabletSlot") return true;
     if (task === "report" && gui.currentGui === "deathpopup") return true;
     if (gui.cursor) return false;
     if (task === "admin") return true;

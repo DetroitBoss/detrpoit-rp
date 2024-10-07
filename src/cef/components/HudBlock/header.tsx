@@ -62,10 +62,12 @@ export class HudHeaderClass extends Component<{
 
 
             <div className="hud-main-info">
-            {this.state.isAdmin ? <div className="hud-main-info-admin">
+            {/* {this.state.isAdmin ?  */}
+            <div className="hud-main-info-admin">
             <p className="p-admin">admin</p>
             {/* <p className="p-admin">admin</p> */}
-                </div> : <></>}
+                </div>
+                 {/* : <></>} */}
                 <div className="hud-main-info-date">
                     <p className="p-date">{this.state.date} {this.state.realHour < 10 ? '   0' : ''}{this.state.realHour}:{this.state.realMinutes < 10 ? '0' : ''}{this.state.realMinutes}</p>
                 </div>

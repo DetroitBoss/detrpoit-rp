@@ -93,6 +93,7 @@ export const phone = {
     soundSetting: new Map<number, boolean>(),
     openPhone: (player: PlayerMp, id: number) => {
         const user = player.user;
+
         if(!user) return;
         if(player.phoneSession) return player.notify("Нельзя использовать телефон во время разговора", "error")
         const item = user.inventory.find(q => q.id === id);

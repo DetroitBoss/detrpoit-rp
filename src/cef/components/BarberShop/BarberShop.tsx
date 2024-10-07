@@ -156,6 +156,8 @@ export class BarberShop extends React.Component<{}, BarberType> {
     }
     setAppearance = (type: string, value: number) => {
         mp.trigger('client:user:personage:eventManager', type, value);
+        console.log("type:",type);
+        console.log("value:",value);
     }
     getName = ( type:page_hair) => {
         // добавить получение стоимость

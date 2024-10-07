@@ -21,6 +21,7 @@ import {currentSlotData} from "./casino/slots";
 import {ENTER_ANIM, EXIT_ANIM} from "../../shared/casino/main";
 import {PayData, PayType} from "../../shared/pay";
 import {fractionCfg} from "./fractions";
+import {NAILS_COMPONENT_ID, nailsConfig} from "../../shared/barbershop";
 
 const player = mp.players.local
 
@@ -577,6 +578,19 @@ CustomEvent.registerServer('verifyVehModel', (model: string) => {
 
 let helpKey:string;
 let helpKeyText:string;
+
+const setNailsOverlay = (index: number, user: any, defaultOpacity = 1.0) => {
+    const overlayValue = user.getLocalSkinData(`NAILS`);
+    const nailsData = nailsConfig.find(data => data.Id === overlayValue);
+    mp.console.logInfo(`nailsData ${nailsData}`);
+    mp.console.logInfo(`overlayValue ${overlayValue}`);
+    if (nailsData !== undefined && overlayValue !== -1) {
+        player.setComponentVariation(NAILS_COMPONENT_ID, nailsData.Drawable, nailsData.Texture, 2);
+        mp.console.logInfo(`NAILS_COMPONENT_ID ${NAILS_COMPONENT_ID}`);
+        mp.console.logInfo(`nailsData.Drawable ${nailsData.Drawable}`);
+        mp.console.logInfo(`nailsData.Texture ${nailsData.Texture}`);
+    }
+};
 
 export const user = {
     get chips(){
@@ -1190,18 +1204,22 @@ export const user = {
                     user.getLocalSkinData('BLUSH_COLOR') || 0,
                     0
                 );
+            if (user.getLocalSkinData('NAILS') != -1)
+                setNailsOverlay(10, user);
             }
+            if (user.getLocalSkinData('LIPS') != -1){
+                player.setHeadOverlay(
+                    8,
+                    user.getLocalSkinData('LIPS'),
+                    user.getLocalSkinData('LIPS_OPACITY') || 0.0,
+                    user.getLocalSkinData('LIPS_COLOR') || 0,
+                    0
+                );
+            }
+
         }
 
-        if (user.getLocalSkinData('LIPS')){
-            player.setHeadOverlay(
-                8,
-                user.getLocalSkinData('LIPS'),
-                user.getLocalSkinData('LIPS_OPACITY') || 0.0,
-                user.getLocalSkinData('LIPS_COLOR') || 0,
-                0
-            );
-        }
+       
 
     },
 }

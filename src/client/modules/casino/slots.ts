@@ -17,6 +17,7 @@ import {
 import {GRID_START_Z} from "../../../shared/casino/roulette";
 import {hideHud} from "../gui";
 import {needCasinoExit} from "./advanced";
+import {gui} from "../gui";
 const player = mp.players.local;
 
 
@@ -247,6 +248,7 @@ export const enterSlots = () => {
             user.playEnterCasinoAnim().then(() => {
                 currentSlotData.goToCoord = false;
                 currentSlotData.playIdleAnim();
+                gui.setGui('casinoslots');
                 sendCEFData()
             })
         });
@@ -368,6 +370,7 @@ mp.events.add('render', () => {
     if (!currentSlotData.goToCoord && !currentSlotData.waitSpinResponse && needCasinoExit()) {
         sendCEFData(true);
         user.playExitCasinoAnim().then(() => {
+            gui.setGui(null);
             mp.game.invoke("0x1A9205C1B9EE827F", currentSlotData.handle, true, true);
             CustomEvent.triggerServer('casino:slots:exit', currentSlotData.id)
             currentSlotData.id = 0;

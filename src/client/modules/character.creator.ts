@@ -33,7 +33,6 @@ mp.events.add({
         for (let param in skin) {
             user.setLocalSkinData(param as any, (skin as any)[param]);
         }
-
         player.clearAllProps();
         user.showLoadDisplay();
         await system.sleep(500);
@@ -250,11 +249,16 @@ mp.events.add({
             case 'blushColor':
                 user.setLocalSkinData('BLUSH_COLOR', value);
                 break;
-
             case 'nails':
+                user.setLocalSkinData('NAILS', value);
                 const nailsData = nailsConfig.find(data => data.Id === value);
                 mp.players.local.setComponentVariation(NAILS_COMPONENT_ID, nailsData.Drawable, nailsData.Texture, 2);
                 break;
+
+            /*case 'nails':
+                const nailsData = nailsConfig.find(data => data.Id === value);
+                mp.players.local.setComponentVariation(NAILS_COMPONENT_ID, nailsData.Drawable, nailsData.Texture, 2);
+                break;*/
         }
 
     },
