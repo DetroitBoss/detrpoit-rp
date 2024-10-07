@@ -36,10 +36,10 @@ const AgeSlider = withStyles({
     thumb: {
       height: 16,
       width: 16,
-      backgroundColor: '#F04D26',
+      backgroundColor: '#E3256B',
       marginLeft: -2,
       '&:focus, &:hover, &$active': {
-        boxShadow: '0px 4px 30px rgba(240, 77, 38, 0.6)'
+        boxShadow: '0px 4px 30px rgba(227, 37, 107, 0.6)'
       },
     },
     active: {},
@@ -58,7 +58,7 @@ const AgeSlider = withStyles({
         },
     },
     track: {
-       backgroundColor: '#F04D26',
+       backgroundColor: '#E3256B',
        height: 5,
        borderRadius: 4,
        marginLeft: 1
@@ -77,9 +77,9 @@ const FloorSlider = withStyles({
     thumb: {
       height: 16,
       width: 16,
-      backgroundColor: '#F04D26',
+      backgroundColor: '#E3256B',
       '&:focus, &:hover, &$active': {
-        boxShadow: '0px 4px 30px rgba(240, 77, 38, 0.6)'
+        boxShadow: '0px 4px 30px rgba(227, 37, 107, 0.6)'
       },
     },
     active: {},

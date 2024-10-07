@@ -265,11 +265,11 @@
 }
 
 .hud-advice-item.warning:after {
-    background-color: #F04D26;
+    background-color: #E3256B;
 }
 
 .hud-advice-item.warning .img-wrap {
-    background-color: #F04D26;
+    background-color: #E3256B;
 }
 
 .hud-advice-item.info:after {
@@ -1051,7 +1051,7 @@ section.hud .hud-main-info .hud-main-info-extra .hud-mount-user .text-wrap p:aft
 section.hud .hud-main-info .hud-main-info-extra .p-admin {
     font-weight: bold;
     font-size: 0.833335vw;
-    color: #F04D26;
+    color: #E3256B;
     text-transform: uppercase;
 }
 

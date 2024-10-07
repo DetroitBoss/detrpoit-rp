@@ -23,14 +23,14 @@ import Slider, { SliderProps } from "@material-ui/core/Slider";
 import { styled } from "@material-ui/styles";
 
 const LscChipSlider = styled(Slider)<SliderProps>(() => ({
-    color: "rgb(240, 77, 38)",
+    color: "rgb(227, 37, 107)",
     height: 30,
     '& .MuiSlider-thumb': {
         '&:hover, &.Mui-focusVisible': {
-            boxShadow: `0px 0px 0px 8px rgba(240, 77, 38, 0.2)`,
+            boxShadow: `0px 0px 0px 8px rgba(227, 37, 107, 0.2)`,
         },
         '&.Mui-active': {
-            boxShadow: `0px 0px 0px 8px rgba(240, 77, 38, 0.2)`,
+            boxShadow: `0px 0px 0px 8px rgba(227, 37, 107, 0.2)`,
         },
     },
 }));

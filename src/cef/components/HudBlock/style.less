@@ -6,7 +6,7 @@
 @dark: #141B1F;
 @red: #EB5757;
 @green: #27AE60;
-@orange: #F04D26;
+@orange: #E3256B;
 @lightblue: #2D9CDB;
 
 
@@ -985,7 +985,19 @@ section.hud {
         color: rgba(255, 255, 255, 1);
       }
     }
+    .hud-main-info-admin {
+      .br6;
+      height: @28px;
+      background: rgba(20, 27, 31, 0.4);
+      padding: @8px @10px;
 
+      .p-admin {
+        font-weight: bold;
+        font-size: @14px;
+        color: @red;
+        .upper;
+      }
+    }
     .hud-main-info-extra {
       .fl-row-aic-je;
       padding: @8px @10px;
@@ -1045,13 +1057,6 @@ section.hud {
         }
       }
 
-      .p-admin {
-        font-weight: bold;
-        font-size: @16px;
-        color: @orange;
-        .upper;
-      }
-
       .p-id {
         font-weight: 400;
         font-size: @16px;
@@ -1070,30 +1075,8 @@ section.hud {
         .fl-row-aic-jcc;
 
         img {
-          width: @18px;
-          height: @12px;
-        }
-
-        &__ru {
-          width: auto !important;
-          height: @14px !important;
-
-        }
-
-        &__line {
-            content: '';
-            width: @1px;
-            height: @12px;
-            background-color: #fff3;
-          margin: 0 @8px;
-        }
-
-        .server-number {
-          font-size: @16px !important;
-          font-weight: 800 !important;
-          margin-top: @1px !important;
-          margin-right: @5px !important;
-          .upper;
+          width: @28px;
+          height: @22px;
         }
       }
     }
@@ -1966,7 +1949,7 @@ section.hud {
 
 .coins-time-bonus .time-gaming-wrapper-gift {
   border-radius: @4px 0 0 @4px;
-  background: #F04D26;
+  background: #E3256B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2293,7 +2276,7 @@ section.hud {
       width: @130px;
       height: 140%;
       display: block;
-      background: linear-gradient(0deg, #F04D26 0%, rgba(240, 77, 38, 0) 100%);
+      background: linear-gradient(0deg, #E3256B 0%, rgba(227, 37, 107, 0) 100%);
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -2340,41 +2323,41 @@ section.hud {
       }
     }
 
-    .bg-payday-content {
-      opacity: .7;
-      z-index: 4;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+    // .bg-payday-content {
+    //   opacity: .7;
+    //   z-index: 4;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
 
 
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: url('./images/fire.gif') no-repeat top center;
-        background-size: 140% auto;
-        border-radius: 0 0 @4px @4px;
-        transform: translateY(-@1px);
-        opacity: .96;
-      }
+    //   &:after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url('./images/fire.gif') no-repeat top center;
+    //     background-size: 140% auto;
+    //     border-radius: 0 0 @4px @4px;
+    //     transform: translateY(-@1px);
+    //     opacity: .96;
+    //   }
 
-      &:before {
-        content: '';
-        width: 100%;
-        height: @32px;
-        background: url('./images/svg/payday-top.svg') no-repeat center center;
-        background-size: 100% 100%;
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-      }
-    }
+    //   &:before {
+    //     content: '';
+    //     width: 100%;
+    //     height: @32px;
+    //     background: url('./images/svg/payday-top.svg') no-repeat center center;
+    //     background-size: 100% 100%;
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 0;
+    //   }
+    // }
 
     ul {
       li {
@@ -2420,7 +2403,7 @@ section.hud {
     &:last-child {
       border-radius: 0 @4px @4px 0;
       color: #fff;
-      background: #F04D26;
+      background: #E3256B;
     }
   }
 }
@@ -2668,7 +2651,7 @@ section.hud .hud-chat .hud-chat-history-wrap {
 
     &.red {
       div.w-sl-box {
-        background: #F04D26;
+        background: #E3256B;
 
         p {
           color: #fff;

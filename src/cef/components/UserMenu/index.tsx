@@ -1461,7 +1461,7 @@ export class UserMenuBlock extends Component<{
                                                                             percent={Math.floor(this.state.food / 10)}
                                                                             strokeWidth={4}
                                                                             trailWidth={4}
-                                                                            strokeColor="#F04D26"
+                                                                            strokeColor="#E3256B"
                                                                             trailColor="rgba(196, 196, 196, 0.2)"
                                                                         />
                                                                         <div className="text-wrap">
@@ -3949,15 +3949,15 @@ const SliderStyles = createStyles({
         height: 8,
         width: 8,
         borderRadius: 4,
-        backgroundColor: "#F04D26",
+        backgroundColor: "#E3256B",
         marginTop: -3,
         "&:focus, &:hover, &$active": {
-            boxShadow: "0px 0px 30px #F04D26",
+            boxShadow: "0px 0px 30px #E3256B",
         },
     },
     track: {
-        backgroundColor: "#F04D26",
-        boxShadow: "0px 0px 3px #F04D26",
+        backgroundColor: "#E3256B",
+        boxShadow: "0px 0px 3px #E3256B",
     },
 });
 
@@ -3986,15 +3986,15 @@ const SliderAimStyles = createStyles({
         width: "0.2vw",
         left: 0,
         borderRadius: "0.2vw",
-        backgroundColor: "#F04D26",
+        backgroundColor: "#E3256B",
         marginTop: "-0.41vw",
         "&:focus, &:hover, &$active": {
-            boxShadow: "0px 0px 30px #F04D26",
+            boxShadow: "0px 0px 30px #E3256B",
         },
     },
     track: {
-        backgroundColor: "#F04D26",
-        boxShadow: "0px 0px 3px #F04D26",
+        backgroundColor: "#E3256B",
+        boxShadow: "0px 0px 3px #E3256B",
     },
 });
 

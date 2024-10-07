@@ -372,10 +372,10 @@ const SliderStyles = createStyles({
         height: '0.625vw',
         width: '0.625vw',
         borderRadius: '20px',
-        backgroundColor: "#f04d26",
+        backgroundColor: "#E3256B",
         marginTop: -3,
         "&:focus, &:hover, &$active": {
-            boxShadow: "0px 0px 30px #F04D26",
+            boxShadow: "0px 0px 30px #E3256B",
         },
     },
     track: {

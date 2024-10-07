@@ -163,9 +163,9 @@ export class Personage extends React.Component<{}, PersData> {
             this.loadDress();
         }, 1000)
 
-        if (!CEF.user.name) {
-            CEF.playSound('createpersonageonyx')
-        }
+        // if (!CEF.user.name) {
+        //     CEF.playSound('createpersonageonyx')
+        // }
     }
 
     setSex = ( sex: number ) => {

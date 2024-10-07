@@ -16,7 +16,7 @@ type ProvodaGameType = {
     provoda: Array<Array<ProvodType>>;
 }
 
-const Colors = ["#F04D26","#2D9CDB", "#4F4F4F", "#F2C94C", "#27AE60", "#9B51E0"];
+const Colors = ["#E3256B","#2D9CDB", "#4F4F4F", "#F2C94C", "#27AE60", "#9B51E0"];
 
 export class ProvodaGame extends Component<{
     status: (status: boolean) => void

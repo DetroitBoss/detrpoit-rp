@@ -62,8 +62,12 @@ export class HudHeaderClass extends Component<{
 
 
             <div className="hud-main-info">
+            {this.state.isAdmin ? <div className="hud-main-info-admin">
+            <p className="p-admin">admin</p>
+            {/* <p className="p-admin">admin</p> */}
+                </div> : <></>}
                 <div className="hud-main-info-date">
-                    <p className="p-date">{this.state.date}</p>
+                    <p className="p-date">{this.state.date} {this.state.realHour < 10 ? '   0' : ''}{this.state.realHour}:{this.state.realMinutes < 10 ? '0' : ''}{this.state.realMinutes}</p>
                 </div>
                 <div className="hud-main-info-extra">
                     <div className="hud-mount-user">
@@ -73,25 +77,20 @@ export class HudHeaderClass extends Component<{
                             <p>1 500</p>
                         </div>
                     </div>
-                    {this.state.isAdmin ? <p className="p-admin">admin</p> : <></>}
                     <p className="p-id">id <span>{CEF.id}</span></p>
                     <div className="mini-logo">
-                        <img src={svgs['mini-logo']} width="24" height="24" />
-                        <img src={svgs["ru"]} className={"mini-logo__ru"} alt=""/>
-                        <div className="mini-logo__line"/>
-                        <div className="server-number">1</div>
+                        <img src={svgs['mini-logo']} width="36" height="36" />
                     </div>
                 </div>
-                <p className="p-time">{this.state.realHour < 10 ? '0' : ''}{this.state.realHour}:{this.state.realMinutes < 10 ? '0' : ''}{this.state.realMinutes}</p>
             </div>
             {this.state.weapon ? <div className="magazine-gun">
-                {/*<div className="fullness-magazine-wrap">*/}
+                {/* <div className="fullness-magazine-wrap">*/}
                 {/*    {system.sortArray([...this.state.weapon.magazines], "ASC").map(magazine => {*/}
                 {/*        if(!magazine) return <div className="fullness-magazine-item empty" />*/}
                 {/*        if(magazine === this.state.weapon.maxMagazine) return <div className="fullness-magazine-item full" />*/}
                 {/*        return <div className="fullness-magazine-item half" />*/}
                 {/*    })}*/}
-                {/*</div>*/}
+                {/*</div> */}
                 <div className="magazine-wrapper">
                     <div className="bullets-wrap">
                         <img src={svgs['bullets']} width="24" height="24" />

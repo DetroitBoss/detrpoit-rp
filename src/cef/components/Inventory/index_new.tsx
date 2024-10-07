@@ -1404,15 +1404,15 @@ const SliderStyles = createStyles({
         height: 16,
         width: 16,
         borderRadius: 8,
-        backgroundColor: '#F04D26',
+        backgroundColor: '#E3256B',
         marginTop: -7,//-3,
         '&:focus, &:hover': {
-            boxShadow: '0px 0px 30px #F04D26'
+            boxShadow: '0px 0px 30px #E3256B'
         }
     },
     track: {
-        backgroundColor: '#F04D26',
-        boxShadow: '0px 0px 3px #F04D26'
+        backgroundColor: '#E3256B',
+        boxShadow: '0px 0px 3px #E3256B'
     }
 });
 const NewSliderStyles = withStyles(SliderStyles)(Slider);

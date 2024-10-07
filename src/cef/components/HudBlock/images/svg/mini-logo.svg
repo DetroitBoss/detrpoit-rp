@@ -1,10 +1,18 @@
-<svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.19985 1.79664C4.4112 1.26204 4.78458 0.804759 5.26907 0.487176C5.74911 0.166903 6.31602 -0.00288909 6.89555 3.71975e-05H18L13.8047 10.2121C13.5929 10.7477 13.2177 11.2053 12.7309 11.5215C12.2508 11.8407 11.6833 12.0076 11.1045 11.9997H0L4.19985 1.79664ZM5.10597 8.54507H10.3297C10.4716 8.54769 10.6102 8.50366 10.7239 8.41994C10.8384 8.34208 10.9281 8.23354 10.9821 8.1071L12.9122 3.4547H7.67481C7.53076 3.44773 7.38839 3.48772 7.26966 3.56848C7.15094 3.64925 7.06246 3.76632 7.01787 3.90162L5.10597 8.54507Z" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="17.4065" y1="6.72613" x2="0.601579" y2="5.23377" gradientUnits="userSpaceOnUse">
-<stop stop-color="#E3256B"/>
-<stop offset="0.4" stop-color="#E3256B"/>
-<stop offset="1" stop-color="#E3256B"/>
-</linearGradient>
-</defs>
+<svg width="72.000000" height="73.000000" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip67_61">
+			<rect id="фрейм 1" width="12.000000" height="13.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="-0.523211" y1="22.045826" x2="21.581461" y2="0.874068" id="paint_linear_67_63_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.050000" stop-color="#E62E6B"/>
+			<stop offset="0.950000" stop-color="#E62E6B"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip67_61)">
+		<path id="path" d="M6.39 0.1L11.55 2.95C11.83 3.11 11.97 3.33 11.97 3.64L11.97 9.34C11.97 9.65 11.83 9.88 11.55 10.03L6.39 12.88C6.12 13.03 5.84 13.03 5.57 12.88L0.41 10.03C0.13 9.88 0 9.65 0 9.34L0 3.64C0 3.33 0.13 3.11 0.41 2.95L5.57 0.1C5.84 -0.05 6.12 -0.05 6.39 0.1Z" fill="url(#paint_linear_67_63_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="path" d="M3.67 8.35L3.67 5.23L5.98 3.97L8.29 5.23L8.29 7.75L5.98 9.01L4.76 8.34L4.76 5.84L5.98 5.17L7.2 5.84L7.2 7.15L5.98 7.81L5.84 7.74L5.84 6.44L6.53 6.07L5.98 5.77L5.3 6.14L5.3 8.04L5.98 8.41L7.74 7.45L7.74 5.54L5.98 4.57L4.22 5.54L4.22 8.64L5.98 9.61L8.83 8.05L8.83 4.93L5.98 3.37L3.13 4.93L3.13 8.05L3.67 8.35Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
 </svg>
