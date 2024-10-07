@@ -68291,7 +68291,6 @@ var _controls = require("./controls");
 var _construction = require("./construction");
 var _main = require("../../shared/casino/main");
 var _extinguishing = require("./jobs/firefighter/extinguishing");
-var _autosalon = require("./businesses/autosalon");
 let inSaveZone = exports.inSaveZone = false;
 let inRedZone = false;
 const blockShootSaveZoneStatus = () => {
@@ -68306,26 +68305,6 @@ const blockShootSaveZoneStatus = () => {
   return inSaveZone && (!_user.user.is_police && _user.user.fraction != 1 || inCasino) && currentWeapon !== _extinguishing.fireExtinguisherHash;
 };
 exports.blockShootSaveZoneStatus = blockShootSaveZoneStatus;
-setInterval(() => {
-  if (!mp.players.local.vehicle) return;
-  const maxSpeed = mp.players.local.vehicle.getVariable('maxSpeed') ? mp.players.local.vehicle.getVariable('maxSpeed') / 3.6 : 999;
-  let {
-    x,
-    y,
-    z
-  } = mp.players.local.position;
-  const zone = _savezone.safeZones.find(zone => _system.system.distanceToPos(mp.players.local.position, {
-      x: zone.x,
-      y: zone.y,
-      z: zone.z
-    }) <= zone.r),
-    inZone = _construction.inConstruction || _user.user.inDriftMap || _main.CASINO_INTERIORS_IDS_IN.includes(mp.game.interior.getInteriorAtCoords(x, y, z)) || zone && !zone.disabled && !mp.players.local.dimension;
-  if (inZone && zone && !zone.disableLockSpeed) {
-    mp.players.local.vehicle.setMaxSpeed(11);
-  } else {
-    if (!_autosalon.testDriveMode) mp.players.local.vehicle.setMaxSpeed(maxSpeed);
-  }
-}, 300);
 setInterval(() => {
   if (!_user.user.login) return;
   let {
@@ -68358,7 +68337,7 @@ _custom.CustomEvent.registerServer('safezone:init', disabledZones => {
     _savezone.safeZones[zone].disabled = true;
   });
 });
-},{"../../shared/savezone":"WVCz","./system":"pi2J","./custom.event":"py8h","./user":"ggMw","./controls":"yuOK","./construction":"Q1Tk","../../shared/casino/main":"FJpA","./jobs/firefighter/extinguishing":"ae5U","./businesses/autosalon":"eXav"}],"Qh13":[function(require,module,exports) {
+},{"../../shared/savezone":"WVCz","./system":"pi2J","./custom.event":"py8h","./user":"ggMw","./controls":"yuOK","./construction":"Q1Tk","../../shared/casino/main":"FJpA","./jobs/firefighter/extinguishing":"ae5U"}],"Qh13":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

@@ -62,12 +62,9 @@ export class HudHeaderClass extends Component<{
 
 
             <div className="hud-main-info">
-            {/* {this.state.isAdmin ?  */}
-            <div className="hud-main-info-admin">
+            {this.state.isAdmin ? <div className="hud-main-info-admin">
             <p className="p-admin">admin</p>
-            {/* <p className="p-admin">admin</p> */}
-                </div>
-                 {/* : <></>} */}
+                </div> : <></>} 
                 <div className="hud-main-info-date">
                     <p className="p-date">{this.state.date} {this.state.realHour < 10 ? '   0' : ''}{this.state.realHour}:{this.state.realMinutes < 10 ? '0' : ''}{this.state.realMinutes}</p>
                 </div>
@@ -76,7 +73,6 @@ export class HudHeaderClass extends Component<{
                         <img src={svgs['user-hud']} width="24" height="24" />
                         <div className="text-wrap">
                             <p>{this.state.online}</p>
-                            <p>1 500</p>
                         </div>
                     </div>
                     <p className="p-id">id <span>{CEF.id}</span></p>

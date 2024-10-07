@@ -20,28 +20,28 @@ export const blockShootSaveZoneStatus = () => {
     return (inSaveZone && ((!user.is_police && user.fraction != 1) || inCasino) && currentWeapon !== fireExtinguisherHash);
 }
 
-setInterval(() => {
-    if (!mp.players.local.vehicle) return;
-    const maxSpeed = mp.players.local.vehicle.getVariable('maxSpeed') ?
-        mp.players.local.vehicle.getVariable('maxSpeed') / 3.6 : 999;
+// setInterval(() => {
+//     if (!mp.players.local.vehicle) return;
+//     const maxSpeed = mp.players.local.vehicle.getVariable('maxSpeed') ?
+//         mp.players.local.vehicle.getVariable('maxSpeed') / 3.6 : 999;
 
-    let {x, y, z} = mp.players.local.position;
-    const zone = safeZones.find(zone => system.distanceToPos(mp.players.local.position, {
-            x: zone.x,
-            y: zone.y,
-            z: zone.z
-        }) <= zone.r),
-        inZone = inConstruction || user.inDriftMap
-            || CASINO_INTERIORS_IDS_IN.includes(mp.game.interior.getInteriorAtCoords(x, y, z))
-            || (zone && !zone.disabled)
-            && !mp.players.local.dimension;
+//     let {x, y, z} = mp.players.local.position;
+//     const zone = safeZones.find(zone => system.distanceToPos(mp.players.local.position, {
+//             x: zone.x,
+//             y: zone.y,
+//             z: zone.z
+//         }) <= zone.r),
+//         inZone = inConstruction || user.inDriftMap
+//             || CASINO_INTERIORS_IDS_IN.includes(mp.game.interior.getInteriorAtCoords(x, y, z))
+//             || (zone && !zone.disabled)
+//             && !mp.players.local.dimension;
 
-    if (inZone && zone && !zone.disableLockSpeed) {
-        mp.players.local.vehicle.setMaxSpeed(11);
-    } else {
-        if (!testDriveMode) mp.players.local.vehicle.setMaxSpeed(maxSpeed);
-    }
-}, 300)
+//     if (inZone && zone && !zone.disableLockSpeed) {
+//         mp.players.local.vehicle.setMaxSpeed(11);
+//     } else {
+//         if (!testDriveMode) mp.players.local.vehicle.setMaxSpeed(maxSpeed);
+//     }
+// }, 300)
 
 setInterval(() => {
     if (!user.login) return;
