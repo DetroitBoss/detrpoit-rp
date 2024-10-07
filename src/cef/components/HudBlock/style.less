@@ -493,8 +493,8 @@ section.hud {
     .hud-write-message {
       width: @500px;
       .fl-row-aic-jsb;
-      background: rgba(255, 255, 255, 0.2);
-      border: @1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(21, 21, 21, 0.8);
+      // border: @1px solid rgba(255, 255, 255, 0.4);
       height: @48px;
       .br4;
 
@@ -549,18 +549,18 @@ section.hud {
       }
 
       label {
-        font-weight: 500;
-        font-size: @14px;
+        font-weight: bold;
+        font-size: @13px;
       }
     }
   }
 
   .hud-extra-radiobutton-wrap {
     .fl-row-aic-jcs;
-    margin-top: @6px;
+    margin-top: @12px;
 
     .hud-extra-radiobutton-item {
-      margin-right: @16px;
+      margin-right: 8px;
 
       &:last-of-type {
         margin-right: 0;
@@ -574,18 +574,30 @@ section.hud {
         &:checked + label {
           color: rgba(255, 255, 255, 1);
           text-shadow: 0px @1px @10px rgba(0, 0, 0, 0.6);
+          background-color: #E3256B;
+          border-radius: 4px;
+          padding: 8px;
 
           &:hover {
             color: rgba(255, 255, 255, 1);
+            background-color: #E3256B;
+            border-radius: 4px;
+            padding: 8px;
           }
         }
 
         &:not(checked) + label {
           color: rgba(255, 255, 255, 0.4);
           text-shadow: 0px @1px @10px rgba(0, 0, 0, 0.6);
+          background-color: rgba(21, 21, 21, 0.8);
+          border-radius: 4px;
+          padding: 8px;
 
           &:hover {
             color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(35, 35, 35, 0.8);
+            border-radius: 4px;
+            padding: 8px;
           }
         }
       }
@@ -2236,7 +2248,7 @@ section.hud {
 .payday-wrapper {
   width: @400px;
   position: absolute;
-  right: @320px;
+  left: @10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 120;
@@ -2258,13 +2270,15 @@ section.hud {
   }
 
   .payday-content {
-    padding: @32px;
+    padding: 15px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    border-radius: 8px;
+    background-color: rgba(21, 21, 21, 0.9);
 
     & > * {
       position: relative;
@@ -2273,7 +2287,8 @@ section.hud {
 
     &:after {
       content: '';
-      width: @130px;
+      width: 140px;
+      border-radius: 9px 9px;
       height: 140%;
       display: block;
       background: linear-gradient(0deg, #E3256B 0%, rgba(227, 37, 107, 0) 100%);

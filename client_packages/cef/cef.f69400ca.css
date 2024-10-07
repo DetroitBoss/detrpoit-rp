@@ -11061,8 +11061,7 @@ section.hud .hud-chat .hud-write-message {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  border: 0.05208333vw solid rgba(255, 255, 255, 0.4);
+  background: rgba(21, 21, 21, 0.8);
   height: 2.5vw;
   border-radius: 0.20833333vw;
 }
@@ -11108,8 +11107,8 @@ section.hud .hud-chat .hud-extra-radiobutton-item input {
   display: none;
 }
 section.hud .hud-chat .hud-extra-radiobutton-item label {
-  font-weight: 500;
-  font-size: 0.72916667vw;
+  font-weight: bold;
+  font-size: 0.67708333vw;
 }
 section.hud .hud-extra-radiobutton-wrap {
   display: -webkit-flex;
@@ -11119,10 +11118,10 @@ section.hud .hud-extra-radiobutton-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.3125vw;
+  margin-top: 0.625vw;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item {
-  margin-right: 0.83333333vw;
+  margin-right: 8px;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item:last-of-type {
   margin-right: 0;
@@ -11135,16 +11134,28 @@ section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item input {
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item input:checked + label {
   color: #ffffff;
   text-shadow: 0px 0.05208333vw 0.52083333vw rgba(0, 0, 0, 0.6);
+  background-color: #E3256B;
+  border-radius: 4px;
+  padding: 8px;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item input:checked + label:hover {
   color: #ffffff;
+  background-color: #E3256B;
+  border-radius: 4px;
+  padding: 8px;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item input:not(checked) + label {
   color: rgba(255, 255, 255, 0.4);
   text-shadow: 0px 0.05208333vw 0.52083333vw rgba(0, 0, 0, 0.6);
+  background-color: rgba(21, 21, 21, 0.8);
+  border-radius: 4px;
+  padding: 8px;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item input:not(checked) + label:hover {
   color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(35, 35, 35, 0.8);
+  border-radius: 4px;
+  padding: 8px;
 }
 section.hud .hud-extra-radiobutton-wrap .hud-extra-radiobutton-item label {
   transition: all 0.33s ease-in-out;
@@ -12723,7 +12734,7 @@ section.hud .hud-money-wrapper .money-wrap .p-big {
 .payday-wrapper {
   width: 20.83333333vw;
   position: absolute;
-  right: 16.66666667vw;
+  left: 0.52083333vw;
   top: 50%;
   transform: translateY(-50%);
   z-index: 120;
@@ -12742,13 +12753,15 @@ section.hud .hud-money-wrapper .money-wrap .p-big {
   margin-bottom: 1.66666667vw;
 }
 .payday-wrapper .payday-content {
-  padding: 1.66666667vw;
+  padding: 15px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
+  border-radius: 8px;
+  background-color: rgba(21, 21, 21, 0.9);
 }
 .payday-wrapper .payday-content > * {
   position: relative;
@@ -12756,7 +12769,8 @@ section.hud .hud-money-wrapper .money-wrap .p-big {
 }
 .payday-wrapper .payday-content:after {
   content: '';
-  width: 6.77083333vw;
+  width: 140px;
+  border-radius: 9px 9px;
   height: 140%;
   display: block;
   background: linear-gradient(0deg, #E3256B 0%, rgba(227, 37, 107, 0) 100%);

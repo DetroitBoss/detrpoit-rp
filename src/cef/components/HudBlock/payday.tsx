@@ -88,7 +88,7 @@ export class HudPayDay extends Component<{}, {
         return <>
             <div className={`payday-wrapper animated ${ this.state.close == false ? 'fadeInUpPayday' : 'fadeInDownPayday'}`}>
                 <div className="payday-head">
-                    <img src={svgs['logo-word-o-orange']} alt=""/>
+                    {/* <img src={svgs['logo-word-o-orange']} alt=""/> */}
                     <p className="font40 fontw800 mb8">PAYDAY</p>
                     <p className="font16 upper fontw400 mb40">{this.timeStringCorrect}</p>
                 </div>

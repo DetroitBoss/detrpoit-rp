@@ -32,9 +32,9 @@ export class HudChatClass extends Component<{
             history: [],
             historyIndex: 0,
             currentTime: '00:00',
-            active: false,
+            active: true,
             show: true,
-            showHud: false,
+            showHud: true,
             enable: true
         };
 
