@@ -8,6 +8,6 @@ CustomEvent.registerClient('debug:fpsData', (player, min: number, max: number, a
     user.log('fpsDebug', `MIN: ${min} | MAX: ${max} | AVERAGE: ${average} | SUM: ${sum} | LENGTH: ${length}`);
 })
 
-gui.chat.registerCommand('stopcef', (player) => {
-    CustomEvent.triggerClient(player, 'stopcef')
-})
+// gui.chat.registerCommand('stopcef', (player) => {
+//     CustomEvent.triggerClient(player, 'stopcef')
+// })

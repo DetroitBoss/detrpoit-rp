@@ -96,7 +96,7 @@ gui.chat.registerCommand('toggleevlog', (player) => {
 gui.chat.registerCommand('atest', player => testMenu(player));
 
 gui.chat.registerCommand('addcloth', player => CustomEvent.triggerClient(player, "admin:cloth:new"));
-// gui.chat.registerCommand('mtp', player => CustomEvent.triggerClient(player, 'tpWaypoint'));
+gui.chat.registerCommand('mtp', player => CustomEvent.triggerClient(player, 'tpWaypoint'));
 
 gui.chat.registerCommand('ajail', (player, userIdStr, minutesStr, ...reasonArgs) => {
     if (!player.user.isAdminNow()) return;

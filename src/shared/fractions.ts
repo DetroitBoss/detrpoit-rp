@@ -20,7 +20,7 @@ export const CRIME_ROBBERY_COOLDOWN = 3600;
 /** Процент получения денег при ограблении */
 export const CRIME_ROBBERY_INTEREST = 20;
 /** Максимально возможная сумма ограбления */
-export const CRIME_ROBBERY_PROFIT_LIMIT = 45000;
+export const CRIME_ROBBERY_PROFIT_LIMIT = 10000000;
 
 export enum DISPATCH_TYPES {
     CALL,

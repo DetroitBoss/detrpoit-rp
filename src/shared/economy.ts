@@ -61,12 +61,12 @@ export const PAYDAY_MONEY_PER_HOUR_MULTIPLE = [
 ];
 
 /** Название донат валюты */
-export const DONATE_MONEY_NAMES = ["коин", "коины", "коинов", "⭕"]
+export const DONATE_MONEY_NAMES = ["коин", "коины", "коинов"]
 /** Сколько виртов за 1 коин */
-export const DONATE_VIRTS_PER_COIN = 100;
+export const DONATE_VIRTS_PER_COIN = 500000;
 
 /** Сколько времени нужно отыграть при акции */
-export const PLAYTIME_TIME = 5;
+export const PLAYTIME_TIME = 4;
 /** Сколько игрок получит денег если отыграет положеный срок при включённой акции */
 export const PLAYTIME_MONEY = 200;
 /** Что игрок получит, вирты или коины */
@@ -75,9 +75,9 @@ export const PLAYTIME_TYPE: "money" | "donate" = 'donate';
 /** Настройки медиа промокода */
 export const MEDIA_PROMOCODE = {
     /** Блокировать ввод медиакода с другого персонажа на том же аккаунте */
-    BLOCK_MULTIPLE: false,
+    BLOCK_MULTIPLE: true,
     /** Сколько денег даст игроку сразу при введении */
-    GIVE_MONEY_PLAYER: 5000,
+    GIVE_MONEY_PLAYER: 40000000,
     // /** Сколько денег даст медиа */
     // GIVE_MONEY_MEDIA: 10000,
     /** Сколько коинов даст игроку */
@@ -85,16 +85,16 @@ export const MEDIA_PROMOCODE = {
     /** Сколько коинов даст медиа */
     GIVE_DONATE_MEDIA: 10,
     /** Уведомлять стримера, если он в сети, что есть промокод был введён */
-    NOTIFY: false,
+    NOTIFY: true,
     /** Какой максимальный уровень у игрока может быть, чтобы иметь возможность ввести промокод медиа. */
     LEVEL_MAX: 2,
     // Сумма которую игрок получит при достижении необходимого ЛВЛ
-    GIVE_MONEY_PLAYER_LEVEL: 25000,
+    GIVE_MONEY_PLAYER_LEVEL: 40000000,
     // Уровень на котором игроку даст вторую часть денег
     LEVEL_TWO: 3,
     //!!!! Не трогать
     REWARD_STAGE_LIST: <{count: number, class: string, name: string, data: any}[]>[
-        {count: 10, class: 'font24 fontw600', name: `$100 000`, data: 100000},
+        {count: 10, class: 'font24 fontw600', name: `$40 000 000`, data: 40000000},
         {count: 20, class: 'font24 fontw600', name: `VIP Diamond<br/><small>на месяц</small>`},
         {count: 30, class: 'font24 fontw600', name: `<small>Семья</small><br/>бесплатно`},
         {count: 40, class: 'font24 fontw600', name: `Пак лицензий`},
@@ -104,10 +104,10 @@ export const MEDIA_PROMOCODE = {
 }
 
 /** Пособие по безработице. Для тех, кто не является членом какой либо фракции */
-export const UNEMPLOYMENT_BENEFIT = 400;
+export const UNEMPLOYMENT_BENEFIT = 200000;
 /** Начальный запас наличных средств игрока
  * !!! Если сменить на работающем сервере - перезапишет баланс всех игроков */
-export const startMoney = 5000;
+export const startMoney = 250000000;
 /** Начальный запас наличных средств игрока
  * !!! Если сменить на работающем сервере - перезапишет баланс всех игроков */
 export const startChips = 0;
@@ -128,30 +128,30 @@ export const DEFAULT_VEHICLE_PLAYER_LIMIT_MAX = 11;
 
 
 /** Процент за снятие средств с банковского счёта */
-export const REMOVAL_BANK_MONEY_PERCENT = 1;
+export const REMOVAL_BANK_MONEY_PERCENT = 2;
 
 //! Телефон
 /** Стоимость анонса мероприятия */
-export const EVENT_ANNOUNCE_COST = 50000
+export const EVENT_ANNOUNCE_COST = 20000000
 /** Время в минутах, сколько анонс будет существовать */
 export const EVENT_ANNOUNCE_MINUTE = 10
 /** Стоимость одной СМС */
-export const SMS_COST = 2;
+export const SMS_COST = 8000;
 /** Стоимость соединения при разговоре */
-export const VOICE_CONNECT_COST = 2;
+export const VOICE_CONNECT_COST = 5000;
 /** Стоимость одной минуты разговора */
-export const VOICE_MINUTE_COST = 2;
+export const VOICE_MINUTE_COST = 4000;
 
 
 //! Банки
 /** Максимальный запас по запасу банковского баланса */
 export const bankCardMax = [10000000, 100000000, 500000000]
 /** Стоимость перевыпуска карты */
-export const newBankCardCost = 5000;
+export const newBankCardCost = 400000;
 /** Стоимость выпуска карт */
-export const bankCardCostCreate = [1000, 20000, 50000];
+export const bankCardCostCreate = [300000, 500000, 1000000];
 /** Стоимость закрытия счёта */
-export const bankAccountClose = 4000;
+export const bankAccountClose = 100000;
 /** Названия тарифов банковских карт */
 export const BANK_CARD_NAME_LIST = [
     "Debit",
@@ -204,7 +204,7 @@ export const BUSINESS_UPGRADE_DATA: {
 
 //? Тату салоны
 /** Множитель цены тату при сведении */
-export const tattooRemoveCostMultipler = 2;
+export const tattooRemoveCostMultipler = 3;
 /** Сколько средств перечислить тату салону при сведении тату */
 export const tattooRemoveMoneySendToBusinessMultipler = 1;
 /** Какой процент от стоимости бизнеса идёт в сейф семьи при каждом PayDay */
@@ -213,20 +213,20 @@ export const familyFractionPayDayRewardPercent = 0.7;
 /** Стоимость выпуска ID карты */
 export const startDocumentCost = 0;
 /** Стоимость перевыпуска ID карты в случае утраты */
-export const restoreDocumentCost = 5000;
+export const restoreDocumentCost = 400000;
 
 
 //! Дома
 /** Стоиомсть ключей от дома */
-export const houseKeyCost = 999
+export const houseKeyCost = 99900
 /** Стоиомсть замены замка */
-export const houseLockRepairCost = 10000
+export const houseLockRepairCost = 100000
 /** Стоимость отправки ТС на штрафстоянку когда игрок выселяется */
-export const houseVehicleRemoveFine = 1000;
+export const houseVehicleRemoveFine = 100000;
 /** Процент от стоимости за сутки в налог */
 export const HOUSE_TAX_PERCENT = 0.4;
 /* Максимальный налог в сутки */
-export const HOUSE_TAX_PERCENT_DAY_MAX = 100000;
+export const HOUSE_TAX_PERCENT_DAY_MAX = 19000000;
 /* Максимальная проплата налога на дом в сутках */
 export const HOUSE_MAX_TAX_DAYS_DEFAULT = 14;
 /** Данные по апгрейду домов */
@@ -265,27 +265,27 @@ export const VEHICLE_KEY_CREATE_COST = 999;
 /** Максимальная сумма штрафа для штрафстоянки */
 export const VEHICLE_FINE_POLICE_MAX = 5000
 /** Стоимость ремонта ТС в ЛСК */
-export const VEHICLE_REPAIR_COST = 500;
+export const VEHICLE_REPAIR_COST = 45000;
 /** Стоимость возврата ТС в гараж */
-export const VEHICLE_RESPAWN_COST = 200
+export const VEHICLE_RESPAWN_COST = 20000
 //! Взаимодействие
 /** Сколько максимум наличных средств можно передать за одну операцию */
-export const GIVE_MONEY_PER_TASK = 50000
+export const GIVE_MONEY_PER_TASK = 50000000
 /** Сколько максимум наличных средств можно передать за 1 рестарт сервера */
-export const GIVE_MONEY_PER_DAY = 10000000
+export const GIVE_MONEY_PER_DAY = 150000000
 
 //! Больница
 
 /** Сколько стоит выписать из больницы */
 export const enum QUICK_HEAL_COST {
     /** Через врача */
-    MANUAL = 400,
+    MANUAL = 37000,
     /** Через врача */
-    MANUAL_LICENSE = 200,
+    MANUAL_LICENSE = 300000,
     /** Через маркер */
-    AUTO = 2000,
+    AUTO = 55000,
     /** Через маркер */
-    AUTO_LICENSE = 1000,
+    AUTO_LICENSE = 359000,
 }
 
 type DonateData = {

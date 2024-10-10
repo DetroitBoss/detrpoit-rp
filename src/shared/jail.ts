@@ -4,7 +4,7 @@ export const CUFF_LEAVE_WARN_DAYS = 10
 export const CUFF_LEAVE_JAIL_MINUTES = 180
 
 /** Количество минут за одну звезду розыска */
-export const JAIL_MINUTES_PER_STAR = 12
+export const JAIL_MINUTES_PER_STAR = 5
 /** Максимальный уровень розыска */
 export const MAX_WANTED_LEVEL = 5;
 /** Координаты админской тюрьмы */
