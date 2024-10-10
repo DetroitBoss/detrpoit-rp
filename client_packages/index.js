@@ -50216,25 +50216,25 @@ var _parking = require("./parking");
 const COINS_FOR_ONE_ROUBLE = exports.COINS_FOR_ONE_ROUBLE = 2;
 const JOB_MONEY_PER_HOUR_MULTIPLE = exports.JOB_MONEY_PER_HOUR_MULTIPLE = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const PAYDAY_MONEY_PER_HOUR_MULTIPLE = exports.PAYDAY_MONEY_PER_HOUR_MULTIPLE = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const DONATE_MONEY_NAMES = exports.DONATE_MONEY_NAMES = ["коин", "коины", "коинов", "⭕"];
-const DONATE_VIRTS_PER_COIN = exports.DONATE_VIRTS_PER_COIN = 100;
-const PLAYTIME_TIME = exports.PLAYTIME_TIME = 5;
+const DONATE_MONEY_NAMES = exports.DONATE_MONEY_NAMES = ["коин", "коины", "коинов"];
+const DONATE_VIRTS_PER_COIN = exports.DONATE_VIRTS_PER_COIN = 500000;
+const PLAYTIME_TIME = exports.PLAYTIME_TIME = 4;
 const PLAYTIME_MONEY = exports.PLAYTIME_MONEY = 200;
 const PLAYTIME_TYPE = exports.PLAYTIME_TYPE = 'donate';
 const MEDIA_PROMOCODE = exports.MEDIA_PROMOCODE = {
-  BLOCK_MULTIPLE: false,
-  GIVE_MONEY_PLAYER: 5000,
+  BLOCK_MULTIPLE: true,
+  GIVE_MONEY_PLAYER: 40000000,
   GIVE_DONATE_PLAYER: 0,
   GIVE_DONATE_MEDIA: 10,
-  NOTIFY: false,
+  NOTIFY: true,
   LEVEL_MAX: 2,
-  GIVE_MONEY_PLAYER_LEVEL: 25000,
+  GIVE_MONEY_PLAYER_LEVEL: 40000000,
   LEVEL_TWO: 3,
   REWARD_STAGE_LIST: [{
     count: 10,
     class: 'font24 fontw600',
-    name: `$100 000`,
-    data: 100000
+    name: `$40 000 000`,
+    data: 40000000
   }, {
     count: 20,
     class: 'font24 fontw600',
@@ -50254,24 +50254,24 @@ const MEDIA_PROMOCODE = exports.MEDIA_PROMOCODE = {
     data: 'must1onyx'
   }]
 };
-const UNEMPLOYMENT_BENEFIT = exports.UNEMPLOYMENT_BENEFIT = 400;
-const startMoney = exports.startMoney = 5000;
+const UNEMPLOYMENT_BENEFIT = exports.UNEMPLOYMENT_BENEFIT = 200000;
+const startMoney = exports.startMoney = 250000000;
 const startChips = exports.startChips = 0;
 const DONATE_SLOT_PERSONAGE_COST = exports.DONATE_SLOT_PERSONAGE_COST = 500;
 const SELL_GOS_TAX_PERCENT = exports.SELL_GOS_TAX_PERCENT = 30;
 const SELL_GOS_TAX_PERCENT_DONATE = exports.SELL_GOS_TAX_PERCENT_DONATE = 0;
 const DEFAULT_VEHICLE_PLAYER_LIMIT = exports.DEFAULT_VEHICLE_PLAYER_LIMIT = 11;
 const DEFAULT_VEHICLE_PLAYER_LIMIT_MAX = exports.DEFAULT_VEHICLE_PLAYER_LIMIT_MAX = 11;
-const REMOVAL_BANK_MONEY_PERCENT = exports.REMOVAL_BANK_MONEY_PERCENT = 1;
-const EVENT_ANNOUNCE_COST = exports.EVENT_ANNOUNCE_COST = 50000;
+const REMOVAL_BANK_MONEY_PERCENT = exports.REMOVAL_BANK_MONEY_PERCENT = 2;
+const EVENT_ANNOUNCE_COST = exports.EVENT_ANNOUNCE_COST = 20000000;
 const EVENT_ANNOUNCE_MINUTE = exports.EVENT_ANNOUNCE_MINUTE = 10;
-const SMS_COST = exports.SMS_COST = 2;
-const VOICE_CONNECT_COST = exports.VOICE_CONNECT_COST = 2;
-const VOICE_MINUTE_COST = exports.VOICE_MINUTE_COST = 2;
+const SMS_COST = exports.SMS_COST = 8000;
+const VOICE_CONNECT_COST = exports.VOICE_CONNECT_COST = 5000;
+const VOICE_MINUTE_COST = exports.VOICE_MINUTE_COST = 4000;
 const bankCardMax = exports.bankCardMax = [10000000, 100000000, 500000000];
-const newBankCardCost = exports.newBankCardCost = 5000;
-const bankCardCostCreate = exports.bankCardCostCreate = [1000, 20000, 50000];
-const bankAccountClose = exports.bankAccountClose = 4000;
+const newBankCardCost = exports.newBankCardCost = 400000;
+const bankCardCostCreate = exports.bankCardCostCreate = [300000, 500000, 1000000];
+const bankAccountClose = exports.bankAccountClose = 100000;
 const BANK_CARD_NAME_LIST = exports.BANK_CARD_NAME_LIST = ["Debit", "Gold", "Platinum"];
 const BANK_CARD_STYLE_LIST = exports.BANK_CARD_STYLE_LIST = ["debit", "gold", "platinum"];
 const bankMaxPercent = exports.bankMaxPercent = 5;
@@ -50302,16 +50302,16 @@ const BUSINESS_UPGRADE_DATA = exports.BUSINESS_UPGRADE_DATA = [{
   level_percent: 10,
   step_by_step: true
 }];
-const tattooRemoveCostMultipler = exports.tattooRemoveCostMultipler = 2;
+const tattooRemoveCostMultipler = exports.tattooRemoveCostMultipler = 3;
 const tattooRemoveMoneySendToBusinessMultipler = exports.tattooRemoveMoneySendToBusinessMultipler = 1;
 const familyFractionPayDayRewardPercent = exports.familyFractionPayDayRewardPercent = 0.7;
 const startDocumentCost = exports.startDocumentCost = 0;
-const restoreDocumentCost = exports.restoreDocumentCost = 5000;
-const houseKeyCost = exports.houseKeyCost = 999;
-const houseLockRepairCost = exports.houseLockRepairCost = 10000;
-const houseVehicleRemoveFine = exports.houseVehicleRemoveFine = 1000;
+const restoreDocumentCost = exports.restoreDocumentCost = 400000;
+const houseKeyCost = exports.houseKeyCost = 99900;
+const houseLockRepairCost = exports.houseLockRepairCost = 100000;
+const houseVehicleRemoveFine = exports.houseVehicleRemoveFine = 100000;
 const HOUSE_TAX_PERCENT = exports.HOUSE_TAX_PERCENT = 0.4;
-const HOUSE_TAX_PERCENT_DAY_MAX = exports.HOUSE_TAX_PERCENT_DAY_MAX = 100000;
+const HOUSE_TAX_PERCENT_DAY_MAX = exports.HOUSE_TAX_PERCENT_DAY_MAX = 19000000;
 const HOUSE_MAX_TAX_DAYS_DEFAULT = exports.HOUSE_MAX_TAX_DAYS_DEFAULT = 14;
 const HOUSE_UPGRADE_LEVEL_COST = exports.HOUSE_UPGRADE_LEVEL_COST = [{
   house: 0,
@@ -50347,16 +50347,16 @@ const VEHICLE_TAX_PERCENT = exports.VEHICLE_TAX_PERCENT = 0;
 const VEHICLE_MAX_TAX_PERCENT_DAY = exports.VEHICLE_MAX_TAX_PERCENT_DAY = 1;
 const VEHICLE_KEY_CREATE_COST = exports.VEHICLE_KEY_CREATE_COST = 999;
 const VEHICLE_FINE_POLICE_MAX = exports.VEHICLE_FINE_POLICE_MAX = 5000;
-const VEHICLE_REPAIR_COST = exports.VEHICLE_REPAIR_COST = 500;
-const VEHICLE_RESPAWN_COST = exports.VEHICLE_RESPAWN_COST = 200;
-const GIVE_MONEY_PER_TASK = exports.GIVE_MONEY_PER_TASK = 50000;
-const GIVE_MONEY_PER_DAY = exports.GIVE_MONEY_PER_DAY = 10000000;
+const VEHICLE_REPAIR_COST = exports.VEHICLE_REPAIR_COST = 45000;
+const VEHICLE_RESPAWN_COST = exports.VEHICLE_RESPAWN_COST = 20000;
+const GIVE_MONEY_PER_TASK = exports.GIVE_MONEY_PER_TASK = 50000000;
+const GIVE_MONEY_PER_DAY = exports.GIVE_MONEY_PER_DAY = 150000000;
 var QUICK_HEAL_COST;
 (function (QUICK_HEAL_COST) {
-  QUICK_HEAL_COST[QUICK_HEAL_COST["MANUAL"] = 400] = "MANUAL";
-  QUICK_HEAL_COST[QUICK_HEAL_COST["MANUAL_LICENSE"] = 200] = "MANUAL_LICENSE";
-  QUICK_HEAL_COST[QUICK_HEAL_COST["AUTO"] = 2000] = "AUTO";
-  QUICK_HEAL_COST[QUICK_HEAL_COST["AUTO_LICENSE"] = 1000] = "AUTO_LICENSE";
+  QUICK_HEAL_COST[QUICK_HEAL_COST["MANUAL"] = 37000] = "MANUAL";
+  QUICK_HEAL_COST[QUICK_HEAL_COST["MANUAL_LICENSE"] = 300000] = "MANUAL_LICENSE";
+  QUICK_HEAL_COST[QUICK_HEAL_COST["AUTO"] = 55000] = "AUTO";
+  QUICK_HEAL_COST[QUICK_HEAL_COST["AUTO_LICENSE"] = 359000] = "AUTO_LICENSE";
 })(QUICK_HEAL_COST || (exports.QUICK_HEAL_COST = QUICK_HEAL_COST = {}));
 const Donate_Items = exports.Donate_Items = [{
   id: 4,
@@ -50426,7 +50426,7 @@ const GANG_INVITE_RANKS_MINUS = exports.GANG_INVITE_RANKS_MINUS = 2;
 const MAIFA_INVITE_RANKS_MINUS = exports.MAIFA_INVITE_RANKS_MINUS = 2;
 const CRIME_ROBBERY_COOLDOWN = exports.CRIME_ROBBERY_COOLDOWN = 3600;
 const CRIME_ROBBERY_INTEREST = exports.CRIME_ROBBERY_INTEREST = 20;
-const CRIME_ROBBERY_PROFIT_LIMIT = exports.CRIME_ROBBERY_PROFIT_LIMIT = 45000;
+const CRIME_ROBBERY_PROFIT_LIMIT = exports.CRIME_ROBBERY_PROFIT_LIMIT = 10000000;
 var DISPATCH_TYPES;
 (function (DISPATCH_TYPES) {
   DISPATCH_TYPES[DISPATCH_TYPES["CALL"] = 0] = "CALL";
@@ -74893,8 +74893,8 @@ const gui = exports.gui = {
   },
   chat: {
     active: false,
-    message: message => {
-      _custom.CustomEvent.triggerCef('outputChatBox', message);
+    message: (message, type = 'None') => {
+      _custom.CustomEvent.triggerCef('outputChatBox', message, type);
     }
   },
   browser: mp.browsers.new('http://package/cef/index.html'),
@@ -94487,7 +94487,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.TRY_RUN_ADD_TIME = exports.PRISON_DATA = exports.MAX_WANTED_LEVEL = exports.JAIL_PC_COORDS = exports.JAIL_MINUTES_PER_STAR = exports.JAIL_ADMIN_MAX_MIN = exports.CUFF_LEAVE_WARN_DAYS = exports.CUFF_LEAVE_JAIL_MINUTES = exports.ADV_MONEY_PERCENT_TO_USER = exports.ADV_JAIL_FREE_COST_MIN_MORE_TIME = exports.ADV_JAIL_FREE_COST_MIN_MORE = exports.ADV_JAIL_FREE_COST_MIN = exports.ADMIN_PRISON_RADIUS = exports.ADMIN_PRISON_COORD = void 0;
 const CUFF_LEAVE_WARN_DAYS = exports.CUFF_LEAVE_WARN_DAYS = 10;
 const CUFF_LEAVE_JAIL_MINUTES = exports.CUFF_LEAVE_JAIL_MINUTES = 180;
-const JAIL_MINUTES_PER_STAR = exports.JAIL_MINUTES_PER_STAR = 12;
+const JAIL_MINUTES_PER_STAR = exports.JAIL_MINUTES_PER_STAR = 5;
 const MAX_WANTED_LEVEL = exports.MAX_WANTED_LEVEL = 5;
 const ADMIN_PRISON_COORD = exports.ADMIN_PRISON_COORD = new mp.Vector3(1641.21, 2570.45, 45.56);
 const ADMIN_PRISON_RADIUS = exports.ADMIN_PRISON_RADIUS = 30;

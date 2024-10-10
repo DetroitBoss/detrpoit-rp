@@ -3545,17 +3545,17 @@ export class User extends UserStatic {
         // Загрузка данных по конфигурации одежды
         setTimeout(() => {
             if (!this.exists) return;
-            this.player.outputChatBox(`!{FFFFFF} Добро пожаловать на сервер !{E3256B}Detroit RolePlay!!{FFFFFF} Приятной Игры!`);
-            this.player.outputChatBox(`!{d6c400} Наш дискорд - discord.gg/EYYBeYxRV5`);
+            this.player.outputChatBox(`!{FFFFFF} Добро пожаловать на сервер !{E3256B}Detroit RolePlay!!{FFFFFF} Приятной Игры!`, "SERVER");
+            this.player.outputChatBox(`!{d6c400} Наш дискорд - discord.gg/EYYBeYxRV5`, "DISCORD");
             // if (getX2Param('donate3')) 
-            if (getX2Param('exp')) this.player.outputChatBox(`!{0095b6} Фракции временно заморожены`);
-            if (getX2Param('exp3')) this.player.outputChatBox(`!{0095b6} Сейчас активна акция: X3 базовый опыт каждый час`);
-            if (getX2Param('job')) this.player.outputChatBox(`!{0095b6} Сейчас активна акция: X2 доход на начальных работах`);
-            if (getX2Param('playtime') && system.playtimeCanNow) this.player.outputChatBox(`!{0095b6} Сейчас активна акция: Отыграй ${PLAYTIME_TIME} часов - получи ${PLAYTIME_TYPE === "donate" ? '' : `$`}${system.numberFormat(PLAYTIME_MONEY)} ${PLAYTIME_TYPE === "donate" ? DONATE_MONEY_NAMES[2] : ``}`);
+            if (getX2Param('exp')) this.player.outputChatBox(`!{FFFFFF} Фракции временно заморожены`, "АКЦИЯ");
+            if (getX2Param('exp3')) this.player.outputChatBox(`!{FFFFFF} Сейчас активна акция: !{E3256B}X3!{FFFFFF} базовый опыт каждый час`, "АКЦИЯ");
+            if (getX2Param('job')) this.player.outputChatBox(`!{FFFFFF} Сейчас активна акция: !{E3256B}X2!{FFFFFF} доход на начальных работах`, "АКЦИЯ");
+            if (getX2Param('playtime') && system.playtimeCanNow) this.player.outputChatBox(`!{FFFFFF} Сейчас активна акция: Отыграй !{E3256B}${PLAYTIME_TIME} !{FFFFFF}  часов - получи ${PLAYTIME_TYPE === "donate" ? '' : `$`}${system.numberFormat(PLAYTIME_MONEY)} ${PLAYTIME_TYPE === "donate" ? DONATE_MONEY_NAMES[2] : ``}`, "АКЦИЯ");
             if (getX2Param('playtimecar') && !this.account.playtimecar && (this.level <= LEVEL_FOR_PLAY_REWARD_MAX || this.entity.playtimecar > 0)) {
                 const cfg = Vehicle.getVehicleConfig(CAR_FOR_PLAY_REWARD_MAX)
                 if(cfg){
-                    this.player.outputChatBox(`!{0095b6} Сейчас активна акция: Отыграй ${Math.floor(MINUTES_FOR_PLAY_REWARD_MAX / 60)} часов - получи ${cfg.name}`);
+                    this.player.outputChatBox(`!{0095b6} Сейчас активна акция: Отыграй ${Math.floor(MINUTES_FOR_PLAY_REWARD_MAX / 60)} часов - получи ${cfg.name}`, "АКЦИЯ");
                 }
             }
             getGpsMissionVehs(this.player);

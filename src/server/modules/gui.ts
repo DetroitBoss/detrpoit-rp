@@ -57,9 +57,6 @@ export const gui = {
             ["do", 0, (player, ...args) => {gui.chat.sendDoCommand(player, args.join(' '))}],
             ["b", 0, (player, ...args) => {gui.chat.sendBCommand(player, args.join(' '))}],
             ["try", 0, (player, ...args) => {gui.chat.sendTryCommand(player, args.join(' '))}],
-            ["qweqweqwe", 0, (player, ...args) => {
-                CustomEvent.triggerClientSocket(player, 'test', args.join(' '))
-            }],
         ],
         registerCommand,
         sendBCommand: function (player: PlayerMp, text: string) {

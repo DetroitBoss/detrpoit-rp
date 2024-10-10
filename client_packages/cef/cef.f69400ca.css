@@ -11031,18 +11031,66 @@ section.hud .hud-chat .hud-chat-history-wrap::-webkit-scrollbar {
 }
 section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 0.3125vw;
 }
 section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item:last-of-type {
   margin-bottom: 0;
 }
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix {
+  margin-right: 5px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.admin-prefix {
+  background-color: #D13939;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.gov-prefix {
+  background-color: #3C86FF;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.action-prefix {
+  background-color: #60D139;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.ds-prefix {
+  background-color: #7289da;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.me-prefix {
+  background-color: #F19CBB;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.report-prefix {
+  background-color: #D13939;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.tg-prefix {
+  background-color: #0088cc;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.mod-prefix {
+  background-color: #E3256B;
+  color: white;
+}
+section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item .prefix.none-prefix {
+  display: none;
+}
 section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item p {
   font-weight: 500;
   font-size: 0.83333333vw;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item p.message {
-  line-height: 1.2;
+  flex-grow: 1;
 }
 section.hud .hud-chat .hud-chat-history-wrap .hud-chat-history-item p.time {
   white-space: nowrap;

@@ -450,37 +450,93 @@ section.hud {
     width: @590px;
     margin-top: @20px;
     margin-left: @20px;
-
+  
     .hud-chat-history-wrap {
-      //			height: @324px;
       height: 30vh;
       overflow: auto;
       margin-bottom: @12px;
-
+  
       &::-webkit-scrollbar {
         display: none;
       }
-
+  
       .hud-chat-history-item {
-        .fl-row-ais;
+        display: flex;
+        align-items: center; // Центрируем элементы по вертикали
         margin-bottom: @6px;
-
+  
         &:last-of-type {
           margin-bottom: 0;
         }
-
+  
+        .prefix {
+          margin-right: 5px;
+          padding: 4px 6px;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: bold;
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); // Добавляем тень к префиксу
+  
+          
+          &.admin-prefix {
+            background-color: #D13939;
+            color: white;
+            
+          }
+  
+          &.gov-prefix {
+            background-color: #3C86FF;
+            color: white;
+          }
+          &.action-prefix {
+            background-color: #60D139;
+            color: white;
+          }         
+          &.ds-prefix {
+            background-color: #7289da;
+            color: white;
+          }       
+          &.me-prefix {
+            background-color: #F19CBB;
+            color: white;
+          }     
+          &.report-prefix {
+            background-color: #D13939;
+            color: white;
+          }   
+          &.tg-prefix {
+            background-color: #0088cc;
+            color: white;
+          }
+  
+          &.mod-prefix {
+            background-color: #E3256B;
+            color: white;
+          }
+  
+          &.none-prefix {
+            display: none;
+          }
+        
+        }
+  
         p {
           font-weight: 500;
           font-size: @16px;
-
+          line-height: 1.2;
+          text-align: center; // Текст по центру горизонтально
+          display: flex;
+          align-items: center; // Центрирование текста по вертикали
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); // Добавляем тень к тексту
+  
           &.message {
-            line-height: 1.2;
+            flex-grow: 1; // Чтобы сообщение занимало оставшееся пространство
           }
-
+  
           &.time {
             white-space: nowrap;
           }
-
+  
           &.name {
             white-space: nowrap;
             margin-left: @4px;
@@ -489,6 +545,10 @@ section.hud {
         }
       }
     }
+
+  
+  
+  
 
     .hud-write-message {
       width: @500px;

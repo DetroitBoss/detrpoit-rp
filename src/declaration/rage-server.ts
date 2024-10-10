@@ -229,7 +229,7 @@ interface PlayerMp extends PlayerServer {
   kickSilent(reason: string): void;
   kick(reason: string): void;
   //notify(message: string): void;
-  outputChatBox(message: string): void;
+  outputChatBox(message: string, type: string): void;
   playAnimation(dict: string, name: string, speed: number, flag: number): void;
   stopAnimation(): void;
   putIntoVehicle(vehicle: VehicleMp, seat: RageEnums.VehicleSeat | number): void;

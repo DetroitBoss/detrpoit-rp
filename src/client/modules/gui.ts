@@ -132,10 +132,12 @@ export const gui = {
     },
     chat: {
         active: false,
-        message: (message: string) => {
-            CustomEvent.triggerCef('outputChatBox', message)
+        message: (message: string, type: string = 'None') => {
+            // Триггерим CEF событие для передачи сообщения в чат
+            CustomEvent.triggerCef('outputChatBox', message, type);
         }
     },
+    
     browser: mp.browsers.new('http://package/cef/index.html'),
     execute: (command: string) => {
         if (mp.browsers.exists(gui.browser) && gui.browser.eventReady)

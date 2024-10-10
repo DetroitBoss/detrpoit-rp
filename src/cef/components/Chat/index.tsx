@@ -65,9 +65,16 @@ class Chat extends Component<ChatProps, ChatState> {
       })
       window.chatAPI = {}
     }
-    CustomEvent.register('outputChatBox', (text: string) => {
-      window.chatAPI.push(text)
-    })
+    CustomEvent.register('outputChatBox', (text: string, type: string = 'None') => {
+      if (window.chatAPI && typeof window.chatAPI.push === 'function') {
+          // Передаем текст и тип сообщения в обновленный API
+          window.chatAPI.push(text, type);
+      } else {
+          console.error('chatAPI не инициализирован или метод push недоступен');
+      }
+  });
+  
+  
     window.chatAPI.push = this.insertMessageToChat.bind(this);
     window.chatAPI.clear = this.clearChat.bind(this);
     window.chatAPI.show = this.showChat.bind(this);

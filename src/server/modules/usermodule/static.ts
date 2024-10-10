@@ -293,11 +293,12 @@ export class UserStatic {
             if (!player.dbid) return;
             CustomEvent.triggerClient(player, 'showWithPicture', title, sender, message, notifPic, time)
         }
-        player.outputChatBox = (message) => {
+        player.outputChatBox = (message, type = 'None') => {
             if (!mp.players.exists(player)) return;
             if (!player.dbid) return;
-            CustomEvent.triggerCef(player, 'cef:chat:message', message)
-        }
+            CustomEvent.triggerCef(player, 'cef:chat:message', message, type);
+        };
+        
         // player.notifyWithPicture(
         //     `Life Invader [${weather.getFullRpTime()}]`,
         //     '~y~Новости погоды',
