@@ -115,7 +115,7 @@ const handle = (player: PlayerMp) => {
                 more: `$${system.numberFormat(getModelCost(item.model))}`,
                 onpress: () => {
                     player.notifyWithPicture("Сдача транспорта", 'Ламар', `Вот примерные координаты местоположения тачки. Модель ${name}, Номерной знак ${item.number}`, 'DIA_LAMAR');
-                    player.outputChatBox(`!{25B000} Вот примерные координаты местоположения тачки. Модель ${name}, Номерной знак ${item.number}`)
+                    player.outputChatBox(`!{25B000} Вот примерные координаты местоположения тачки. Модель ${name}, Номерной знак ${item.number}`,"SERVER")
                     CustomEvent.triggerClient(player, 'vehicleGrab:setBlipPos', item.pos.x, item.pos.y, item.pos.z);
                     //user.setWaypoint(item.pos.x, item.pos.y, item.pos.z, `Доставка для Ламара ${name} ${item.number} за $${system.numberFormat(getModelCost(item.model))}`);
                 }

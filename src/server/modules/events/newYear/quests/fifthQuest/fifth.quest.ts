@@ -92,6 +92,6 @@ registerQuestFactory(
 
 mp.events.add('advancedQuests:collectCheckpointComplete', (player: PlayerMp) => {
     if (player.user.advancedQuests.isQuestActive(NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID)) {
-        player.outputChatBox(`!{FF4500}*Оповещение из ближайшей Всепогодной акустики* Хей, это Санта и мой новогодний гномик ${player.user.name}. Мы поздравляем всех с наступающим Новым годом! Хей хоу.`);
+        player.outputChatBox(`!{FF4500}*Оповещение из ближайшей Всепогодной акустики* Хей, это Санта и мой новогодний гномик ${player.user.name}. Мы поздравляем всех с наступающим Новым годом! Хей хоу.`,"SERVER");
     }
 })

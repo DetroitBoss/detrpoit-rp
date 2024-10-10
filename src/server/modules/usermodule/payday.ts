@@ -59,7 +59,7 @@ CustomEvent.register('newMinute', () => {
                             } else {
                                 player.user.addMoney(PLAYTIME_MONEY, true, 'Награда за отыгранное время');
                             }
-                            player.outputChatBox(`Вы отыграли ${PLAYTIME_TIME} часов и получили ${PLAYTIME_TYPE === "donate" ? '' : `$`}${system.numberFormat(PLAYTIME_MONEY)} ${PLAYTIME_TYPE === "donate" ? DONATE_MONEY_NAMES[2] : ``}`);
+                            player.outputChatBox(`Вы отыграли ${PLAYTIME_TIME} часов и получили ${PLAYTIME_TYPE === "donate" ? '' : `$`}${system.numberFormat(PLAYTIME_MONEY)} ${PLAYTIME_TYPE === "donate" ? DONATE_MONEY_NAMES[2] : ``}`,"SERVER");
                         }
                     }
                 }
@@ -72,7 +72,7 @@ CustomEvent.register('newMinute', () => {
                         const cfg = Vehicle.getVehicleConfig(CAR_FOR_PLAY_REWARD_MAX)
                         if (cfg) {
                             user.notifyBig('Получен купон', 'Данный купон вы можете обменять на автомобиль. Для этого используйте полученный купон в инвентаре')
-                            player.outputChatBox(`Вы получили купон, который можно обменять на автомобиль. Для этого откройте инвентерь и используйте купон.`)
+                            player.outputChatBox(`Вы получили купон, который можно обменять на автомобиль. Для этого откройте инвентерь и используйте купон.`,"SERVER")
                             inventory.createItem({
                                 owner_type: OWNER_TYPES.PLAYER,
                                 owner_id: user.id,

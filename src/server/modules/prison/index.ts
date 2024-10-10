@@ -154,7 +154,7 @@ class Prison {
         const targetName = data.rp_name;
 
         mp.players.toArray().filter(p => p && p.user && p.user.isAdminNow()).forEach(p => {
-            p.outputChatBox(`!{#80A6FF}Администратор ${player.user.name} посадил ${targetName}[${targetId}] в деморган на ${time} минут. Причина: ${reason}`);
+            p.outputChatBox(`!{#80A6FF}Администратор ${player.user.name} посадил ${targetName}[${targetId}] в деморган на ${time} минут. Причина: ${reason}`,"None");
         })
     }
 

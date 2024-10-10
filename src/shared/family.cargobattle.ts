@@ -1,10 +1,10 @@
 
 /** Минимальное количество членов семей для начала Борьбы за груз. */
-export const FamilyCargoStartMembers = 2//3
+export const FamilyCargoStartMembers = 1//3
 /** Минимальное количество семей с минимальным количеством членов семей (значение выше) для начала Борьбы за груз */
-export const FamilyCargoStartFamilies = 2//2
+export const FamilyCargoStartFamilies = 1//2
 /** Время на подготовку семей, в минутах */
-export const FamilyCargoTime = 10
+export const FamilyCargoTime = 2
 
 export const FamilyCargoStages = {
     STAGE_NONE: 1,

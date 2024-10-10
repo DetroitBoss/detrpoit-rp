@@ -95,13 +95,13 @@ CustomEvent.registerClient('drift:score', (player, score: number) => {
     const user = player.user;
     if(!user) return;
     if(!todayBestDriftScore.has(user.id) || todayBestDriftScore.get(user.id).score < score) {
-        if(todayBestDriftScore.has(user.id) && todayBestDriftScore.get(user.id).score > 5000) player.outputChatBox(`Вы установили новый сегодняшний рекорд. Прошлый рекорд ${todayBestDriftScore.get(user.id).score}, новый ${score}`)
+        if(todayBestDriftScore.has(user.id) && todayBestDriftScore.get(user.id).score > 5000) player.outputChatBox(`Вы установили новый сегодняшний рекорд. Прошлый рекорд ${todayBestDriftScore.get(user.id).score}, новый ${score}`,"SERVER")
         todayBestDriftScore.set(user.id, {name: user.name, score});
     }
     lastDriftScore.set(user.id, score);
     user.achiev.achievTickByType('driftPoints', score);
     if(user.entity.drift_best < score) {
-        if(user.entity.drift_best > 5000) player.outputChatBox(`Вы установили новый лучший рекорд. Прошлый рекорд ${user.entity.drift_best}, новый ${score}`)
+        if(user.entity.drift_best > 5000) player.outputChatBox(`Вы установили новый лучший рекорд. Прошлый рекорд ${user.entity.drift_best}, новый ${score}`,"SERVER")
         user.entity.drift_best = score
         saveEntity(user.entity).then(() => {
             loadTop3Drifters();

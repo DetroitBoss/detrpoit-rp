@@ -332,7 +332,7 @@ export class DeathMath {
             q(winner);
         })
         this.spectators.map(item => {
-            item.player.outputChatBox(`Победила команда ${winner == 1 ? this.team1_name : this.team2_name}`);
+            item.player.outputChatBox(`Победила команда ${winner == 1 ? this.team1_name : this.team2_name}`,"SERVER");
             CustomEvent.triggerClient(item.player, 'deathmath:stop')
             menu.accept(item.player, 'Подтвердите выход', 'small', 60000).then(status => {
                 item.player.user.teleport(item.enter.x, item.enter.y, item.enter.z, item.enter.h, item.enter.d, true)

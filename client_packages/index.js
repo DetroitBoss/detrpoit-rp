@@ -77497,9 +77497,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.FamilyCargoTime = exports.FamilyCargoStartMembers = exports.FamilyCargoStartFamilies = exports.FamilyCargoStages = exports.FAMILY_TIMEOUT_AFTER_CARGO_BATTLE = exports.FAMILY_CARGO_VALUE_FOR_WIN = exports.FAMILY_CARGO_TIME_TO_TIMER = exports.FAMILY_CARGO_POINTS_FOR_ONE_TICK = exports.FAMILY_CARGO_DISTANCE = exports.CARGOBATTLE_OBJECTS = void 0;
-const FamilyCargoStartMembers = exports.FamilyCargoStartMembers = 2;
-const FamilyCargoStartFamilies = exports.FamilyCargoStartFamilies = 2;
-const FamilyCargoTime = exports.FamilyCargoTime = 10;
+const FamilyCargoStartMembers = exports.FamilyCargoStartMembers = 1;
+const FamilyCargoStartFamilies = exports.FamilyCargoStartFamilies = 1;
+const FamilyCargoTime = exports.FamilyCargoTime = 2;
 const FamilyCargoStages = exports.FamilyCargoStages = {
   STAGE_NONE: 1,
   STAGE_FREEZE: 2,

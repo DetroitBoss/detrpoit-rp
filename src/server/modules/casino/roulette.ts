@@ -24,7 +24,7 @@ gui.chat.registerCommand("casinostats", (player) => {
     const user = player.user;
     if (!user) return;
     if (!user.isAdminNow(6)) return;
-    player.outputChatBox(`На ставках в рулетке выиграли сегодня: ${roulleteDailyWinning} фишек | всего поставили: ${roulleteDailyLoosing} фишек`)
+    player.outputChatBox(`На ставках в рулетке выиграли сегодня: ${roulleteDailyWinning} фишек | всего поставили: ${roulleteDailyLoosing} фишек`,"SERVER")
 })
 
 interface TableData {

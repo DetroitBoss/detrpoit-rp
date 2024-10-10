@@ -399,7 +399,7 @@ export class DeathMathLobby {
                     return { name: p.user.name, kills: 0 }
                 })
             } as IGunGamePlayerScores)
-            target.outputChatBox(`Для предварительного выхода используйте команду /exit`)
+            target.outputChatBox(`Для предварительного выхода используйте команду /exit`,"SERVER")
         });
     }
     canJoin(player: PlayerMp, team: 0 | 1){

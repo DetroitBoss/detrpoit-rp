@@ -27,7 +27,7 @@ export class Presents {
         this.active = true;
 
         mp.players.forEach((p) => {
-            p.outputChatBox(PRESENTS_START_TEXT);
+            p.outputChatBox(PRESENTS_START_TEXT,"None");
         });
 
         const coords = PRESENTS_COORDS[Math.floor(Math.random() * PRESENTS_COORDS.length)];
@@ -39,7 +39,7 @@ export class Presents {
         this.active = false;
 
         mp.players.forEach((p) => {
-            p.outputChatBox(PRESENTS_STOP_TEXT);
+            p.outputChatBox(PRESENTS_STOP_TEXT,"None");
         });
 
         this.presentsList.forEach((item) => {

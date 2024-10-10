@@ -9,7 +9,7 @@ const interact = (player: PlayerMp) => {
     if (player.user.advancedQuests.isQuestActive(NEW_YEAR_SIXTH_QUEST_ID)) {
         player.user.setGui('advancedQuests', 'advancedQuests:setComponent', 'enterWord');
     }else{
-        player.outputChatBox(`${NEW_YEAR_GALILEO_NPC_NAME}: Ты кто такой? Я тебя не звал. Иди отсюда!`);
+        player.outputChatBox(`${NEW_YEAR_GALILEO_NPC_NAME}: Ты кто такой? Я тебя не звал. Иди отсюда!`,"None");
     }
 };
 

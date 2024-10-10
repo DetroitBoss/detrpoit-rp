@@ -52,7 +52,7 @@ export class SanitationSquad {
         this.vehicle.setColorRGB(0, 0, 0, 0, 0, 0);
         this.vehicle.numberPlate = "TRASH";
         this.vehicle.trashBags = 0;
-        if (this.password) player.outputChatBox(`Пароль от сессии: ${this.password}`);
+        if (this.password) player.outputChatBox(`Пароль от сессии: ${this.password}`,"SERVER");
     }
 
     public addPlayer(player: PlayerMp) {

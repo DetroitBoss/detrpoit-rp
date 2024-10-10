@@ -97,7 +97,7 @@ class BattlePass {
         players.forEach(player => {
             if (!player.user) return;
 
-            player.outputChatBox(`${name} - выиграл ежедневный розыгрыш опыта от боевого пропуска`);
+            player.outputChatBox(`${name} - выиграл ежедневный розыгрыш опыта от боевого пропуска`,"SERVER");
         })
     }
 

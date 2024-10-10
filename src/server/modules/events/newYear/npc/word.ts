@@ -10,7 +10,7 @@ const interact = (player: PlayerMp) => {
         if (player.user.advancedQuests.isQuestActive(NEW_YEAR_THIRD_QUEST_ID)) {
             player.user.setGui('advancedQuests', 'advancedQuests:setComponent', 'enterWord');
         }else{
-            player.outputChatBox(`${NEW_YEAR_WORD_NPC_NAME}: Милок, ты чё-то не туда забрёл, давай, чеши отсюда!`);
+            player.outputChatBox(`${NEW_YEAR_WORD_NPC_NAME}: Милок, ты чё-то не туда забрёл, давай, чеши отсюда!`,"None");
         }
 };
 

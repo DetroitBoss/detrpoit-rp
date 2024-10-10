@@ -72,7 +72,7 @@ export class RewardManager {
 
         battlePassStorage.updatePlayerStorage(user.player);
         user.notify(`Приз получен - ${BATTLE_PASS_SEASON.rewards[level].name}`, 'success');
-        user.player.outputChatBox(`Вы получили приз - ${BATTLE_PASS_SEASON.rewards[level].name}`);
+        user.player.outputChatBox(`Вы получили приз - ${BATTLE_PASS_SEASON.rewards[level].name}`,"SERVER");
 
         user.battlePass.battlePassEntity.save();
     }

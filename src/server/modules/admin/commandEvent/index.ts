@@ -145,7 +145,7 @@ class CommandEvent {
                         p.outputChatBox(
                             `!{${COMMAND_EVENT_CHAT_COLOR}}Администратор ${state.adminName}` +
                             ` запустил мероприятие ${state.name},` +
-                            `чтобы принять участие введите команду - /event`
+                            `чтобы принять участие введите команду - /event`,"SERVER"
                         );
                     })
 
@@ -184,11 +184,11 @@ class CommandEvent {
                         if (this._state.teleportActive) {
                             p.outputChatBox(
                                 `!{${COMMAND_EVENT_CHAT_COLOR}} Мероприятие: Телепорт открыт, чтобы телепортироваться` +
-                                ` введите команду - /event`
+                                ` введите команду - /event`,"SERVER"
                             );
                         } else {
                             p.outputChatBox(
-                                `!{${COMMAND_EVENT_CHAT_COLOR}} Мероприятие: Телепорт закрыт.`
+                                `!{${COMMAND_EVENT_CHAT_COLOR}} Мероприятие: Телепорт закрыт.`,"SERVER"
                             );
                         }
                     })

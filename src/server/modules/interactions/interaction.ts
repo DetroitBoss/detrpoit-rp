@@ -98,7 +98,7 @@ const vehInteract = (player: PlayerMp, targetId: number) => {
             if (activeCars.find(c => c.veh.id == target.id)) {
                 mp.players.toArray().filter(u => u.user?.fractionData?.police).forEach(player => {
                     player.notifyWithPicture("Сдача транспорта", 'Ламар', `Кто-то взломал авто ${target.modelname}, Номерной знак ${target.numberPlate}. Координаты на карте`, 'DIA_LAMAR')
-                    player.outputChatBox(`!{25B000} Кто-то взломал авто ${target.modelname}, Номерной знак ${target.numberPlate}. Координаты на карте`)
+                    player.outputChatBox(`!{25B000} Кто-то взломал авто ${target.modelname}, Номерной знак ${target.numberPlate}. Координаты на карте`,"None")
                     CustomEvent.triggerClient(player, 'vehicleGrab:setBlipPos', target.position.x, target.position.y, target.position.z);
                 })
                 CustomEvent.triggerClient(player, 'vehicleGrab:deleteBlip')

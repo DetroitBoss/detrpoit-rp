@@ -93,7 +93,7 @@ CustomEvent.registerCef('news:new', (player, cat: string, text: string, number: 
     orderList.set(orderListId, { ids: orderListId, id: user.id, name: user.name, cat, text: system.filterInput(text), number, time: system.timestamp});
     if (free) pushNews(orderList.get(orderListId));
     else {
-        mp.players.toArray().filter(q => q && q.user && q.user.fraction === 5 && q.user.exists).map(target => target.outputChatBox(`Новое объявление в новостях на модерацию`))
+        mp.players.toArray().filter(q => q && q.user && q.user.fraction === 5 && q.user.exists).map(target => target.outputChatBox(`Новое объявление в новостях на модерацию`,"None"))
     }
     return ""
 })

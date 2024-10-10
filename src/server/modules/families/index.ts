@@ -50,7 +50,7 @@ gui.chat.registerCommand("h", (player, ...messagearr: string[]) => {
     
     mp.players.toArray()
         .filter(q => q.user && q.user.exists && q.user.family && q.user.familyId === familyId)
-        .map(target => target.outputChatBox(`!{00FF00} ${user.getFamilyRank().name} ${user.name}: ${message}`));
+        .map(target => target.outputChatBox(`!{00FF00} ${user.getFamilyRank().name} ${user.name}: ${message}`,"None"));
 })
 
 gui.chat.registerCommand("hb", (player, ...messagearr: string[]) => {
@@ -63,7 +63,7 @@ gui.chat.registerCommand("hb", (player, ...messagearr: string[]) => {
 
     mp.players.toArray()
         .filter(q => q.user && q.user.exists && q.user.family && q.user.familyId === familyId)
-        .map(target => target.outputChatBox(`!{00FF00} ${user.getFamilyRank().name} ${user.name}: (( ${message} ))`));
+        .map(target => target.outputChatBox(`!{00FF00} ${user.getFamilyRank().name} ${user.name}: (( ${message} ))`,"None"));
 })
 
 CustomEvent.register('newHour', (hour: number) => {

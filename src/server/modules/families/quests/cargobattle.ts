@@ -15,6 +15,7 @@ import {
 import {CustomEvent} from "../../custom.event";
 import {colshapeHandle, colshapes} from "../../checkpoints";
 import { getX2Param } from "../../usermodule/static";
+import { gui } from "../../gui";
 
 
 mp.events.add('playerDeath', (player) => {
@@ -355,7 +356,9 @@ export class CargoBattleFamilyQuest {
         mp.players.toArray().map(q => { return q.user && (q.user.isAdminNow() || (q.user.family && ((onlyInGame && this.familyInGame.includes(q.user.family)) || !onlyInGame))) && func(q) });
     }
 }
-
+gui.chat.registerCommand('starttestfam', (player) => {
+    new CargoBattleFamilyQuest().startReady().catch(() => startTimeout(3000));
+});
 
 const startTimeout = (time = FAMILY_CARGO_TIME_TO_TIMER * 60000) => {
     if(time <= 0) return;

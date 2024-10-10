@@ -191,7 +191,7 @@ CustomEvent.registerCef('marriage::confirmSign', (player) => {
 
         mp.players.toArray()
             .filter(q => q.user && q.user.exists)
-            .forEach(usr => usr.outputChatBox(`!{ee82ee}${senderUser.name} и ${targetUser.name} теперь ${senderUser.male ? 'муж и жена' : 'жена и муж'}`));
+            .forEach(usr => usr.outputChatBox(`!{ee82ee}${senderUser.name} и ${targetUser.name} теперь ${senderUser.male ? 'муж и жена' : 'жена и муж'}`,"SERVER"));
 
         senderUser.notify(`Вы успешно ${senderUser.male ? 'женились' : 'вышли замуж'}`)
         targetUser.notify(`Вы успешно ${targetUser.male ? 'женились' : 'вышли замуж'}`)

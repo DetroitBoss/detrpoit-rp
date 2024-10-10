@@ -120,12 +120,12 @@ export const dialogSystem = {
         if (dialog.id.includes('all_faction_chat') && player) {
             mp.players.toArray().filter(q => mp.players.exists(q) && q.user && q.user.is_gos && q.user.rank >= 7 && (!q.dialog || !q.dialog.includes(id))).map(target => {
                 target.notify('Новое сообщение в чате государственных структур', 'success');
-                target.outputChatBox(`Новое сообщение в чате государственных структур от ${player.user.name} ${player.user.id}: ${system.filterInput(text)}`)
+                target.outputChatBox(`Новое сообщение в чате государственных структур от ${player.user.name} ${player.user.id}: ${system.filterInput(text)}`,"None")
             })
         } else if (dialog.id.includes('faction_') && player){
             mp.players.toArray().filter(q => mp.players.exists(q) && q.user && q.user.fraction === dialog.fraction && (!q.dialog || !q.dialog.includes(id))).map(target => {
                 target.notify('Новое сообщение в чате фракции', 'success');
-                target.outputChatBox(`Новое сообщение в чате фракции от ${player.user.name} ${player.user.id}: ${system.filterInput(text)}`)
+                target.outputChatBox(`Новое сообщение в чате фракции от ${player.user.name} ${player.user.id}: ${system.filterInput(text)}`,"None")
             })
         } else if (dialog.id.includes('family_') && player){
             mp.players.toArray().filter(q => mp.players.exists(q) && q.user && q.user.family && q.user.family.id === dialog.family && (!q.dialog || !q.dialog.includes(id))).map(target => {
@@ -133,7 +133,7 @@ export const dialogSystem = {
             })
         } else if (dialog.id === "admin_chat" && player){
             mp.players.toArray().filter(q => mp.players.exists(q) && q.user && q.user.admin_level && (!q.dialog || !q.dialog.includes(id))).map(target => {
-                if(player) target.outputChatBox(`!{08540a}Новое сообщение в ${dialog.name} от ${player.user.name}: ${system.filterInput(text)}`)
+                if(player) target.outputChatBox(`!{08540a}Новое сообщение в ${dialog.name} от ${player.user.name}: ${system.filterInput(text)}`,"None")
                 target.notify(`Новое сообщение в [${dialog.name}]`, 'success');
             })
         }

@@ -325,7 +325,7 @@ gui.chat.registerCommand("m", (player) => {
     
     mp.players.forEach((nplayer) => {
         if (nplayer.dist(player.position) < gui.chat.chatRange * 2 && nplayer.dimension == player.dimension)
-            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)}: !{FFFFFF} Всем оставаться на местах, работают правоохранительные органы. В случае неподчинения вы будете задержаны.`)
+            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)}: !{FFFFFF} Всем оставаться на местах, работают правоохранительные органы. В случае неподчинения вы будете задержаны.`,"None")
     })
 });
 
@@ -336,7 +336,7 @@ gui.chat.registerCommand("m1", (player) => {
 
     mp.players.forEach((nplayer) => {
         if (nplayer.dist(player.position) < gui.chat.chatRange * 2 && nplayer.dimension == player.dimension)
-            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)}: !{FFFFFF} Внимание! Остановите свой автомобиль, заглушите двигатель и держите руки на руле!`)
+            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)}: !{FFFFFF} Внимание! Остановите свой автомобиль, заглушите двигатель и держите руки на руле!`,"None")
     })
 });
 
@@ -358,12 +358,12 @@ gui.chat.registerCommand("wh", (player, targetIdStr: string, ...messagearr: stri
         return;
     }
 
-    target.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${target.user.getChatNameString(player)} шепчет: !{FFFFFF} ${message}`)
-    player.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${player.user.getChatNameString(player)} шепнул !{C2A2DA}${player.user.getChatNameString(target)}: !{FFFFFF} ${message}`)
+    target.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${target.user.getChatNameString(player)} шепчет: !{FFFFFF} ${message}`,"None")
+    player.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${player.user.getChatNameString(player)} шепнул !{C2A2DA}${player.user.getChatNameString(target)}: !{FFFFFF} ${message}`,"None")
     
     mp.players.forEach((nplayer) => {
         if (nplayer.dist(player.position) < gui.chat.chatRange && nplayer.dimension == player.dimension && nplayer != target)
-            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${nplayer.user.getChatNameString(player)} шепнул что-то игроку ${id}`)
+            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{C2A2DA}${nplayer.user.getChatNameString(player)} шепнул что-то игроку ${id}`,"None")
     })
 });
 
@@ -376,7 +376,7 @@ gui.chat.registerCommand("s", (player, ...messagearr: string[]) => {
 
     mp.players.forEach((nplayer) => {
         if (nplayer.dist(player.position) < gui.chat.chatRange * 2 && nplayer.dimension == player.dimension)
-            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)} кричит:!{FFFFFF} ${message}`)
+            nplayer.outputChatBox(`[${gui.chat.getTime()}] !{2196F3}${nplayer.user.getChatNameString(player)} кричит:!{FFFFFF} ${message}`,"None")
     })
 });
 
@@ -406,7 +406,7 @@ gui.chat.registerCommand("dep", (player, ...messagearr: string[]) => {
         return player.notify("Недостаточно прав");
 
     mp.players.toArray().filter(q => q.user && q.user.exists && q.user.fraction && q.user.is_gos).map(target =>
-        target.outputChatBox(`!{666999}[Гос.волна] ${fractionName} ${user.rankName} ${user.name} (${user.dbid}): ${message}`))
+        target.outputChatBox(`!{666999}[Гос.волна] ${fractionName} ${user.rankName} ${user.name} (${user.dbid}): ${message}`,"GOV"))
 });
 
 gui.chat.registerCommand("gov", (player, ...messagearr: string[]) => {
@@ -425,7 +425,7 @@ gui.chat.registerCommand("gov", (player, ...messagearr: string[]) => {
         return player.notify("Нет доступа");
 
     mp.players.toArray().filter(q => q.user && q.user.exists).map(target =>
-        target.outputChatBox(`!{8498D9}${fractionName} ${user.name} (${user.dbid}): ${message}`))
+        target.outputChatBox(`!{8498D9}${fractionName} ${user.name} (${user.dbid}): ${message}`,"GOV"))
 });
 
 gui.chat.registerCommand("f", (player, ...messagearr: string[]) => {
@@ -438,7 +438,7 @@ gui.chat.registerCommand("f", (player, ...messagearr: string[]) => {
     let message = system.filterInput(escape(messagearr.join(' ')))
     if(!message) return;
     mp.players.toArray().filter(q => q.user && q.user.exists && q.user.fraction === fraction).map(target =>
-        target.outputChatBox(`!{2196F3}[Рация ${name}] ${user.rankName} ${user.name} (${user.id}): ${message}`))
+        target.outputChatBox(`!{2196F3}[Рация ${name}] ${user.rankName} ${user.name} (${user.id}): ${message}`,"None"))
 
     gui.chat.sendMeCommand(player, "сказал что-то в рацию");
 })
@@ -454,6 +454,6 @@ gui.chat.registerCommand("fb", (player, ...messagearr: string[]) => {
     let message = system.filterInput(escape(messagearr.join(' ')))
     if(!message) return;
     mp.players.toArray().filter(q => q.user && q.user.exists && q.user.fraction === fraction).map(target =>
-        target.outputChatBox(`!{2196F3}[Рация ${name}] ${user.rankName} ${user.name} (${user.id}): (( ${message} ))`))
+        target.outputChatBox(`!{2196F3}[Рация ${name}] ${user.rankName} ${user.name} (${user.id}): (( ${message} ))`,"None"))
         //target.outputChatBox(`[Рация ${name}] ${user.name}: (( ${message} ))`))
 })

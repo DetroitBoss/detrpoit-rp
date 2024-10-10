@@ -931,7 +931,7 @@ export class User extends UserStatic {
                 }
                 if(this.player && mp.players.exists(this.player) && this.player.user){
                     mp.players.toArray().filter(q => q.id !== this.player.id && q.user && (q.user.isAdminNow() || (q.dimension === this.player.dimension && system.distanceToPos(this.player.position, q.position) < 50))).map(target => {
-                        target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${this.name} !{2196F3}Был отправлен в Jail администратором ${who.user.name} (${who.user.id}) по причине ${system.filterInput(reason)}`);
+                        target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${this.name} !{2196F3}Был отправлен в Jail администратором ${who.user.name} (${who.user.id}) по причине ${system.filterInput(reason)}`,"None");
                     })
                 }
             }
@@ -1332,7 +1332,7 @@ export class User extends UserStatic {
             }
             if(this.account.promocode && MEDIA_PROMOCODE.LEVEL_TWO === this.level){
                 this.addMoney(MEDIA_PROMOCODE.GIVE_MONEY_PLAYER_LEVEL, true, 'Награда за промокод')
-                if(this.exists) this.player.outputChatBox(`Вы получили $${system.numberFormat(MEDIA_PROMOCODE.GIVE_MONEY_PLAYER_LEVEL)} за ввод медиа промокода`);
+                if(this.exists) this.player.outputChatBox(`Вы получили $${system.numberFormat(MEDIA_PROMOCODE.GIVE_MONEY_PLAYER_LEVEL)} за ввод медиа промокода`,"SERVER");
             }
         }
     }
@@ -3096,7 +3096,7 @@ export class User extends UserStatic {
             prison.systemJail(this.entity, CUFF_LEAVE_JAIL_MINUTES, 'Выход из игры в наручниках');
             
             mp.players.toArray().filter(q => q.user && q.user.id !== this.id && ((q.dimension === this.player.dimension && system.distanceToPos(this.player.position, q.position) < 50))).map(target => {
-                target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${target.user.getChatNameString(this.player)} Покинул сервер: !{2196F3}в наручниках`);
+                target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${target.user.getChatNameString(this.player)} Покинул сервер: !{2196F3}в наручниках`,"None");
             })
         }
         this.save();

@@ -85,7 +85,7 @@ gui.chat.registerCommand('deleteitems', (player, targetIdStr, itemIdStr) => {
         inventory.deleteItem(item, OWNER_TYPES.PLAYER, target.user.id);
     });
 
-    player.outputChatBox(`У игрока ${targetIdStr}: ${itemIdStr} - itemAmount x${itemAmount}, itemCount x${itemCount}`);
+    player.outputChatBox(`У игрока ${targetIdStr}: ${itemIdStr} - itemAmount x${itemAmount}, itemCount x${itemCount}`,"SERVER");
     player.user.log('AdminJob', `Забрал все предметы #${itemId} (${itemCount}, ${itemAmount})`, target);
 });
 
@@ -126,7 +126,7 @@ gui.chat.registerCommand('a', (player, ...args) => {
 
     mp.players.toArray()
         .filter(p => p.user && p.user.admin_level && p.user.admin_level >= 1)
-        .forEach(p => p.outputChatBox(`!{338A36}[A] ${player.user.name} (${player.user.id}): ${message}`));
+        .forEach(p => p.outputChatBox(`!{338A36}[A] ${player.user.name} (${player.user.id}): ${message}`),"None");
 })
 
 gui.chat.registerCommand('gangzones', (player) => {
@@ -310,7 +310,7 @@ gui.chat.registerCommand("adminPanel", async (player, task: string, ids: string,
         addAdminStats(user.id, 'cmute')
         syncMutePlayer(id)
         const mutePlayer = User.get(id);
-        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку текстового чата до ${system.timeStampString(cmute.get(id))}. Причина: ${reason}`)
+        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку текстового чата до ${system.timeStampString(cmute.get(id))}. Причина: ${reason}`,"SERVER")
     } else if (task === 'vmute') {
         if (!user.hasPermission('admin:useredit:bmute')) return player.notify("У вас нет доступа", 'error');
         const target = User.get(id);
@@ -319,7 +319,7 @@ gui.chat.registerCommand("adminPanel", async (player, task: string, ids: string,
         addAdminStats(user.id, 'vmute')
         syncMutePlayer(id)
         const mutePlayer = User.get(id);
-        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку голосового чата до ${system.timeStampString(vmute.get(id))}. Причина: ${reason}`)
+        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку голосового чата до ${system.timeStampString(vmute.get(id))}. Причина: ${reason}`,"SERVER")
     } else if (task === 'kill') {
         const target = User.get(id);
         if (!target) return player.notify('Пользователь offline', 'error')
@@ -614,8 +614,8 @@ gui.chat.registerCommand("pm", (player, str, ...text) => {
     if (!target) return player.notify('Игрок не обнаружен', 'error');
     writeSpecialLog(`pm: ${text.join(' ')}`, player, target.user.id);
     writePersonalMessage(`pm: ${text.join(' ')}`, player, target.user.id);
-    target.outputChatBox(`!{#FFA500}${user.name} [#${user.id}]: ${text.join(' ')}`)
-    player.outputChatBox(`!{#FFA500}${user.name} [#${user.id}]: ${text.join(' ')}`)
+    target.outputChatBox(`!{#FFA500}${user.name} [#${user.id}]: ${text.join(' ')}`,"REPORT")
+    player.outputChatBox(`!{#FFA500}${user.name} [#${user.id}]: ${text.join(' ')}`,"REPORT")
 })
 
 gui.chat.registerCommand("tpveh", (player, str) => {
@@ -633,24 +633,24 @@ gui.chat.registerCommand('admins', (player) => {
     const user = player.user;
     if (!user) return;
     if (!user.admin_level) return;
-    player.outputChatBox(`Список администраторов в сети: ${mp.players.toArray().filter(q => q.user && q.user.admin_level).map(q => `${q.user.name} [#${q.user.id}] (${q.user.admin_level} LVL)`).join(', ')}`)
+    player.outputChatBox(`Список администраторов в сети: ${mp.players.toArray().filter(q => q.user && q.user.admin_level).map(q => `${q.user.name} [#${q.user.id}] (${q.user.admin_level} LVL)`).join(', ')}`,"None")
 })
 
 gui.chat.registerCommand('helpers', (player) => {
     const user = player.user;
     if (!user) return;
     if (!user.admin_level && !user.helper) return;
-    player.outputChatBox(`Список хелперов в сети: ${mp.players.toArray().filter(q => q.user && q.user.helper).map(q => `${q.user.name} [#${q.user.id}] (${q.user.helper_level} LVL)`).join(', ')}`)
+    player.outputChatBox(`Список хелперов в сети: ${mp.players.toArray().filter(q => q.user && q.user.helper).map(q => `${q.user.name} [#${q.user.id}] (${q.user.helper_level} LVL)`).join(', ')}`,"None")
 })
 
-gui.chat.registerCommand("makeadmin", (player, str) => {
-    if(getX2Param('testserver')) return;
-    if(!player.user) return;
-    let d = parseInt(str);
-    if(isNaN(d) || d < 0 || d > 7) return player.notify("Уровень админки допустим от 0 до 7", "error");
-    player.user.admin_level = d;
-    player.notify("Новый уровень админки: "+d, "success");
-})
+// gui.chat.registerCommand("makeadmin", (player, str) => {
+//     if(getX2Param('testserver')) return;
+//     if(!player.user) return;
+//     let d = parseInt(str);
+//     if(isNaN(d) || d < 0 || d > 7) return player.notify("Уровень админки допустим от 0 до 7", "error");
+//     player.user.admin_level = d;
+//     player.notify("Новый уровень админки: "+d, "success");
+// })
 
 let deathList: { id: number, name: string, pos: Vector3Mp, killerid?: number, killername?: string }[] = []
 
@@ -845,7 +845,7 @@ CustomEvent.registerClient('admin:global:notify', (player, text: string, dimensi
     const user = player.user;
     if (!user.hasPermission('admin:global:notify')) return;
     mp.players.toArray().filter(q => !dimensionFilter || player.dimension === q.dimension).map(target => {
-        if (mp.players.exists(target)) target.outputChatBox(`!{ff0000}[${gui.chat.getTime()}] Сообщение от администратора ${player.user.name}: ${escape(text)}`)
+        if (mp.players.exists(target)) target.outputChatBox(`!{ff0000}[${gui.chat.getTime()}] Сообщение от администратора ${player.user.name}: ${escape(text)}`,"ADMIN")
     })
 
 })
@@ -854,7 +854,7 @@ CustomEvent.registerClient('admin:globalevent:notify', (player, text: string, di
     const user = player.user;
     if (!user.hasPermission('admin:global:notify')) return;
     mp.players.toArray().filter(q => !dimensionFilter || player.dimension === q.dimension).map(target => {
-        if (mp.players.exists(target)) target.outputChatBox(`!{fcba03}[${gui.chat.getTime()}] (${player.user.name}): Событие ${escape(text)}`)
+        if (mp.players.exists(target)) target.outputChatBox(`!{fcba03}[${gui.chat.getTime()}] (${player.user.name}): Событие ${escape(text)}`,"ADMIN")
     })
 
 })
@@ -1587,7 +1587,7 @@ const vmuteAccount = async (player: PlayerMp, id: number) => {
                         syncMutePlayer(id)
 
                         const mutePlayer = User.get(id);
-                        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку голосового чата до ${system.timeStampString(vmute.get(id))}. Причина: ${reason}`)
+                        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку голосового чата до ${system.timeStampString(vmute.get(id))}. Причина: ${reason}`,"SERVER")
 
                         s();
                     })
@@ -1674,7 +1674,7 @@ const cmuteAccount = async (player: PlayerMp, id: number) => {
                         s();
 
                         const mutePlayer = User.get(id);
-                        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку текстового чата до ${system.timeStampString(cmute.get(id))}. Причина: ${reason}`)
+                        if (mutePlayer) mutePlayer.outputChatBox(`Вы получили блокировку текстового чата до ${system.timeStampString(cmute.get(id))}. Причина: ${reason}`,"SERVER")
                     })
                 })
             }

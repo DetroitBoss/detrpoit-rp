@@ -473,44 +473,61 @@ section.hud {
           margin-right: 5px;
           padding: 4px 6px;
           border-radius: 4px;
-          font-size: 14px;
+          font-size: 12px;
           font-weight: bold;
-          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); // Добавляем тень к префиксу
-  
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); // Добавляем тень к тексту префикса
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  // Добавляем тень к фону префикса
+
           
           &.admin-prefix {
-            background-color: #D13939;
+            background-color: rgba(209, 57, 57, 0.8);
             color: white;
             
           }
   
           &.gov-prefix {
-            background-color: #3C86FF;
+            background-color: rgba(60, 134, 255, 0.8);
             color: white;
           }
           &.action-prefix {
-            background-color: #60D139;
+            background-color: rgba(255, 184, 65, 0.8);
             color: white;
           }         
           &.ds-prefix {
-            background-color: #7289da;
+            background-color: rgba(114, 137, 218, 0.8);
+            color: white;
+          }           
+          &.try-prefix {
+            background-color: rgba(194, 162, 218, 0.8);
+            color: white;
+          }           
+          &.do-prefix {
+            background-color: rgba(21, 96, 189, 0.8);
+            color: white;
+          }           
+          &.dice-prefix {
+            background-color: rgba(194, 162, 218, 0.8);
             color: white;
           }       
+          &.nonrp-prefix {
+            background-color: rgba(181, 184, 177, 0.8);
+            color: white;
+          }  
           &.me-prefix {
-            background-color: #F19CBB;
+            background-color: rgba(241, 156, 187, 0.8);
             color: white;
           }     
           &.report-prefix {
-            background-color: #D13939;
+            background-color: rgba(209, 57, 57, 0.8);
             color: white;
           }   
           &.tg-prefix {
-            background-color: #0088cc;
+            background-color: rgba(0, 136, 204, 0.8);
             color: white;
           }
   
           &.mod-prefix {
-            background-color: #E3256B;
+            background-color: rgba(227, 37, 107, 0.8);
             color: white;
           }
   
@@ -522,12 +539,12 @@ section.hud {
   
         p {
           font-weight: 500;
-          font-size: @16px;
+          font-size: @14px;
           line-height: 1.2;
           text-align: center; // Текст по центру горизонтально
           display: flex;
           align-items: center; // Центрирование текста по вертикали
-          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); // Добавляем тень к тексту
+          text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); // Добавляем тень к тексту
   
           &.message {
             flex-grow: 1; // Чтобы сообщение занимало оставшееся пространство

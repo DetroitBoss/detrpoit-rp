@@ -75,7 +75,7 @@ class TicketManager {
 
         mp.players.toArray()
             .filter(p => p.user && p.user.isAdminNow())
-            .forEach(p => p.outputChatBox(`!{3CB371}${admin.user.name}[${admin.user.admin_level}] to ${ticket.description.creatorName}[${ticket.description.creatorId}]: ${message}`));
+            .forEach(p => p.outputChatBox(`!{3CB371}${admin.user.name}[${admin.user.admin_level}] to ${ticket.description.creatorName}[${ticket.description.creatorId}]: ${message}`,"None"));
     }
 
     public async close(admin: PlayerMp, ticketId: number): Promise<void> {

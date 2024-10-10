@@ -983,7 +983,7 @@ export const inventory = {
                     g: 0,
                     b: 0
                 }, new mp.Vector3(0, 0, 0), 0, Vehicle.fineDimension, 0, 1)
-                player.outputChatBox(`Вы получили ${vehConf.name} обменяв купон. Транспорт вы можете бесплатно забрать на ближайшей штрафстоянке`);
+                player.outputChatBox(`Вы получили ${vehConf.name} обменяв купон. Транспорт вы можете бесплатно забрать на ближайшей штрафстоянке`,"SERVER");
             } else {
                 return player.notify('Данный купон нельзя применить', 'error');
             }

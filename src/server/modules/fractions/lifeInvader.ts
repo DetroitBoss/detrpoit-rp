@@ -14,5 +14,5 @@ gui.chat.registerCommand('w', (player, ...args) => {
 
     const message = args.join(' ');
     mp.players.toArray()
-        .forEach(p => p.outputChatBox(`!{FC5A03}Weazel News ${player.user.name} [${player.dbid}]: ${message}`));
+        .forEach(p => p.outputChatBox(`!{FC5A03}Weazel News ${player.user.name} [${player.dbid}]: ${message}`,"None"));
 });

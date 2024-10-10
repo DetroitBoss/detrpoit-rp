@@ -434,12 +434,12 @@ gui.chat.registerCommand('testmining', (player) => {
                 const data = item.miningData
 
                 if (randomComponent === "cpu" && data.cpu) {
-                    player.outputChatBox('alg ' + item.id)
+                    player.outputChatBox('alg ' + item.id,"None")
                 }
-                else if (randomComponent === "alghoritm" && data.algorithm) player.outputChatBox('alg ' + item.id);
-                else if (randomComponent === "videocards" && data.cards[0]) player.outputChatBox('videocards ' + item.id);
-                else if (randomComponent === "powers" && data.powers[0]) player.outputChatBox('powers ' + item.id);
-                else if (randomComponent === "rams" && data.ram[0]) player.outputChatBox('rams ' + item.id);
+                else if (randomComponent === "alghoritm" && data.algorithm) player.outputChatBox('alg ' + item.id,"None");
+                else if (randomComponent === "videocards" && data.cards[0]) player.outputChatBox('videocards ' + item.id,"None");
+                else if (randomComponent === "powers" && data.powers[0]) player.outputChatBox('powers ' + item.id,"None");
+                else if (randomComponent === "rams" && data.ram[0]) player.outputChatBox('rams ' + item.id,"None");
             }
         }
     })

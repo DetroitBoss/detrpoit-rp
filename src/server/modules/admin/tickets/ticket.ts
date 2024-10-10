@@ -62,7 +62,7 @@ export class Ticket {
         const player = User.get(this.description.creatorId)
 
         if (player?.user) {
-            player.outputChatBox(`!{3CB371}${this._data.description.adminName}: ${message}`)
+            player.outputChatBox(`!{3CB371}${this._data.description.adminName}: ${message}`,"REPORT")
 
             player.notify(`Администратор ответил на Ваш репорт, посмотрите ответ в чате.`, 'info')
             CustomEvent.triggerCef(player, 'playSound', 'admans')

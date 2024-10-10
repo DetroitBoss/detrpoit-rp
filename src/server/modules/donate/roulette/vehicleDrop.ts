@@ -37,7 +37,7 @@ export class VehicleDrop extends DropBase {
             Vehicle.fineDimension, 
             this.data.sellPrice, 
             this.data.sellType == DropSellType.DONATE ? 1 : 0)
-        player.outputChatBox(`Вы получили ${vehConf.name} из донат-рулетки. Транспорт вы можете бесплатно забрать на ближайшей штрафстоянке`);
+        player.outputChatBox(`Вы получили ${vehConf.name} из донат-рулетки. Транспорт вы можете бесплатно забрать на ближайшей штрафстоянке`,"SERVER");
         
         return true;
     };

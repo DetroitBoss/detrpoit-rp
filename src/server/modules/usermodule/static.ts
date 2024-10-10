@@ -414,10 +414,10 @@ export class UserStatic {
         if (!mp.players.exists(player)) return;
         if(player && mp.players.exists(player) && player.user){
             mp.players.toArray().filter(q => q.id !== player.id && q.user && (q.user.isAdminNow() || (q.dimension === player.dimension && system.distanceToPos(player.position, q.position) < 50))).map(target => {
-                target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${player.user.name} ${who ? `был кикнут администратором ${who.user.name} (${who.user.id})` : `Покинул сервер`}: !{2196F3}${reason}`);
+                target.outputChatBox(`[${gui.chat.getTime()}] !{FF0000}${player.user.name} ${who ? `был кикнут администратором ${who.user.name} (${who.user.id})` : `Покинул сервер`}: !{2196F3}${reason}`,"None");
             })
         }
-        player.outputChatBox(`Вы были кикнуты с сервера, причина: ${reason}`);
+        player.outputChatBox(`Вы были кикнуты с сервера, причина: ${reason}`,"SERVER");
         player.kick(`Вы были кикнуты с сервера, причина: ${reason}`);
         system.debug.info(`${player.user ? `${player.user.name} #${player.user.id}` : 'Неавторизованный игрок'} был кикнут, причина: ${reason}`);
     }

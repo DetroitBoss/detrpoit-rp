@@ -8,14 +8,14 @@ export function greeting() {
 
         if (date.getMonth() === 11) {
             if (date.getDate() === 31) {
-                player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с Новым ${date.getFullYear() + 1} Годом! С любовью, команда Detroit RolePlay.`);
+                player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с Новым ${date.getFullYear() + 1} Годом! С любовью, команда Detroit RolePlay.`,"SERVER");
             }else{
-                player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с наступающим Новым ${date.getFullYear() + 1} Годом! С любовью, команда Detroit RolePlay.`);
+                player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с наступающим Новым ${date.getFullYear() + 1} Годом! С любовью, команда Detroit RolePlay.`,"SERVER");
             }
         }
 
         if (date.getMonth() === 0) {
-            player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с наступившим Новым ${date.getFullYear()} Годом! С любовью, команда Detroit RolePlay.`);
+            player.outputChatBox(`!{${GREETING_COLOR}} Поздравляем Вас с наступившим Новым ${date.getFullYear()} Годом! С любовью, команда Detroit RolePlay.`,"SERVER");
         }
     });
 }
