@@ -25,8 +25,8 @@ export class HudActions extends Component<{}, {
             show:false,
             notShow: false,
             actions: [
-//                {type:0, time: 5, desc: 'Акция действительна с 14:00 до 23:00', amount: 200, pic: 'coins-action' }
-//                {type:1, time: 20, desc:'Mercedes W140', pic: 'car-action' }
+                // {type:0, time: 5, desc: 'Акция действительна с 14:00 до 23:00', amount: 200, pic: 'coins-action' }
+                //    {type:1, time: 20, desc:'Gallivanter Range Rider', pic: 'car-action' }
             ],
             current: 0
         }
@@ -64,7 +64,7 @@ export class HudActions extends Component<{}, {
                             {this.state.actions[ cur ].type === 1 ? 
                                 <p className="font18 fontw400 ln-1-4 mb32">Вы можете получить купон на бесплатный автомобиль <strong>{this.state.actions[ cur ].desc}</strong>! Используйте купон в инвентаре и получите авто!<br />Время вы можете отследить в главном меню: <strong>M</strong></p> : null }
                         <div className="hud-flex-line">
-                            <button className="easy-button orange" onClick={()=>{
+                            <button className="easy-button" onClick={()=>{
                                 if(this.state.notShow) CustomEvent.triggerServer('wintaskevent:setnotshow', this.state.actions[ cur ].type)
                                 if( this.state.actions.length <= cur+1) {
                                     this.setState({show: false});

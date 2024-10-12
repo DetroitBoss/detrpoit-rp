@@ -29,17 +29,17 @@ export class HudPayDay extends Component<{}, {
         super(props);
 
         this.state = {
-            time: '00:00',
+            time: '10:00',
             show: false,
-            level:1,
-            exp:1,
-            maxexp:2,
+            level:5,
+            exp:2,
+            maxexp:100,
             add: {
                 money: 999,
                 exp: 1,
                 info:[
-                    // { money:100, text:"Директор"},
-                    // { money:100, text:"Директор"},
+                    { money:100, text:"Директор"},
+                    { money:100223, text:"Детроит ВАНЯ"},
                     // { money:100, text:"Директор"},
                     // { money:100, text:"Директор"}
                 ]
@@ -88,7 +88,6 @@ export class HudPayDay extends Component<{}, {
         return <>
             <div className={`payday-wrapper animated ${ this.state.close == false ? 'fadeInUpPayday' : 'fadeInDownPayday'}`}>
                 <div className="payday-head">
-                    {/* <img src={svgs['logo-word-o-orange']} alt=""/> */}
                     <p className="font40 fontw800 mb8">PAYDAY</p>
                     <p className="font16 upper fontw400 mb40">{this.timeStringCorrect}</p>
                 </div>

@@ -23,11 +23,11 @@ export class HudSpeedometerClass extends Component<{}, {
 
         this.state = {
             show: CEF.test ? true : false,
-            speed: 5,
+            speed: 10,
             fuel: 0,
             locked: false,
             engine: false,
-            strapped: false,
+            strapped: true,
         }
         CustomEvent.register('hud:speedometer', (data: { [param: string]: any }) => {
             if (JSON.stringify(data).length < 5) return this.setState({ show: false });
@@ -56,8 +56,8 @@ export class HudSpeedometerClass extends Component<{}, {
             easing: 'easeInOut',
             duration: 98,
             color: '#ffffff',
-            trailColor: 'rgba(255, 255, 255, 0.2)',
-            trailWidth: 8,
+            trailColor: 'rgba(21, 21, 21, 0.7)',
+            trailWidth: 4,
             svgStyle: null
         });
 
@@ -104,13 +104,14 @@ export class HudSpeedometerClass extends Component<{}, {
                         <div className="in-speed-wrapper">
                             <div className="in-speed-wrap">
                                 <div className="in-speed-opacity">
-                                    <p><span>{this.speedString}</span></p>
+                                    <p><span>{this.speedString}3232</span></p>
                                 </div>
                             </div>
                             <p className="p-descr">км/ч</p>
                         </div>
                     </div>
-                    {this.state.data ? <div className="other-value-wrap">
+                    {this.state.data ? 
+                    <div className="other-value-wrap">
                         <div className={"other-value-item " + (this.state.strapped ? 'active' : '')}>
                             <img src={svgs['strapped']} width="24" height="24" />
                             <p>{getKeyName(this.state.data['seatbelt'])}</p>

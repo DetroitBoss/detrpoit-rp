@@ -56,9 +56,9 @@ export class HudQuestClass extends Component<{
         CustomEvent.register('hud:pubghide', () => {
             this.setState({inpubg: false});
         })
-        // CustomEvent.register('alerts:enable', (data: StorageAlertData) => {
-        //     this.setState({display: !!data.questLines});
-        // })
+        CustomEvent.register('alerts:enable', (data: StorageAlertData) => {
+            this.setState({display: !!data.questLines});
+        })
     }
     get questData() {
         if (!this.state.data) return null;
@@ -113,7 +113,6 @@ export class HudQuestClass extends Component<{
                                     <div className="hint-text">
                                         <p>{task.descTask}</p>
                                     </div>
-                                    <div className="icon-wrap"></div>
                                 </div> : <></>}
                             </div>
                         })}
@@ -152,4 +151,55 @@ export class HudQuestClass extends Component<{
             }
         </>
     }
+//     return <>
+//         <div className="hud-quest-line-wrapper">
+//             <div className="title-row">
+//                 <p className="p-title">Тестове</p>
+//                 <div className="icon-wrap">
+//                     <img src={svgs['target']} width="24" height="24"/>
+//                 </div>
+//             </div>
+//             <div className="hud-quest-line-wrap">
+//                 <div
+//                         className="hud-quest-line-item ">
+//                         <div className="hud-quest-line-row">
+//                             <p className="p-title">Тестове2</p>
+//                             <div className="icon-wrap">
+//                                 <img src={svgs['target']} width="24" height="24"/>
+//                             </div>
+//                         </div>
+//                         <div className="hud-quest-line-row">
+//                             <div className="hint-text">
+//                                 <p>Тестове3</p>
+//                             </div>
+//                         </div> 
+//                     </div>
+
+//             </div>
+//         </div>
+//         <div className="hud-quest-line-wrapper">
+//                 <div className="title-row">
+//                     <p className="p-title">Аукру</p>
+//                     <div className="icon-wrap">
+//                         <img src={svgs['target']} width="24" height="24"/>
+//                     </div>
+//                 </div>
+
+//                 <div className="hud-quest-line-wrap">
+//                         <div className="hud-quest-line-item ">
+//                             <div className="hud-quest-line-row">
+//                                 <p className="p-title">Аукру1</p>
+
+                                
+//                                 <div className="hud-quest-count-wrap">
+//                                     <p>1 / 3</p>
+//                                 </div>
+                                
+//                             </div>
+//                         </div>
+                  
+//                 </div>
+//             </div>
+// </>
+// }
 };

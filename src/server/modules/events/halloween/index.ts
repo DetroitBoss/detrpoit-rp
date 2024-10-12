@@ -17,9 +17,9 @@ export const isHalloweenEnabled = (): boolean => {
     return halloweenData.data[0].enabled;
 }
 
- //import './sweetsCollecting';
- //import './quests';
- //import './npcs';
- //import './potions';
+//  import './sweetsCollecting';
+//  import './quests';
+//  import './npcs';
+//  import './potions';
 import './potions/item.use.hook';
 import './exchange';

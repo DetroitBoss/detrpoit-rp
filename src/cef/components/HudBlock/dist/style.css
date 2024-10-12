@@ -228,7 +228,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: rgba(20, 27, 31, 0.7);
+    background: rgba(21, 21, 21, 0.7);
     margin-bottom: 0.2083vw;
     border-radius: 0.3125vw;
 }
@@ -612,7 +612,7 @@ section.hud .hud-location-wrapper .hud-money-wrapper .hud-raised-money {
     align-items: flex-start;
     padding: 0.26041667vw;
     border-radius: 0.2083vw;
-    background: rgba(20, 27, 31, 0.8);
+    background: rgba(21, 21, 21, 0.8);
 }
 
 section.hud .hud-location-wrapper .hud-money-wrapper .hud-raised-money p {
@@ -648,7 +648,7 @@ section.hud .hud-location-wrapper .text-wrap .location-area {
     justify-content: flex-start;
     align-items: center;
     padding: 0.625vw;
-    background: linear-gradient(90deg, rgba(20, 27, 31, 0.7) 0%, rgba(20, 27, 31, 0) 100%);
+    background: linear-gradient(90deg, rgba(21, 21, 21, 0.7) 0%, rgba(21, 21, 21, 0) 100%);
     border-radius: 0.3125vw;
 }
 
@@ -751,7 +751,7 @@ section.hud .hud-location-wrapper .text-wrap .mic-wrap {
     align-items: center;
     width: 2.5vw;
     height: 2.604vw;
-    background: rgba(20, 27, 31, 0.6);
+    background: rgba(21, 21, 21, 0.6);
     border-radius: 0.3125vw;
 }
 
@@ -787,7 +787,7 @@ section.hud .hud-location-wrapper .text-wrap .address-wrap {
     border-radius: 0.3125vw;
     padding: 0.625vw;
     height: 2.604vw;
-    background: linear-gradient(90deg, rgba(20, 27, 31, 0.7) 0%, rgba(20, 27, 31, 0) 100%);
+    background: linear-gradient(90deg, rgba(21, 21, 21, 0.7) 0%, rgba(21, 21, 21, 0) 100%);
 }
 
 section.hud .hud-location-wrapper .text-wrap .address-wrap img {
@@ -818,7 +818,7 @@ section.hud .value-key-location-wrap {
     top: 50%;
     transform: translateY(-50%);
     display: inline-block;
-    background: rgba(20, 27, 31, 0.4);
+    background: rgba(21, 21, 21, 0.4);
     border-radius: 0.3125vw 0 0.3125vw 0;
     padding: 0.833335vw 0;
     padding-right: 0.520834vw;
@@ -960,7 +960,7 @@ section.hud .hud-main-info>*:first-child {
 section.hud .hud-main-info .hud-main-info-date {
     border-radius: 0.3125vw;
     height: 1.458335vw;
-    background: rgba(20, 27, 31, 0.4);
+    background: rgba(21, 21, 21, 0.4);
     padding: 0.41666667vw 0.520834vw;
 }
 
@@ -981,7 +981,7 @@ section.hud .hud-main-info .hud-main-info-extra {
     padding: 0.41666667vw 0.520834vw;
     padding-right: 0;
     height: 1.458335vw;
-    background: rgba(20, 27, 31, 0.4);
+    background: rgba(21, 21, 21, 0.4);
     border-radius: 0.3125vw;
 }
 
@@ -1068,7 +1068,7 @@ section.hud .hud-main-info .hud-main-info-extra .p-id span {
 section.hud .hud-main-info .hud-main-info-extra .mini-logo {
     height: 1.458335vw;
     width: 1.458335vw;
-    background: rgba(20, 27, 31, 0.8);
+    background: rgba(21, 21, 21, 0.8);
     border-radius: 0 0.3125vw 0.3125vw 0;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1208,7 +1208,7 @@ section.hud .hud-small-dialog {
 }
 
 section.hud .hud-small-dialog .small-dialog-wrapper {
-    background: rgba(20, 27, 31, 0.7);
+    background: rgba(21, 21, 21, 0.7);
     border-radius: 0.3125vw;
     padding: 1.5625vw;
     padding-bottom: 1.041665vw;
@@ -1271,7 +1271,7 @@ section.hud .hud-big-dialog .big-dialog-wrapper {
     top: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(20, 27, 31, 0.7);
+    background: rgba(21, 21, 21, 0.7);
     border-radius: 0.3125vw;
     padding: 1.5625vw;
     padding-bottom: 1.041665vw;
@@ -1575,7 +1575,7 @@ section.hud .hud-notification-info-short {
     left: 50%;
     transform: translateX(-50%);
     bottom: 100px;
-    background: rgba(20, 27, 31, 0.7);
+    background: rgba(21, 21, 21, 0.7);
     border-radius: 0.3125vw;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1607,7 +1607,7 @@ section.hud .hud-notification-info-big {
     transform: translateX(-50%);
     padding: 5.41666667vw 3.64583vw;
     padding-bottom: 3.64583vw;
-    background: linear-gradient(180deg, rgba(20, 27, 31, 0) 0%, rgba(20, 27, 31, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, rgba(21, 21, 21, 0.5) 100%);
 }
 
 section.hud .hud-notification-info-big .p-big {

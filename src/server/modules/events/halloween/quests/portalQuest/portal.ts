@@ -14,7 +14,7 @@ import {ITEM_TYPE} from "../../../../../../shared/inventory";
 import {gui} from "../../../../gui";
 import {randomArrayElement, takeElements} from "../../../../../../shared/arrays";
 
-const MAX_DISTANCE_TO_TELEPORT = 10;
+const MAX_DISTANCE_TO_TELEPORT = 30;
 
 const portalObject = mp.objects.new(HALLOWEEN_PORTAL_MODEL, HALLOWEEN_PORTAL_POSITION, {
     rotation: new mp.Vector3(0, 0, 252),
@@ -42,10 +42,10 @@ function handlePlayerEnterPortal(player: PlayerMp, index: number) {
         return;
     }
 
-    if (!player.user.advancedQuests.isQuestActive(HALLOWEEN_PORTALS_QUEST_ID)) {
-        player.notify('Вы не сможете зайти в портал, пока не дойдете по квестовой цепочке до этого задания', 'error');
-        return;
-    }
+    // if (!player.user.advancedQuests.isQuestActive(HALLOWEEN_PORTALS_QUEST_ID)) {
+    //     player.notify('Вы не сможете зайти в портал, пока не дойдете по квестовой цепочке до этого задания', 'error');
+    //     return;
+    // }
 
     if (inventory.getItemsCountByType(player, ITEM_TYPE.WEAPON) < 1) {
         player.notify('Не забудьте взять с собой оружие', 'warning');

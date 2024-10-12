@@ -3601,7 +3601,7 @@ export class User extends UserStatic {
         if (getX2Param('playtimecar') && !this.account.playtimecar && (this.level <= LEVEL_FOR_PLAY_REWARD_MAX || this.entity.playtimecar > 0)) {
             const cfg = Vehicle.getVehicleConfig(CAR_FOR_PLAY_REWARD_MAX)
             if(cfg && !this.entity.successItem.includes(100001)){
-                sendListHud.push({type:1, time: Math.floor(MINUTES_FOR_PLAY_REWARD_MAX / 60), desc:'Mercedes W140', pic: 'car-action' })
+                sendListHud.push({type:1, time: Math.floor(MINUTES_FOR_PLAY_REWARD_MAX / 60), desc:'Gallivanter Range Rider', pic: 'car-action' })
             }
         }
         if(sendListHud.length > 0){

@@ -108818,7 +108818,859 @@ const verify = ped => {
   if (!(0, _peds.isPedMy)(ped)) return;
   mp.game.invoke('0xBB9CE077274F6A1B', ped.handle, true, true);
 };
-},{"../../shared/hunting":"auEu","./system":"pi2J","./peds":"ds7w","./user":"ggMw","./custom.event":"py8h","../../shared/hooks":"H3J5","./interact":"m19G"}],"knjE":[function(require,module,exports) {
+},{"../../shared/hunting":"auEu","./system":"pi2J","./peds":"ds7w","./user":"ggMw","./custom.event":"py8h","../../shared/hooks":"H3J5","./interact":"m19G"}],"QZWk":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.QUEST_1_POTIONS_GOAL = exports.QUEST_1_POTATO_GOAL = exports.QUEST_1_OBJECT_TO_FIND_NAME = exports.QUEST_1_OBJECT_TO_FIND_MODEL = exports.QUEST_1_OBJECT_POSITIONS = exports.QUEST_1_OBJECT_GOAL = exports.QUEST_1_MILK_GOAL = exports.QUEST_1_CHIPS_GOAL = exports.QUEST_1_BOAR_MEAL_GOAL = exports.QUEST_1_BLUEBERRY_GOAL = exports.POTATO_ITEM_ID = exports.MILK_ITEM_ID = exports.HALLOWEEN_ZOMBIE_KILLED_EVENT = exports.HALLOWEEN_ZOMBIES_MODELS = exports.HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = exports.HALLOWEEN_ZOMBIES_DAMAGE = exports.HALLOWEEN_SWEET_NPC_PARAMETERS = exports.HALLOWEEN_SWEET_NPC_NAME = exports.HALLOWEEN_SWEET_NPC_ID = exports.HALLOWEEN_START_QUEST_NAME = exports.HALLOWEEN_START_QUEST_ID = exports.HALLOWEEN_START_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_PORTAL_POSITION = exports.HALLOWEEN_PORTAL_MODEL = exports.HALLOWEEN_PORTAL_HEADING = exports.HALLOWEEN_PORTALS_ZOMBIES_GOAL = exports.HALLOWEEN_PORTALS_QUEST_NAME = exports.HALLOWEEN_PORTALS_QUEST_ID = exports.HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = exports.HALLOWEEN_PORTALS_ARMORS_GOAL = exports.HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = exports.HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = exports.HALLOWEEN_ISLAND_PORTAL_POSITION = exports.HALLOWEEN_ISLAND_DIMENSION_BASE = exports.HALLOWEEN_HOUSE_POS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NPC_ID = exports.HALLOWEEN_GHOSTS_QUEST_NAME = exports.HALLOWEEN_GHOSTS_QUEST_ID = exports.HALLOWEEN_GHOSTS_COUNT = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = exports.HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTBUSTER_NPC_NAME = exports.HALLOWEEN_GHOSTBUSTER_NPC_ID = exports.HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = exports.HALLOWEEN_GHOSTBUSTERS_CARS = exports.HALLOWEEN_EXIT_PORTAL_EVENT = exports.HALLOWEEN_EXCHANGE_STARTS_DATE = exports.HALLOWEEN_EXCHANGE_NPC_PARAMETERS = exports.HALLOWEEN_EXCHANGE_NPC_NAME = exports.HALLOWEEN_EXCHANGE_NPC_ID = exports.HALLOWEEN_ENTER_PORTAL_EVENT = exports.HALLOWEEN_END_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_DESTROY_GHOST_EVENT = exports.GHOST_MODEL = exports.GHOST_HEALTH = exports.GHOST_DAMAGE_PER_SECOND = exports.GHOST_APPEARS_POSITIONS = exports.GHOSTBUSTERS_BACKPACK_MODEL = exports.CHIPS_ITEM_ID = exports.BOAR_MEAL_ITEM_ID = exports.BLUEBERRY_ITEM_ID = void 0;
+const HALLOWEEN_EXCHANGE_NPC_ID = exports.HALLOWEEN_EXCHANGE_NPC_ID = 'halloween-exchange-npc';
+const HALLOWEEN_EXCHANGE_NPC_NAME = exports.HALLOWEEN_EXCHANGE_NPC_NAME = 'Обменщик';
+const HALLOWEEN_EXCHANGE_NPC_PARAMETERS = exports.HALLOWEEN_EXCHANGE_NPC_PARAMETERS = {
+  Position: new mp.Vector3(1676.36, 3688.48, 34.32),
+  Heading: 93,
+  Model: 'u_m_o_filmnoir',
+  Name: HALLOWEEN_EXCHANGE_NPC_NAME
+};
+const HALLOWEEN_EXCHANGE_STARTS_DATE = exports.HALLOWEEN_EXCHANGE_STARTS_DATE = new Date(2021, 11, 8, 4, 30);
+const HALLOWEEN_SWEET_NPC_ID = exports.HALLOWEEN_SWEET_NPC_ID = 'halloween-sweet-npc';
+const HALLOWEEN_SWEET_NPC_NAME = exports.HALLOWEEN_SWEET_NPC_NAME = 'Конфетчик';
+const HALLOWEEN_SWEET_NPC_PARAMETERS = exports.HALLOWEEN_SWEET_NPC_PARAMETERS = {
+  Position: new mp.Vector3(1661.29, 3687.51, 34.23),
+  Heading: 210,
+  Name: HALLOWEEN_SWEET_NPC_NAME,
+  Model: 's_m_m_strperf_01'
+};
+const HALLOWEEN_GHOSTBUSTER_NPC_ID = exports.HALLOWEEN_GHOSTBUSTER_NPC_ID = 'halloween-ghostbuster';
+const HALLOWEEN_GHOSTBUSTER_NPC_NAME = exports.HALLOWEEN_GHOSTBUSTER_NPC_NAME = 'Рэй Стэнц';
+const HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = {
+  Position: new mp.Vector3(1669.18, 3691.57, 34.25),
+  Heading: 183,
+  Model: 's_m_y_clown_01',
+  Name: HALLOWEEN_GHOSTBUSTER_NPC_NAME
+};
+const HALLOWEEN_GHOSTS_QUEST_NPC_ID = exports.HALLOWEEN_GHOSTS_QUEST_NPC_ID = 'halloween-ghosts-quest-1';
+const HALLOWEEN_GHOSTS_QUEST_NPC_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NPC_NAME = 'Старый дед';
+const HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = {
+  Position: new mp.Vector3(2528.81, 2586.80, 37.94),
+  Heading: 0,
+  Model: 'ig_cletus',
+  Name: HALLOWEEN_GHOSTS_QUEST_NPC_NAME
+};
+const HALLOWEEN_START_QUEST_ID = exports.HALLOWEEN_START_QUEST_ID = 'halloween-first-quest';
+const HALLOWEEN_START_QUEST_NAME = exports.HALLOWEEN_START_QUEST_NAME = 'Операция Ы';
+const BOAR_MEAL_ITEM_ID = exports.BOAR_MEAL_ITEM_ID = 830;
+const QUEST_1_BOAR_MEAL_GOAL = exports.QUEST_1_BOAR_MEAL_GOAL = 2;
+const CHIPS_ITEM_ID = exports.CHIPS_ITEM_ID = 21;
+const QUEST_1_CHIPS_GOAL = exports.QUEST_1_CHIPS_GOAL = 1;
+const MILK_ITEM_ID = exports.MILK_ITEM_ID = 9000;
+const QUEST_1_MILK_GOAL = exports.QUEST_1_MILK_GOAL = 10;
+const POTATO_ITEM_ID = exports.POTATO_ITEM_ID = 7020;
+const QUEST_1_POTATO_GOAL = exports.QUEST_1_POTATO_GOAL = 50;
+const BLUEBERRY_ITEM_ID = exports.BLUEBERRY_ITEM_ID = 7030;
+const QUEST_1_BLUEBERRY_GOAL = exports.QUEST_1_BLUEBERRY_GOAL = 15;
+const QUEST_1_OBJECT_TO_FIND_NAME = exports.QUEST_1_OBJECT_TO_FIND_NAME = 'странный предмет';
+const QUEST_1_OBJECT_TO_FIND_MODEL = exports.QUEST_1_OBJECT_TO_FIND_MODEL = 'vw_prop_casino_art_skull_01a';
+const QUEST_1_OBJECT_GOAL = exports.QUEST_1_OBJECT_GOAL = 3;
+const QUEST_1_OBJECT_POSITIONS = exports.QUEST_1_OBJECT_POSITIONS = [[new mp.Vector3(2433.79, 4972.22, 41.29), 136], [new mp.Vector3(2428.87, 4966.58, 45.55), 303], [new mp.Vector3(2435.20, 4973.67, 45.62), 223], [new mp.Vector3(2456.54, 4983.07, 46.81), 134], [new mp.Vector3(2457.15, 4973.77, 45.92), 64], [new mp.Vector3(2451.55, 4977.93, 46.29), 135], [new mp.Vector3(2445.53, 4989.16, 46.80), 148], [new mp.Vector3(2449.25, 4974.21, 51.46), 4], [new mp.Vector3(2439.42, 4968.47, 51.21), 319], [new mp.Vector3(2444.61, 4976.09, 51.48), 57], [new mp.Vector3(2449.47, 4988.66, 50.57), 184], [new mp.Vector3(2454.01, 4969.61, 50.57), 354], [new mp.Vector3(2453.11, 4979.42, 51.32), 227], [new mp.Vector3(2451.28, 4974.31, 51.48), 227]];
+const QUEST_1_POTIONS_GOAL = exports.QUEST_1_POTIONS_GOAL = 1;
+const HALLOWEEN_HOUSE_POS = exports.HALLOWEEN_HOUSE_POS = new mp.Vector3(2435.76, 4975.81, 46.57);
+const HALLOWEEN_GHOSTS_QUEST_ID = exports.HALLOWEEN_GHOSTS_QUEST_ID = 'halloween-ghosts';
+const HALLOWEEN_GHOSTS_QUEST_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NAME = 'Операция НЕ ССЫ';
+const HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = new mp.Vector3(2330.15, 2572.39, 45.48);
+const HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = {
+  dictionary: 'anim@heists@money_grab@duffel',
+  name: 'loop',
+  durationSec: 5
+};
+const HALLOWEEN_DESTROY_GHOST_EVENT = exports.HALLOWEEN_DESTROY_GHOST_EVENT = 'halloween:ghostDestroyed';
+const HALLOWEEN_START_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_START_GHOSTS_DESTROY_EVENT = 'halloween:quest:startGhostsDestroy';
+const HALLOWEEN_END_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_END_GHOSTS_DESTROY_EVENT = 'halloween:quest:endGhostsDestroy';
+const HALLOWEEN_GHOSTS_COUNT = exports.HALLOWEEN_GHOSTS_COUNT = 5;
+const HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = exports.HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = 'ecto1';
+const HALLOWEEN_GHOSTBUSTERS_CARS = exports.HALLOWEEN_GHOSTBUSTERS_CARS = [[new mp.Vector3(1702.13, 3626.23, 35.12), 24], [new mp.Vector3(1708.73, 3630.14, 35.02), 28], [new mp.Vector3(1716.55, 3634.11, 35.00), 31], [new mp.Vector3(1727.27, 3640.48, 34.85), 27], [new mp.Vector3(1732.27, 3643.66, 34.92), 27], [new mp.Vector3(1685.11, 3620.37, 35.34), 24], [new mp.Vector3(1678.55, 3616.52, 35.40), 26], [new mp.Vector3(1671.83, 3613.18, 35.38), 27], [new mp.Vector3(1666.81, 3610.37, 35.38), 29], [new mp.Vector3(1609.94, 3691.19, 34.44), 222], [new mp.Vector3(1617.78, 3695.48, 34.37), 208], [new mp.Vector3(1623.21, 3698.47, 34.29), 208], [new mp.Vector3(1628.55, 3701.49, 34.20), 202], [new mp.Vector3(1633.83, 3704.07, 34.12), 208], [new mp.Vector3(1640.56, 3707.79, 34.07), 204], [new mp.Vector3(1645.91, 3710.69, 34.03), 205]];
+const GHOSTBUSTERS_BACKPACK_MODEL = exports.GHOSTBUSTERS_BACKPACK_MODEL = 'ghostbusters_bag';
+const GHOST_MODEL = exports.GHOST_MODEL = 'on_slime';
+const GHOST_APPEARS_POSITIONS = exports.GHOST_APPEARS_POSITIONS = [[new mp.Vector3(2435.17, 4959.56, 46.82), 331], [new mp.Vector3(2443.07, 4969.24, 46.81), 127], [new mp.Vector3(2448.36, 4980.31, 46.81), 48], [new mp.Vector3(2455.82, 4994.02, 46.81), 129], [new mp.Vector3(2444.39, 4975.90, 46.81), 130], [new mp.Vector3(2435.05, 4963.13, 46.81), 337], [new mp.Vector3(2443.86, 4965.10, 46.81), 46], [new mp.Vector3(2454.73, 4981.11, 46.81), 225], [new mp.Vector3(2450.35, 4975.20, 51.56), 48], [new mp.Vector3(2443.73, 4984.58, 51.56), 124], [new mp.Vector3(2442.24, 4976.45, 51.56), 272], [new mp.Vector3(2439.14, 4969.12, 51.56), 313], [new mp.Vector3(2452.17, 4973.77, 51.56), 320], [new mp.Vector3(2444.97, 4989.04, 51.70), 217], [new mp.Vector3(2435.25, 4973.09, 46.83), 223], [new mp.Vector3(2450.70, 4977.27, 46.81), 131], [new mp.Vector3(2458.92, 4991.12, 46.81), 137], [new mp.Vector3(2430.49, 4968.24, 46.82), 220], [new mp.Vector3(2448.02, 4969.72, 46.81), 39], [new mp.Vector3(2445.23, 4988.32, 46.81), 141], [new mp.Vector3(2454.72, 4984.12, 46.81), 32], [new mp.Vector3(2454.34, 4989.73, 46.81), 41], [new mp.Vector3(2452.82, 4982.17, 48.06), 137], [new mp.Vector3(2452.68, 4981.69, 48.06), 39], [new mp.Vector3(2446.89, 4976.70, 51.56), 318]];
+const GHOST_DAMAGE_PER_SECOND = exports.GHOST_DAMAGE_PER_SECOND = 40;
+const GHOST_HEALTH = exports.GHOST_HEALTH = 100;
+const HALLOWEEN_PORTALS_QUEST_ID = exports.HALLOWEEN_PORTALS_QUEST_ID = 'halloween-portal-quest';
+const HALLOWEEN_PORTALS_QUEST_NAME = exports.HALLOWEEN_PORTALS_QUEST_NAME = 'Операция СХОДКА';
+const HALLOWEEN_PORTALS_ARMORS_GOAL = exports.HALLOWEEN_PORTALS_ARMORS_GOAL = 2;
+const HALLOWEEN_PORTAL_MODEL = exports.HALLOWEEN_PORTAL_MODEL = 'netherportal';
+const HALLOWEEN_PORTAL_POSITION = exports.HALLOWEEN_PORTAL_POSITION = new mp.Vector3(-549.74, -261.05, 34.34);
+const HALLOWEEN_PORTAL_HEADING = exports.HALLOWEEN_PORTAL_HEADING = 252;
+const HALLOWEEN_ENTER_PORTAL_EVENT = exports.HALLOWEEN_ENTER_PORTAL_EVENT = 'halloween:enterPortal';
+const HALLOWEEN_ZOMBIE_KILLED_EVENT = exports.HALLOWEEN_ZOMBIE_KILLED_EVENT = 'halloween:killZombie';
+const HALLOWEEN_EXIT_PORTAL_EVENT = exports.HALLOWEEN_EXIT_PORTAL_EVENT = 'halloween:exitPortal';
+const HALLOWEEN_ISLAND_PORTAL_POSITION = exports.HALLOWEEN_ISLAND_PORTAL_POSITION = new mp.Vector3(5322.75, -5249.59, 31.44);
+const HALLOWEEN_ISLAND_DIMENSION_BASE = exports.HALLOWEEN_ISLAND_DIMENSION_BASE = 1000013;
+const HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = exports.HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = [[new mp.Vector3(5393.33, -5237.47, 34.04), 73], [new mp.Vector3(5381.45, -5231.26, 33.05), 90], [new mp.Vector3(5373.11, -5223.51, 32.15), 130], [new mp.Vector3(5364.69, -5216.29, 31.26), 123], [new mp.Vector3(5357.34, -5213.02, 30.96), 99], [new mp.Vector3(5346.36, -5204.38, 30.95), 141], [new mp.Vector3(5337.82, -5202.20, 31.75), 146], [new mp.Vector3(5329.58, -5199.73, 31.88), 149], [new mp.Vector3(5318.25, -5202.50, 31.74), 206], [new mp.Vector3(5301.80, -5207.36, 31.79), 209], [new mp.Vector3(5287.15, -5217.61, 30.86), 147], [new mp.Vector3(5269.11, -5233.38, 27.57), 217], [new mp.Vector3(5272.77, -5261.83, 28.67), 272], [new mp.Vector3(5278.17, -5285.01, 31.04), 298], [new mp.Vector3(5284.99, -5293.98, 32.26), 311], [new mp.Vector3(5294.35, -5306.25, 34.13), 242], [new mp.Vector3(5301.34, -5313.67, 35.19), 320], [new mp.Vector3(5309.08, -5315.97, 35.47), 10], [new mp.Vector3(5315.01, -5314.35, 35.87), 29], [new mp.Vector3(5320.45, -5310.95, 36.05), 336], [new mp.Vector3(5335.59, -5302.39, 36.51), 46], [new mp.Vector3(5339.92, -5299.90, 36.68), 24], [new mp.Vector3(5348.61, -5301.59, 37.23), 36], [new mp.Vector3(5363.26, -5292.02, 34.87), 61], [new mp.Vector3(5375.14, -5277.79, 34.78), 57], [new mp.Vector3(5388.76, -5259.67, 34.66), 68], [new mp.Vector3(5381.93, -5269.25, 34.61), 82], [new mp.Vector3(5395.42, -5254.91, 34.83), 25]];
+const HALLOWEEN_ZOMBIES_MODELS = exports.HALLOWEEN_ZOMBIES_MODELS = ["u_m_o_filmnoir", "ig_johnnyklebitz", "s_m_m_movalien_01", "u_m_y_zombie_01", "u_f_m_drowned_01", "s_m_m_strperf_01", "u_f_y_corpse_01", "u_m_m_prolsec_01"];
+const HALLOWEEN_PORTALS_ZOMBIES_GOAL = exports.HALLOWEEN_PORTALS_ZOMBIES_GOAL = 20;
+const HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = exports.HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = 2088;
+const HALLOWEEN_ZOMBIES_DAMAGE = exports.HALLOWEEN_ZOMBIES_DAMAGE = 30;
+const HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = exports.HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = 20;
+const HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = exports.HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = 5;
+},{}],"aUAa":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.onyxCreateObject = onyxCreateObject;
+var _interact = require("./interact");
+const queue = [];
+mp.events.add('entityStreamIn', entity => {
+  if (!entity || !entity.handle || entity.type !== _interact.ENTITY_TYPES.OBJECT) {
+    return;
+  }
+  const idx = queue.findIndex(el => el.obj === entity);
+  if (idx === -1) {
+    return;
+  }
+  queue[idx].handler(entity);
+  queue.splice(idx, 1);
+});
+function onyxCreateObject(model, position, handler, options) {
+  const object = mp.objects.new(model, position, options);
+  object.notifyStreaming = true;
+  queue.push({
+    obj: object,
+    handler
+  });
+  return object;
+}
+},{"./interact":"m19G"}],"uWgG":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Ghost = void 0;
+var _objects = require("../../../../objects");
+const pool = [];
+const deleteFromPool = ghost => {
+  const idx = pool.findIndex(el => el === ghost);
+  if (idx !== -1) {
+    pool.splice(idx, 1);
+  }
+};
+class Ghost {
+  constructor(health, model, position, destroyHandler) {
+    this._alive = false;
+    this.handleStreamIn = object => {
+      if (object !== this._object) {
+        return;
+      }
+      this._alive = true;
+    };
+    this._destroyHandler = destroyHandler;
+    this._health = health;
+    this._object = (0, _objects.onyxCreateObject)(model, position[0], this.handleStreamIn, {
+      alpha: 200,
+      dimension: mp.players.local.dimension,
+      rotation: new mp.Vector3(0, 0, position[1])
+    });
+    pool.push(this);
+  }
+  get alive() {
+    return this._alive;
+  }
+  get position() {
+    if (!this._object || !this._object.handle) {
+      return null;
+    }
+    return this._object.getCoords(false);
+  }
+  destroy() {
+    if (!this._alive) {
+      return;
+    }
+    this._alive = false;
+    if (this._object && this._object.handle) {
+      this._object.destroy();
+    }
+    deleteFromPool(this);
+    this._destroyHandler(this._health);
+  }
+  slide(targetPosition) {
+    this._slidePosition = targetPosition;
+  }
+  handleRender() {
+    if (this.alive && this._object && this._object.handle) {
+      const isSlideEnd = this._object.slide(this._slidePosition.x, this._slidePosition.y, this._slidePosition.z, 0.01, 0.01, 0.01, false);
+      if (isSlideEnd) {
+        this.destroy();
+      }
+    }
+  }
+  applyDamage(damage) {
+    this._health -= damage;
+    return this._health <= 0;
+  }
+}
+exports.Ghost = Ghost;
+mp.events.add('render', () => {
+  for (let ghost of pool) {
+    ghost.handleRender();
+  }
+});
+},{"../../../../objects":"aUAa"}],"KZ9N":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.disableHalloweenWeather = disableHalloweenWeather;
+exports.enableHalloweenWeather = enableHalloweenWeather;
+var _world = require("../../../world");
+const QUEST_TIME_HOUR = 0;
+async function enableHalloweenWeather(transitionTimeS) {
+  _world.weather.ignoreServerWeather = true;
+  mp.game.gameplay.setWeatherTypeOverTime('HALLOWEEN', transitionTimeS);
+  setTimeout(() => {
+    mp.game.gameplay.setWeatherTypeNow('HALLOWEEN');
+    mp.game.gameplay.setWeatherTypeNowPersist('HALLOWEEN');
+  }, (transitionTimeS - 1) * 1000);
+  mp.game.time.pauseClock(true);
+  await _world.weather.smoothTimeTransition(_world.weather.realHour, _world.weather.realMinute, QUEST_TIME_HOUR, true);
+}
+async function disableHalloweenWeather(transitionTimeS) {
+  mp.game.gameplay.setWeatherTypeOverTime(_world.weather.weather, transitionTimeS);
+  setTimeout(() => {
+    mp.game.gameplay.setWeatherTypeNow(_world.weather.weather);
+    mp.game.gameplay.setWeatherTypeNowPersist(_world.weather.weather);
+  }, (transitionTimeS - 1) * 1000);
+  mp.game.time.pauseClock(false);
+  await _world.weather.smoothTimeTransition(QUEST_TIME_HOUR, 0, _world.weather.realHour, false);
+}
+},{"../../../world":"j6No"}],"Kh8J":[function(require,module,exports) {
+"use strict";
+
+var _custom = require("../../../../custom.event");
+var _halloween = require("../../../../../../shared/events/halloween.config");
+var _system = require("../../../../../../shared/system");
+var _ghost = require("./ghost");
+var _raycast = require("../../../../raycast");
+var _fps = require("../../../../fps");
+var _user = require("../../../../user");
+var _common = require("../common");
+const GHOST_RADIUS = 2.5;
+const gameplayCamera = mp.cameras.new('gameplay');
+let isQuestEnabled = false;
+let ghost = null;
+let questSuit = null;
+let last_health = _halloween.GHOST_HEALTH;
+setInterval(() => {
+  if (!isQuestEnabled || ghost !== null) {
+    return;
+  }
+  createGhost();
+}, 5000);
+_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_START_GHOSTS_DESTROY_EVENT, () => {
+  if (mp.players.local.isInAnyVehicle(false)) {
+    mp.players.local.taskLeaveVehicle(mp.players.local.vehicle.handle, 256);
+    setTimeout(() => {
+      startQuest();
+    }, 2000);
+  } else {
+    startQuest();
+  }
+});
+function startQuest() {
+  isQuestEnabled = true;
+  (0, _common.enableHalloweenWeather)(20);
+  givePlayerQuestSuit();
+  createGhost();
+}
+async function givePlayerQuestSuit() {
+  const playerPos = mp.players.local.position;
+  const objectH = mp.game.object.createObject(mp.game.joaat(_halloween.GHOSTBUSTERS_BACKPACK_MODEL), playerPos.x, playerPos.y, playerPos.z - 10, true, true, true);
+  const object = mp.objects.newWeak(objectH);
+  while (!object.handle) {
+    await mp.game.waitAsync(10);
+  }
+  const boneIndex = mp.players.local.getBoneIndex(64729);
+  object.attachTo(mp.players.local.handle, boneIndex, 0.035, -0.190, 0.260, 356, 156, 173, false, false, false, false, 2, true);
+  questSuit = {
+    backpackObject: object
+  };
+  (0, _user.giveWeaponLocally)('weapon_rayminigun', 0, true);
+}
+function createGhost() {
+  const position = _system.systemUtil.randomArrayElement(_halloween.GHOST_APPEARS_POSITIONS);
+  ghost = new _ghost.Ghost(last_health, _halloween.GHOST_MODEL, position, healthLeft => {
+    last_health = healthLeft > 0 ? healthLeft : _halloween.GHOST_HEALTH;
+    ghost = null;
+  });
+  const targetPosition = _system.systemUtil.randomArrayElement(_halloween.GHOST_APPEARS_POSITIONS);
+  ghost.slide(targetPosition[0]);
+}
+_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_END_GHOSTS_DESTROY_EVENT, () => {
+  isQuestEnabled = false;
+  if (questSuit) {
+    questSuit.backpackObject.destroy();
+  }
+  questSuit = null;
+  if (ghost && ghost.alive) {
+    ghost.destroy();
+    ghost = null;
+  }
+  (0, _user.clearAllWeapons)();
+  (0, _common.disableHalloweenWeather)(20);
+});
+mp.events.add('render', () => {
+  if (!questSuit) {
+    return;
+  }
+  mp.game.controls.disableControlAction(0, 24, true);
+  if (mp.game.controls.isControlPressed(0, 25) && mp.game.controls.isDisabledControlPressed(0, 24)) {
+    tryDamageGhost();
+  }
+});
+function tryDamageGhost() {
+  if (!ghost || !ghost.alive) {
+    return;
+  }
+  if (isAimingOnGhost()) {
+    const isDead = ghost.applyDamage(_halloween.GHOST_DAMAGE_PER_SECOND / _fps.FPS.fps);
+    if (isDead) {
+      ghost.destroy();
+      _custom.CustomEvent.triggerServer(_halloween.HALLOWEEN_DESTROY_GHOST_EVENT);
+    }
+  }
+}
+function isAimingOnGhost() {
+  const ghostPos = ghost.position;
+  if (!ghostPos) {
+    return false;
+  }
+  const lookAtPosition = _raycast.Raycast.getPositionLookAt();
+  const cameraPosition = gameplayCamera.getCoord();
+  const raycastResult = mp.raycasting.testPointToPoint(cameraPosition, lookAtPosition);
+  if (!raycastResult) {
+    return false;
+  }
+  const surfacePosition = raycastResult.position;
+  if (surfacePosition) {
+    playRailgunFx(surfacePosition);
+  }
+  const lineDist = _system.systemUtil.distanceToPos(cameraPosition, surfacePosition);
+  let t = ((ghostPos.x - cameraPosition.x) * (surfacePosition.x - cameraPosition.x) + (ghostPos.y - cameraPosition.y) * (surfacePosition.y - cameraPosition.y) + (ghostPos.z - cameraPosition.z) * (surfacePosition.z - cameraPosition.z)) / lineDist;
+  t = Math.max(0, Math.min(1, t));
+  const dist = _system.systemUtil.distanceToPos(ghostPos, {
+    x: cameraPosition.x + t * (surfacePosition.x - cameraPosition.x),
+    y: cameraPosition.y + t * (surfacePosition.y - cameraPosition.y),
+    z: cameraPosition.z + t * (surfacePosition.z - cameraPosition.z)
+  });
+  return dist <= GHOST_RADIUS;
+}
+let ptfxHandle = null;
+function playRailgunFx(position) {
+  if (!mp.game.streaming.hasNamedPtfxAssetLoaded('weap_xs_weapons')) {
+    mp.game.streaming.requestNamedPtfxAsset('weap_xs_weapons');
+  }
+  const camRotation = gameplayCamera.getRot(4);
+  if (ptfxHandle) {
+    return;
+  }
+  mp.game.graphics.setPtfxAssetNextCall('weap_xs_weapons');
+  ptfxHandle = mp.game.graphics.startParticleFxLoopedAtCoord('proj_xs_sr_raygun_trail', position.x, position.y, position.z, -camRotation.x, camRotation.y, camRotation.z + 90, 1, false, false, false, false);
+  setTimeout(() => {
+    mp.game.graphics.removeParticleFx(ptfxHandle, true);
+    ptfxHandle = null;
+  }, 50);
+}
+},{"../../../../custom.event":"py8h","../../../../../../shared/events/halloween.config":"QZWk","../../../../../../shared/system":"SNxO","./ghost":"uWgG","../../../../raycast":"ghdA","../../../../fps":"JiGH","../../../../user":"ggMw","../common":"KZ9N"}],"mD5O":[function(require,module,exports) {
+"use strict";
+
+var _peds = require("../../../../peds");
+var _custom = require("../../../../custom.event");
+var _system = require("../../../../../../shared/system");
+var _zombiesDemolition = require("./zombiesDemolition");
+const PLAYER_GROUP = 'playersTeam';
+const ZOMBIE_GROUP = 'zombiesGroup';
+const PLAYER_GROUP_HASH = mp.game.joaat('playersTeam');
+const ZOMBIE_GROUP_HASH = mp.game.joaat('zombiesGroup');
+mp.events.add('playerReady', () => {
+  mp.game.ped.addRelationshipGroup(PLAYER_GROUP, PLAYER_GROUP_HASH);
+  mp.game.ped.addRelationshipGroup(ZOMBIE_GROUP, ZOMBIE_GROUP_HASH);
+  mp.game.ped.setRelationshipBetweenGroups(0, ZOMBIE_GROUP_HASH, PLAYER_GROUP_HASH);
+  mp.game.ped.setRelationshipBetweenGroups(2, PLAYER_GROUP_HASH, ZOMBIE_GROUP_HASH);
+});
+mp.events.add('playerWeaponShot', (targetPosition, targetEntity) => {
+  try {
+    if (mp.players.local.dimension === 0) {
+      return;
+    }
+    mp.peds.toArray().forEach(ped => {
+      if (!ped || !ped.handle || !ped.getVariable('halloweenZombie')) {
+        return;
+      }
+      if (ped.isDead()) {
+        return;
+      }
+      if (mp.game.player.isFreeAimingAtEntity(ped.handle)) {
+        _custom.CustomEvent.triggerServer('halloween:damageZombie', ped.remoteId);
+      }
+    });
+  } catch (e) {}
+});
+_custom.CustomEvent.registerServer('halloween:killZombie', pedRemoteId => {
+  try {
+    mp.peds.toArray().forEach(ped => {
+      if (!ped || !mp.peds.exists(ped) || ped.remoteId !== pedRemoteId) {
+        return;
+      }
+      ped.applyDamageTo(200, true);
+    });
+  } catch (e) {}
+});
+function startPedControlling(ped) {
+  try {
+    if (!verifyZombiePed(ped)) {
+      return;
+    }
+    applyZombiePedAttributes(ped);
+    applyZombieRelations(ped);
+    const distanceToAttack = 2;
+    const interval = setInterval(() => {
+      try {
+        if (mp.players.local.dimension === 0) {
+          clearInterval(interval);
+          return;
+        }
+        if (!ped || !ped.handle || ped.isDead()) {
+          clearInterval(interval);
+          return;
+        }
+        const target = getNearestPlayer(ped.getCoordsAutoAlive());
+        if (!target) {
+          return;
+        }
+        const tPos = target.position;
+        if (_system.systemUtil.distanceToPos(ped.getCoordsAutoAlive(), tPos) < distanceToAttack) {
+          mp.game.streaming.requestAnimDict('misscarsteal4@actor');
+          ped.taskPlayAnim("misscarsteal4@actor", "stumble", 1.5, 1.0, 500, 9, 1.0, false, false, false);
+          _custom.CustomEvent.triggerServer('halloween:zombieDamage', target.remoteId);
+        } else {
+          ped.taskGoToCoordAnyMeans(tPos.x, tPos.y, tPos.z, 4.0, 0.0, true, 1.0, 0);
+        }
+      } catch (e) {
+        return;
+      }
+    }, 2000);
+  } catch (e) {}
+}
+function applyZombiePedAttributes(ped) {
+  ped.setInvincible(false);
+  ped.setCanBeDamaged(false);
+  ped.freezePosition(false);
+  ped.setCanRagdoll(true);
+  ped.setCanRagdollFromPlayerImpact(false);
+  mp.game.invoke('0x26695EC767728D84', ped.handle, 1);
+  ped.setCombatAbility(0);
+  ped.setCombatMovement(0);
+  ped.setCombatRange(0);
+  mp.game.invoke('0x95D2D383D5396B8A', ped.handle, true);
+  ped.setBlockingOfNonTemporaryEvents(true);
+  for (let i = 0; i < 64; i += 2) {
+    ped.setFleeAttributes(i, false);
+  }
+  ped.setFleeAttributes(0, false);
+  ped.setMovementClipset(_zombiesDemolition.ZOMBIES_MOVEMENT_CLIPSET, 1.0);
+}
+function applyZombieRelations(ped) {
+  ped.setRelationshipGroupHash(ZOMBIE_GROUP_HASH);
+  mp.players.forEach(player => {
+    if (player.dimension !== mp.players.local.dimension) {
+      return;
+    }
+    player.setRelationshipGroupHash(PLAYER_GROUP_HASH);
+  });
+}
+function getNearestPlayer(position) {
+  var _mp$players$toArray$f;
+  return (_mp$players$toArray$f = mp.players.toArray().filter(player => (player === null || player === void 0 ? void 0 : player.handle) && player.dimension === mp.players.local.dimension).map(player => ({
+    player: player,
+    dist: _system.systemUtil.distanceToPos(position, player.position)
+  })).sort((a, b) => a.dist - b.dist)[0]) === null || _mp$players$toArray$f === void 0 ? void 0 : _mp$players$toArray$f.player;
+}
+function verifyZombiePed(ped) {
+  if ((ped === null || ped === void 0 ? void 0 : ped.type) !== 'ped') return false;
+  if (!ped.handle) return false;
+  if (!ped.getVariable('halloweenZombie')) {
+    return false;
+  }
+  if (!(0, _peds.isPedMy)(ped)) {
+    return false;
+  }
+  return true;
+}
+mp.events.add('entityControllerChange', (ped, controller) => {
+  if (mp.players.local.dimension === 0) {
+    return;
+  }
+  startPedControlling(ped);
+});
+mp.events.add('entityStreamIn', ped => {
+  startPedControlling(ped);
+});
+},{"../../../../peds":"ds7w","../../../../custom.event":"py8h","../../../../../../shared/system":"SNxO","./zombiesDemolition":"CYX4"}],"CYX4":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ZOMBIES_MOVEMENT_CLIPSET = void 0;
+require("./zombiesController");
+var _custom = require("../../../../custom.event");
+var _halloween = require("../../../../../../shared/events/halloween.config");
+var _common = require("../common");
+const ZOMBIES_MOVEMENT_CLIPSET = exports.ZOMBIES_MOVEMENT_CLIPSET = 'move_heist_lester';
+_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_ENTER_PORTAL_EVENT, () => {
+  loadZombiesClipSet();
+  (0, _common.enableHalloweenWeather)(20);
+});
+_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_EXIT_PORTAL_EVENT, () => {
+  (0, _common.disableHalloweenWeather)(20);
+});
+async function loadZombiesClipSet() {
+  while (!mp.game.streaming.hasClipSetLoaded(ZOMBIES_MOVEMENT_CLIPSET)) {
+    await mp.game.waitAsync(10);
+  }
+}
+mp.events.add('entityStreamIn', ped => {
+  try {
+    if (!(ped !== null && ped !== void 0 && ped.getVariable('halloweenZombie'))) {
+      return;
+    }
+    drawPedBlood(ped);
+  } catch (e) {}
+});
+function drawPedBlood(ped) {
+  mp.game.invoke('0x46DF918788CB093F', ped.handle, "BigHitByVehicle", 0.0, 9.0);
+  mp.game.invoke('0x46DF918788CB093F', ped.handle, "SCR_Dumpster", 0.0, 9.0);
+  mp.game.invoke('0x46DF918788CB093F', ped.handle, "SCR_Torture", 0.0, 9.0);
+}
+_custom.CustomEvent.registerServer('halloween:applyDamageByZombie', () => {
+  try {
+    if (mp.players.local.health <= 0) {
+      return;
+    }
+    if (mp.players.local.health < _halloween.HALLOWEEN_ZOMBIES_DAMAGE) {
+      mp.players.local.applyDamageTo(mp.players.local.health + 1, true);
+    } else {
+      mp.players.local.applyDamageTo(_halloween.HALLOWEEN_ZOMBIES_DAMAGE, true);
+    }
+  } catch (e) {}
+});
+},{"./zombiesController":"mD5O","../../../../custom.event":"py8h","../../../../../../shared/events/halloween.config":"QZWk","../common":"KZ9N"}],"xqVl":[function(require,module,exports) {
+"use strict";
+
+require("./quests/ghosts/ghosts.quest");
+require("./quests/zombies/zombiesDemolition");
+},{"./quests/ghosts/ghosts.quest":"Kh8J","./quests/zombies/zombiesDemolition":"CYX4"}],"MzZK":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WEAPON_UNARMED_HASH = exports.WEAPON_UNARMED = exports.WEAPON_SNOWBALL_HASH = exports.WEAPON_SNOWBALL = exports.SNOWBALL_ANIMATION = void 0;
+const WEAPON_UNARMED_HASH = exports.WEAPON_UNARMED_HASH = -1569615261;
+const WEAPON_SNOWBALL_HASH = exports.WEAPON_SNOWBALL_HASH = 126349499;
+const WEAPON_UNARMED = exports.WEAPON_UNARMED = 'weapon_unarmed';
+const WEAPON_SNOWBALL = exports.WEAPON_SNOWBALL = 'weapon_snowball';
+const SNOWBALL_ANIMATION = exports.SNOWBALL_ANIMATION = {
+  dictionary: 'anim@mp_snowball',
+  name: 'pickup_snowball',
+  durationSec: 2000
+};
+},{}],"lhDV":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Snowballs = void 0;
+var _custom = require("../../../custom.event");
+var _user = require("../../../user");
+var _snowballs = require("../../../../../shared/events/newYear/snowballs.config");
+class Snowballs {
+  constructor() {
+    this.inHand = false;
+    this.player = mp.players.local;
+    this.weapon = 2725352035;
+    _custom.CustomEvent.register('snowball', () => this.createHandle());
+    _custom.CustomEvent.registerServer('snowballs:weaponChange', (oldWeapon, newWeapon) => this.weaponChangeHandle(oldWeapon, newWeapon));
+    mp.events.add('playerWeaponShot', () => this.weaponShotHandle());
+  }
+  weaponShotHandle() {
+    if (this.inHand) {
+      this.inHand = false;
+      _custom.CustomEvent.triggerServer('snowballs:reset');
+      this.weapon = 2725352035;
+    }
+  }
+  async createHandle() {
+    if (this.inHand) return _user.user.notify('У вас уже есть снежок', 'error');
+    if (this.player.vehicle) return _user.user.notify('Выйдите из машины, чтобы слепить снежок', 'error');
+    if (mp.raycasting.testPointToPoint(this.player.position, new mp.Vector3(this.player.position.x, this.player.position.y, 797), null, 1)) return _user.user.notify('Чтобы слепить снежок, необходимо находиться под открытым небом', 'error');
+    if (this.weapon !== 2725352035) return _user.user.notify('Уберите оружие из рук, чтобы слепить снежок', 'error');
+    _user.user.playAnim([[_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name]], false, false);
+    while (true) {
+      if (this.player.isPlayingAnim(_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name, 3) && this.player.getAnimCurrentTime(_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name) > 0.75) {
+        _custom.CustomEvent.triggerServer('snowballs:give');
+        this.inHand = true;
+        break;
+      }
+      await mp.game.waitAsync(0);
+    }
+  }
+  weaponChangeHandle(oldWeapon, newWeapon) {
+    this.weapon = newWeapon;
+    if (oldWeapon === _snowballs.WEAPON_SNOWBALL_HASH && this.inHand) this.inHand = false;
+  }
+}
+exports.Snowballs = Snowballs;
+},{"../../../custom.event":"py8h","../../../user":"ggMw","../../../../../shared/events/newYear/snowballs.config":"MzZK"}],"tE0d":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NEW_YEAR_EXCHANGE_ACTIVE = exports.NEW_YEAR_EVENT_BLIP_SPRITE = exports.NEW_YEAR_EVENT_BLIP_POSITION = exports.NEW_YEAR_EVENT_BLIP_OPTIONS = exports.GREETING_COLOR = exports.EVENT_IS_ACTIVE = void 0;
+const EVENT_IS_ACTIVE = exports.EVENT_IS_ACTIVE = false;
+const NEW_YEAR_EXCHANGE_ACTIVE = exports.NEW_YEAR_EXCHANGE_ACTIVE = true;
+const GREETING_COLOR = exports.GREETING_COLOR = "ff5a3d";
+const NEW_YEAR_EVENT_BLIP_SPRITE = exports.NEW_YEAR_EVENT_BLIP_SPRITE = 304;
+const NEW_YEAR_EVENT_BLIP_POSITION = exports.NEW_YEAR_EVENT_BLIP_POSITION = new mp.Vector3(1669.18, 3691.57, 34.25);
+const NEW_YEAR_EVENT_BLIP_OPTIONS = exports.NEW_YEAR_EVENT_BLIP_OPTIONS = {
+  color: 75,
+  dimension: 0,
+  name: "Санта Клаус",
+  shortRange: true
+};
+},{}],"sE8r":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NEW_YEAR_SPANISH_NPC_NAME = exports.NEW_YEAR_SPANISH_NPC_ID = exports.NEW_YEAR_SIXTH_QUEST_WORD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_NAME = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = exports.NEW_YEAR_SIXTH_QUEST_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_JOB_GOAL = exports.NEW_YEAR_SIXTH_QUEST_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = exports.NEW_YEAR_SIXTH_QUEST_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = exports.NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = exports.NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = exports.NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SECOND_QUEST_NAME = exports.NEW_YEAR_SECOND_QUEST_ID = exports.NEW_YEAR_SECOND_QUEST_CARRY_GOAL = exports.NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_SECOND_QUEST_BANANA_GOAL = exports.NEW_YEAR_SANTA_NPC_PARAMETERS = exports.NEW_YEAR_SANTA_NPC_NAME = exports.NEW_YEAR_SANTA_NPC_ID = exports.NEW_YEAR_MEGATRON_NPC_PARAMETERS = exports.NEW_YEAR_MEGATRON_NPC_NAME = exports.NEW_YEAR_MEGATRON_NPC_ID = exports.NEW_YEAR_HOMELESS_NPC_PARAMETERS = exports.NEW_YEAR_HOMELESS_NPC_NAME = exports.NEW_YEAR_HOMELESS_NPC_ID = exports.NEW_YEAR_HARRY_NPC_PARAMETERS = exports.NEW_YEAR_HARRY_NPC_NAME = exports.NEW_YEAR_HARRY_NPC_ID = exports.NEW_YEAR_GALILEO_NPC_RANGE = exports.NEW_YEAR_GALILEO_NPC_POSITION = exports.NEW_YEAR_GALILEO_NPC_NAME = exports.NEW_YEAR_GALILEO_NPC_MODEL = exports.NEW_YEAR_GALILEO_NPC_HEADING = exports.NEW_YEAR_GALILEO_NPC_DIMENSION = exports.NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FOURTH_QUEST_NAME = exports.NEW_YEAR_FOURTH_QUEST_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = exports.NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = exports.NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_TREES_GOAL = exports.NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIRST_QUEST_NAME = exports.NEW_YEAR_FIRST_QUEST_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_GOAL = exports.NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = exports.NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_TYPE = exports.NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_GOAL = exports.NEW_YEAR_FIFTH_QUEST_ID = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = exports.NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_COLA_GOAL = exports.NEW_YEAR_BOLVANKA_NPC_PARAMETERS = exports.NEW_YEAR_BOLVANKA_NPC_NAME = exports.NEW_YEAR_BOLVANKA_NPC_ID = exports.NEW_YEAR_ARIEL_NPC_PARAMETERS = exports.NEW_YEAR_ARIEL_NPC_NAME = exports.NEW_YEAR_ARIEL_NPC_ID = void 0;
+exports.NEW_YEAR_WORD_NPC_RANGE = exports.NEW_YEAR_WORD_NPC_POSITION = exports.NEW_YEAR_WORD_NPC_NAME = exports.NEW_YEAR_WORD_NPC_MODEL = exports.NEW_YEAR_WORD_NPC_HEADING = exports.NEW_YEAR_WORD_NPC_DIMENSION = exports.NEW_YEAR_THIRD_QUEST_VALID_WORD = exports.NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_THIRD_QUEST_NAME = exports.NEW_YEAR_THIRD_QUEST_ID = exports.NEW_YEAR_THIRD_QUEST_HUD_NAME = exports.NEW_YEAR_SPANISH_NPC_PARAMETERS = void 0;
+const NEW_YEAR_SANTA_NPC_ID = exports.NEW_YEAR_SANTA_NPC_ID = 'new-year-santa';
+const NEW_YEAR_SANTA_NPC_NAME = exports.NEW_YEAR_SANTA_NPC_NAME = 'Санта Клаус';
+const NEW_YEAR_SANTA_NPC_PARAMETERS = exports.NEW_YEAR_SANTA_NPC_PARAMETERS = {
+  Position: new mp.Vector3(1674.40, 3684.91, 34.32),
+  Heading: 5,
+  Model: 's_m_y_clown_01',
+  Name: NEW_YEAR_SANTA_NPC_NAME
+};
+const NEW_YEAR_HARRY_NPC_ID = exports.NEW_YEAR_HARRY_NPC_ID = 'new-year-harry';
+const NEW_YEAR_HARRY_NPC_NAME = exports.NEW_YEAR_HARRY_NPC_NAME = 'Гарри';
+const NEW_YEAR_HARRY_NPC_PARAMETERS = exports.NEW_YEAR_HARRY_NPC_PARAMETERS = {
+  Position: new mp.Vector3(2220.25, 5609.61, 54.71),
+  Heading: 117,
+  Model: 'ig_isldj_02',
+  Name: NEW_YEAR_HARRY_NPC_NAME
+};
+const NEW_YEAR_WORD_NPC_POSITION = exports.NEW_YEAR_WORD_NPC_POSITION = new mp.Vector3(63.42, 118.50, 79.11);
+const NEW_YEAR_WORD_NPC_HEADING = exports.NEW_YEAR_WORD_NPC_HEADING = 140;
+const NEW_YEAR_WORD_NPC_MODEL = exports.NEW_YEAR_WORD_NPC_MODEL = 's_m_m_postal_01';
+const NEW_YEAR_WORD_NPC_NAME = exports.NEW_YEAR_WORD_NPC_NAME = 'Руслан';
+const NEW_YEAR_WORD_NPC_RANGE = exports.NEW_YEAR_WORD_NPC_RANGE = 1.5;
+const NEW_YEAR_WORD_NPC_DIMENSION = exports.NEW_YEAR_WORD_NPC_DIMENSION = 0;
+const NEW_YEAR_HOMELESS_NPC_ID = exports.NEW_YEAR_HOMELESS_NPC_ID = 'new-year-marv';
+const NEW_YEAR_HOMELESS_NPC_NAME = exports.NEW_YEAR_HOMELESS_NPC_NAME = 'Марв';
+const NEW_YEAR_HOMELESS_NPC_PARAMETERS = exports.NEW_YEAR_HOMELESS_NPC_PARAMETERS = {
+  Position: new mp.Vector3(1099.42, -775.49, 58.35),
+  Heading: 183,
+  Model: 'a_m_m_tramp_01',
+  Name: NEW_YEAR_HOMELESS_NPC_NAME
+};
+const NEW_YEAR_SPANISH_NPC_ID = exports.NEW_YEAR_SPANISH_NPC_ID = 'new-year-abelardo';
+const NEW_YEAR_SPANISH_NPC_NAME = exports.NEW_YEAR_SPANISH_NPC_NAME = 'Абелардо';
+const NEW_YEAR_SPANISH_NPC_PARAMETERS = exports.NEW_YEAR_SPANISH_NPC_PARAMETERS = {
+  Position: new mp.Vector3(-1069.57, -1675.77, 4.54),
+  Heading: 29,
+  Model: 's_m_o_busker_01',
+  Name: NEW_YEAR_SPANISH_NPC_NAME
+};
+const NEW_YEAR_FIRST_QUEST_ID = exports.NEW_YEAR_FIRST_QUEST_ID = 'new-year-first-quest';
+const NEW_YEAR_FIRST_QUEST_NAME = exports.NEW_YEAR_FIRST_QUEST_NAME = 'Ёлкоруб';
+const NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = 215;
+const NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = exports.NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = 1;
+const NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = 26;
+const NEW_YEAR_FIRST_QUEST_DONUT_GOAL = exports.NEW_YEAR_FIRST_QUEST_DONUT_GOAL = 1;
+const NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = 5;
+const NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = exports.NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = 1;
+const NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = 7011;
+const NEW_YEAR_FIRST_QUEST_TREES_GOAL = exports.NEW_YEAR_FIRST_QUEST_TREES_GOAL = 20;
+const NEW_YEAR_SECOND_QUEST_ID = exports.NEW_YEAR_SECOND_QUEST_ID = 'new-year-second-quest';
+const NEW_YEAR_SECOND_QUEST_NAME = exports.NEW_YEAR_SECOND_QUEST_NAME = 'Фейхоа или...';
+const NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = 25;
+const NEW_YEAR_SECOND_QUEST_BANANA_GOAL = exports.NEW_YEAR_SECOND_QUEST_BANANA_GOAL = 15;
+const NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = new mp.Vector3(2220.48, 5578.52, 52.72);
+const NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = new mp.Vector3(2225.49, 5578.14, 52.70);
+const NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = new mp.Vector3(2231.56, 5575.46, 52.80);
+const NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = new mp.Vector3(2223.74, 5575.85, 52.62);
+const NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = exports.NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = {
+  dictionary: 'anim@heists@money_grab@duffel',
+  name: 'loop',
+  durationSec: 5
+};
+const NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = exports.NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = "Неизвестная трава";
+const NEW_YEAR_SECOND_QUEST_CARRY_GOAL = exports.NEW_YEAR_SECOND_QUEST_CARRY_GOAL = 2;
+const NEW_YEAR_THIRD_QUEST_ID = exports.NEW_YEAR_THIRD_QUEST_ID = 'new-year-third-quest';
+const NEW_YEAR_THIRD_QUEST_NAME = exports.NEW_YEAR_THIRD_QUEST_NAME = 'Сайфер или как найти нужное слово';
+const NEW_YEAR_THIRD_QUEST_VALID_WORD = exports.NEW_YEAR_THIRD_QUEST_VALID_WORD = 'dashound';
+const NEW_YEAR_THIRD_QUEST_HUD_NAME = exports.NEW_YEAR_THIRD_QUEST_HUD_NAME = 'Найти кодовое слово из песни';
+const NEW_YEAR_FOURTH_QUEST_ID = exports.NEW_YEAR_FOURTH_QUEST_ID = 'new-year-fourth-quest';
+const NEW_YEAR_FOURTH_QUEST_NAME = exports.NEW_YEAR_FOURTH_QUEST_NAME = 'Испанский стыд';
+const NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = 20;
+const NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = 2;
+const NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = 2;
+const NEW_YEAR_FOURTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_COLA_GOAL = 2;
+const NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = 25;
+const NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = 15;
+const NEW_YEAR_FIFTH_QUEST_ID = exports.NEW_YEAR_FIFTH_QUEST_ID = 'new-year-fifth-quest';
+const NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = 'new-year-fifth-quest-first';
+const NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = 'new-year-fifth-quest-second';
+const NEW_YEAR_FIFTH_QUEST_NAME = exports.NEW_YEAR_FIFTH_QUEST_NAME = 'Новогодний переполох';
+const NEW_YEAR_MEGATRON_NPC_ID = exports.NEW_YEAR_MEGATRON_NPC_ID = 'new-year-megatron';
+const NEW_YEAR_MEGATRON_NPC_NAME = exports.NEW_YEAR_MEGATRON_NPC_NAME = 'Мегатрон';
+const NEW_YEAR_MEGATRON_NPC_PARAMETERS = exports.NEW_YEAR_MEGATRON_NPC_PARAMETERS = {
+  Position: new mp.Vector3(-420.54, 1219.48, 325.76),
+  Heading: 176,
+  Model: 'a_m_m_genfat_02',
+  Name: NEW_YEAR_MEGATRON_NPC_NAME
+};
+const NEW_YEAR_BOLVANKA_NPC_ID = exports.NEW_YEAR_BOLVANKA_NPC_ID = 'new-year-bolvanka';
+const NEW_YEAR_BOLVANKA_NPC_NAME = exports.NEW_YEAR_BOLVANKA_NPC_NAME = 'Охранник';
+const NEW_YEAR_BOLVANKA_NPC_PARAMETERS = exports.NEW_YEAR_BOLVANKA_NPC_PARAMETERS = {
+  Position: new mp.Vector3(722.53, 1291.67, 360.30),
+  Heading: 181,
+  Model: 'csb_prologuedriver',
+  Name: NEW_YEAR_BOLVANKA_NPC_NAME
+};
+const NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = new mp.Vector3(714.02, 1285.84, 359.30);
+const NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = {
+  dictionary: 'missbigscore1switch_trevor_piss',
+  name: 'piss_loop',
+  durationSec: 10
+};
+const NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = 'Пытаемся разобраться с проводами';
+const NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = 'Найти нужный электрощиток';
+const NEW_YEAR_FIFTH_QUEST_JOB_TYPE = exports.NEW_YEAR_FIFTH_QUEST_JOB_TYPE = 'electrician';
+const NEW_YEAR_FIFTH_QUEST_JOB_GOAL = exports.NEW_YEAR_FIFTH_QUEST_JOB_GOAL = 30;
+const NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = 'Поработать на электрике';
+const NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = 24;
+const NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = 2;
+const NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = 2;
+const NEW_YEAR_FIFTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_COLA_GOAL = 3;
+const NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = 7;
+const NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = 4;
+const NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = 200;
+const NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = 5;
+const NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = 7000;
+const NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = 15;
+const NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = 7022;
+const NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = 10;
+const NEW_YEAR_SIXTH_QUEST_ID = exports.NEW_YEAR_SIXTH_QUEST_ID = 'new-year-sixth-quest';
+const NEW_YEAR_SIXTH_QUEST_NAME = exports.NEW_YEAR_SIXTH_QUEST_NAME = 'Конец или новое начало';
+const NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = new mp.Vector3(-744.67, 4323.64, 140.35);
+const NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = {
+  dictionary: 'anim@amb@business@bgen@bgen_no_work@',
+  name: 'sit_phone_phoneputdown_fallasleep_nowork',
+  durationSec: 5
+};
+const NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = 'Воссоединяемся с природой';
+const NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = 830;
+const NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = exports.NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = 5;
+const NEW_YEAR_SIXTH_QUEST_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_JOB_TYPE = 'busman:way';
+const NEW_YEAR_SIXTH_QUEST_JOB_GOAL = exports.NEW_YEAR_SIXTH_QUEST_JOB_GOAL = 4;
+const NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = 'Проехать маршрут на работе Автобусника';
+const NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = 'busman';
+const NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = 'Уволиться с работы в автобусном депо';
+const NEW_YEAR_SIXTH_QUEST_WORD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_WORD_TEXT = 'galileo';
+const NEW_YEAR_SIXTH_QUEST_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_HUD_NAME = 'Найти кодовое слово по описанию';
+const NEW_YEAR_ARIEL_NPC_ID = exports.NEW_YEAR_ARIEL_NPC_ID = 'new-year-ariel';
+const NEW_YEAR_ARIEL_NPC_NAME = exports.NEW_YEAR_ARIEL_NPC_NAME = 'Ариэль';
+const NEW_YEAR_ARIEL_NPC_PARAMETERS = exports.NEW_YEAR_ARIEL_NPC_PARAMETERS = {
+  Position: new mp.Vector3(-747.22, 4323.73, 141.70),
+  Heading: 305,
+  Model: 'a_f_m_bodybuild_01',
+  Name: NEW_YEAR_ARIEL_NPC_NAME
+};
+const NEW_YEAR_GALILEO_NPC_POSITION = exports.NEW_YEAR_GALILEO_NPC_POSITION = new mp.Vector3(-601.17, 2091.22, 131.50);
+const NEW_YEAR_GALILEO_NPC_HEADING = exports.NEW_YEAR_GALILEO_NPC_HEADING = 351;
+const NEW_YEAR_GALILEO_NPC_MODEL = exports.NEW_YEAR_GALILEO_NPC_MODEL = 'mp_m_counterfeit_01';
+const NEW_YEAR_GALILEO_NPC_NAME = exports.NEW_YEAR_GALILEO_NPC_NAME = 'Рудокоп';
+const NEW_YEAR_GALILEO_NPC_RANGE = exports.NEW_YEAR_GALILEO_NPC_RANGE = 1.5;
+const NEW_YEAR_GALILEO_NPC_DIMENSION = exports.NEW_YEAR_GALILEO_NPC_DIMENSION = 0;
+const NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = 1000;
+const NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = 1500;
+const NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = 1700;
+const NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = 2000;
+const NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = 500;
+const NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = 1500;
+const NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = 1500;
+const NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = 2500;
+const NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = 888;
+},{}],"zua9":[function(require,module,exports) {
+"use strict";
+
+var _snowballs = require("./snowballs");
+var _main = require("../../../../shared/events/newYear/main.config");
+var _quests = require("../../../../shared/events/newYear/quests.config");
+if (_main.EVENT_IS_ACTIVE) {
+  new _snowballs.Snowballs();
+  mp.events.add('entityStreamIn', entity => {
+    if (entity.type !== 'ped' || !entity.getVariable('advancedPedName')) return;
+    switch (entity.getVariable('advancedPedName')) {
+      case _quests.NEW_YEAR_SANTA_NPC_NAME:
+        {
+          mp.game.invoke('0x44A0870B7E92D7C0', entity.handle, 0, false);
+          break;
+        }
+      case _quests.NEW_YEAR_HOMELESS_NPC_NAME:
+        {
+          break;
+        }
+      case _quests.NEW_YEAR_BOLVANKA_NPC_NAME:
+        {
+          mp.game.invoke('0xEA47FE3719165B94', entity.handle, 'amb@world_human_bum_slumped@male@laying_on_right_side@idle_a', 'idle_a', 8, 8, -1, 1, 0, true, true, true);
+          break;
+        }
+      case _quests.NEW_YEAR_MEGATRON_NPC_NAME:
+        {
+          mp.game.invoke('0x142A02425FF02BD9', entity.handle, "WORLD_HUMAN_AA_SMOKE", 0, false);
+          break;
+        }
+      case _quests.NEW_YEAR_WORD_NPC_NAME:
+        {
+          break;
+        }
+      case _quests.NEW_YEAR_GALILEO_NPC_NAME:
+        {
+          break;
+        }
+      default:
+        {
+          break;
+        }
+    }
+  });
+}
+},{"./snowballs":"lhDV","../../../../shared/events/newYear/main.config":"tE0d","../../../../shared/events/newYear/quests.config":"sE8r"}],"RqhX":[function(require,module,exports) {
+"use strict";
+
+require("./halloween");
+require("./newYear");
+},{"./halloween":"xqVl","./newYear":"zua9"}],"knjE":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -114656,859 +115508,7 @@ require("./enterVehicleQuestStep");
 "use strict";
 
 require("./questSteps");
-},{"./questSteps":"gkBA"}],"QZWk":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.QUEST_1_POTIONS_GOAL = exports.QUEST_1_POTATO_GOAL = exports.QUEST_1_OBJECT_TO_FIND_NAME = exports.QUEST_1_OBJECT_TO_FIND_MODEL = exports.QUEST_1_OBJECT_POSITIONS = exports.QUEST_1_OBJECT_GOAL = exports.QUEST_1_MILK_GOAL = exports.QUEST_1_CHIPS_GOAL = exports.QUEST_1_BOAR_MEAL_GOAL = exports.QUEST_1_BLUEBERRY_GOAL = exports.POTATO_ITEM_ID = exports.MILK_ITEM_ID = exports.HALLOWEEN_ZOMBIE_KILLED_EVENT = exports.HALLOWEEN_ZOMBIES_MODELS = exports.HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = exports.HALLOWEEN_ZOMBIES_DAMAGE = exports.HALLOWEEN_SWEET_NPC_PARAMETERS = exports.HALLOWEEN_SWEET_NPC_NAME = exports.HALLOWEEN_SWEET_NPC_ID = exports.HALLOWEEN_START_QUEST_NAME = exports.HALLOWEEN_START_QUEST_ID = exports.HALLOWEEN_START_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_PORTAL_POSITION = exports.HALLOWEEN_PORTAL_MODEL = exports.HALLOWEEN_PORTAL_HEADING = exports.HALLOWEEN_PORTALS_ZOMBIES_GOAL = exports.HALLOWEEN_PORTALS_QUEST_NAME = exports.HALLOWEEN_PORTALS_QUEST_ID = exports.HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = exports.HALLOWEEN_PORTALS_ARMORS_GOAL = exports.HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = exports.HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = exports.HALLOWEEN_ISLAND_PORTAL_POSITION = exports.HALLOWEEN_ISLAND_DIMENSION_BASE = exports.HALLOWEEN_HOUSE_POS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NPC_ID = exports.HALLOWEEN_GHOSTS_QUEST_NAME = exports.HALLOWEEN_GHOSTS_QUEST_ID = exports.HALLOWEEN_GHOSTS_COUNT = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = exports.HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTBUSTER_NPC_NAME = exports.HALLOWEEN_GHOSTBUSTER_NPC_ID = exports.HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = exports.HALLOWEEN_GHOSTBUSTERS_CARS = exports.HALLOWEEN_EXIT_PORTAL_EVENT = exports.HALLOWEEN_EXCHANGE_STARTS_DATE = exports.HALLOWEEN_EXCHANGE_NPC_PARAMETERS = exports.HALLOWEEN_EXCHANGE_NPC_NAME = exports.HALLOWEEN_EXCHANGE_NPC_ID = exports.HALLOWEEN_ENTER_PORTAL_EVENT = exports.HALLOWEEN_END_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_DESTROY_GHOST_EVENT = exports.GHOST_MODEL = exports.GHOST_HEALTH = exports.GHOST_DAMAGE_PER_SECOND = exports.GHOST_APPEARS_POSITIONS = exports.GHOSTBUSTERS_BACKPACK_MODEL = exports.CHIPS_ITEM_ID = exports.BOAR_MEAL_ITEM_ID = exports.BLUEBERRY_ITEM_ID = void 0;
-const HALLOWEEN_EXCHANGE_NPC_ID = exports.HALLOWEEN_EXCHANGE_NPC_ID = 'halloween-exchange-npc';
-const HALLOWEEN_EXCHANGE_NPC_NAME = exports.HALLOWEEN_EXCHANGE_NPC_NAME = 'Обменщик';
-const HALLOWEEN_EXCHANGE_NPC_PARAMETERS = exports.HALLOWEEN_EXCHANGE_NPC_PARAMETERS = {
-  Position: new mp.Vector3(1676.36, 3688.48, 34.32),
-  Heading: 93,
-  Model: 'u_m_o_filmnoir',
-  Name: HALLOWEEN_EXCHANGE_NPC_NAME
-};
-const HALLOWEEN_EXCHANGE_STARTS_DATE = exports.HALLOWEEN_EXCHANGE_STARTS_DATE = new Date(2021, 11, 8, 4, 30);
-const HALLOWEEN_SWEET_NPC_ID = exports.HALLOWEEN_SWEET_NPC_ID = 'halloween-sweet-npc';
-const HALLOWEEN_SWEET_NPC_NAME = exports.HALLOWEEN_SWEET_NPC_NAME = 'Конфетчик';
-const HALLOWEEN_SWEET_NPC_PARAMETERS = exports.HALLOWEEN_SWEET_NPC_PARAMETERS = {
-  Position: new mp.Vector3(1661.29, 3687.51, 34.23),
-  Heading: 210,
-  Name: HALLOWEEN_SWEET_NPC_NAME,
-  Model: 's_m_m_strperf_01'
-};
-const HALLOWEEN_GHOSTBUSTER_NPC_ID = exports.HALLOWEEN_GHOSTBUSTER_NPC_ID = 'halloween-ghostbuster';
-const HALLOWEEN_GHOSTBUSTER_NPC_NAME = exports.HALLOWEEN_GHOSTBUSTER_NPC_NAME = 'Рэй Стэнц';
-const HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTBUSTER_NPC_PARAMETERS = {
-  Position: new mp.Vector3(1669.18, 3691.57, 34.25),
-  Heading: 183,
-  Model: 's_m_y_clown_01',
-  Name: HALLOWEEN_GHOSTBUSTER_NPC_NAME
-};
-const HALLOWEEN_GHOSTS_QUEST_NPC_ID = exports.HALLOWEEN_GHOSTS_QUEST_NPC_ID = 'halloween-ghosts-quest-1';
-const HALLOWEEN_GHOSTS_QUEST_NPC_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NPC_NAME = 'Старый дед';
-const HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = exports.HALLOWEEN_GHOSTS_QUEST_NPC_PARAMETERS = {
-  Position: new mp.Vector3(2528.81, 2586.80, 37.94),
-  Heading: 0,
-  Model: 'ig_cletus',
-  Name: HALLOWEEN_GHOSTS_QUEST_NPC_NAME
-};
-const HALLOWEEN_START_QUEST_ID = exports.HALLOWEEN_START_QUEST_ID = 'halloween-first-quest';
-const HALLOWEEN_START_QUEST_NAME = exports.HALLOWEEN_START_QUEST_NAME = 'Операция Ы';
-const BOAR_MEAL_ITEM_ID = exports.BOAR_MEAL_ITEM_ID = 830;
-const QUEST_1_BOAR_MEAL_GOAL = exports.QUEST_1_BOAR_MEAL_GOAL = 2;
-const CHIPS_ITEM_ID = exports.CHIPS_ITEM_ID = 21;
-const QUEST_1_CHIPS_GOAL = exports.QUEST_1_CHIPS_GOAL = 1;
-const MILK_ITEM_ID = exports.MILK_ITEM_ID = 9000;
-const QUEST_1_MILK_GOAL = exports.QUEST_1_MILK_GOAL = 10;
-const POTATO_ITEM_ID = exports.POTATO_ITEM_ID = 7020;
-const QUEST_1_POTATO_GOAL = exports.QUEST_1_POTATO_GOAL = 50;
-const BLUEBERRY_ITEM_ID = exports.BLUEBERRY_ITEM_ID = 7030;
-const QUEST_1_BLUEBERRY_GOAL = exports.QUEST_1_BLUEBERRY_GOAL = 15;
-const QUEST_1_OBJECT_TO_FIND_NAME = exports.QUEST_1_OBJECT_TO_FIND_NAME = 'странный предмет';
-const QUEST_1_OBJECT_TO_FIND_MODEL = exports.QUEST_1_OBJECT_TO_FIND_MODEL = 'vw_prop_casino_art_skull_01a';
-const QUEST_1_OBJECT_GOAL = exports.QUEST_1_OBJECT_GOAL = 3;
-const QUEST_1_OBJECT_POSITIONS = exports.QUEST_1_OBJECT_POSITIONS = [[new mp.Vector3(2433.79, 4972.22, 41.29), 136], [new mp.Vector3(2428.87, 4966.58, 45.55), 303], [new mp.Vector3(2435.20, 4973.67, 45.62), 223], [new mp.Vector3(2456.54, 4983.07, 46.81), 134], [new mp.Vector3(2457.15, 4973.77, 45.92), 64], [new mp.Vector3(2451.55, 4977.93, 46.29), 135], [new mp.Vector3(2445.53, 4989.16, 46.80), 148], [new mp.Vector3(2449.25, 4974.21, 51.46), 4], [new mp.Vector3(2439.42, 4968.47, 51.21), 319], [new mp.Vector3(2444.61, 4976.09, 51.48), 57], [new mp.Vector3(2449.47, 4988.66, 50.57), 184], [new mp.Vector3(2454.01, 4969.61, 50.57), 354], [new mp.Vector3(2453.11, 4979.42, 51.32), 227], [new mp.Vector3(2451.28, 4974.31, 51.48), 227]];
-const QUEST_1_POTIONS_GOAL = exports.QUEST_1_POTIONS_GOAL = 1;
-const HALLOWEEN_HOUSE_POS = exports.HALLOWEEN_HOUSE_POS = new mp.Vector3(2435.76, 4975.81, 46.57);
-const HALLOWEEN_GHOSTS_QUEST_ID = exports.HALLOWEEN_GHOSTS_QUEST_ID = 'halloween-ghosts';
-const HALLOWEEN_GHOSTS_QUEST_NAME = exports.HALLOWEEN_GHOSTS_QUEST_NAME = 'Операция НЕ ССЫ';
-const HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_POSITION = new mp.Vector3(2330.15, 2572.39, 45.48);
-const HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = exports.HALLOWEEN_GHOSTS_COLLECT_MODULE_ANIMATION = {
-  dictionary: 'anim@heists@money_grab@duffel',
-  name: 'loop',
-  durationSec: 5
-};
-const HALLOWEEN_DESTROY_GHOST_EVENT = exports.HALLOWEEN_DESTROY_GHOST_EVENT = 'halloween:ghostDestroyed';
-const HALLOWEEN_START_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_START_GHOSTS_DESTROY_EVENT = 'halloween:quest:startGhostsDestroy';
-const HALLOWEEN_END_GHOSTS_DESTROY_EVENT = exports.HALLOWEEN_END_GHOSTS_DESTROY_EVENT = 'halloween:quest:endGhostsDestroy';
-const HALLOWEEN_GHOSTS_COUNT = exports.HALLOWEEN_GHOSTS_COUNT = 5;
-const HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = exports.HALLOWEEN_GHOSTBUSTERS_CAR_MODEL = 'ecto1';
-const HALLOWEEN_GHOSTBUSTERS_CARS = exports.HALLOWEEN_GHOSTBUSTERS_CARS = [[new mp.Vector3(1702.13, 3626.23, 35.12), 24], [new mp.Vector3(1708.73, 3630.14, 35.02), 28], [new mp.Vector3(1716.55, 3634.11, 35.00), 31], [new mp.Vector3(1727.27, 3640.48, 34.85), 27], [new mp.Vector3(1732.27, 3643.66, 34.92), 27], [new mp.Vector3(1685.11, 3620.37, 35.34), 24], [new mp.Vector3(1678.55, 3616.52, 35.40), 26], [new mp.Vector3(1671.83, 3613.18, 35.38), 27], [new mp.Vector3(1666.81, 3610.37, 35.38), 29], [new mp.Vector3(1609.94, 3691.19, 34.44), 222], [new mp.Vector3(1617.78, 3695.48, 34.37), 208], [new mp.Vector3(1623.21, 3698.47, 34.29), 208], [new mp.Vector3(1628.55, 3701.49, 34.20), 202], [new mp.Vector3(1633.83, 3704.07, 34.12), 208], [new mp.Vector3(1640.56, 3707.79, 34.07), 204], [new mp.Vector3(1645.91, 3710.69, 34.03), 205]];
-const GHOSTBUSTERS_BACKPACK_MODEL = exports.GHOSTBUSTERS_BACKPACK_MODEL = 'ghostbusters_bag';
-const GHOST_MODEL = exports.GHOST_MODEL = 'on_slime';
-const GHOST_APPEARS_POSITIONS = exports.GHOST_APPEARS_POSITIONS = [[new mp.Vector3(2435.17, 4959.56, 46.82), 331], [new mp.Vector3(2443.07, 4969.24, 46.81), 127], [new mp.Vector3(2448.36, 4980.31, 46.81), 48], [new mp.Vector3(2455.82, 4994.02, 46.81), 129], [new mp.Vector3(2444.39, 4975.90, 46.81), 130], [new mp.Vector3(2435.05, 4963.13, 46.81), 337], [new mp.Vector3(2443.86, 4965.10, 46.81), 46], [new mp.Vector3(2454.73, 4981.11, 46.81), 225], [new mp.Vector3(2450.35, 4975.20, 51.56), 48], [new mp.Vector3(2443.73, 4984.58, 51.56), 124], [new mp.Vector3(2442.24, 4976.45, 51.56), 272], [new mp.Vector3(2439.14, 4969.12, 51.56), 313], [new mp.Vector3(2452.17, 4973.77, 51.56), 320], [new mp.Vector3(2444.97, 4989.04, 51.70), 217], [new mp.Vector3(2435.25, 4973.09, 46.83), 223], [new mp.Vector3(2450.70, 4977.27, 46.81), 131], [new mp.Vector3(2458.92, 4991.12, 46.81), 137], [new mp.Vector3(2430.49, 4968.24, 46.82), 220], [new mp.Vector3(2448.02, 4969.72, 46.81), 39], [new mp.Vector3(2445.23, 4988.32, 46.81), 141], [new mp.Vector3(2454.72, 4984.12, 46.81), 32], [new mp.Vector3(2454.34, 4989.73, 46.81), 41], [new mp.Vector3(2452.82, 4982.17, 48.06), 137], [new mp.Vector3(2452.68, 4981.69, 48.06), 39], [new mp.Vector3(2446.89, 4976.70, 51.56), 318]];
-const GHOST_DAMAGE_PER_SECOND = exports.GHOST_DAMAGE_PER_SECOND = 40;
-const GHOST_HEALTH = exports.GHOST_HEALTH = 100;
-const HALLOWEEN_PORTALS_QUEST_ID = exports.HALLOWEEN_PORTALS_QUEST_ID = 'halloween-portal-quest';
-const HALLOWEEN_PORTALS_QUEST_NAME = exports.HALLOWEEN_PORTALS_QUEST_NAME = 'Операция СХОДКА';
-const HALLOWEEN_PORTALS_ARMORS_GOAL = exports.HALLOWEEN_PORTALS_ARMORS_GOAL = 2;
-const HALLOWEEN_PORTAL_MODEL = exports.HALLOWEEN_PORTAL_MODEL = 'netherportal';
-const HALLOWEEN_PORTAL_POSITION = exports.HALLOWEEN_PORTAL_POSITION = new mp.Vector3(-549.74, -261.05, 34.34);
-const HALLOWEEN_PORTAL_HEADING = exports.HALLOWEEN_PORTAL_HEADING = 252;
-const HALLOWEEN_ENTER_PORTAL_EVENT = exports.HALLOWEEN_ENTER_PORTAL_EVENT = 'halloween:enterPortal';
-const HALLOWEEN_ZOMBIE_KILLED_EVENT = exports.HALLOWEEN_ZOMBIE_KILLED_EVENT = 'halloween:killZombie';
-const HALLOWEEN_EXIT_PORTAL_EVENT = exports.HALLOWEEN_EXIT_PORTAL_EVENT = 'halloween:exitPortal';
-const HALLOWEEN_ISLAND_PORTAL_POSITION = exports.HALLOWEEN_ISLAND_PORTAL_POSITION = new mp.Vector3(5322.75, -5249.59, 31.44);
-const HALLOWEEN_ISLAND_DIMENSION_BASE = exports.HALLOWEEN_ISLAND_DIMENSION_BASE = 1000013;
-const HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = exports.HALLOWEEN_ISLAND_ZOMBIES_POSITIONS = [[new mp.Vector3(5393.33, -5237.47, 34.04), 73], [new mp.Vector3(5381.45, -5231.26, 33.05), 90], [new mp.Vector3(5373.11, -5223.51, 32.15), 130], [new mp.Vector3(5364.69, -5216.29, 31.26), 123], [new mp.Vector3(5357.34, -5213.02, 30.96), 99], [new mp.Vector3(5346.36, -5204.38, 30.95), 141], [new mp.Vector3(5337.82, -5202.20, 31.75), 146], [new mp.Vector3(5329.58, -5199.73, 31.88), 149], [new mp.Vector3(5318.25, -5202.50, 31.74), 206], [new mp.Vector3(5301.80, -5207.36, 31.79), 209], [new mp.Vector3(5287.15, -5217.61, 30.86), 147], [new mp.Vector3(5269.11, -5233.38, 27.57), 217], [new mp.Vector3(5272.77, -5261.83, 28.67), 272], [new mp.Vector3(5278.17, -5285.01, 31.04), 298], [new mp.Vector3(5284.99, -5293.98, 32.26), 311], [new mp.Vector3(5294.35, -5306.25, 34.13), 242], [new mp.Vector3(5301.34, -5313.67, 35.19), 320], [new mp.Vector3(5309.08, -5315.97, 35.47), 10], [new mp.Vector3(5315.01, -5314.35, 35.87), 29], [new mp.Vector3(5320.45, -5310.95, 36.05), 336], [new mp.Vector3(5335.59, -5302.39, 36.51), 46], [new mp.Vector3(5339.92, -5299.90, 36.68), 24], [new mp.Vector3(5348.61, -5301.59, 37.23), 36], [new mp.Vector3(5363.26, -5292.02, 34.87), 61], [new mp.Vector3(5375.14, -5277.79, 34.78), 57], [new mp.Vector3(5388.76, -5259.67, 34.66), 68], [new mp.Vector3(5381.93, -5269.25, 34.61), 82], [new mp.Vector3(5395.42, -5254.91, 34.83), 25]];
-const HALLOWEEN_ZOMBIES_MODELS = exports.HALLOWEEN_ZOMBIES_MODELS = ["u_m_o_filmnoir", "ig_johnnyklebitz", "s_m_m_movalien_01", "u_m_y_zombie_01", "u_f_m_drowned_01", "s_m_m_strperf_01", "u_f_y_corpse_01", "u_m_m_prolsec_01"];
-const HALLOWEEN_PORTALS_ZOMBIES_GOAL = exports.HALLOWEEN_PORTALS_ZOMBIES_GOAL = 20;
-const HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = exports.HALLOWEEN_PORTALS_QUEST_BAG_REWARD_ITEM_ID = 2088;
-const HALLOWEEN_ZOMBIES_DAMAGE = exports.HALLOWEEN_ZOMBIES_DAMAGE = 30;
-const HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = exports.HALLOWEEN_PLAYER_TO_ZOMBIES_DAMAGE = 20;
-const HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = exports.HALLOWEEN_ZOMBIES_EVENT_GROUP_LENGTH = 5;
-},{}],"aUAa":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.onyxCreateObject = onyxCreateObject;
-var _interact = require("./interact");
-const queue = [];
-mp.events.add('entityStreamIn', entity => {
-  if (!entity || !entity.handle || entity.type !== _interact.ENTITY_TYPES.OBJECT) {
-    return;
-  }
-  const idx = queue.findIndex(el => el.obj === entity);
-  if (idx === -1) {
-    return;
-  }
-  queue[idx].handler(entity);
-  queue.splice(idx, 1);
-});
-function onyxCreateObject(model, position, handler, options) {
-  const object = mp.objects.new(model, position, options);
-  object.notifyStreaming = true;
-  queue.push({
-    obj: object,
-    handler
-  });
-  return object;
-}
-},{"./interact":"m19G"}],"uWgG":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Ghost = void 0;
-var _objects = require("../../../../objects");
-const pool = [];
-const deleteFromPool = ghost => {
-  const idx = pool.findIndex(el => el === ghost);
-  if (idx !== -1) {
-    pool.splice(idx, 1);
-  }
-};
-class Ghost {
-  constructor(health, model, position, destroyHandler) {
-    this._alive = false;
-    this.handleStreamIn = object => {
-      if (object !== this._object) {
-        return;
-      }
-      this._alive = true;
-    };
-    this._destroyHandler = destroyHandler;
-    this._health = health;
-    this._object = (0, _objects.onyxCreateObject)(model, position[0], this.handleStreamIn, {
-      alpha: 200,
-      dimension: mp.players.local.dimension,
-      rotation: new mp.Vector3(0, 0, position[1])
-    });
-    pool.push(this);
-  }
-  get alive() {
-    return this._alive;
-  }
-  get position() {
-    if (!this._object || !this._object.handle) {
-      return null;
-    }
-    return this._object.getCoords(false);
-  }
-  destroy() {
-    if (!this._alive) {
-      return;
-    }
-    this._alive = false;
-    if (this._object && this._object.handle) {
-      this._object.destroy();
-    }
-    deleteFromPool(this);
-    this._destroyHandler(this._health);
-  }
-  slide(targetPosition) {
-    this._slidePosition = targetPosition;
-  }
-  handleRender() {
-    if (this.alive && this._object && this._object.handle) {
-      const isSlideEnd = this._object.slide(this._slidePosition.x, this._slidePosition.y, this._slidePosition.z, 0.01, 0.01, 0.01, false);
-      if (isSlideEnd) {
-        this.destroy();
-      }
-    }
-  }
-  applyDamage(damage) {
-    this._health -= damage;
-    return this._health <= 0;
-  }
-}
-exports.Ghost = Ghost;
-mp.events.add('render', () => {
-  for (let ghost of pool) {
-    ghost.handleRender();
-  }
-});
-},{"../../../../objects":"aUAa"}],"KZ9N":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.disableHalloweenWeather = disableHalloweenWeather;
-exports.enableHalloweenWeather = enableHalloweenWeather;
-var _world = require("../../../world");
-const QUEST_TIME_HOUR = 0;
-async function enableHalloweenWeather(transitionTimeS) {
-  _world.weather.ignoreServerWeather = true;
-  mp.game.gameplay.setWeatherTypeOverTime('HALLOWEEN', transitionTimeS);
-  setTimeout(() => {
-    mp.game.gameplay.setWeatherTypeNow('HALLOWEEN');
-    mp.game.gameplay.setWeatherTypeNowPersist('HALLOWEEN');
-  }, (transitionTimeS - 1) * 1000);
-  mp.game.time.pauseClock(true);
-  await _world.weather.smoothTimeTransition(_world.weather.realHour, _world.weather.realMinute, QUEST_TIME_HOUR, true);
-}
-async function disableHalloweenWeather(transitionTimeS) {
-  mp.game.gameplay.setWeatherTypeOverTime(_world.weather.weather, transitionTimeS);
-  setTimeout(() => {
-    mp.game.gameplay.setWeatherTypeNow(_world.weather.weather);
-    mp.game.gameplay.setWeatherTypeNowPersist(_world.weather.weather);
-  }, (transitionTimeS - 1) * 1000);
-  mp.game.time.pauseClock(false);
-  await _world.weather.smoothTimeTransition(QUEST_TIME_HOUR, 0, _world.weather.realHour, false);
-}
-},{"../../../world":"j6No"}],"Kh8J":[function(require,module,exports) {
-"use strict";
-
-var _custom = require("../../../../custom.event");
-var _halloween = require("../../../../../../shared/events/halloween.config");
-var _system = require("../../../../../../shared/system");
-var _ghost = require("./ghost");
-var _raycast = require("../../../../raycast");
-var _fps = require("../../../../fps");
-var _user = require("../../../../user");
-var _common = require("../common");
-const GHOST_RADIUS = 2.5;
-const gameplayCamera = mp.cameras.new('gameplay');
-let isQuestEnabled = false;
-let ghost = null;
-let questSuit = null;
-let last_health = _halloween.GHOST_HEALTH;
-setInterval(() => {
-  if (!isQuestEnabled || ghost !== null) {
-    return;
-  }
-  createGhost();
-}, 5000);
-_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_START_GHOSTS_DESTROY_EVENT, () => {
-  if (mp.players.local.isInAnyVehicle(false)) {
-    mp.players.local.taskLeaveVehicle(mp.players.local.vehicle.handle, 256);
-    setTimeout(() => {
-      startQuest();
-    }, 2000);
-  } else {
-    startQuest();
-  }
-});
-function startQuest() {
-  isQuestEnabled = true;
-  (0, _common.enableHalloweenWeather)(20);
-  givePlayerQuestSuit();
-  createGhost();
-}
-async function givePlayerQuestSuit() {
-  const playerPos = mp.players.local.position;
-  const objectH = mp.game.object.createObject(mp.game.joaat(_halloween.GHOSTBUSTERS_BACKPACK_MODEL), playerPos.x, playerPos.y, playerPos.z - 10, true, true, true);
-  const object = mp.objects.newWeak(objectH);
-  while (!object.handle) {
-    await mp.game.waitAsync(10);
-  }
-  const boneIndex = mp.players.local.getBoneIndex(64729);
-  object.attachTo(mp.players.local.handle, boneIndex, 0.035, -0.190, 0.260, 356, 156, 173, false, false, false, false, 2, true);
-  questSuit = {
-    backpackObject: object
-  };
-  (0, _user.giveWeaponLocally)('weapon_rayminigun', 0, true);
-}
-function createGhost() {
-  const position = _system.systemUtil.randomArrayElement(_halloween.GHOST_APPEARS_POSITIONS);
-  ghost = new _ghost.Ghost(last_health, _halloween.GHOST_MODEL, position, healthLeft => {
-    last_health = healthLeft > 0 ? healthLeft : _halloween.GHOST_HEALTH;
-    ghost = null;
-  });
-  const targetPosition = _system.systemUtil.randomArrayElement(_halloween.GHOST_APPEARS_POSITIONS);
-  ghost.slide(targetPosition[0]);
-}
-_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_END_GHOSTS_DESTROY_EVENT, () => {
-  isQuestEnabled = false;
-  if (questSuit) {
-    questSuit.backpackObject.destroy();
-  }
-  questSuit = null;
-  if (ghost && ghost.alive) {
-    ghost.destroy();
-    ghost = null;
-  }
-  (0, _user.clearAllWeapons)();
-  (0, _common.disableHalloweenWeather)(20);
-});
-mp.events.add('render', () => {
-  if (!questSuit) {
-    return;
-  }
-  mp.game.controls.disableControlAction(0, 24, true);
-  if (mp.game.controls.isControlPressed(0, 25) && mp.game.controls.isDisabledControlPressed(0, 24)) {
-    tryDamageGhost();
-  }
-});
-function tryDamageGhost() {
-  if (!ghost || !ghost.alive) {
-    return;
-  }
-  if (isAimingOnGhost()) {
-    const isDead = ghost.applyDamage(_halloween.GHOST_DAMAGE_PER_SECOND / _fps.FPS.fps);
-    if (isDead) {
-      ghost.destroy();
-      _custom.CustomEvent.triggerServer(_halloween.HALLOWEEN_DESTROY_GHOST_EVENT);
-    }
-  }
-}
-function isAimingOnGhost() {
-  const ghostPos = ghost.position;
-  if (!ghostPos) {
-    return false;
-  }
-  const lookAtPosition = _raycast.Raycast.getPositionLookAt();
-  const cameraPosition = gameplayCamera.getCoord();
-  const raycastResult = mp.raycasting.testPointToPoint(cameraPosition, lookAtPosition);
-  if (!raycastResult) {
-    return false;
-  }
-  const surfacePosition = raycastResult.position;
-  if (surfacePosition) {
-    playRailgunFx(surfacePosition);
-  }
-  const lineDist = _system.systemUtil.distanceToPos(cameraPosition, surfacePosition);
-  let t = ((ghostPos.x - cameraPosition.x) * (surfacePosition.x - cameraPosition.x) + (ghostPos.y - cameraPosition.y) * (surfacePosition.y - cameraPosition.y) + (ghostPos.z - cameraPosition.z) * (surfacePosition.z - cameraPosition.z)) / lineDist;
-  t = Math.max(0, Math.min(1, t));
-  const dist = _system.systemUtil.distanceToPos(ghostPos, {
-    x: cameraPosition.x + t * (surfacePosition.x - cameraPosition.x),
-    y: cameraPosition.y + t * (surfacePosition.y - cameraPosition.y),
-    z: cameraPosition.z + t * (surfacePosition.z - cameraPosition.z)
-  });
-  return dist <= GHOST_RADIUS;
-}
-let ptfxHandle = null;
-function playRailgunFx(position) {
-  if (!mp.game.streaming.hasNamedPtfxAssetLoaded('weap_xs_weapons')) {
-    mp.game.streaming.requestNamedPtfxAsset('weap_xs_weapons');
-  }
-  const camRotation = gameplayCamera.getRot(4);
-  if (ptfxHandle) {
-    return;
-  }
-  mp.game.graphics.setPtfxAssetNextCall('weap_xs_weapons');
-  ptfxHandle = mp.game.graphics.startParticleFxLoopedAtCoord('proj_xs_sr_raygun_trail', position.x, position.y, position.z, -camRotation.x, camRotation.y, camRotation.z + 90, 1, false, false, false, false);
-  setTimeout(() => {
-    mp.game.graphics.removeParticleFx(ptfxHandle, true);
-    ptfxHandle = null;
-  }, 50);
-}
-},{"../../../../custom.event":"py8h","../../../../../../shared/events/halloween.config":"QZWk","../../../../../../shared/system":"SNxO","./ghost":"uWgG","../../../../raycast":"ghdA","../../../../fps":"JiGH","../../../../user":"ggMw","../common":"KZ9N"}],"mD5O":[function(require,module,exports) {
-"use strict";
-
-var _peds = require("../../../../peds");
-var _custom = require("../../../../custom.event");
-var _system = require("../../../../../../shared/system");
-var _zombiesDemolition = require("./zombiesDemolition");
-const PLAYER_GROUP = 'playersTeam';
-const ZOMBIE_GROUP = 'zombiesGroup';
-const PLAYER_GROUP_HASH = mp.game.joaat('playersTeam');
-const ZOMBIE_GROUP_HASH = mp.game.joaat('zombiesGroup');
-mp.events.add('playerReady', () => {
-  mp.game.ped.addRelationshipGroup(PLAYER_GROUP, PLAYER_GROUP_HASH);
-  mp.game.ped.addRelationshipGroup(ZOMBIE_GROUP, ZOMBIE_GROUP_HASH);
-  mp.game.ped.setRelationshipBetweenGroups(0, ZOMBIE_GROUP_HASH, PLAYER_GROUP_HASH);
-  mp.game.ped.setRelationshipBetweenGroups(2, PLAYER_GROUP_HASH, ZOMBIE_GROUP_HASH);
-});
-mp.events.add('playerWeaponShot', (targetPosition, targetEntity) => {
-  try {
-    if (mp.players.local.dimension === 0) {
-      return;
-    }
-    mp.peds.toArray().forEach(ped => {
-      if (!ped || !ped.handle || !ped.getVariable('halloweenZombie')) {
-        return;
-      }
-      if (ped.isDead()) {
-        return;
-      }
-      if (mp.game.player.isFreeAimingAtEntity(ped.handle)) {
-        _custom.CustomEvent.triggerServer('halloween:damageZombie', ped.remoteId);
-      }
-    });
-  } catch (e) {}
-});
-_custom.CustomEvent.registerServer('halloween:killZombie', pedRemoteId => {
-  try {
-    mp.peds.toArray().forEach(ped => {
-      if (!ped || !mp.peds.exists(ped) || ped.remoteId !== pedRemoteId) {
-        return;
-      }
-      ped.applyDamageTo(200, true);
-    });
-  } catch (e) {}
-});
-function startPedControlling(ped) {
-  try {
-    if (!verifyZombiePed(ped)) {
-      return;
-    }
-    applyZombiePedAttributes(ped);
-    applyZombieRelations(ped);
-    const distanceToAttack = 2;
-    const interval = setInterval(() => {
-      try {
-        if (mp.players.local.dimension === 0) {
-          clearInterval(interval);
-          return;
-        }
-        if (!ped || !ped.handle || ped.isDead()) {
-          clearInterval(interval);
-          return;
-        }
-        const target = getNearestPlayer(ped.getCoordsAutoAlive());
-        if (!target) {
-          return;
-        }
-        const tPos = target.position;
-        if (_system.systemUtil.distanceToPos(ped.getCoordsAutoAlive(), tPos) < distanceToAttack) {
-          mp.game.streaming.requestAnimDict('misscarsteal4@actor');
-          ped.taskPlayAnim("misscarsteal4@actor", "stumble", 1.5, 1.0, 500, 9, 1.0, false, false, false);
-          _custom.CustomEvent.triggerServer('halloween:zombieDamage', target.remoteId);
-        } else {
-          ped.taskGoToCoordAnyMeans(tPos.x, tPos.y, tPos.z, 4.0, 0.0, true, 1.0, 0);
-        }
-      } catch (e) {
-        return;
-      }
-    }, 2000);
-  } catch (e) {}
-}
-function applyZombiePedAttributes(ped) {
-  ped.setInvincible(false);
-  ped.setCanBeDamaged(false);
-  ped.freezePosition(false);
-  ped.setCanRagdoll(true);
-  ped.setCanRagdollFromPlayerImpact(false);
-  mp.game.invoke('0x26695EC767728D84', ped.handle, 1);
-  ped.setCombatAbility(0);
-  ped.setCombatMovement(0);
-  ped.setCombatRange(0);
-  mp.game.invoke('0x95D2D383D5396B8A', ped.handle, true);
-  ped.setBlockingOfNonTemporaryEvents(true);
-  for (let i = 0; i < 64; i += 2) {
-    ped.setFleeAttributes(i, false);
-  }
-  ped.setFleeAttributes(0, false);
-  ped.setMovementClipset(_zombiesDemolition.ZOMBIES_MOVEMENT_CLIPSET, 1.0);
-}
-function applyZombieRelations(ped) {
-  ped.setRelationshipGroupHash(ZOMBIE_GROUP_HASH);
-  mp.players.forEach(player => {
-    if (player.dimension !== mp.players.local.dimension) {
-      return;
-    }
-    player.setRelationshipGroupHash(PLAYER_GROUP_HASH);
-  });
-}
-function getNearestPlayer(position) {
-  var _mp$players$toArray$f;
-  return (_mp$players$toArray$f = mp.players.toArray().filter(player => (player === null || player === void 0 ? void 0 : player.handle) && player.dimension === mp.players.local.dimension).map(player => ({
-    player: player,
-    dist: _system.systemUtil.distanceToPos(position, player.position)
-  })).sort((a, b) => a.dist - b.dist)[0]) === null || _mp$players$toArray$f === void 0 ? void 0 : _mp$players$toArray$f.player;
-}
-function verifyZombiePed(ped) {
-  if ((ped === null || ped === void 0 ? void 0 : ped.type) !== 'ped') return false;
-  if (!ped.handle) return false;
-  if (!ped.getVariable('halloweenZombie')) {
-    return false;
-  }
-  if (!(0, _peds.isPedMy)(ped)) {
-    return false;
-  }
-  return true;
-}
-mp.events.add('entityControllerChange', (ped, controller) => {
-  if (mp.players.local.dimension === 0) {
-    return;
-  }
-  startPedControlling(ped);
-});
-mp.events.add('entityStreamIn', ped => {
-  startPedControlling(ped);
-});
-},{"../../../../peds":"ds7w","../../../../custom.event":"py8h","../../../../../../shared/system":"SNxO","./zombiesDemolition":"CYX4"}],"CYX4":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ZOMBIES_MOVEMENT_CLIPSET = void 0;
-require("./zombiesController");
-var _custom = require("../../../../custom.event");
-var _halloween = require("../../../../../../shared/events/halloween.config");
-var _common = require("../common");
-const ZOMBIES_MOVEMENT_CLIPSET = exports.ZOMBIES_MOVEMENT_CLIPSET = 'move_heist_lester';
-_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_ENTER_PORTAL_EVENT, () => {
-  loadZombiesClipSet();
-  (0, _common.enableHalloweenWeather)(20);
-});
-_custom.CustomEvent.registerServer(_halloween.HALLOWEEN_EXIT_PORTAL_EVENT, () => {
-  (0, _common.disableHalloweenWeather)(20);
-});
-async function loadZombiesClipSet() {
-  while (!mp.game.streaming.hasClipSetLoaded(ZOMBIES_MOVEMENT_CLIPSET)) {
-    await mp.game.waitAsync(10);
-  }
-}
-mp.events.add('entityStreamIn', ped => {
-  try {
-    if (!(ped !== null && ped !== void 0 && ped.getVariable('halloweenZombie'))) {
-      return;
-    }
-    drawPedBlood(ped);
-  } catch (e) {}
-});
-function drawPedBlood(ped) {
-  mp.game.invoke('0x46DF918788CB093F', ped.handle, "BigHitByVehicle", 0.0, 9.0);
-  mp.game.invoke('0x46DF918788CB093F', ped.handle, "SCR_Dumpster", 0.0, 9.0);
-  mp.game.invoke('0x46DF918788CB093F', ped.handle, "SCR_Torture", 0.0, 9.0);
-}
-_custom.CustomEvent.registerServer('halloween:applyDamageByZombie', () => {
-  try {
-    if (mp.players.local.health <= 0) {
-      return;
-    }
-    if (mp.players.local.health < _halloween.HALLOWEEN_ZOMBIES_DAMAGE) {
-      mp.players.local.applyDamageTo(mp.players.local.health + 1, true);
-    } else {
-      mp.players.local.applyDamageTo(_halloween.HALLOWEEN_ZOMBIES_DAMAGE, true);
-    }
-  } catch (e) {}
-});
-},{"./zombiesController":"mD5O","../../../../custom.event":"py8h","../../../../../../shared/events/halloween.config":"QZWk","../common":"KZ9N"}],"xqVl":[function(require,module,exports) {
-"use strict";
-
-require("./quests/ghosts/ghosts.quest");
-require("./quests/zombies/zombiesDemolition");
-},{"./quests/ghosts/ghosts.quest":"Kh8J","./quests/zombies/zombiesDemolition":"CYX4"}],"MzZK":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.WEAPON_UNARMED_HASH = exports.WEAPON_UNARMED = exports.WEAPON_SNOWBALL_HASH = exports.WEAPON_SNOWBALL = exports.SNOWBALL_ANIMATION = void 0;
-const WEAPON_UNARMED_HASH = exports.WEAPON_UNARMED_HASH = -1569615261;
-const WEAPON_SNOWBALL_HASH = exports.WEAPON_SNOWBALL_HASH = 126349499;
-const WEAPON_UNARMED = exports.WEAPON_UNARMED = 'weapon_unarmed';
-const WEAPON_SNOWBALL = exports.WEAPON_SNOWBALL = 'weapon_snowball';
-const SNOWBALL_ANIMATION = exports.SNOWBALL_ANIMATION = {
-  dictionary: 'anim@mp_snowball',
-  name: 'pickup_snowball',
-  durationSec: 2000
-};
-},{}],"lhDV":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Snowballs = void 0;
-var _custom = require("../../../custom.event");
-var _user = require("../../../user");
-var _snowballs = require("../../../../../shared/events/newYear/snowballs.config");
-class Snowballs {
-  constructor() {
-    this.inHand = false;
-    this.player = mp.players.local;
-    this.weapon = 2725352035;
-    _custom.CustomEvent.register('snowball', () => this.createHandle());
-    _custom.CustomEvent.registerServer('snowballs:weaponChange', (oldWeapon, newWeapon) => this.weaponChangeHandle(oldWeapon, newWeapon));
-    mp.events.add('playerWeaponShot', () => this.weaponShotHandle());
-  }
-  weaponShotHandle() {
-    if (this.inHand) {
-      this.inHand = false;
-      _custom.CustomEvent.triggerServer('snowballs:reset');
-      this.weapon = 2725352035;
-    }
-  }
-  async createHandle() {
-    if (this.inHand) return _user.user.notify('У вас уже есть снежок', 'error');
-    if (this.player.vehicle) return _user.user.notify('Выйдите из машины, чтобы слепить снежок', 'error');
-    if (mp.raycasting.testPointToPoint(this.player.position, new mp.Vector3(this.player.position.x, this.player.position.y, 797), null, 1)) return _user.user.notify('Чтобы слепить снежок, необходимо находиться под открытым небом', 'error');
-    if (this.weapon !== 2725352035) return _user.user.notify('Уберите оружие из рук, чтобы слепить снежок', 'error');
-    _user.user.playAnim([[_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name]], false, false);
-    while (true) {
-      if (this.player.isPlayingAnim(_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name, 3) && this.player.getAnimCurrentTime(_snowballs.SNOWBALL_ANIMATION.dictionary, _snowballs.SNOWBALL_ANIMATION.name) > 0.75) {
-        _custom.CustomEvent.triggerServer('snowballs:give');
-        this.inHand = true;
-        break;
-      }
-      await mp.game.waitAsync(0);
-    }
-  }
-  weaponChangeHandle(oldWeapon, newWeapon) {
-    this.weapon = newWeapon;
-    if (oldWeapon === _snowballs.WEAPON_SNOWBALL_HASH && this.inHand) this.inHand = false;
-  }
-}
-exports.Snowballs = Snowballs;
-},{"../../../custom.event":"py8h","../../../user":"ggMw","../../../../../shared/events/newYear/snowballs.config":"MzZK"}],"tE0d":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.NEW_YEAR_EXCHANGE_ACTIVE = exports.NEW_YEAR_EVENT_BLIP_SPRITE = exports.NEW_YEAR_EVENT_BLIP_POSITION = exports.NEW_YEAR_EVENT_BLIP_OPTIONS = exports.GREETING_COLOR = exports.EVENT_IS_ACTIVE = void 0;
-const EVENT_IS_ACTIVE = exports.EVENT_IS_ACTIVE = false;
-const NEW_YEAR_EXCHANGE_ACTIVE = exports.NEW_YEAR_EXCHANGE_ACTIVE = true;
-const GREETING_COLOR = exports.GREETING_COLOR = "ff5a3d";
-const NEW_YEAR_EVENT_BLIP_SPRITE = exports.NEW_YEAR_EVENT_BLIP_SPRITE = 304;
-const NEW_YEAR_EVENT_BLIP_POSITION = exports.NEW_YEAR_EVENT_BLIP_POSITION = new mp.Vector3(1669.18, 3691.57, 34.25);
-const NEW_YEAR_EVENT_BLIP_OPTIONS = exports.NEW_YEAR_EVENT_BLIP_OPTIONS = {
-  color: 75,
-  dimension: 0,
-  name: "Санта Клаус",
-  shortRange: true
-};
-},{}],"sE8r":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.NEW_YEAR_SPANISH_NPC_NAME = exports.NEW_YEAR_SPANISH_NPC_ID = exports.NEW_YEAR_SIXTH_QUEST_WORD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_NAME = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = exports.NEW_YEAR_SIXTH_QUEST_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_JOB_GOAL = exports.NEW_YEAR_SIXTH_QUEST_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = exports.NEW_YEAR_SIXTH_QUEST_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = exports.NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = exports.NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = exports.NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SECOND_QUEST_NAME = exports.NEW_YEAR_SECOND_QUEST_ID = exports.NEW_YEAR_SECOND_QUEST_CARRY_GOAL = exports.NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_SECOND_QUEST_BANANA_GOAL = exports.NEW_YEAR_SANTA_NPC_PARAMETERS = exports.NEW_YEAR_SANTA_NPC_NAME = exports.NEW_YEAR_SANTA_NPC_ID = exports.NEW_YEAR_MEGATRON_NPC_PARAMETERS = exports.NEW_YEAR_MEGATRON_NPC_NAME = exports.NEW_YEAR_MEGATRON_NPC_ID = exports.NEW_YEAR_HOMELESS_NPC_PARAMETERS = exports.NEW_YEAR_HOMELESS_NPC_NAME = exports.NEW_YEAR_HOMELESS_NPC_ID = exports.NEW_YEAR_HARRY_NPC_PARAMETERS = exports.NEW_YEAR_HARRY_NPC_NAME = exports.NEW_YEAR_HARRY_NPC_ID = exports.NEW_YEAR_GALILEO_NPC_RANGE = exports.NEW_YEAR_GALILEO_NPC_POSITION = exports.NEW_YEAR_GALILEO_NPC_NAME = exports.NEW_YEAR_GALILEO_NPC_MODEL = exports.NEW_YEAR_GALILEO_NPC_HEADING = exports.NEW_YEAR_GALILEO_NPC_DIMENSION = exports.NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FOURTH_QUEST_NAME = exports.NEW_YEAR_FOURTH_QUEST_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = exports.NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = exports.NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_TREES_GOAL = exports.NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIRST_QUEST_NAME = exports.NEW_YEAR_FIRST_QUEST_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_GOAL = exports.NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = exports.NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_TYPE = exports.NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_GOAL = exports.NEW_YEAR_FIFTH_QUEST_ID = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = exports.NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_COLA_GOAL = exports.NEW_YEAR_BOLVANKA_NPC_PARAMETERS = exports.NEW_YEAR_BOLVANKA_NPC_NAME = exports.NEW_YEAR_BOLVANKA_NPC_ID = exports.NEW_YEAR_ARIEL_NPC_PARAMETERS = exports.NEW_YEAR_ARIEL_NPC_NAME = exports.NEW_YEAR_ARIEL_NPC_ID = void 0;
-exports.NEW_YEAR_WORD_NPC_RANGE = exports.NEW_YEAR_WORD_NPC_POSITION = exports.NEW_YEAR_WORD_NPC_NAME = exports.NEW_YEAR_WORD_NPC_MODEL = exports.NEW_YEAR_WORD_NPC_HEADING = exports.NEW_YEAR_WORD_NPC_DIMENSION = exports.NEW_YEAR_THIRD_QUEST_VALID_WORD = exports.NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_THIRD_QUEST_NAME = exports.NEW_YEAR_THIRD_QUEST_ID = exports.NEW_YEAR_THIRD_QUEST_HUD_NAME = exports.NEW_YEAR_SPANISH_NPC_PARAMETERS = void 0;
-const NEW_YEAR_SANTA_NPC_ID = exports.NEW_YEAR_SANTA_NPC_ID = 'new-year-santa';
-const NEW_YEAR_SANTA_NPC_NAME = exports.NEW_YEAR_SANTA_NPC_NAME = 'Санта Клаус';
-const NEW_YEAR_SANTA_NPC_PARAMETERS = exports.NEW_YEAR_SANTA_NPC_PARAMETERS = {
-  Position: new mp.Vector3(1674.40, 3684.91, 34.32),
-  Heading: 5,
-  Model: 's_m_y_clown_01',
-  Name: NEW_YEAR_SANTA_NPC_NAME
-};
-const NEW_YEAR_HARRY_NPC_ID = exports.NEW_YEAR_HARRY_NPC_ID = 'new-year-harry';
-const NEW_YEAR_HARRY_NPC_NAME = exports.NEW_YEAR_HARRY_NPC_NAME = 'Гарри';
-const NEW_YEAR_HARRY_NPC_PARAMETERS = exports.NEW_YEAR_HARRY_NPC_PARAMETERS = {
-  Position: new mp.Vector3(2220.25, 5609.61, 54.71),
-  Heading: 117,
-  Model: 'ig_isldj_02',
-  Name: NEW_YEAR_HARRY_NPC_NAME
-};
-const NEW_YEAR_WORD_NPC_POSITION = exports.NEW_YEAR_WORD_NPC_POSITION = new mp.Vector3(63.42, 118.50, 79.11);
-const NEW_YEAR_WORD_NPC_HEADING = exports.NEW_YEAR_WORD_NPC_HEADING = 140;
-const NEW_YEAR_WORD_NPC_MODEL = exports.NEW_YEAR_WORD_NPC_MODEL = 's_m_m_postal_01';
-const NEW_YEAR_WORD_NPC_NAME = exports.NEW_YEAR_WORD_NPC_NAME = 'Руслан';
-const NEW_YEAR_WORD_NPC_RANGE = exports.NEW_YEAR_WORD_NPC_RANGE = 1.5;
-const NEW_YEAR_WORD_NPC_DIMENSION = exports.NEW_YEAR_WORD_NPC_DIMENSION = 0;
-const NEW_YEAR_HOMELESS_NPC_ID = exports.NEW_YEAR_HOMELESS_NPC_ID = 'new-year-marv';
-const NEW_YEAR_HOMELESS_NPC_NAME = exports.NEW_YEAR_HOMELESS_NPC_NAME = 'Марв';
-const NEW_YEAR_HOMELESS_NPC_PARAMETERS = exports.NEW_YEAR_HOMELESS_NPC_PARAMETERS = {
-  Position: new mp.Vector3(1099.42, -775.49, 58.35),
-  Heading: 183,
-  Model: 'a_m_m_tramp_01',
-  Name: NEW_YEAR_HOMELESS_NPC_NAME
-};
-const NEW_YEAR_SPANISH_NPC_ID = exports.NEW_YEAR_SPANISH_NPC_ID = 'new-year-abelardo';
-const NEW_YEAR_SPANISH_NPC_NAME = exports.NEW_YEAR_SPANISH_NPC_NAME = 'Абелардо';
-const NEW_YEAR_SPANISH_NPC_PARAMETERS = exports.NEW_YEAR_SPANISH_NPC_PARAMETERS = {
-  Position: new mp.Vector3(-1069.57, -1675.77, 4.54),
-  Heading: 29,
-  Model: 's_m_o_busker_01',
-  Name: NEW_YEAR_SPANISH_NPC_NAME
-};
-const NEW_YEAR_FIRST_QUEST_ID = exports.NEW_YEAR_FIRST_QUEST_ID = 'new-year-first-quest';
-const NEW_YEAR_FIRST_QUEST_NAME = exports.NEW_YEAR_FIRST_QUEST_NAME = 'Ёлкоруб';
-const NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COGNAC_ITEM_ID = 215;
-const NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = exports.NEW_YEAR_FIRST_QUEST_COGNAC_GOAL = 1;
-const NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_DONUT_ITEM_ID = 26;
-const NEW_YEAR_FIRST_QUEST_DONUT_GOAL = exports.NEW_YEAR_FIRST_QUEST_DONUT_GOAL = 1;
-const NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_COFFEE_ITEM_ID = 5;
-const NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = exports.NEW_YEAR_FIRST_QUEST_COFFEE_GOAL = 1;
-const NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = exports.NEW_YEAR_FIRST_QUEST_TREES_ITEM_ID = 7011;
-const NEW_YEAR_FIRST_QUEST_TREES_GOAL = exports.NEW_YEAR_FIRST_QUEST_TREES_GOAL = 20;
-const NEW_YEAR_SECOND_QUEST_ID = exports.NEW_YEAR_SECOND_QUEST_ID = 'new-year-second-quest';
-const NEW_YEAR_SECOND_QUEST_NAME = exports.NEW_YEAR_SECOND_QUEST_NAME = 'Фейхоа или...';
-const NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_SECOND_QUEST_BANANA_ITEM_ID = 25;
-const NEW_YEAR_SECOND_QUEST_BANANA_GOAL = exports.NEW_YEAR_SECOND_QUEST_BANANA_GOAL = 15;
-const NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FIRST = new mp.Vector3(2220.48, 5578.52, 52.72);
-const NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_SECOND = new mp.Vector3(2225.49, 5578.14, 52.70);
-const NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_THIRD = new mp.Vector3(2231.56, 5575.46, 52.80);
-const NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = exports.NEW_YEAR_SECOND_QUEST_WEED_POSITION_FOURTH = new mp.Vector3(2223.74, 5575.85, 52.62);
-const NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = exports.NEW_YEAR_SECOND_QUEST_WEED_ANIMATION_DATA = {
-  dictionary: 'anim@heists@money_grab@duffel',
-  name: 'loop',
-  durationSec: 5
-};
-const NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = exports.NEW_YEAR_SECOND_QUEST_WEED_HELP_TEXT = "Неизвестная трава";
-const NEW_YEAR_SECOND_QUEST_CARRY_GOAL = exports.NEW_YEAR_SECOND_QUEST_CARRY_GOAL = 2;
-const NEW_YEAR_THIRD_QUEST_ID = exports.NEW_YEAR_THIRD_QUEST_ID = 'new-year-third-quest';
-const NEW_YEAR_THIRD_QUEST_NAME = exports.NEW_YEAR_THIRD_QUEST_NAME = 'Сайфер или как найти нужное слово';
-const NEW_YEAR_THIRD_QUEST_VALID_WORD = exports.NEW_YEAR_THIRD_QUEST_VALID_WORD = 'dashound';
-const NEW_YEAR_THIRD_QUEST_HUD_NAME = exports.NEW_YEAR_THIRD_QUEST_HUD_NAME = 'Найти кодовое слово из песни';
-const NEW_YEAR_FOURTH_QUEST_ID = exports.NEW_YEAR_FOURTH_QUEST_ID = 'new-year-fourth-quest';
-const NEW_YEAR_FOURTH_QUEST_NAME = exports.NEW_YEAR_FOURTH_QUEST_NAME = 'Испанский стыд';
-const NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_ITEM_ID = 20;
-const NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_COLA_ITEM_ID = 2;
-const NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = exports.NEW_YEAR_FOURTH_QUEST_CHEESE_BURGER_GOAL = 2;
-const NEW_YEAR_FOURTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_COLA_GOAL = 2;
-const NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = exports.NEW_YEAR_FOURTH_QUEST_BANANA_ITEM_ID = 25;
-const NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = exports.NEW_YEAR_FOURTH_QUEST_BANANA_GOAL = 15;
-const NEW_YEAR_FIFTH_QUEST_ID = exports.NEW_YEAR_FIFTH_QUEST_ID = 'new-year-fifth-quest';
-const NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_ID = 'new-year-fifth-quest-first';
-const NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_ID = 'new-year-fifth-quest-second';
-const NEW_YEAR_FIFTH_QUEST_NAME = exports.NEW_YEAR_FIFTH_QUEST_NAME = 'Новогодний переполох';
-const NEW_YEAR_MEGATRON_NPC_ID = exports.NEW_YEAR_MEGATRON_NPC_ID = 'new-year-megatron';
-const NEW_YEAR_MEGATRON_NPC_NAME = exports.NEW_YEAR_MEGATRON_NPC_NAME = 'Мегатрон';
-const NEW_YEAR_MEGATRON_NPC_PARAMETERS = exports.NEW_YEAR_MEGATRON_NPC_PARAMETERS = {
-  Position: new mp.Vector3(-420.54, 1219.48, 325.76),
-  Heading: 176,
-  Model: 'a_m_m_genfat_02',
-  Name: NEW_YEAR_MEGATRON_NPC_NAME
-};
-const NEW_YEAR_BOLVANKA_NPC_ID = exports.NEW_YEAR_BOLVANKA_NPC_ID = 'new-year-bolvanka';
-const NEW_YEAR_BOLVANKA_NPC_NAME = exports.NEW_YEAR_BOLVANKA_NPC_NAME = 'Охранник';
-const NEW_YEAR_BOLVANKA_NPC_PARAMETERS = exports.NEW_YEAR_BOLVANKA_NPC_PARAMETERS = {
-  Position: new mp.Vector3(722.53, 1291.67, 360.30),
-  Heading: 181,
-  Model: 'csb_prologuedriver',
-  Name: NEW_YEAR_BOLVANKA_NPC_NAME
-};
-const NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_POSITION = new mp.Vector3(714.02, 1285.84, 359.30);
-const NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_ANIMATION_DATA = {
-  dictionary: 'missbigscore1switch_trevor_piss',
-  name: 'piss_loop',
-  durationSec: 10
-};
-const NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HELP_TEXT = 'Пытаемся разобраться с проводами';
-const NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_FIFTH_QUEST_COLLECT_HUD_TEXT = 'Найти нужный электрощиток';
-const NEW_YEAR_FIFTH_QUEST_JOB_TYPE = exports.NEW_YEAR_FIFTH_QUEST_JOB_TYPE = 'electrician';
-const NEW_YEAR_FIFTH_QUEST_JOB_GOAL = exports.NEW_YEAR_FIFTH_QUEST_JOB_GOAL = 30;
-const NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_FIFTH_QUEST_JOB_HUD_NAME = 'Поработать на электрике';
-const NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_ITEM_ID = 24;
-const NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_PIZZA_GOAL = 2;
-const NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_COLA_ITEM_ID = 2;
-const NEW_YEAR_FIFTH_QUEST_COLA_GOAL = exports.NEW_YEAR_FIFTH_QUEST_COLA_GOAL = 3;
-const NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_ITEM_ID = 7;
-const NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = exports.NEW_YEAR_FIFTH_QUEST_ENERGY_GOAL = 4;
-const NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_SIDR_ITEM_ID = 200;
-const NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = exports.NEW_YEAR_FIFTH_QUEST_SIDR_GOAL = 5;
-const NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_POTATO_ITEM_ID = 7000;
-const NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_POTATO_GOAL = 15;
-const NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_ITEM_ID = 7022;
-const NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = exports.NEW_YEAR_FIFTH_QUEST_TOMATO_GOAL = 10;
-const NEW_YEAR_SIXTH_QUEST_ID = exports.NEW_YEAR_SIXTH_QUEST_ID = 'new-year-sixth-quest';
-const NEW_YEAR_SIXTH_QUEST_NAME = exports.NEW_YEAR_SIXTH_QUEST_NAME = 'Конец или новое начало';
-const NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_POSITION = new mp.Vector3(-744.67, 4323.64, 140.35);
-const NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_ANIMATION = {
-  dictionary: 'anim@amb@business@bgen@bgen_no_work@',
-  name: 'sit_phone_phoneputdown_fallasleep_nowork',
-  durationSec: 5
-};
-const NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_COLLECT_HUD_TEXT = 'Воссоединяемся с природой';
-const NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_HUNT_ITEM_ID = 830;
-const NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = exports.NEW_YEAR_SIXTH_QUEST_HUNT_GOAL = 5;
-const NEW_YEAR_SIXTH_QUEST_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_JOB_TYPE = 'busman:way';
-const NEW_YEAR_SIXTH_QUEST_JOB_GOAL = exports.NEW_YEAR_SIXTH_QUEST_JOB_GOAL = 4;
-const NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_JOB_HUD_NAME = 'Проехать маршрут на работе Автобусника';
-const NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TYPE = 'busman';
-const NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = exports.NEW_YEAR_SIXTH_QUEST_LEAVE_JOB_TEXT = 'Уволиться с работы в автобусном депо';
-const NEW_YEAR_SIXTH_QUEST_WORD_TEXT = exports.NEW_YEAR_SIXTH_QUEST_WORD_TEXT = 'galileo';
-const NEW_YEAR_SIXTH_QUEST_HUD_NAME = exports.NEW_YEAR_SIXTH_QUEST_HUD_NAME = 'Найти кодовое слово по описанию';
-const NEW_YEAR_ARIEL_NPC_ID = exports.NEW_YEAR_ARIEL_NPC_ID = 'new-year-ariel';
-const NEW_YEAR_ARIEL_NPC_NAME = exports.NEW_YEAR_ARIEL_NPC_NAME = 'Ариэль';
-const NEW_YEAR_ARIEL_NPC_PARAMETERS = exports.NEW_YEAR_ARIEL_NPC_PARAMETERS = {
-  Position: new mp.Vector3(-747.22, 4323.73, 141.70),
-  Heading: 305,
-  Model: 'a_f_m_bodybuild_01',
-  Name: NEW_YEAR_ARIEL_NPC_NAME
-};
-const NEW_YEAR_GALILEO_NPC_POSITION = exports.NEW_YEAR_GALILEO_NPC_POSITION = new mp.Vector3(-601.17, 2091.22, 131.50);
-const NEW_YEAR_GALILEO_NPC_HEADING = exports.NEW_YEAR_GALILEO_NPC_HEADING = 351;
-const NEW_YEAR_GALILEO_NPC_MODEL = exports.NEW_YEAR_GALILEO_NPC_MODEL = 'mp_m_counterfeit_01';
-const NEW_YEAR_GALILEO_NPC_NAME = exports.NEW_YEAR_GALILEO_NPC_NAME = 'Рудокоп';
-const NEW_YEAR_GALILEO_NPC_RANGE = exports.NEW_YEAR_GALILEO_NPC_RANGE = 1.5;
-const NEW_YEAR_GALILEO_NPC_DIMENSION = exports.NEW_YEAR_GALILEO_NPC_DIMENSION = 0;
-const NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIRST_QUEST_REWARD_LOLLIPOPS = 1000;
-const NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SECOND_QUEST_REWARD_LOLLIPOPS = 1500;
-const NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_THIRD_QUEST_REWARD_LOLLIPOPS = 1700;
-const NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FOURTH_QUEST_REWARD_LOLLIPOPS = 2000;
-const NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_REWARD_LOLLIPOPS = 500;
-const NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_FIRST_LINE_REWARD_LOLLIPOPS = 1500;
-const NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = exports.NEW_YEAR_FIFTH_QUEST_SECOND_LINE_REWARD_LOLLIPOPS = 1500;
-const NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = exports.NEW_YEAR_SIXTH_QUEST_REWARD_LOLLIPOPS = 2500;
-const NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = exports.NEW_YEAR_SIXTH_QUEST_REWARD_ITEM_ID = 888;
-},{}],"zua9":[function(require,module,exports) {
-"use strict";
-
-var _snowballs = require("./snowballs");
-var _main = require("../../../../shared/events/newYear/main.config");
-var _quests = require("../../../../shared/events/newYear/quests.config");
-if (_main.EVENT_IS_ACTIVE) {
-  new _snowballs.Snowballs();
-  mp.events.add('entityStreamIn', entity => {
-    if (entity.type !== 'ped' || !entity.getVariable('advancedPedName')) return;
-    switch (entity.getVariable('advancedPedName')) {
-      case _quests.NEW_YEAR_SANTA_NPC_NAME:
-        {
-          mp.game.invoke('0x44A0870B7E92D7C0', entity.handle, 0, false);
-          break;
-        }
-      case _quests.NEW_YEAR_HOMELESS_NPC_NAME:
-        {
-          break;
-        }
-      case _quests.NEW_YEAR_BOLVANKA_NPC_NAME:
-        {
-          mp.game.invoke('0xEA47FE3719165B94', entity.handle, 'amb@world_human_bum_slumped@male@laying_on_right_side@idle_a', 'idle_a', 8, 8, -1, 1, 0, true, true, true);
-          break;
-        }
-      case _quests.NEW_YEAR_MEGATRON_NPC_NAME:
-        {
-          mp.game.invoke('0x142A02425FF02BD9', entity.handle, "WORLD_HUMAN_AA_SMOKE", 0, false);
-          break;
-        }
-      case _quests.NEW_YEAR_WORD_NPC_NAME:
-        {
-          break;
-        }
-      case _quests.NEW_YEAR_GALILEO_NPC_NAME:
-        {
-          break;
-        }
-      default:
-        {
-          break;
-        }
-    }
-  });
-}
-},{"./snowballs":"lhDV","../../../../shared/events/newYear/main.config":"tE0d","../../../../shared/events/newYear/quests.config":"sE8r"}],"RqhX":[function(require,module,exports) {
-"use strict";
-
-require("./halloween");
-require("./newYear");
-},{"./halloween":"xqVl","./newYear":"zua9"}],"feKp":[function(require,module,exports) {
+},{"./questSteps":"gkBA"}],"feKp":[function(require,module,exports) {
 "use strict";
 
 var _custom = require("./custom.event");
@@ -117309,6 +117309,7 @@ require("./job.dress");
 require("./helicam");
 require("./lods");
 require("./hunting");
+require("./events/index");
 require("./musicPlayer");
 require("./damageController");
 require("./mining");
@@ -117321,7 +117322,6 @@ require("./farm/farmController");
 require("./blackout");
 require("./advancedNpc");
 require("./advancedQuests");
-require("./events");
 require("./crosshair");
 require("./specFxes");
 require("./carry");
@@ -117339,7 +117339,7 @@ require("./prison");
 require("./hitMarker");
 require("./supplyWar");
 require("./memorialStatue");
-},{"./user":"ggMw","./controls":"yuOK","./menu":"Aiz7","./admin":"s4Xg","./survival":"nroP","./gui":"bk91","./world":"j6No","./character.creator":"X7UN","./inventory":"E5lg","./checkpoints":"XCJl","./blips":"vw4c","./businesses":"nphQ","./cloth":"Sp7p","./tattoo":"EG54","./mainmenu":"ciLG","./hotkeys":"OtV2","./vehicles":"J8pg","./voice":"WpQ0","./anim":"stJJ","./interact":"m19G","./navigation":"Wwxz","./scaleform.mp":"p2OF","./jobs":"un2p","./jail":"arTi","./interactions":"i0E8","./chest":"eVha","./house":"baXL","./dynamicBlip":"TK9Y","./vehicle.grab":"Aej0","./vehicle.registration":"rrVP","./license":"SVhP","./attach":"sXtZ","./doors":"H2nx","./peds":"ds7w","./terminal":"L1Tx","./grab.zone":"oAOB","./gpsTrack":"fUei","./race":"oS9n","./fish":"DueU","./gr6":"OnFn","./teleport.system":"UgKs","./dance":"gNQw","./bars":"ORIu","./afk":"X2Af","./rappel":"GXij","./fps":"JiGH","./discord":"MPk7","./quests":"W1Bu","./npc.dialog":"CWsZ","./signature":"zYqN","./ginteract":"SF2W","./accept":"RT6N","./savezone":"ehdN","./taxi":"G0I7","./npc.customer":"Ij8u","./documents.pos":"hsxS","./mafia.clean.wanted":"ywkW","./dispatch":"CTZz","./vehicle.sell":"He5v","./fingerpoint":"dnPV","./island":"ziAL","./boxgame":"y0tC","./deathmatch":"d354","./gangwar":"cDXP","./wintask":"yCG7","./family":"GI3U","./vote":"cgSZ","./protection":"Qh13","./construction":"Q1Tk","./shooting":"OVYI","./sync":"nW4K","./police.radar":"R94t","./farm":"buab","./task":"UOh7","./npc.seller":"rRcs","./crafting":"tmgr","./casino/index":"ydwT","./gpsMarkSync":"ZVj5","./job.dress":"TuAn","./helicam":"m5tX","./lods":"VwFo","./hunting":"wMFx","./musicPlayer":"jMsm","./damageController":"RJXt","./mining":"OkNF","./family.bizwar":"X3nK","./jobs/index":"CrOp","./menus":"P1zH","./families":"JP2y","./market":"c25B","./farm/farmController":"Mftc","./blackout":"r8Xy","./advancedNpc":"M82h","./advancedQuests":"Y8OG","./events":"RqhX","./crosshair":"feKp","./specFxes":"Nv2L","./carry":"QJy9","./autopilot":"IYHr","./diving":"fKzZ","./snowWar":"SZmx","./pets":"WzW6","./battlePass":"tIom","./houses":"J1du","./duckWalk":"mOW9","./islandBattle":"ZSz4","./smoking":"wxoF","./fractions":"ZnXR","./prison":"x7xl","./hitMarker":"WwQs","./supplyWar":"cEEo","./memorialStatue":"Zifh"}],"QCba":[function(require,module,exports) {
+},{"./user":"ggMw","./controls":"yuOK","./menu":"Aiz7","./admin":"s4Xg","./survival":"nroP","./gui":"bk91","./world":"j6No","./character.creator":"X7UN","./inventory":"E5lg","./checkpoints":"XCJl","./blips":"vw4c","./businesses":"nphQ","./cloth":"Sp7p","./tattoo":"EG54","./mainmenu":"ciLG","./hotkeys":"OtV2","./vehicles":"J8pg","./voice":"WpQ0","./anim":"stJJ","./interact":"m19G","./navigation":"Wwxz","./scaleform.mp":"p2OF","./jobs":"un2p","./jail":"arTi","./interactions":"i0E8","./chest":"eVha","./house":"baXL","./dynamicBlip":"TK9Y","./vehicle.grab":"Aej0","./vehicle.registration":"rrVP","./license":"SVhP","./attach":"sXtZ","./doors":"H2nx","./peds":"ds7w","./terminal":"L1Tx","./grab.zone":"oAOB","./gpsTrack":"fUei","./race":"oS9n","./fish":"DueU","./gr6":"OnFn","./teleport.system":"UgKs","./dance":"gNQw","./bars":"ORIu","./afk":"X2Af","./rappel":"GXij","./fps":"JiGH","./discord":"MPk7","./quests":"W1Bu","./npc.dialog":"CWsZ","./signature":"zYqN","./ginteract":"SF2W","./accept":"RT6N","./savezone":"ehdN","./taxi":"G0I7","./npc.customer":"Ij8u","./documents.pos":"hsxS","./mafia.clean.wanted":"ywkW","./dispatch":"CTZz","./vehicle.sell":"He5v","./fingerpoint":"dnPV","./island":"ziAL","./boxgame":"y0tC","./deathmatch":"d354","./gangwar":"cDXP","./wintask":"yCG7","./family":"GI3U","./vote":"cgSZ","./protection":"Qh13","./construction":"Q1Tk","./shooting":"OVYI","./sync":"nW4K","./police.radar":"R94t","./farm":"buab","./task":"UOh7","./npc.seller":"rRcs","./crafting":"tmgr","./casino/index":"ydwT","./gpsMarkSync":"ZVj5","./job.dress":"TuAn","./helicam":"m5tX","./lods":"VwFo","./hunting":"wMFx","./events/index":"RqhX","./musicPlayer":"jMsm","./damageController":"RJXt","./mining":"OkNF","./family.bizwar":"X3nK","./jobs/index":"CrOp","./menus":"P1zH","./families":"JP2y","./market":"c25B","./farm/farmController":"Mftc","./blackout":"r8Xy","./advancedNpc":"M82h","./advancedQuests":"Y8OG","./crosshair":"feKp","./specFxes":"Nv2L","./carry":"QJy9","./autopilot":"IYHr","./diving":"fKzZ","./snowWar":"SZmx","./pets":"WzW6","./battlePass":"tIom","./houses":"J1du","./duckWalk":"mOW9","./islandBattle":"ZSz4","./smoking":"wxoF","./fractions":"ZnXR","./prison":"x7xl","./hitMarker":"WwQs","./supplyWar":"cEEo","./memorialStatue":"Zifh"}],"QCba":[function(require,module,exports) {
 "use strict";
 
 var _alertsSettings = require("../shared/alertsSettings");

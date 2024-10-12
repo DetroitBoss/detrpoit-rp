@@ -92,7 +92,7 @@ export class ChatDialogClass extends Component<{
         this.leaveChat(this.id)   
     }
     render(){
-        return <div className="chat-wrapper" style={{background: 'rgba(20, 27, 31, 0.9)'}} tabIndex={-1}>
+        return <div className="chat-wrapper" style={{background: 'rgba(21,21,21, 0.9)'}} tabIndex={-1}>
             <div className="chat-wrap" tabIndex={-1}>
                 {this.state.messages.map((message, id) => {
                     return <div key={`dialog_message_${message.id}_${id}`} className={"chat-item " + (CEF.id === message.id ? 'me' : '')}>

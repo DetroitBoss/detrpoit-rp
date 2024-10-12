@@ -22,7 +22,7 @@ import {CustomEvent} from "../../custom.event";
 
 const HALLOWEEN_EXCHANGE_DIALOG_ID = 'halloween-exchange';
 
-//const exchangeNpc = new ServerNpc(HALLOWEEN_EXCHANGE_NPC_ID, HALLOWEEN_EXCHANGE_NPC_PARAMETERS, HALLOWEEN_EXCHANGE_DIALOG_ID);
+const exchangeNpc = new ServerNpc(HALLOWEEN_EXCHANGE_NPC_ID, HALLOWEEN_EXCHANGE_NPC_PARAMETERS, HALLOWEEN_EXCHANGE_DIALOG_ID);
 
 registerDialog({
     id: HALLOWEEN_EXCHANGE_DIALOG_ID,
