@@ -22,6 +22,7 @@ import {
 import { CEF } from "../../modules/CEF";
 import svg from "./images/svg/*.svg"
 import images from "./images/*.png"
+import productImages from '../../../../../shared/icons/*.png'
 import iconsItems from '../../../shared/icons/*.png';
 import { system } from "../../modules/system";
 import { systemUtil } from "../../../shared/system";
@@ -529,6 +530,8 @@ class ItemDraw extends Component<ItemDrawProps, ItemDrawState> {
                     <div tabIndex={-1} className="in-inventory-item-main-wrap br4">
                         <div tabIndex={-1} className="img-wrap">
                             <img tabIndex={-1} src={`http://cloud.detroitgta-5.ru/items/Item_${this.item.item_id}.png`} alt="" draggable="false"/>
+                            {/* <img tabIndex={-1} src={productImages['Item_' + this.item.item_id]} alt="" draggable="false"/> */}
+                            
                         </div>
                         {!this.props.ishotkey ? <i tabIndex={-1} className="count p-14px fw700 upper">{this.item.count}</i> : <></>}
                     </div>
@@ -1298,8 +1301,8 @@ export class InventoryClass extends Component<{}, InventoryMainData> {
                                 }}>
                                     <div tabIndex={-1} className="in-inventory-item-main-wrap br4">
                                         <div tabIndex={-1} className="img-wrap">
-                                            <img tabIndex={-1} src={`http://cloud.detroitgta-5.ru/items/Item_${inventoryShared.getWeaponConfigByItemId(this.state.weapons.item_id).ammo_box}.png`} alt=""
-                                                 draggable="false"/>
+                                            <img tabIndex={-1} src={`http://cloud.detroitgta-5.ru/items/Item_${inventoryShared.getWeaponConfigByItemId(this.state.weapons.item_id).ammo_box}.png`} alt="" draggable="false"/>
+                                            {/* <img tabIndex={-1} src={productImages['Item_' + '${inventoryShared.getWeaponConfigByItemId(this.state.weapons.item_id).ammo_box}']} alt="" draggable="false"/> */}
                                         </div>
                                         <i tabIndex={-1} className="count p-14px fw700 upper">{this.state.weapons.ammo}</i>
                                     </div>

@@ -22,7 +22,7 @@ interface GetShow {
 const TYPE_HIDE           = 0,
       TYPE_REG            = 1,
       TYPE_LOGIN          = 2,
-      TYPE_SELECT_CHARACTER          = 3,
+      TYPE_SELECT_CHARACTER          = 3, // вернуть
       TYPE_EMAIL            = 4,
 
       ERROR_LOGIN         = 1,

@@ -40,8 +40,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {
@@ -70,8 +70,8 @@ export const QUESTS_DATA: QuestData[] = [
                     x: 446.59, y: -1231.38,
                     text: "Росс",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -83,8 +83,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]
@@ -109,8 +109,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -853.86,
                     text: "Магазин электроники",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -122,8 +122,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -150,7 +150,7 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -209.09,
                     text: "Правительство",
                     bliptype: 1,
-                    blipcolor: 51,
+                    blipcolor: 61,
                     bliproute: 1
                 }
             },
@@ -163,8 +163,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ] 
@@ -191,8 +191,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1350.07,
                     text: "Магазин 24/7",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -210,8 +210,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]
@@ -241,8 +241,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: 5184.26,
                     text: "Гараж Тони",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -254,8 +254,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -280,8 +280,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1299.51,
                     text: "Автошкола",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -293,8 +293,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -319,8 +319,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1037.22,
                     text: "Банк",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -332,8 +332,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -361,7 +361,7 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1231.38,
                     text: "Конверт с лицензией",
                     bliptype: 1,
-                    blipcolor: 51,
+                    blipcolor: 61,
                     bliproute: 11
                 }
             },
@@ -374,8 +374,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -404,8 +404,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1187.72,
                     text: "Ламар",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -417,8 +417,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1301.40, 
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -448,8 +448,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {
@@ -471,8 +471,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -833.50, 
                     text: "Авраам",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -484,8 +484,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]  
@@ -510,8 +510,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -853.86,
                     text: "Магазин электроники",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -523,8 +523,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -551,8 +551,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -209.09,
                     text: "Правительство",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -564,8 +564,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ] 
@@ -590,8 +590,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -999.74,
                     text: "Стройка",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -603,8 +603,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -628,8 +628,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -902.03,
                     text: "Магазин 24/7",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -647,8 +647,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]
@@ -673,8 +673,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -1299.51,
                     text: "Автошкола",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -686,8 +686,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        
@@ -717,8 +717,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -326.60,
                     text: "Банк",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
             {   
@@ -730,8 +730,8 @@ export const QUESTS_DATA: QuestData[] = [
                     y: -874.74,
                     text: "",
                     bliptype: 1,
-                    blipcolor: 51,
-                    bliproute: 51
+                    blipcolor: 61,
+                    bliproute: 61
                 }
             },
         ]        

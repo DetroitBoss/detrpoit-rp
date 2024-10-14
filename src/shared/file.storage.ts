@@ -1,1 +1,1 @@
-export const FILE_STORAGE_URL = 'files.onyx-gta.ru'
+export const FILE_STORAGE_URL = 'cloud.detroitgta-5.ru'

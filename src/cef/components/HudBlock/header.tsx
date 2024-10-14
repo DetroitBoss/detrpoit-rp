@@ -77,7 +77,7 @@ export class HudHeaderClass extends Component<{
                     </div>
                     <p className="p-id">id <span>{CEF.id}</span></p>
                     <div className="mini-logo">
-                        <img src={svgs['mini-logo']} width="36" height="36" />
+                        <img src={svgs['mini-logo']} width="66" height="66" />
                     </div>
                 </div>
             </div>

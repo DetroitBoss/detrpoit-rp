@@ -56,7 +56,7 @@ export class HudSpeedometerClass extends Component<{}, {
             easing: 'easeInOut',
             duration: 98,
             color: '#ffffff',
-            trailColor: 'rgba(21, 21, 21, 0.7)',
+            trailColor: 'rgba(225, 225, 225, 0.4)',
             trailWidth: 4,
             svgStyle: null
         });
@@ -104,7 +104,7 @@ export class HudSpeedometerClass extends Component<{}, {
                         <div className="in-speed-wrapper">
                             <div className="in-speed-wrap">
                                 <div className="in-speed-opacity">
-                                    <p><span>{this.speedString}3232</span></p>
+                                    <p><span>{this.speedString}</span></p>
                                 </div>
                             </div>
                             <p className="p-descr">км/ч</p>

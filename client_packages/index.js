@@ -265,8 +265,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Найти Росса',
@@ -303,8 +303,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1231.38,
       text: "Росс",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -315,8 +315,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -349,8 +349,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -853.86,
       text: "Магазин электроники",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -361,8 +361,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -400,7 +400,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -209.09,
       text: "Правительство",
       bliptype: 1,
-      blipcolor: 51,
+      blipcolor: 61,
       bliproute: 1
     }
   }, {
@@ -412,8 +412,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -451,8 +451,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1350.07,
       text: "Магазин 24/7",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Купить чипсы',
@@ -468,8 +468,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -508,8 +508,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: 5184.26,
       text: "Гараж Тони",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -520,8 +520,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -554,8 +554,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1299.51,
       text: "Автошкола",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -566,8 +566,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -603,8 +603,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1037.22,
       text: "Банк",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -615,8 +615,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -656,7 +656,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1231.38,
       text: "Конверт с лицензией",
       bliptype: 1,
-      blipcolor: 51,
+      blipcolor: 61,
       bliproute: 11
     }
   }, {
@@ -668,8 +668,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -702,8 +702,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1187.72,
       text: "Ламар",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Стэнли',
@@ -714,8 +714,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1301.40,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -755,8 +755,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Найти Авраама',
@@ -778,8 +778,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -833.50,
       text: "Авраам",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -790,8 +790,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -824,8 +824,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -853.86,
       text: "Магазин электроники",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -836,8 +836,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -875,8 +875,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -209.09,
       text: "Правительство",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -887,8 +887,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -922,8 +922,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -999.74,
       text: "Стройка",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -934,8 +934,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -968,8 +968,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -902.03,
       text: "Магазин 24/7",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Купить чипсы',
@@ -985,8 +985,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -1019,8 +1019,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -1299.51,
       text: "Автошкола",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -1031,8 +1031,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }, {
@@ -1071,8 +1071,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -326.60,
       text: "Банк",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }, {
     nameTask: 'Вернитесь к Джеффри',
@@ -1083,8 +1083,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       y: -874.74,
       text: "",
       bliptype: 1,
-      blipcolor: 51,
-      bliproute: 51
+      blipcolor: 61,
+      bliproute: 61
     }
   }]
 }];

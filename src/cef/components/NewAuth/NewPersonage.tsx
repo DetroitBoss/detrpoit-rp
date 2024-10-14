@@ -101,7 +101,8 @@ export default class NewPersonage extends React.Component<{ data: personageLogin
     createPers = () => {
         this.setState({ ...this.state, page_loading: -1 });
         setTimeout(() => {
-            this.setState({ ...this.state, page: INFO_LINE, page_loading: INFO_LINE });
+            // this.setState({ ...this.state, page: INFO_LINE, page_loading: INFO_LINE });
+            this.selectLine(0)
         }, 1000);
     }
     editPers = (id: number) => {
@@ -129,13 +130,13 @@ export default class NewPersonage extends React.Component<{ data: personageLogin
     prev_selectLine = () => {
         this.setState({ ...this.state, page_loading: -1 });
         setTimeout(() => {
-            CEF.playSound('questonyx')
-            this.setState({ ...this.state, page: SELECT_LINE, page_loading: SELECT_LINE });
+            // CEF.playSound('questonyx')
+            this.setState({ ...this.state, page: 3, page_loading: 3 });
         }, 1000);
     }
 
     componentDidMount = () => {
-        this.setState({ ...this.state, page_loading: SELECT_PERS });
+        this.setState({ ...this.state, page_loading: 3 });
     }
     render() {
         if (this.state.show === false) return null;
@@ -167,7 +168,7 @@ const persComponent = (state: GetData,
                 <div className="newpers_blur_test" />
                 <div className="newpers_grid" />
                 <div className={`newpers_block ${state.page_loading > 0 ? "show" : ""}`}>
-                    <div className="newpers_sinfo"><h3>Выберите</h3><h3>Персонажа</h3></div>
+                    {/* <div className="newpers_sinfo"><h3>Выберите</h3><h3>Персонажа</h3></div> */}
                     {characters.map((data: personageLoginData, index: number) =>
                         <div key={index} className={data.id != 0 ? "newpers_box" : "newpers_box newpers_new"}>
                             {persBox(data, selectPers, buyPers, editPers, delPers, createPers, donate, state.error)}
