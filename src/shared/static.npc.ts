@@ -155,40 +155,10 @@ const carfamali: QuestDialog = ["Приехал поработать на кар
 
 
 export const STATIC_NPC_DATA: StaticNpcItem[] = [
-    // bomj spawn
-    { x: 666.79, y: -612.33, z: 18.35, h: 256, name: '', model: "a_m_o_acult_02", anim: ['amb@code_human_cower_stand@female@base', 'base'] }, 
-    { x: 666.98, y: -616.87, z: 18.33, h: 359, name: '', model: "a_m_m_afriamer_01", anim: ['amb@world_human_stand_guard@male@base', 'base'] }, 
-    { x: 671.68, y: -612.67, z: 18.72, h: 276, name: '', model: "a_m_o_beach_01", anim: ['', 'base'] }, 
-    { x: 673.47, y: -612.71, z: 18.85, h: 88, name: '', model: "u_m_m_bikehire_01", anim: ['', 'base'] }, 
-    { x: 685.41, y: -617.53, z: 19.65, h: 66, name: '', model: "a_c_cat_01", anim: ['', 'base'] }, 
-    { x: 684.74, y: -616.40, z: 19.62, h: 187, name: '', model: "a_m_m_indian_01", anim: ['', 'base'] }, 
-    { x: 692.42, y: -617.80, z: 20.12, h: 256, name: '', model: "a_m_m_eastsa_01", anim: ['', 'base'] }, 
-    { x: 695.50, y: -613.33, z: 20.54, h: 119, name: '', model: "a_c_chop", anim: ['', 'base'] }, 
-    { x: 700.95, y: -617.31, z: 18.84, h: 4, name: '', model: "a_c_husky", anim: ['', 'base'] }, 
-    // ghetto spawn
-    { x: 20.14, y: -1300.51, z: 28.28, h: 205, name: '', model: "a_c_pug", anim: ['', 'base'] },
-    { x: 21.17, y: -1300.66, z: 29.19, h: 125, name: '', model: "ig_car3guy2", anim: ['', 'base'] },
-    { x: 8.21, y: -1300.84, z: 29.17, h: 85, name: '', model: "s_m_m_dockwork_01", anim: ['', 'base'] },
-    { x: 7.12, y: -1300.73, z: 29.18, h: 269, name: '', model: "s_m_y_dockwork_01", anim: ['', 'base'] },
-    { x: 21.01, y: -1312.66, z: 29.46, h: 15, name: '', model: "g_m_y_famfor_01", anim: ['', 'base'] },
-    { x: 22.04, y: -1311.54, z: 29.26, h: 145, name: '', model: "ig_g", anim: ['', 'base'] },
-    // police spawn
-    { x: -1057.31, y: -868.33, z: 5.11, h: 38, name: '', model: "s_m_m_prisguard_01", anim: ['', 'base'] },
-    { x: -1068.41, y: -853.05, z: 4.87, h: 73, name: '', model: "s_f_y_cop_01", anim: ['', 'base'] }, 
-    { x: -1070.17, y: -853.82, z: 4.87, h: 330, name: '', model: "s_m_y_cop_01", anim: ['', 'base'] },
-    { x: -1070.16, y: -851.97, z: 4.87, h: 220, name: '', model: "csb_cop", anim: ['', 'base'] },
-    { x: -1068.14, y: -867.05, z: 4.87, h: 292, name: '', model: "s_m_y_hwaycop_01", anim: ['', 'base'] },
-    { x: -1067.71, y: -870.55, z: 4.92, h: 311, name: '', model: "s_m_y_ranger_01", anim: ['', 'base'] },
-    { x: -1047.52, y: -862.04, z: 4.92, h: 42, name: '', model: "s_f_y_ranger_01", anim: ['', 'base'] }, 
-    { x: -1067.31, y: -873.89, z: 4.36, h: 273, name: '', model: "a_c_husky", anim: ['', 'base'] },
     // Аренды на начальных работах
     { x: -516.26, y: -1013.09, z: 23.45, h: 24, name: '', model: "cs_andreas", anim: ['', 'base'] },
     { x: 2138.34, y: 4923.52, z: 41.04, h: 344, name: '', model: "cs_andreas", anim: ['', 'base'] },
     { x: -1047.80, y: -874.36, z: 5.64, h: 168, name: '', model: "cs_andreas", anim: ['', 'base'] },
-
-    // Донат автосалон
-    { x: -481.60, y: -85.83, z: 39.72, h: 265, name: 'Наташа', model: "a_f_y_bevhills_02", anim: ["mini@strip_club@private_dance@part1", "priv_dance_p1"] },
-    { x: -478.85, y: -89.90, z: 39.72, h: 256, name: 'Таня', model: "a_f_y_bevhills_01", anim: ["mini@strip_club@private_dance@part1", "priv_dance_p1"] },
     // Начальная работа сад
     { x: 2413.03, y: 4997.99, z: 46.63, h: 126, name: '', model: "u_m_y_mani", anim: ['', 'base'] },
     // Стройка
