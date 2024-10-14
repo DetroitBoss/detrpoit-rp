@@ -17,12 +17,12 @@ export const QUEST_SPAWN_ITEM: {
 
 export const QUESTS_DATA: QuestData[] = [
     {
-        id: 1, name: "Знакомство со Стэнли", desc: "Описание", reward: 
+        id: 1, name: "Знакомство со Джин", desc: "Описание", reward: 
         [{ type: "cash", value: 500 }, { type: "item", value: 850}], taskStepByStep: true, nextQuest: 2,  botData: {
             id: 0,
             dialogStart: ['Слышь! Я бы не советовал здесь так ошиваться. Места это не тихие.. ', 
             { answers: ['Я тут недалеко работаю.'], onAnswer: () => {                   
-                return ['Аа.. тебе работка нужна? Ну ты же понимаешь чем мы тут занимаемся? Мне нужно передать один пакетик своему старому корешу, да самому не безопасно, так как легавые давно пасут. Если хочешь доказать, что на что-то способен, то вот зиплок, замотанный изолентой. Доставь его Россу. Скажи, что это от Стэнли, да сам не вздумай открывать его, координаты указаны на пакете. Арендуй мопед или велик за углом.', 
+                return ['Аа.. тебе работка нужна? Ну ты же понимаешь чем мы тут занимаемся? Мне нужно передать один пакетик своему старому корешу, да самому не безопасно, так как легавые давно пасут. Если хочешь доказать, что на что-то способен, то вот зиплок, замотанный изолентой. Доставь его Россу. Скажи, что это от Джин, да сам не вздумай открывать его, координаты указаны на пакете. Арендуй мопед или велик за углом.', 
                 { answers: ['Понял, скоро вернусь.'] 
             }]
             } }],
@@ -32,12 +32,12 @@ export const QUESTS_DATA: QuestData[] = [
         },
         tasks: [
             {   
-                nameTask: 'Найдите Стэнли',
+                nameTask: 'Найдите Джин',
                 descTask: 'Найдите квестового персонажа',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -50,12 +50,12 @@ export const QUESTS_DATA: QuestData[] = [
                 type: "delivertonpc",
                 name: "Росс",
                 role: "",
-                dialog: ['Чего нужно??', { answers: ['Я от Стэнли'], onAnswer: () => {
-                    return ['Оу.. ты от Стэнли?', {
+                dialog: ['Чего нужно??', { answers: ['Я от Джин'], onAnswer: () => {
+                    return ['Оу.. ты от Джин?', {
                         answers: ['У меня тут пакет для тебя. Держи!'], onAnswer: () => {
                             return ['Лады, пацан. *взял пакет, открыл его, достал оттуда кусок бумаги и прочел вслух*: Братан, это проверка моего нового помощника, и если пакет не был вскрыт до тебя, то пожми руку этому оборванцу, он справился с заданием.', {
                                 answers: ['Все нормально? Я могу идти?'], onAnswer: () => {
-                                    return ['Охх.. Типичный Стэнли, всегда что-нибудь придумает, когда взбредёт в голову заняться наставничеством и помогать таким бедолагам. Езжай обратно, я передам ему, что всё хорошо.', {
+                                    return ['Охх.. Типичный Джин, всегда что-нибудь придумает, когда взбредёт в голову заняться наставничеством и помогать таким бедолагам. Езжай обратно, я передам ему, что всё хорошо.', {
                                         answers: ['Окей, рад был познакомится.'] 
                                     }]
                                 }
@@ -75,12 +75,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -114,12 +114,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -155,12 +155,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -174,7 +174,7 @@ export const QUESTS_DATA: QuestData[] = [
             id: 0,
             dialogStart: ['Поздравляю с чистой работой, но такая будет не всегда. Возьми 500$ и купи себе энергетик и чипсы похавать, а то выглядишь не очень.', { answers: ['А куда можно сходить?'], onAnswer: () => {
                 return ['За углом есть магазин 24 часа маркет, как освоешься возращайся ко мне.', {
-                    answers: ['Спасибо Стэнли!']
+                    answers: ['Спасибо Джин!']
                 }]
             } }],
             dialogComplete: ['Осмотрелся? Как тебе наш район?', {
@@ -202,12 +202,12 @@ export const QUESTS_DATA: QuestData[] = [
                 item_id: 21,
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -246,12 +246,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -265,7 +265,7 @@ export const QUESTS_DATA: QuestData[] = [
         name: "Получение лицензии", desc: "Описание", reward: [{ type: "cash", value: 1000 }], taskStepByStep: true, nextQuest: 7, botData: {
             id: 0,
             dialogStart: ['А руки растут откуда надо. Деньги эти ещё пригодятся. Всегда лучше иметь при себе немного нала. Так же нам предстоит много гонять, поэтому без прав никуда. После от копов проблем будет больше. Вот тебе 1.000$, направляйся в автошколу и получи права.', 
-            { answers: ['Спасибо Стэнли! До скорой встречи.'], }],
+            { answers: ['Спасибо Джин! До скорой встречи.'], }],
             dialogComplete: ['Молодец, ты хороший водитель', {
                 answers: ['Я знаю брат'], onAnswer: (index) => 7 }],
         },
@@ -285,12 +285,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -324,12 +324,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -350,7 +350,7 @@ export const QUESTS_DATA: QuestData[] = [
         tasks: [
             {   
                 nameTask: 'Заберите лицензию на оружие',
-                descTask: 'Стэнли попросил Росса сделать вам лицензию, заберите ее',
+                descTask: 'Джин попросил Росса сделать вам лицензию, заберите ее',
                 type: "gotopos",
                 x: 446.59,
                 y: -1231.38,
@@ -366,12 +366,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -409,12 +409,12 @@ export const QUESTS_DATA: QuestData[] = [
                 }
             },
             {   
-                nameTask: 'Вернитесь к Стэнли',
+                nameTask: 'Вернитесь к Джину',
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 21.26, 
-                    y: -1301.40, 
+                    x: 192.09, 
+                    y: -809.64, 
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -739,7 +739,7 @@ export const QUESTS_DATA: QuestData[] = [
 ];
 // x: -190.55, y: -811.15, z: 30.45, h: 52
 export const QUEST_BOT_DATA: { model: string; x: number; y: number; z: number; h: number; name: string; role: string, id: number; freeError: string, anim?:string|[string, string] }[] = [
-    { id: 0, name: '~y~NPC: ~w~Джин Детроитович', role: "", x: -190.55, y: -811.15, z: 30.45, h: 52, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
+    { id: 0, name: '~y~NPC~w~: Джин Детроитович', role: "", x: -190.55, y: -811.15, z: 30.45, h: 52, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
     // { id: 500, name: 'Джеффри Порт', role: "", x: -1066.17, y: -874.74, z: 4.98, h: 332, model: "s_m_m_fiboffice_01", freeError: "Здравствуйте, извините у меня разговор по телефону." },
 ]
 

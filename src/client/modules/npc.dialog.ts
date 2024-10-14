@@ -166,7 +166,7 @@ export class NpcSpawn {
             this.scaleform = new ScaleformTextMp(this.scaleformPos, this._name, {
                 dimension: this._d,
                 range: this._r,
-                type: 'front',
+                type: 'rotation',
             })
         }
 

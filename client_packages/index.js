@@ -230,7 +230,7 @@ const QUEST_SPAWN_ITEM = exports.QUEST_SPAWN_ITEM = [{
 }];
 const QUESTS_DATA = exports.QUESTS_DATA = [{
   id: 1,
-  name: "Знакомство со Стэнли",
+  name: "Знакомство со Джин",
   desc: "Описание",
   reward: [{
     type: "cash",
@@ -246,7 +246,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     dialogStart: ['Слышь! Я бы не советовал здесь так ошиваться. Места это не тихие.. ', {
       answers: ['Я тут недалеко работаю.'],
       onAnswer: () => {
-        return ['Аа.. тебе работка нужна? Ну ты же понимаешь чем мы тут занимаемся? Мне нужно передать один пакетик своему старому корешу, да самому не безопасно, так как легавые давно пасут. Если хочешь доказать, что на что-то способен, то вот зиплок, замотанный изолентой. Доставь его Россу. Скажи, что это от Стэнли, да сам не вздумай открывать его, координаты указаны на пакете. Арендуй мопед или велик за углом.', {
+        return ['Аа.. тебе работка нужна? Ну ты же понимаешь чем мы тут занимаемся? Мне нужно передать один пакетик своему старому корешу, да самому не безопасно, так как легавые давно пасут. Если хочешь доказать, что на что-то способен, то вот зиплок, замотанный изолентой. Доставь его Россу. Скажи, что это от Джин, да сам не вздумай открывать его, координаты указаны на пакете. Арендуй мопед или велик за углом.', {
           answers: ['Понял, скоро вернусь.']
         }];
       }
@@ -257,12 +257,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     }]
   },
   tasks: [{
-    nameTask: 'Найдите Стэнли',
+    nameTask: 'Найдите Джин',
     descTask: 'Найдите квестового персонажа',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -275,15 +275,15 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     name: "Росс",
     role: "",
     dialog: ['Чего нужно??', {
-      answers: ['Я от Стэнли'],
+      answers: ['Я от Джин'],
       onAnswer: () => {
-        return ['Оу.. ты от Стэнли?', {
+        return ['Оу.. ты от Джин?', {
           answers: ['У меня тут пакет для тебя. Держи!'],
           onAnswer: () => {
             return ['Лады, пацан. *взял пакет, открыл его, достал оттуда кусок бумаги и прочел вслух*: Братан, это проверка моего нового помощника, и если пакет не был вскрыт до тебя, то пожми руку этому оборванцу, он справился с заданием.', {
               answers: ['Все нормально? Я могу идти?'],
               onAnswer: () => {
-                return ['Охх.. Типичный Стэнли, всегда что-нибудь придумает, когда взбредёт в голову заняться наставничеством и помогать таким бедолагам. Езжай обратно, я передам ему, что всё хорошо.', {
+                return ['Охх.. Типичный Джин, всегда что-нибудь придумает, когда взбредёт в голову заняться наставничеством и помогать таким бедолагам. Езжай обратно, я передам ему, что всё хорошо.', {
                   answers: ['Окей, рад был познакомится.']
                 }];
               }
@@ -307,12 +307,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -353,12 +353,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -404,12 +404,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 1
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -432,7 +432,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       answers: ['А куда можно сходить?'],
       onAnswer: () => {
         return ['За углом есть магазин 24 часа маркет, как освоешься возращайся ко мне.', {
-          answers: ['Спасибо Стэнли!']
+          answers: ['Спасибо Джин!']
         }];
       }
     }],
@@ -460,12 +460,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     type: "itemHave",
     item_id: 21
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -512,12 +512,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -537,7 +537,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
   botData: {
     id: 0,
     dialogStart: ['А руки растут откуда надо. Деньги эти ещё пригодятся. Всегда лучше иметь при себе немного нала. Так же нам предстоит много гонять, поэтому без прав никуда. После от копов проблем будет больше. Вот тебе 1.000$, направляйся в автошколу и получи права.', {
-      answers: ['Спасибо Стэнли! До скорой встречи.']
+      answers: ['Спасибо Джин! До скорой встречи.']
     }],
     dialogComplete: ['Молодец, ты хороший водитель', {
       answers: ['Я знаю брат'],
@@ -558,12 +558,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -607,12 +607,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -645,7 +645,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
   },
   tasks: [{
     nameTask: 'Заберите лицензию на оружие',
-    descTask: 'Стэнли попросил Росса сделать вам лицензию, заберите ее',
+    descTask: 'Джин попросил Росса сделать вам лицензию, заберите ее',
     type: "gotopos",
     x: 446.59,
     y: -1231.38,
@@ -660,12 +660,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 11
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -706,12 +706,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
       bliproute: 61
     }
   }, {
-    nameTask: 'Вернитесь к Стэнли',
+    nameTask: 'Вернитесь к Джину',
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 21.26,
-      y: -1301.40,
+      x: 192.09,
+      y: -809.64,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -1090,7 +1090,7 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
 }];
 const QUEST_BOT_DATA = exports.QUEST_BOT_DATA = [{
   id: 0,
-  name: '~y~NPC: Джин Детроитович',
+  name: '~y~NPC~w~: Джин Детроитович',
   role: "",
   x: -190.55,
   y: -811.15,
@@ -1098,16 +1098,6 @@ const QUEST_BOT_DATA = exports.QUEST_BOT_DATA = [{
   h: 52,
   model: "a_m_m_og_boss_01",
   freeError: "Ничего не подскажу, пока!"
-}, {
-  id: 500,
-  name: 'Джеффри Порт',
-  role: "",
-  x: -1066.17,
-  y: -874.74,
-  z: 4.98,
-  h: 332,
-  model: "s_m_m_fiboffice_01",
-  freeError: "Здравствуйте, извините у меня разговор по телефону."
 }];
 },{}],"SNxO":[function(require,module,exports) {
 "use strict";
@@ -89843,7 +89833,7 @@ const BLIPS_DATA = exports.BLIPS_DATA = [{
   type: 280,
   color: 5,
   position: new mp.Vector3(20.22, -1301.45, 29.13),
-  name: "Стэнли"
+  name: "Джин"
 }, {
   type: 280,
   color: 5,
@@ -90073,21 +90063,21 @@ _order.ORDER_LOAD_COORDS.map((item, index) => {
   _system.system.createBlipNearest(85, 26, item, `Погрузочная зона №${index + 1}`, 100);
   new _scaleform.ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), `Погрузочная зона №${index + 1}`, {
     range: 5,
-    type: "front"
+    type: ""
   });
 });
 _order.ORDER_CAR_POS.map(item => {
   _system.system.createBlip(85, 1, item, `Аренда служебного транспорта`, 0);
   new _scaleform.ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), 'Аренда служебного транспорта', {
     range: 20,
-    type: "front"
+    type: ""
   });
 });
 _order.ORDER_MENU_POS.map(item => {
   _system.system.createBlip(616, 26, item, `Служба доставки`);
   new _scaleform.ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), `Служба доставки`, {
     range: 25,
-    type: "front"
+    type: ""
   });
 });
 },{"../system":"pi2J","../../../shared/order.system":"Bxla","../scaleform.mp":"p2OF"}],"oVg3":[function(require,module,exports) {
@@ -101581,7 +101571,7 @@ class NpcSpawn {
       this.scaleform = new _scaleform.ScaleformTextMp(this.scaleformPos, this._name, {
         dimension: this._d,
         range: this._r,
-        type: 'front'
+        type: 'rotation'
       });
     }
   }
@@ -101696,7 +101686,7 @@ setInterval(() => {
             }
             if (!createdScaleform.has(`${questid}_${taskid}`)) {
               createdScaleform.set(`${questid}_${taskid}`, new _scaleform.ScaleformTextMp(new mp.Vector3(task.x, task.y, task.z + 1), task.text, {
-                type: "front",
+                type: "",
                 range: 10
               }));
             }

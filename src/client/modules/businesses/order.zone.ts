@@ -6,7 +6,7 @@ ORDER_LOAD_COORDS.map((item, index) => {
     system.createBlipNearest(85, 26, item, `Погрузочная зона №${index+1}`, 100)
     new ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), `Погрузочная зона №${index + 1}`, {
         range: 5,
-        type: "front"
+        type: ""
     })
 })
 ORDER_CAR_POS.map(item => {
@@ -14,13 +14,13 @@ ORDER_CAR_POS.map(item => {
     system.createBlip(85, 1, item, `Аренда служебного транспорта`, 0);
     new ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), 'Аренда служебного транспорта', {
         range: 20,
-        type: "front"
+        type: ""
     })
 })
 ORDER_MENU_POS.map(item => {
     system.createBlip(616, 26, item, `Служба доставки`)
     new ScaleformTextMp(new mp.Vector3(item.x, item.y, item.z + 1), `Служба доставки`, {
         range: 25,
-        type: "front"
+        type: ""
     })
 })

@@ -136,7 +136,7 @@ export class MoneyChestClass {
         this.label = new ScaleformTextMp(new mp.Vector3(this.position.x, this.position.y, this.position.z + 1), `${this.name}\n($${system.numberFormat(this.money)})`, {
             dimension: this.dimension,
             range: 10,
-            type: "front"
+            type: ""
         }, visualizationPredicate, 'admin', 'fraction');
 
         this.blip = system.createDynamicBlip(`moneychest_${this.id}`, 108, 1, this.position, `${this.name}`, {

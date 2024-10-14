@@ -202,7 +202,7 @@ export class FractionGarage {
         this.label = new ScaleformTextMp(new mp.Vector3(this.position.x, this.position.y, this.position.z + 1), `Гараж ${this.name}`, {
             dimension: this.dimension,
             range: 10,
-            type: "front"
+            type: ""
         })
     }
     createColshape(){

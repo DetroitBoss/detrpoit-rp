@@ -205,7 +205,7 @@ export class fractionChest {
         this.label = new ScaleformTextMp(new mp.Vector3(this.pos.x, this.pos.y, this.pos.z + 1), `Склад ${this.name}`, {
             dimension: this.dimension,
             range: 10,
-            type: "front",
+            type: "",
         })
     }
     createColshape(){

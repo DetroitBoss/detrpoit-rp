@@ -1600,15 +1600,15 @@ export const houses = {
                 })
             }
         })
-        // m.newItem({
-        //     type: 'list',
-        //     name: "Для семьи",
-        //     list: ['Нет', 'Да'],
-        //     listSelected: item.forFamily,
-        //     onchange: (val) => {
-        //         item.forFamily = val
-        //     }
-        // })
+        m.newItem({
+            type: 'list',
+            name: "Для семьи",
+            list: ['Нет', 'Да'],
+            listSelected: item.forFamily,
+            onchange: (val) => {
+                item.forFamily = val
+            }
+        })
 
         m.newItem({
             type: 'list',

@@ -74,7 +74,7 @@ setInterval(() => {
                         }
                         if (!createdScaleform.has(`${questid}_${taskid}`)) {
                             createdScaleform.set(`${questid}_${taskid}`, new ScaleformTextMp(new mp.Vector3(task.x, task.y, task.z + 1), task.text, {
-                                type: "front",
+                                type: "",
                                 range: 10
                             }))
                         }
