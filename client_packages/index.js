@@ -211,10 +211,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.QUEST_SPAWN_ITEM = exports.QUEST_BOT_DATA = exports.QUESTS_DATA = void 0;
 const QUEST_SPAWN_ITEM = exports.QUEST_SPAWN_ITEM = [{
-  x: 3.29,
-  y: -1308.97,
-  z: 30.17,
-  h: 293,
+  x: -201.65,
+  y: -797.10,
+  z: 30.45,
+  h: 223,
   questID: 1
 }, {
   x: -1057.11,
@@ -1090,12 +1090,12 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
 }];
 const QUEST_BOT_DATA = exports.QUEST_BOT_DATA = [{
   id: 0,
-  name: 'Стэнли Уильямс',
+  name: '~y~NPC: Джин Детроитович',
   role: "",
-  x: 21.26,
-  y: -1301.40,
-  z: 29.14,
-  h: 88,
+  x: -190.55,
+  y: -811.15,
+  z: 30.45,
+  h: 52,
   model: "a_m_m_og_boss_01",
   freeError: "Ничего не подскажу, пока!"
 }, {

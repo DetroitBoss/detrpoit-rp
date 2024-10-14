@@ -10,7 +10,7 @@ export const QUEST_SPAWN_ITEM: {
     /** ID самого квеста, который будет выдан игроку при создании персонажа. Если не указать - квест выдан не будет */
     questID?: number
 }[] = [
-    {x: 3.29, y: -1308.97, z: 30.17, h: 293, questID: 1},
+    {x: -201.65, y: -797.10, z: 30.45, h: 223, questID: 1}, //spawn quest
     {x: -1057.11, y: -855.24, z: 4.87, h: 151, questID: 500},
     {x: -519.57, y: -258.77, z: 35.59, h: 28},
 ]
@@ -737,10 +737,10 @@ export const QUESTS_DATA: QuestData[] = [
         ]        
     },
 ];
-
+// x: -190.55, y: -811.15, z: 30.45, h: 52
 export const QUEST_BOT_DATA: { model: string; x: number; y: number; z: number; h: number; name: string; role: string, id: number; freeError: string, anim?:string|[string, string] }[] = [
-    { id: 0, name: 'Стэнли Уильямс', role: "", x: 21.26, y: -1301.40, z: 29.14, h: 88, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
-    { id: 500, name: 'Джеффри Порт', role: "", x: -1066.17, y: -874.74, z: 4.98, h: 332, model: "s_m_m_fiboffice_01", freeError: "Здравствуйте, извините у меня разговор по телефону." },
+    { id: 0, name: '~y~NPC: ~w~Джин Детроитович', role: "", x: -190.55, y: -811.15, z: 30.45, h: 52, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
+    // { id: 500, name: 'Джеффри Порт', role: "", x: -1066.17, y: -874.74, z: 4.98, h: 332, model: "s_m_m_fiboffice_01", freeError: "Здравствуйте, извините у меня разговор по телефону." },
 ]
 
 
