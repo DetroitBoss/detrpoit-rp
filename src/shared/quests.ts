@@ -36,8 +36,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Найдите квестового персонажа',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -79,8 +79,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -118,8 +118,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -159,8 +159,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -206,8 +206,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -250,8 +250,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -289,8 +289,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -328,8 +328,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -370,8 +370,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -413,8 +413,8 @@ export const QUESTS_DATA: QuestData[] = [
                 descTask: 'Завершите квест и заберите награду',
                 type: "questBotSpeak",
                 blipData: {
-                    x: 192.09, 
-                    y: -809.64, 
+                    x: -190.55,
+                    y: -811.15,
                     text: "",
                     bliptype: 1,
                     blipcolor: 61,
@@ -739,7 +739,7 @@ export const QUESTS_DATA: QuestData[] = [
 ];
 // x: -190.55, y: -811.15, z: 30.45, h: 52
 export const QUEST_BOT_DATA: { model: string; x: number; y: number; z: number; h: number; name: string; role: string, id: number; freeError: string, anim?:string|[string, string] }[] = [
-    { id: 0, name: '~y~NPC~w~: Джин Детроитович', role: "", x: -190.55, y: -811.15, z: 30.45, h: 52, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
+    { id: 0, name: 'Джин Детроитович', role: "", x: -190.55, y: -811.15, z: 30.45, h: 52, model: "a_m_m_og_boss_01", freeError: "Ничего не подскажу, пока!" },
     // { id: 500, name: 'Джеффри Порт', role: "", x: -1066.17, y: -874.74, z: 4.98, h: 332, model: "s_m_m_fiboffice_01", freeError: "Здравствуйте, извините у меня разговор по телефону." },
 ]
 

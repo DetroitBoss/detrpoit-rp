@@ -24,7 +24,7 @@ export class ScaleformTextMp extends GameVisualElement {
     }
     private positionData: Vector3Mp;
     private textData: string;
-    private typeData: "rotation" | "front" | "board" = "front";
+    private typeData: "" | "rotation" | "front" | "board" = "front";
     private dimensionData: number = 0;
     private rotationData = { x: 0, y: 0, z: 0 };
     private scaleData = DEFAULT_SCALE;

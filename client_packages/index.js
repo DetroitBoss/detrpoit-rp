@@ -261,8 +261,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Найдите квестового персонажа',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -311,8 +311,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -357,8 +357,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -408,8 +408,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -464,8 +464,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -516,8 +516,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -562,8 +562,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -611,8 +611,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -664,8 +664,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -710,8 +710,8 @@ const QUESTS_DATA = exports.QUESTS_DATA = [{
     descTask: 'Завершите квест и заберите награду',
     type: "questBotSpeak",
     blipData: {
-      x: 192.09,
-      y: -809.64,
+      x: -190.55,
+      y: -811.15,
       text: "",
       bliptype: 1,
       blipcolor: 61,
@@ -62906,9 +62906,9 @@ const safeZones = exports.safeZones = [{
   r: 80,
   disableLockSpeed: true
 }, {
-  x: 19.46,
-  y: -1302.21,
-  z: 29.07,
+  x: -195.23,
+  y: -804.87,
+  z: 30.45,
   r: 120
 }, {
   x: -710.38,
@@ -89831,14 +89831,9 @@ const BLIPS_DATA = exports.BLIPS_DATA = [{
   name: "Ламар"
 }, {
   type: 280,
-  color: 5,
-  position: new mp.Vector3(20.22, -1301.45, 29.13),
+  color: 48,
+  position: new mp.Vector3(-190.55, -811.15, 30.45),
   name: "Джин"
-}, {
-  type: 280,
-  color: 5,
-  position: new mp.Vector3(-1066.14, -873.60, 4.99),
-  name: "Джеффри"
 }, {
   type: 84,
   color: 59,

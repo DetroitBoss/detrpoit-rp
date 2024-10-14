@@ -162,18 +162,18 @@ export const BLIPS_DATA: { type: number, color: number, position: Vector3Mp, nam
     },
     {
         type: 280, 
-        color: 5,
-        position: new mp.Vector3(20.22, -1301.45, 29.13),
+        color: 48,
+        position: new mp.Vector3(-190.55, -811.15, 30.45),
         name: "Джин"
         
     },
-    {
-        type: 280, 
-        color: 5,
-        position: new mp.Vector3(-1066.14, -873.60, 4.99),
-        name: "Джеффри"
+    // {
+    //     type: 280, 
+    //     color: 5,
+    //     position: new mp.Vector3(-1066.14, -873.60, 4.99),
+    //     name: "Джеффри"
         
-    },
+    // },
     {
         type: 84, 
         color: 59,

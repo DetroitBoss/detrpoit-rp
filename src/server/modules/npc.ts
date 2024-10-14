@@ -150,10 +150,10 @@ export class NpcSpawn {
             if (this.scaleform.dimension != this._d) this.scaleform.dimension = this._d;
             if (this.scaleform.range != this._r) this.scaleform.range = this._r;
         } else {
-            this.scaleform = new ScaleformTextMp(this.scaleformPos, this._name, {
+            this.scaleform = new ScaleformTextMp(this.scaleformPos, "~y~NPC~w~:" + this._name, {
                 dimension: this._d,
                 range: this._r,
-                type: 'front',
+                type: "",
             })
         }
         
