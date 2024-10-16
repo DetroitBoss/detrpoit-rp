@@ -2270,7 +2270,7 @@ export const CONTAINERS_DATA:{
     bag_sync?: BagAttachData,
 }[] = [
     {item_id: 861, owner_type: OWNER_TYPES.WALLET, max_size: 1500, access: [824, 800, 801, 802, 803, 805, 851]},
-    {item_id: 2000, owner_type: OWNER_TYPES.BAG1, max_size: 10000, bag_sync: {d: 35, t: 0, p: 2}},
+    {item_id: 2000, owner_type: OWNER_TYPES.BAG1, max_size: 10000, bag_sync: {d: 166, t: 0, p: 2}},
     {item_id: 2001, owner_type: OWNER_TYPES.BAG2, max_size: 10000, bag_sync: {d: 35, t: 1, p: 2}},
     {item_id: 2002, owner_type: OWNER_TYPES.BAG3, max_size: 10000, bag_sync: {d: 35, t: 3, p: 2}},
     {item_id: 2003, owner_type: OWNER_TYPES.BAG4, max_size: 10000, bag_sync: {d: 35, t: 4, p: 2}},

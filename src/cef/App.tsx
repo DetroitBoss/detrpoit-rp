@@ -293,7 +293,7 @@ export class App extends Component<{},
     componentDidMount() {
         setTimeout(() => {
             if (!CEF.test) CEF.gui.setGui("init");
-            // if (CEF.test) CEF.gui.setGui("login");
+            // if (CEF.test) CEF.gui.setGui("tablet");
         }, 100);
     }
 

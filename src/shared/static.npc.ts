@@ -155,6 +155,23 @@ const carfamali: QuestDialog = ["Приехал поработать на кар
 
 
 export const STATIC_NPC_DATA: StaticNpcItem[] = [
+    //PEd INTRO Ебал его
+    { x: -2031.72, y: -1042.88, z: 5.88, h: 144, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2033.20, y: -1038.70, z: 5.88, h: 307, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2031.27, y: -1037.98, z: 5.88, h: 65, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2032.43, y: -1036.66, z: 5.88, h: 152, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2032.93, y: -1034.93, z: 5.88, h: 269, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2029.04, y: -1043.33, z: 6.33, h: 264, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2027.95, y: -1030.07, z: 6.33, h: 88, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2034.00, y: -1032.77, z: 5.88, h: 261, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2028.03, y: -1034.01, z: 5.88, h: 343, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2022.27, y: -1041.21, z: 6.73, h: 273, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2020.28, y: -1037, z: 6.73, h: 284, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2020.91, y: -1039.61, z: 6.73, h: 225, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2023.75, y: -1039.50, z: 5.57, h: 20, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2024.06, y: -1036.33, z: 5.57, h: 202, name: '', model: "cs_andreas", anim: ['', 'base'] },
+    { x: -2030.68, y: -1029.82, z: 5.88, h: 49, name: '', model: "cs_andreas", anim: ['', 'base'] },
+
     // Аренды на начальных работах
     { x: -516.26, y: -1013.09, z: 23.45, h: 24, name: '', model: "cs_andreas", anim: ['', 'base'] },
     { x: 2138.34, y: 4923.52, z: 41.04, h: 344, name: '', model: "cs_andreas", anim: ['', 'base'] },

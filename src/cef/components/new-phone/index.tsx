@@ -57,7 +57,7 @@ export class NewPhone extends Component<
       balance: 0,
       targetMessengerNumber: 0,
       targetMessengerName: "",
-      opened: false,
+      opened: true,
       taxes: [],
       phoneHistory: [],
       apps: [
@@ -68,18 +68,18 @@ export class NewPhone extends Component<
           icon: "weather",
         },
         {
-          name: "Onyx Drive",
+          name: "DRP Drive",
           isBig: false,
           page: PhonePages.CONTACTS,
           icon: "onyx-drive",
-          isBlock: true,
+          isBlock: false,
         },
         {
-          name: "Onyx FM",
+          name: "DRP FM",
           isBig: false,
           page: PhonePages.CONTACTS,
           icon: "onyx-fm",
-          isBlock: true,
+          isBlock: false,
         },
         {
           name: "Биржа",
@@ -507,7 +507,7 @@ export class NewPhone extends Component<
                       >
                         <div className="np-main-page-app-icon">
                           <img src={png[a.icon]} alt="" />
-                          {a.isBlock !== undefined && a.isBlock === true ? (
+                          {a.isBlock !== undefined && a.isBlock === false ? (
                             <div className="np-main-page-app-blocked">
                               <svg
                                 width="24"
@@ -543,7 +543,7 @@ export class NewPhone extends Component<
                         >
                           <div className="np-main-page-app-icon">
                             <img src={png[a.icon]} alt="" />
-                            {a.isBlock !== undefined && a.isBlock === true ? (
+                            {a.isBlock !== undefined && a.isBlock === false ? (
                               <div className="np-main-page-app-blocked">
                                 <svg
                                   width="24"

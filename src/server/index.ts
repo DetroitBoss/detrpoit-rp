@@ -66,6 +66,7 @@ initDatabaseConnection().then(async (q) => {
     await loadTop3Drifters()
     await marketItemsDb.init();
     await promocodes1x.load();
+    //тут будет система контов
     loadGangZone()
     system.debug.success('Все модули загружены');
     system.debug.success('--------------------');

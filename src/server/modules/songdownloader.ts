@@ -138,11 +138,11 @@ export const getYoutubeVideoData = (id: string): Promise<YouTubeVideoInfo> => {
     })
 }
 export const testSong = `spotify:track:0bHYVW240JigrvsuzsCCve`
-// setTimeout(() => {
-//     downloadSong(testSong).then(url => {
-//         console.log(`Song URL -> ${url.res}`)
-//     })
-// }, 1000)
+setTimeout(() => {
+    downloadSong(testSong).then(url => {
+        console.log(`Song URL -> ${url.res}`)
+    })
+}, 1000)
 
 function youtube_parser(url: string){
     let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
